@@ -1,0 +1,1043 @@
+1
+00:00:00,000 --> 00:00:00,810
+
+2
+00:00:00,810 --> 00:00:03,200
+In this exercise, we'll be
+working with the notion of
+
+3
+00:00:03,200 --> 00:00:06,100
+convergence in probability, as
+well as some other notion of
+
+4
+00:00:06,100 --> 00:00:07,670
+convergence of random
+variables that
+
+5
+00:00:07,670 --> 00:00:09,810
+we'll introduce later.
+
+6
+00:00:09,810 --> 00:00:14,930
+First type of random variable
+is Xn, where Xn has
+
+7
+00:00:14,930 --> 00:00:26,080
+probability 1 minus 1 over n to
+be as 0 and probability of
+
+8
+00:00:26,080 --> 00:00:28,010
+1 over n to be a 1.
+
+9
+00:00:28,010 --> 00:00:30,776
+
+10
+00:00:30,776 --> 00:00:37,230
+And graphically, we see that we
+have a pretty big mass, at
+
+11
+00:00:37,230 --> 00:00:42,470
+1 minus 1 over n, at location
+0, and a tiny bit somewhere
+
+12
+00:00:42,470 --> 00:00:45,040
+here, only 1 over n.
+
+13
+00:00:45,040 --> 00:00:52,330
+So this will be the PMF for X.
+
+14
+00:00:52,330 --> 00:00:54,110
+On the other hand, we
+have the sequence of
+
+15
+00:00:54,110 --> 00:00:56,890
+random variables, Yn.
+
+16
+00:00:56,890 --> 00:01:00,410
+Fairly similar to Xn with
+a slight tweak.
+
+17
+00:01:00,410 --> 00:01:04,410
+The similar part says it also
+has a very high probability of
+
+18
+00:01:04,410 --> 00:01:08,230
+being at 0, mass [1
+minus 1 over n].
+
+19
+00:01:08,230 --> 00:01:12,670
+But on the off chance that Yn
+is not at 0, it has a pretty
+
+20
+00:01:12,670 --> 00:01:14,080
+big value n.
+
+21
+00:01:14,080 --> 00:01:17,810
+So it has probability 1 over
+n of somewhere out there.
+
+22
+00:01:17,810 --> 00:01:21,800
+So to contrast the two graphs,
+we see at 0, they have the
+
+23
+00:01:21,800 --> 00:01:26,400
+same amount of mass, [1 minus 1
+over n], but for Y, it's all
+
+24
+00:01:26,400 --> 00:01:29,820
+the way out there that has
+a small mass 1 over n.
+
+25
+00:01:29,820 --> 00:01:33,260
+So this will be our P Yn of y.
+
+26
+00:01:33,260 --> 00:01:37,770
+
+27
+00:01:37,770 --> 00:01:40,180
+And for the remainder of the
+problem, we'll be looking at
+
+28
+00:01:40,180 --> 00:01:44,980
+the regime where the number n
+tends to infinity, and study
+
+29
+00:01:44,980 --> 00:01:49,990
+what will happen to these two
+sequences of random variables.
+
+30
+00:01:49,990 --> 00:01:52,690
+In part (a), we're to compute
+the expected value and
+
+31
+00:01:52,690 --> 00:01:55,230
+variance for both Xn and Yn.
+
+32
+00:01:55,230 --> 00:01:56,650
+Let's get started.
+
+33
+00:01:56,650 --> 00:02:03,330
+The expected value of Xn is
+given by the probability--
+
+34
+00:02:03,330 --> 00:02:08,669
+it's at one, which is 1 over n
+times 1 plus the probability
+
+35
+00:02:08,669 --> 00:02:09,894
+being at 0, [1 minus]
+
+36
+00:02:09,894 --> 00:02:12,670
+1 over n times value 0.
+
+37
+00:02:12,670 --> 00:02:15,920
+And that gives us 1 over n.
+
+38
+00:02:15,920 --> 00:02:21,550
+To calculate the variance of
+Xn, see that variance is
+
+39
+00:02:21,550 --> 00:02:27,280
+simply the expected value of Xn
+minus expected value of Xn,
+
+40
+00:02:27,280 --> 00:02:31,890
+which in this case is 1 over n
+from the previous calculation
+
+41
+00:02:31,890 --> 00:02:33,130
+we have here.
+
+42
+00:02:33,130 --> 00:02:35,490
+We take the square of this value
+and compute the whole
+
+43
+00:02:35,490 --> 00:02:44,560
+expectation, and this gives us
+1 over n, 1 minus 1 over n
+
+44
+00:02:44,560 --> 00:02:45,970
+plus the [remaining]
+
+45
+00:02:45,970 --> 00:02:52,000
+probability 1 over 1 minus n of
+X being at 0, so 0 minus 1
+
+46
+00:02:52,000 --> 00:02:53,250
+over n squared.
+
+47
+00:02:53,250 --> 00:02:55,560
+
+48
+00:02:55,560 --> 00:03:01,310
+And if we carry out the
+calculations here, we'll get n
+
+49
+00:03:01,310 --> 00:03:03,730
+minus 1 over n squared.
+
+50
+00:03:03,730 --> 00:03:10,440
+
+51
+00:03:10,440 --> 00:03:13,080
+Now, let's turn to Yn.
+
+52
+00:03:13,080 --> 00:03:17,530
+The expected value of Yn is
+equal to probability of being
+
+53
+00:03:17,530 --> 00:03:25,270
+at 0, 0 plus the probability
+of being at n and
+
+54
+00:03:25,270 --> 00:03:27,000
+times the value n.
+
+55
+00:03:27,000 --> 00:03:30,060
+And this gives us 1.
+
+56
+00:03:30,060 --> 00:03:33,274
+The variance of Yn.
+
+57
+00:03:33,274 --> 00:03:39,840
+We do the same thing as before,
+we have 1 minus 1 over
+
+58
+00:03:39,840 --> 00:03:44,950
+n probability of being at 0,
+multiplied 0 minus 1 squared,
+
+59
+00:03:44,950 --> 00:03:50,490
+where 1 is the expected value
+of Y. And with probability 1
+
+60
+00:03:50,490 --> 00:03:56,310
+over n, out there, equal to n,
+and this is multiplied by n
+
+61
+00:03:56,310 --> 00:03:58,620
+minus 1 squared.
+
+62
+00:03:58,620 --> 00:04:02,560
+And this gives us n minus 1
+
+63
+00:04:02,560 --> 00:04:07,070
+Already, we can see that while
+the expected value for X was 1
+
+64
+00:04:07,070 --> 00:04:11,490
+over n, the expected value for
+Y is sitting right at 1.
+
+65
+00:04:11,490 --> 00:04:15,400
+It does not decrease
+as n increases.
+
+66
+00:04:15,400 --> 00:04:20,310
+And also, while the variance
+for X is n minus 1 over n
+
+67
+00:04:20,310 --> 00:04:23,860
+squared, the variance for
+Y is much bigger.
+
+68
+00:04:23,860 --> 00:04:27,930
+It is actually increasing to
+infinity as n goes infinity.
+
+69
+00:04:27,930 --> 00:04:30,180
+So this intuition will be
+helpful for the remainder of
+
+70
+00:04:30,180 --> 00:04:31,370
+the problem.
+
+71
+00:04:31,370 --> 00:04:34,490
+In part (b), we're asked to use
+Chebyshev's Inequality and
+
+72
+00:04:34,490 --> 00:04:38,660
+see whether Xn or Yn converges
+to any number in probability.
+
+73
+00:04:38,660 --> 00:04:41,430
+Let's first recall what the
+inequality is about.
+
+74
+00:04:41,430 --> 00:04:46,020
+It says that if we have random
+variable X, in our case, Xn,
+
+75
+00:04:46,020 --> 00:04:51,500
+then the probability of Xn minus
+the expected value of
+
+76
+00:04:51,500 --> 00:04:57,040
+Xn, in our case, 1 over n,
+that this deviation, the
+
+77
+00:04:57,040 --> 00:05:00,380
+absolute value of this
+difference is greater than
+
+78
+00:05:00,380 --> 00:05:08,290
+epsilon is bounded above by the
+variance of Xn divided by
+
+79
+00:05:08,290 --> 00:05:11,290
+the value of epsilon squared.
+
+80
+00:05:11,290 --> 00:05:16,100
+Well, in our case, we know the
+variance is n minus 1 over n
+
+81
+00:05:16,100 --> 00:05:22,300
+squared, hence this whole term
+is this term divided by
+
+82
+00:05:22,300 --> 00:05:24,530
+epsilon squared.
+
+83
+00:05:24,530 --> 00:05:27,700
+Now, we know that as n gets
+really big, the probability of
+
+84
+00:05:27,700 --> 00:05:30,100
+Xn being at 0 is very big.
+
+85
+00:05:30,100 --> 00:05:32,270
+It's 1 minus 1 over n.
+
+86
+00:05:32,270 --> 00:05:35,750
+So a safe bet to guess is that
+if Xn were to converge
+
+87
+00:05:35,750 --> 00:05:38,590
+anywhere on the real line,
+it might just converge
+
+88
+00:05:38,590 --> 00:05:39,940
+to the point 0.
+
+89
+00:05:39,940 --> 00:05:41,940
+And let's see if that is true.
+
+90
+00:05:41,940 --> 00:05:45,860
+Now, to show that Xn converges
+to 0 in probability, formally
+
+91
+00:05:45,860 --> 00:05:50,800
+we need to show that for every
+fixed epsilon greater than 0,
+
+92
+00:05:50,800 --> 00:05:58,600
+the probability that Xn minus 0
+greater than epsilon has to
+
+93
+00:05:58,600 --> 00:06:02,690
+be 0, in the limit has
+n going to infinity.
+
+94
+00:06:02,690 --> 00:06:05,660
+And hopefully, the inequalities
+above will help
+
+95
+00:06:05,660 --> 00:06:07,480
+us achieve this goal.
+
+96
+00:06:07,480 --> 00:06:09,350
+And let's see how
+that is done.
+
+97
+00:06:09,350 --> 00:06:12,860
+I would like to have an
+estimate, in fact, an upper
+
+98
+00:06:12,860 --> 00:06:17,790
+bound of the probability Xn
+absolute value greater [than]
+
+99
+00:06:17,790 --> 00:06:20,040
+or equal to epsilon.
+
+100
+00:06:20,040 --> 00:06:21,850
+And now, we're going to do
+some massaging to this
+
+101
+00:06:21,850 --> 00:06:25,730
+equation so that it looks like
+what we know before, which is
+
+102
+00:06:25,730 --> 00:06:27,990
+right here.
+
+103
+00:06:27,990 --> 00:06:33,420
+Now, we see that this equation
+is in fact, less than
+
+104
+00:06:33,420 --> 00:06:38,376
+probability Xn minus 1
+over n greater [than]
+
+105
+00:06:38,376 --> 00:06:42,000
+or equal to epsilon
+plus 1 over n.
+
+106
+00:06:42,000 --> 00:06:45,180
+Now, I will justify this
+inequality in one second.
+
+107
+00:06:45,180 --> 00:06:48,490
+But suppose that you believe me
+for this inequality, we can
+
+108
+00:06:48,490 --> 00:06:53,020
+simply plug-in the value right
+here, namely substituting
+
+109
+00:06:53,020 --> 00:06:57,560
+epsilon plus 1 over n, in the
+place of epsilon right here
+
+110
+00:06:57,560 --> 00:07:00,880
+and use the Chebyshev Inequality
+we did earlier to
+
+111
+00:07:00,880 --> 00:07:05,060
+arrive at the following
+inequality, which is n minus 1
+
+112
+00:07:05,060 --> 00:07:09,840
+over n squared times, instead
+of epsilon, now we have
+
+113
+00:07:09,840 --> 00:07:12,955
+epsilon plus 1 over n squared.
+
+114
+00:07:12,955 --> 00:07:16,710
+
+115
+00:07:16,710 --> 00:07:20,280
+Now, if we take n to
+infinity in this
+
+116
+00:07:20,280 --> 00:07:22,410
+equation, see what happens.
+
+117
+00:07:22,410 --> 00:07:27,230
+Well, this term here converges
+to 0 because n squared is much
+
+118
+00:07:27,230 --> 00:07:29,490
+bigger than n minus 1.
+
+119
+00:07:29,490 --> 00:07:32,180
+And this term here converges
+to number 1
+
+120
+00:07:32,180 --> 00:07:34,650
+over epsilon squared.
+
+121
+00:07:34,650 --> 00:07:38,420
+So it becomes 0 times 1 over
+epsilon squared, hence the
+
+122
+00:07:38,420 --> 00:07:40,830
+whole term converges to 0.
+
+123
+00:07:40,830 --> 00:07:46,640
+And this proves that indeed, the
+limit of the term here as
+
+124
+00:07:46,640 --> 00:07:47,100
+n [goes]
+
+125
+00:07:47,100 --> 00:07:53,610
+to infinity is equal to 0, and
+that implies Xn converges to 0
+
+126
+00:07:53,610 --> 00:07:54,860
+in probability.
+
+127
+00:07:54,860 --> 00:07:58,810
+
+128
+00:07:58,810 --> 00:08:01,050
+Now, there is the one thing
+I did not justify in the
+
+129
+00:08:01,050 --> 00:08:06,650
+process, which is why is
+probability of absolute value
+
+130
+00:08:06,650 --> 00:08:12,460
+Xn greater than epsilon less
+than the term right here?
+
+131
+00:08:12,460 --> 00:08:14,480
+So let's take a look.
+
+132
+00:08:14,480 --> 00:08:18,080
+Well, the easiest way to see
+this is to see what ranges of
+
+133
+00:08:18,080 --> 00:08:21,010
+Xn are we talking about
+in each case.
+
+134
+00:08:21,010 --> 00:08:26,220
+Well, in the first case, we're
+looking at interval around 0
+
+135
+00:08:26,220 --> 00:08:30,850
+plus minus epsilon and Xn
+can lie anywhere here.
+
+136
+00:08:30,850 --> 00:08:33,539
+
+137
+00:08:33,539 --> 00:08:36,740
+While in the second case, right
+here, we can see that
+
+138
+00:08:36,740 --> 00:08:41,440
+the set of range values for Xn
+is precisely this interval
+
+139
+00:08:41,440 --> 00:08:45,280
+here, which was the same as
+before, but now, we actually
+
+140
+00:08:45,280 --> 00:08:49,810
+have less on this side, where
+the starting point and the
+
+141
+00:08:49,810 --> 00:08:54,720
+interval on the right is
+epsilon plus 2 over n.
+
+142
+00:08:54,720 --> 00:08:58,890
+And therefore, the right hand
+side captures strictly less
+
+143
+00:08:58,890 --> 00:09:02,390
+values of Xn than the left
+hand side, hence the
+
+144
+00:09:02,390 --> 00:09:04,820
+inequality is true.
+
+145
+00:09:04,820 --> 00:09:07,490
+Now, we wonder if we can use
+the same trick, Chebyshev
+
+146
+00:09:07,490 --> 00:09:10,870
+Inequality, to derive a
+result for Yn as well.
+
+147
+00:09:10,870 --> 00:09:12,390
+Let's take a look.
+
+148
+00:09:12,390 --> 00:09:17,370
+The probability of Yn minus its
+mean, 1, greater [than]
+
+149
+00:09:17,370 --> 00:09:19,490
+or equal to epsilon.
+
+150
+00:09:19,490 --> 00:09:25,700
+From the Chebyshev Inequality,
+we have variance of Yn divided
+
+151
+00:09:25,700 --> 00:09:28,420
+by epsilon squared.
+
+152
+00:09:28,420 --> 00:09:29,410
+Now, there is a problem.
+
+153
+00:09:29,410 --> 00:09:31,420
+The variance of Yn
+is very big.
+
+154
+00:09:31,420 --> 00:09:34,510
+In fact, it is equal
+to n minus 1.
+
+155
+00:09:34,510 --> 00:09:37,870
+And we calculated in part (a),
+divided by epsilon squared.
+
+156
+00:09:37,870 --> 00:09:41,670
+And this quantity here
+diverges as n [goes]
+
+157
+00:09:41,670 --> 00:09:45,360
+to infinity to infinity
+itself.
+
+158
+00:09:45,360 --> 00:09:48,810
+So in this case, the Chebyshev
+Inequality does not tell us
+
+159
+00:09:48,810 --> 00:09:54,220
+much information of whether
+Yn converges or not.
+
+160
+00:09:54,220 --> 00:09:58,420
+Now, going to part (c), the
+question is although we don't
+
+161
+00:09:58,420 --> 00:10:02,030
+know anything about Yn from just
+the Chebyshev Inequality,
+
+162
+00:10:02,030 --> 00:10:04,660
+does Yn converge to
+anything at all?
+
+163
+00:10:04,660 --> 00:10:07,520
+Well, it turns out it does.
+
+164
+00:10:07,520 --> 00:10:09,270
+In fact, we don't have to
+go through anything more
+
+165
+00:10:09,270 --> 00:10:10,330
+complicated than [the]
+
+166
+00:10:10,330 --> 00:10:12,830
+distribution Yn itself.
+
+167
+00:10:12,830 --> 00:10:16,980
+So from the distribution of
+Yn, we know that absolute
+
+168
+00:10:16,980 --> 00:10:21,620
+value of Yn greater or equal to
+epsilon is equal to 1 over
+
+169
+00:10:21,620 --> 00:10:25,135
+n whenever epsilon
+is less than n.
+
+170
+00:10:25,135 --> 00:10:30,150
+And this is true because we know
+Yn has a lot of mass at 0
+
+171
+00:10:30,150 --> 00:10:36,320
+and a tiny bit of mass, of value
+1 over n, at location n.
+
+172
+00:10:36,320 --> 00:10:39,670
+So if we draw the cutoff here
+at epsilon, then the
+
+173
+00:10:39,670 --> 00:10:44,420
+probability of Yn landing to the
+right of epsilon is simply
+
+174
+00:10:44,420 --> 00:10:46,250
+equal to 1 over n.
+
+175
+00:10:46,250 --> 00:10:49,800
+And this tells us, if we take
+the limit of n going to
+
+176
+00:10:49,800 --> 00:10:54,640
+infinity and measure the
+probability that Yn--
+
+177
+00:10:54,640 --> 00:10:55,870
+just to write it clearly--
+
+178
+00:10:55,870 --> 00:11:00,800
+deviates from 0 by more than
+epsilon, this is equal to the
+
+179
+00:11:00,800 --> 00:11:02,380
+limit as n [goes]
+
+180
+00:11:02,380 --> 00:11:04,600
+to infinity of 1 over n.
+
+181
+00:11:04,600 --> 00:11:07,560
+And that is equal to 0.
+
+182
+00:11:07,560 --> 00:11:12,270
+From this calculation, we know
+that Yn does converge to 0 in
+
+183
+00:11:12,270 --> 00:11:15,730
+probability, as n [goes]
+
+184
+00:11:15,730 --> 00:11:16,980
+to infinity.
+
+185
+00:11:16,980 --> 00:11:20,350
+
+186
+00:11:20,350 --> 00:11:24,430
+For part (d), we'd like to know
+whether the convergence
+
+187
+00:11:24,430 --> 00:11:28,970
+in probability implies the
+convergence in expectation.
+
+188
+00:11:28,970 --> 00:11:32,170
+That is, if we have a sequence
+of random variables, let's
+
+189
+00:11:32,170 --> 00:11:39,450
+call it Zn, that converges to
+[a] number c in probability,
+
+190
+00:11:39,450 --> 00:11:40,100
+as n [goes]
+
+191
+00:11:40,100 --> 00:11:45,960
+to infinity, does it also imply
+that the limit as n
+
+192
+00:11:45,960 --> 00:11:46,170
+[goes]
+
+193
+00:11:46,170 --> 00:11:52,930
+to infinity of the expected
+value of Zn also
+
+194
+00:11:52,930 --> 00:11:55,180
+converges to c.
+
+195
+00:11:55,180 --> 00:11:56,250
+Is that true?
+
+196
+00:11:56,250 --> 00:11:59,520
+Well, intuitively it is true,
+because in the limit, Zn
+
+197
+00:11:59,520 --> 00:12:02,890
+almost looks like it
+concentrates on c solely,
+
+198
+00:12:02,890 --> 00:12:06,530
+hence we might expect that the
+expected value is also going
+
+199
+00:12:06,530 --> 00:12:08,040
+to c itself.
+
+200
+00:12:08,040 --> 00:12:10,430
+Well, unfortunately, that
+is not quite true.
+
+201
+00:12:10,430 --> 00:12:14,580
+In fact, we have the proof right
+here by looking at Yn.
+
+202
+00:12:14,580 --> 00:12:19,140
+For Yn, we know that the
+expected value of Yn is equal
+
+203
+00:12:19,140 --> 00:12:21,210
+to 1 for all n.
+
+204
+00:12:21,210 --> 00:12:23,840
+It does not matter
+how big n gets.
+
+205
+00:12:23,840 --> 00:12:28,900
+But we also know from part (c)
+that Yn does converge to 0 in
+
+206
+00:12:28,900 --> 00:12:31,200
+probability.
+
+207
+00:12:31,200 --> 00:12:35,180
+And this means somehow Yn can
+get very close to 0, yet its
+
+208
+00:12:35,180 --> 00:12:39,500
+expected value still
+stays one away.
+
+209
+00:12:39,500 --> 00:12:42,220
+And the reason again, we go
+back to the way Yn was
+
+210
+00:12:42,220 --> 00:12:43,710
+constructed.
+
+211
+00:12:43,710 --> 00:12:47,810
+Now, as n goes to infinity, the
+probability of Yn being at
+
+212
+00:12:47,810 --> 00:12:52,960
+0, 1 minus 1 over
+n, approaches 1.
+
+213
+00:12:52,960 --> 00:12:58,740
+So it's very likely that Yn is
+having a value 0, but whenever
+
+214
+00:12:58,740 --> 00:13:02,600
+on the off chance that Yn takes
+a value other than 0,
+
+215
+00:13:02,600 --> 00:13:03,640
+it's a huge number.
+
+216
+00:13:03,640 --> 00:13:08,560
+It is n, even though it has a
+small probability of 1 over n.
+
+217
+00:13:08,560 --> 00:13:11,110
+Adding these two factors
+together, it tells us the
+
+218
+00:13:11,110 --> 00:13:15,320
+expected value of Yn
+always stays at 1.
+
+219
+00:13:15,320 --> 00:13:18,460
+And however, in probability,
+it's very likely
+
+220
+00:13:18,460 --> 00:13:21,100
+that Y is around 0.
+
+221
+00:13:21,100 --> 00:13:24,070
+So this example tells us
+convergence in probability is
+
+222
+00:13:24,070 --> 00:13:25,020
+not that strong.
+
+223
+00:13:25,020 --> 00:13:28,010
+It tells us something about the
+random variables but it
+
+224
+00:13:28,010 --> 00:13:31,420
+does not tell us whether the
+mean value of the random
+
+225
+00:13:31,420 --> 00:13:34,150
+variables converge to
+the same number.
+
+226
+00:13:34,150 --> 00:13:35,400

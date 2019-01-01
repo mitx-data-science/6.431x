@@ -1,0 +1,152 @@
+1
+00:00:00,000 --> 00:00:00,260
+
+2
+00:00:00,260 --> 00:00:03,800
+In this lecture, we introduce
+the Poisson process, which is
+
+3
+00:00:03,800 --> 00:00:07,320
+a continuous time analog of
+the Bernoulli process.
+
+4
+00:00:07,320 --> 00:00:10,690
+One way of thinking about
+it is as follows.
+
+5
+00:00:10,690 --> 00:00:14,610
+Time is continuous, but
+conceptually we divide it into
+
+6
+00:00:14,610 --> 00:00:16,640
+a very large number of slots.
+
+7
+00:00:16,640 --> 00:00:19,090
+And during each slot,
+we have a tiny
+
+8
+00:00:19,090 --> 00:00:21,240
+probability of an arrival.
+
+9
+00:00:21,240 --> 00:00:23,570
+This probability is proportional
+to the
+
+10
+00:00:23,570 --> 00:00:25,610
+length of the slot.
+
+11
+00:00:25,610 --> 00:00:28,150
+Furthermore, we have an
+independence assumption for
+
+12
+00:00:28,150 --> 00:00:29,400
+the different slots.
+
+13
+00:00:29,400 --> 00:00:31,860
+
+14
+00:00:31,860 --> 00:00:35,560
+The Poisson process is a very
+elegant model of arrival
+
+15
+00:00:35,560 --> 00:00:37,870
+processes in continuous time.
+
+16
+00:00:37,870 --> 00:00:40,850
+It models many real-world
+phenomena.
+
+17
+00:00:40,850 --> 00:00:44,390
+And it also has a very clean
+mathematical structure that
+
+18
+00:00:44,390 --> 00:00:46,970
+allows us to calculate
+practically
+
+19
+00:00:46,970 --> 00:00:50,300
+every quantity of interest.
+
+20
+00:00:50,300 --> 00:00:53,820
+Our development will parallel
+our analysis of
+
+21
+00:00:53,820 --> 00:00:55,640
+the Bernoulli process.
+
+22
+00:00:55,640 --> 00:00:59,830
+For example, we will find the
+PMF of the number of arrivals
+
+23
+00:00:59,830 --> 00:01:03,030
+during a time interval
+and the PDF of the
+
+24
+00:01:03,030 --> 00:01:05,930
+time of the kth arrival.
+
+25
+00:01:05,930 --> 00:01:08,950
+We will discuss the
+memorylessness properties of
+
+26
+00:01:08,950 --> 00:01:10,900
+the Poisson process.
+
+27
+00:01:10,900 --> 00:01:13,540
+Similar to the case of the
+Bernoulli process, this is
+
+28
+00:01:13,540 --> 00:01:16,450
+just a consequence of the
+independence assumptions that
+
+29
+00:01:16,450 --> 00:01:18,580
+we are making.
+
+30
+00:01:18,580 --> 00:01:21,530
+We will then exploit these
+independence properties to
+
+31
+00:01:21,530 --> 00:01:25,580
+argue that the interarrival
+times are independent
+
+32
+00:01:25,580 --> 00:01:27,950
+exponential random variables.
+
+33
+00:01:27,950 --> 00:01:30,480
+And we will conclude with
+a comprehensive example.
+
+34
+00:01:30,480 --> 00:01:31,730

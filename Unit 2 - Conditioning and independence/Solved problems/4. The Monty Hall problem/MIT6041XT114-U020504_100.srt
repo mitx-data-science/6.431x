@@ -1,0 +1,1506 @@
+1
+00:00:00,000 --> 00:00:00,433
+
+2
+00:00:00,433 --> 00:00:01,300
+Hi.
+
+3
+00:00:01,300 --> 00:00:02,780
+In the session, we'll
+be solving
+
+4
+00:00:02,780 --> 00:00:04,500
+the Monty Hall problem.
+
+5
+00:00:04,500 --> 00:00:07,190
+And this problem is based on
+an old game show that was
+
+6
+00:00:07,190 --> 00:00:09,930
+called "Let's Make a Deal."
+And the host of this game
+
+7
+00:00:09,930 --> 00:00:13,170
+show, his name was Monty Hall,
+which is why this problem is
+
+8
+00:00:13,170 --> 00:00:15,570
+now known as the Monty
+Hall problem.
+
+9
+00:00:15,570 --> 00:00:18,840
+And this problem is actually
+pretty well-known, because
+
+10
+00:00:18,840 --> 00:00:21,450
+there was some disagreement at
+the time over what the right
+
+11
+00:00:21,450 --> 00:00:24,330
+answer to this problem
+should be.
+
+12
+00:00:24,330 --> 00:00:27,800
+Even some really smart people
+didn't agree on what the right
+
+13
+00:00:27,800 --> 00:00:29,360
+answer should be.
+
+14
+00:00:29,360 --> 00:00:36,040
+And part of what might explain
+that disagreement is that they
+
+15
+00:00:36,040 --> 00:00:38,110
+probably were considering
+slightly different variations
+
+16
+00:00:38,110 --> 00:00:43,220
+of the problem, because as in
+all probability problems, the
+
+17
+00:00:43,220 --> 00:00:44,930
+assumptions that you're
+working with are very
+
+18
+00:00:44,930 --> 00:00:48,860
+important, because otherwise you
+may be solving an actually
+
+19
+00:00:48,860 --> 00:00:50,080
+different problem.
+
+20
+00:00:50,080 --> 00:00:54,480
+And so what we'll do first is
+really layout concretely what
+
+21
+00:00:54,480 --> 00:00:56,760
+all the assumptions are, what
+the rules of the game are.
+
+22
+00:00:56,760 --> 00:01:00,190
+And then we'll go through the
+methodology to solve for the
+
+23
+00:01:00,190 --> 00:01:02,350
+actual answer.
+
+24
+00:01:02,350 --> 00:01:07,530
+So the game is actually
+relatively simple.
+
+25
+00:01:07,530 --> 00:01:10,820
+So you're on a game
+show and you're
+
+26
+00:01:10,820 --> 00:01:12,490
+presented with three doors.
+
+27
+00:01:12,490 --> 00:01:13,720
+These doors are closed.
+
+28
+00:01:13,720 --> 00:01:17,940
+And behind one of these doors is
+a prize, let's say, a car.
+
+29
+00:01:17,940 --> 00:01:20,840
+And behind the other two
+doors, there's nothing.
+
+30
+00:01:20,840 --> 00:01:22,790
+You don't know which
+one it is.
+
+31
+00:01:22,790 --> 00:01:26,170
+And the rules of the game are
+that, first, you get to choose
+
+32
+00:01:26,170 --> 00:01:27,800
+any one of these three.
+
+33
+00:01:27,800 --> 00:01:31,820
+So you pick one of the
+doors that you want.
+
+34
+00:01:31,820 --> 00:01:35,620
+They don't show you what's
+behind that door, but your
+
+35
+00:01:35,620 --> 00:01:38,890
+friend, who actually knows
+which door has the prize
+
+36
+00:01:38,890 --> 00:01:41,630
+behind it, will look at
+the remaining doors.
+
+37
+00:01:41,630 --> 00:01:45,640
+So let's, just for example,
+let's say you chose door one.
+
+38
+00:01:45,640 --> 00:01:48,900
+Your friend will look at
+the other two doors
+
+39
+00:01:48,900 --> 00:01:51,240
+and open one of them.
+
+40
+00:01:51,240 --> 00:01:53,370
+And you will make sure
+that the one
+
+41
+00:01:53,370 --> 00:01:54,950
+that he opens is empty.
+
+42
+00:01:54,950 --> 00:01:57,390
+That is the prize not
+behind that one.
+
+43
+00:01:57,390 --> 00:02:01,810
+And at this point, one of the
+doors is open and its empty,
+
+44
+00:02:01,810 --> 00:02:05,130
+you have your original door plus
+another unopened door.
+
+45
+00:02:05,130 --> 00:02:07,360
+And you're given an option--
+you could either stay with
+
+46
+00:02:07,360 --> 00:02:10,789
+your initial choice or
+you can switch to the
+
+47
+00:02:10,789 --> 00:02:12,150
+other unopened door.
+
+48
+00:02:12,150 --> 00:02:14,780
+And whichever one is your
+final choice, they
+
+49
+00:02:14,780 --> 00:02:15,830
+will open that door.
+
+50
+00:02:15,830 --> 00:02:18,275
+And if there's a price behind
+it, you win, and if there is
+
+51
+00:02:18,275 --> 00:02:20,890
+not, then you don't win.
+
+52
+00:02:20,890 --> 00:02:23,630
+So the question that we're
+trying to answer is what is
+
+53
+00:02:23,630 --> 00:02:25,290
+the better strategy here?
+
+54
+00:02:25,290 --> 00:02:29,790
+Is the better strategy to stay
+with your initial choice or is
+
+55
+00:02:29,790 --> 00:02:33,910
+it better to switch to the
+other unopened door?
+
+56
+00:02:33,910 --> 00:02:38,360
+OK, so it turns out that the
+specific rules here actually
+
+57
+00:02:38,360 --> 00:02:39,600
+are very important.
+
+58
+00:02:39,600 --> 00:02:43,010
+Specifically, the rule about
+how your friend chooses to
+
+59
+00:02:43,010 --> 00:02:43,750
+open doors.
+
+60
+00:02:43,750 --> 00:02:47,460
+And the fact that he will always
+open one of the two
+
+61
+00:02:47,460 --> 00:02:49,650
+other door that you haven't
+picked and he will make sure
+
+62
+00:02:49,650 --> 00:02:53,000
+that that door doesn't have
+a prize behind it.
+
+63
+00:02:53,000 --> 00:02:54,930
+And let's see how that actually
+
+64
+00:02:54,930 --> 00:02:56,890
+plays out in this problem.
+
+65
+00:02:56,890 --> 00:03:00,880
+So the simplest way, I think, of
+thinking about this problem
+
+66
+00:03:00,880 --> 00:03:05,050
+is just to think about under
+what circumstances does
+
+67
+00:03:05,050 --> 00:03:07,900
+staying with your initial
+choice win?
+
+68
+00:03:07,900 --> 00:03:11,380
+So if you think about it, the
+only way that you can win by
+
+69
+00:03:11,380 --> 00:03:13,450
+staying with your initial choice
+is if your initial
+
+70
+00:03:13,450 --> 00:03:17,270
+choice happened to be the door
+that has a prize behind it.
+
+71
+00:03:17,270 --> 00:03:20,820
+And because you're sticking with
+the initial choice, you
+
+72
+00:03:20,820 --> 00:03:23,000
+can actually kind of forget
+about the rest of the game,
+
+73
+00:03:23,000 --> 00:03:26,310
+about opening of the other
+door and about switching.
+
+74
+00:03:26,310 --> 00:03:28,650
+It's as if you're playing a
+simpler game, which is just
+
+75
+00:03:28,650 --> 00:03:33,340
+you have three doors, one of
+them has a prize behind it,
+
+76
+00:03:33,340 --> 00:03:35,480
+and you choose one of them.
+
+77
+00:03:35,480 --> 00:03:37,340
+And if you guessed right,
+then you win.
+
+78
+00:03:37,340 --> 00:03:40,440
+If you didn't, then
+you don't win.
+
+79
+00:03:40,440 --> 00:03:43,360
+And because the another
+important assumption is that
+
+80
+00:03:43,360 --> 00:03:46,020
+the prize has an equal
+probability of being behind
+
+81
+00:03:46,020 --> 00:03:49,500
+any one of three doors so one
+third, one third, one third.
+
+82
+00:03:49,500 --> 00:03:53,690
+Because of that, then if you
+stay with your first choice,
+
+83
+00:03:53,690 --> 00:03:55,980
+you win only if your first
+choice happened
+
+84
+00:03:55,980 --> 00:03:56,740
+to the right one.
+
+85
+00:03:56,740 --> 00:03:59,800
+And that is the case with
+probablility one third.
+
+86
+00:03:59,800 --> 00:04:04,980
+So with that simple argument you
+can convince yourself that
+
+87
+00:04:04,980 --> 00:04:08,400
+the probability of winning,
+given the strategy of staying
+
+88
+00:04:08,400 --> 00:04:10,990
+with your first choice,
+is one third.
+
+89
+00:04:10,990 --> 00:04:12,050
+Now, let's think
+about the other
+
+90
+00:04:12,050 --> 00:04:13,960
+strategy, which is to switch.
+
+91
+00:04:13,960 --> 00:04:18,390
+So under what circumstances does
+switching win for you?
+
+92
+00:04:18,390 --> 00:04:23,760
+Well, if your first choice
+happens to be the right door,
+
+93
+00:04:23,760 --> 00:04:29,740
+then switching away from that
+door will always lose.
+
+94
+00:04:29,740 --> 00:04:34,670
+But let's say, that happens
+with probably one third.
+
+95
+00:04:34,670 --> 00:04:37,920
+But the rest of the time with
+probably 2/3, your first
+
+96
+00:04:37,920 --> 00:04:39,260
+choice would be wrong.
+
+97
+00:04:39,260 --> 00:04:41,250
+So let's give an example here.
+
+98
+00:04:41,250 --> 00:04:44,635
+Let's say, the prize, which I'll
+denote by happy face, is
+
+99
+00:04:44,635 --> 00:04:45,870
+behind door two.
+
+100
+00:04:45,870 --> 00:04:48,090
+And your first choice
+was door one.
+
+101
+00:04:48,090 --> 00:04:50,390
+So your first choice
+was wrong.
+
+102
+00:04:50,390 --> 00:04:53,730
+Now, your friend can open door
+two, because door two has the
+
+103
+00:04:53,730 --> 00:04:54,650
+prize behind it.
+
+104
+00:04:54,650 --> 00:04:57,540
+He also doesn't open the door
+that you initially picked.
+
+105
+00:04:57,540 --> 00:04:59,930
+So he has to open door three.
+
+106
+00:04:59,930 --> 00:05:02,110
+So door three is open, and now
+you have an option of sticking
+
+107
+00:05:02,110 --> 00:05:03,520
+with your first choice--
+door one--
+
+108
+00:05:03,520 --> 00:05:05,330
+or switching to door two.
+
+109
+00:05:05,330 --> 00:05:07,030
+So in this case, it's
+obvious to see that
+
+110
+00:05:07,030 --> 00:05:09,300
+switching wins for you.
+
+111
+00:05:09,300 --> 00:05:15,020
+And now, if instead, you picked
+door one first, and the
+
+112
+00:05:15,020 --> 00:05:19,300
+prize was behind door three,
+again, you are wrong.
+
+113
+00:05:19,300 --> 00:05:22,120
+And again, your friend is
+forced to open door two.
+
+114
+00:05:22,120 --> 00:05:24,530
+And switching, again,
+wins for you.
+
+115
+00:05:24,530 --> 00:05:29,530
+And so if you think about it,
+switching will win for you, as
+
+116
+00:05:29,530 --> 00:05:32,560
+long as your initial
+pick was wrong.
+
+117
+00:05:32,560 --> 00:05:36,610
+If your initial pick was wrong,
+then the prize is
+
+118
+00:05:36,610 --> 00:05:38,540
+behind one of the doors.
+
+119
+00:05:38,540 --> 00:05:41,050
+Your friend has to open one of
+the doors, but he can't open
+
+120
+00:05:41,050 --> 00:05:42,820
+the door that has the
+prize behind it.
+
+121
+00:05:42,820 --> 00:05:48,030
+So he has to open the other
+bad door, leaving the good
+
+122
+00:05:48,030 --> 00:05:49,490
+door with the prize behind
+it as the one that
+
+123
+00:05:49,490 --> 00:05:50,810
+you can switch to.
+
+124
+00:05:50,810 --> 00:05:54,020
+And so by switching you will
+win in this scenario.
+
+125
+00:05:54,020 --> 00:05:55,730
+And what is the probability
+of that happening?
+
+126
+00:05:55,730 --> 00:06:00,160
+Well, that happens if your
+initial pick was wrong, which
+
+127
+00:06:00,160 --> 00:06:03,110
+happens with probably 2/3.
+
+128
+00:06:03,110 --> 00:06:06,520
+So the final answer then, it's
+pretty simple, the probability
+
+129
+00:06:06,520 --> 00:06:09,526
+of winning if you stay is one
+third, and the probability of
+
+130
+00:06:09,526 --> 00:06:11,560
+winning if you switch is 2/3.
+
+131
+00:06:11,560 --> 00:06:15,130
+And so maybe counterintuitively
+the result
+
+132
+00:06:15,130 --> 00:06:17,500
+is that it's actually better
+for you, twice as good for
+
+133
+00:06:17,500 --> 00:06:21,500
+you, to switch rather
+than stay.
+
+134
+00:06:21,500 --> 00:06:26,930
+And so that was the argument,
+the kind of simple argument.
+
+135
+00:06:26,930 --> 00:06:29,630
+We can also be more methodical
+about this and actually list
+
+136
+00:06:29,630 --> 00:06:31,020
+out all of the possible
+outcomes.
+
+137
+00:06:31,020 --> 00:06:33,290
+Because it's relatively small
+problem-- there's only three
+
+138
+00:06:33,290 --> 00:06:35,050
+doors-- we can actually
+just list out all
+
+139
+00:06:35,050 --> 00:06:36,230
+the possible outcomes.
+
+140
+00:06:36,230 --> 00:06:40,000
+So for example, if you chose
+door one first, and the prize
+
+141
+00:06:40,000 --> 00:06:42,570
+was behind door one, your
+friend has a choice.
+
+142
+00:06:42,570 --> 00:06:44,870
+He can open door two or
+door three, because
+
+143
+00:06:44,870 --> 00:06:46,740
+they're both empty.
+
+144
+00:06:46,740 --> 00:06:50,440
+And then in that case, if you
+stay, you win, you picked the
+
+145
+00:06:50,440 --> 00:06:51,250
+door correctly.
+
+146
+00:06:51,250 --> 00:06:54,940
+And if you switch to two or
+three, then you lose.
+
+147
+00:06:54,940 --> 00:06:58,400
+But if you chose door one, the
+prize is behind door two, then
+
+148
+00:06:58,400 --> 00:07:00,580
+your friend has to open door
+three, he is forced to do
+
+149
+00:07:00,580 --> 00:07:03,510
+that, then staying with lose
+but switching would win.
+
+150
+00:07:03,510 --> 00:07:06,320
+And so on for the other cases.
+
+151
+00:07:06,320 --> 00:07:13,920
+And so again, this is just an
+exhaustive list of all the
+
+152
+00:07:13,920 --> 00:07:17,020
+possible outcomes, from which
+you can see that, in fact,
+
+153
+00:07:17,020 --> 00:07:22,520
+staying wins, only if your
+first choice was correct.
+
+154
+00:07:22,520 --> 00:07:24,850
+And switching wins in
+all the other cases.
+
+155
+00:07:24,850 --> 00:07:28,780
+And so one third of the time,
+staying would win, 2/3 of the
+
+156
+00:07:28,780 --> 00:07:31,070
+time switching would win.
+
+157
+00:07:31,070 --> 00:07:35,210
+OK, so now, we have
+the answer.
+
+158
+00:07:35,210 --> 00:07:37,880
+Let's try to figure out and
+convince yourself that it's
+
+159
+00:07:37,880 --> 00:07:40,780
+actually right, because you
+might think before going
+
+160
+00:07:40,780 --> 00:07:44,870
+through this process that
+maybe it doesn't matter
+
+161
+00:07:44,870 --> 00:07:46,410
+whether you stay or you switch,
+they both have the
+
+162
+00:07:46,410 --> 00:07:47,900
+same probablility of
+winning, or maybe
+
+163
+00:07:47,900 --> 00:07:49,910
+even staying is better.
+
+164
+00:07:49,910 --> 00:07:52,950
+So why is staying worse
+and switching better?
+
+165
+00:07:52,950 --> 00:07:56,790
+Well, the first argument really
+is something that we've
+
+166
+00:07:56,790 --> 00:07:58,430
+already talked about.
+
+167
+00:07:58,430 --> 00:08:02,750
+By staying, you're essentially
+banking on your first choice
+
+168
+00:08:02,750 --> 00:08:06,390
+being correct, which is a
+relatively poor bet, because
+
+169
+00:08:06,390 --> 00:08:09,350
+you have only one in three
+chance of being right.
+
+170
+00:08:09,350 --> 00:08:13,340
+But by switching, you're
+actually banking on your first
+
+171
+00:08:13,340 --> 00:08:17,600
+choice being wrong, which is a
+relatively better bet, because
+
+172
+00:08:17,600 --> 00:08:20,100
+you're more likely to be wrong
+than right in your first
+
+173
+00:08:20,100 --> 00:08:22,580
+choice, because you're
+just picking blindly.
+
+174
+00:08:22,580 --> 00:08:27,120
+OK, so that is one intuitive
+explanation for why
+
+175
+00:08:27,120 --> 00:08:29,620
+switching is better.
+
+176
+00:08:29,620 --> 00:08:34,320
+Another slightly different way
+to think about it is that
+
+177
+00:08:34,320 --> 00:08:39,960
+instead of picking single doors,
+you're actually picking
+
+178
+00:08:39,960 --> 00:08:41,770
+groups of doors.
+
+179
+00:08:41,770 --> 00:08:44,780
+So let's say that your first
+pick was door one.
+
+180
+00:08:44,780 --> 00:08:49,510
+Then you're actually really
+deciding between door one or
+
+181
+00:08:49,510 --> 00:08:52,120
+doors two and three combined.
+
+182
+00:08:52,120 --> 00:08:53,365
+So why is that?
+
+183
+00:08:53,365 --> 00:08:56,560
+It's because by staying
+with door one, you're
+
+184
+00:08:56,560 --> 00:08:57,950
+staying with door one.
+
+185
+00:08:57,950 --> 00:09:02,360
+But by switching, you're
+actually getting two doors for
+
+186
+00:09:02,360 --> 00:09:07,460
+the price of one, because you
+know that your friend will
+
+187
+00:09:07,460 --> 00:09:11,170
+reveal one of these to be empty,
+and the other one will
+
+188
+00:09:11,170 --> 00:09:11,950
+stay closed.
+
+189
+00:09:11,950 --> 00:09:16,010
+But switching really kind of
+buys you both of these.
+
+190
+00:09:16,010 --> 00:09:21,640
+And so because it buys you two
+opportunities to win, you get
+
+191
+00:09:21,640 --> 00:09:24,210
+2/3 chance of winning, versus
+a one third chance.
+
+192
+00:09:24,210 --> 00:09:26,930
+
+193
+00:09:26,930 --> 00:09:30,920
+Another way of thinking about
+this is to increase the scale
+
+194
+00:09:30,920 --> 00:09:37,570
+of the problem, and maybe that
+will help visualize the
+
+195
+00:09:37,570 --> 00:09:39,890
+counter-intuitive answer.
+
+196
+00:09:39,890 --> 00:09:42,710
+So instead of having three
+doors, imagine that you have
+
+197
+00:09:42,710 --> 00:09:45,890
+1,000 doors that are closed.
+
+198
+00:09:45,890 --> 00:09:51,230
+And again, one prize is behind
+one of the doors.
+
+199
+00:09:51,230 --> 00:09:55,510
+And the rules are similar-- you
+pick one door first, and
+
+200
+00:09:55,510 --> 00:09:59,720
+then your friend will open
+998 other doors.
+
+201
+00:09:59,720 --> 00:10:02,370
+And these doors are guaranteed
+to be empty.
+
+202
+00:10:02,370 --> 00:10:05,450
+And now you're left with your
+initial door plus one other
+
+203
+00:10:05,450 --> 00:10:07,140
+door that is unopened.
+
+204
+00:10:07,140 --> 00:10:09,590
+So now the question is should
+you stay with your first
+
+205
+00:10:09,590 --> 00:10:14,540
+choice or switch to
+your other choice?
+
+206
+00:10:14,540 --> 00:10:18,940
+And it should be more
+intuitively obvious now that
+
+207
+00:10:18,940 --> 00:10:21,890
+the better decision would be
+to switch, because you're
+
+208
+00:10:21,890 --> 00:10:27,450
+overwhelmingly more likely to
+have picked incorrectly for
+
+209
+00:10:27,450 --> 00:10:28,250
+your first pick.
+
+210
+00:10:28,250 --> 00:10:31,000
+You have only 1 in 1,000 chance
+of getting it right.
+
+211
+00:10:31,000 --> 00:10:36,240
+So that is kind of just taking
+this to a bigger extreme and
+
+212
+00:10:36,240 --> 00:10:40,020
+really driving home
+the intuition.
+
+213
+00:10:40,020 --> 00:10:50,110
+OK, so what we've really
+discovered is that the fact
+
+214
+00:10:50,110 --> 00:10:53,430
+that the rules of the game are
+that your friend has to open
+
+215
+00:10:53,430 --> 00:10:57,840
+one of the other two doors and
+cannot reveal the prize plays
+
+216
+00:10:57,840 --> 00:10:59,580
+a big role in this problem.
+
+217
+00:10:59,580 --> 00:11:01,770
+And that is an important
+assumption.
+
+218
+00:11:01,770 --> 00:11:04,720
+OK, so now let's think
+about a slightly
+
+219
+00:11:04,720 --> 00:11:05,980
+different variation now.
+
+220
+00:11:05,980 --> 00:11:06,990
+So a different strategy.
+
+221
+00:11:06,990 --> 00:11:10,550
+Instead of just always staying
+or always switching, we have a
+
+222
+00:11:10,550 --> 00:11:15,540
+specific other strategy, which
+is that you will choose door
+
+223
+00:11:15,540 --> 00:11:19,550
+one first and then, depending on
+what your friend does, you
+
+224
+00:11:19,550 --> 00:11:21,680
+will act accordingly.
+
+225
+00:11:21,680 --> 00:11:25,620
+So if your friend opens door
+two, you will not switch.
+
+226
+00:11:25,620 --> 00:11:28,130
+And if your friend opens door
+three, you will switch.
+
+227
+00:11:28,130 --> 00:11:33,150
+So let's draw out exactly
+what happens here.
+
+228
+00:11:33,150 --> 00:11:35,160
+So you have door one
+that you've chosen.
+
+229
+00:11:35,160 --> 00:11:37,980
+
+230
+00:11:37,980 --> 00:11:42,780
+And the prize can be behind
+doors one, two, or three.
+
+231
+00:11:42,780 --> 00:11:44,590
+And again, it's equally
+likely.
+
+232
+00:11:44,590 --> 00:11:47,450
+So the probabilities of these
+branches are one third, one
+
+233
+00:11:47,450 --> 00:11:50,220
+third, and one third.
+
+234
+00:11:50,220 --> 00:11:57,970
+And now given that, your friend
+in this scenario has a
+
+235
+00:11:57,970 --> 00:12:00,130
+choice between opening
+doors two or three.
+
+236
+00:12:00,130 --> 00:12:03,510
+And so because of doors, you
+chose one, the prize actually
+
+237
+00:12:03,510 --> 00:12:06,400
+is behind one, and so two and
+three are both empty, so he
+
+238
+00:12:06,400 --> 00:12:08,030
+can choose whichever one
+he wants to open.
+
+239
+00:12:08,030 --> 00:12:11,380
+
+240
+00:12:11,380 --> 00:12:15,490
+And the problem actually hasn't
+specified how your
+
+241
+00:12:15,490 --> 00:12:16,660
+friend actually decides
+between this.
+
+242
+00:12:16,660 --> 00:12:21,310
+So we'll leave it in general.
+
+243
+00:12:21,310 --> 00:12:22,900
+So we'll say that [with]
+
+244
+00:12:22,900 --> 00:12:26,000
+probability p, your friend
+will open two, door
+
+245
+00:12:26,000 --> 00:12:26,670
+two, in this case.
+
+246
+00:12:26,670 --> 00:12:31,480
+And with the remaining
+probability 1 minus p, he will
+
+247
+00:12:31,480 --> 00:12:33,270
+open door three.
+
+248
+00:12:33,270 --> 00:12:34,340
+What about in this case?
+
+249
+00:12:34,340 --> 00:12:35,760
+Well, you chose door one.
+
+250
+00:12:35,760 --> 00:12:37,490
+The prize is actually
+behind door two.
+
+251
+00:12:37,490 --> 00:12:40,010
+So following the rules of the
+game, your friend is forced to
+
+252
+00:12:40,010 --> 00:12:40,920
+open door three.
+
+253
+00:12:40,920 --> 00:12:43,530
+So this happens with
+probability 1.
+
+254
+00:12:43,530 --> 00:12:46,710
+And similarly, if the prize is
+behind door three, your friend
+
+255
+00:12:46,710 --> 00:12:48,890
+is forced to open door two,
+which, again, happens with
+
+256
+00:12:48,890 --> 00:12:50,460
+probably 1.
+
+257
+00:12:50,460 --> 00:12:53,860
+So now let's see how this
+strategy works.
+
+258
+00:12:53,860 --> 00:12:55,300
+When do you win?
+
+259
+00:12:55,300 --> 00:13:02,300
+You win when, according to the
+strategy, your final choice is
+
+260
+00:13:02,300 --> 00:13:02,900
+the right door.
+
+261
+00:13:02,900 --> 00:13:06,160
+So according to the strategy,
+in this case, your friend
+
+262
+00:13:06,160 --> 00:13:07,650
+opened door two.
+
+263
+00:13:07,650 --> 00:13:10,560
+And according to your strategy,
+if door two is open,
+
+264
+00:13:10,560 --> 00:13:11,330
+you don't switch.
+
+265
+00:13:11,330 --> 00:13:13,660
+So you stay with your
+first choice of one.
+
+266
+00:13:13,660 --> 00:13:17,380
+And that happens to the right
+one, so you win in this case.
+
+267
+00:13:17,380 --> 00:13:18,500
+But what about here?
+
+268
+00:13:18,500 --> 00:13:22,110
+Your friend opened door three,
+and by your strategy, you do
+
+269
+00:13:22,110 --> 00:13:26,080
+switch, which is the wrong
+choice here, so you lose.
+
+270
+00:13:26,080 --> 00:13:28,750
+Here, you switch, because you
+open door three, and you
+
+271
+00:13:28,750 --> 00:13:31,460
+switch to the right door,
+so that wins.
+
+272
+00:13:31,460 --> 00:13:34,910
+And this one, you don't
+switch, and you lose.
+
+273
+00:13:34,910 --> 00:13:39,110
+All right, so what is the final
+probability of winning?
+
+274
+00:13:39,110 --> 00:13:42,130
+And the final probably of
+winning is the probability of
+
+275
+00:13:42,130 --> 00:13:45,730
+getting to these two outcomes,
+which happens with probability
+
+276
+00:13:45,730 --> 00:13:52,510
+one third times p plus
+one third times 1.
+
+277
+00:13:52,510 --> 00:13:53,670
+So one third.
+
+278
+00:13:53,670 --> 00:13:57,010
+So the final answer
+is 1/3 p plus 1/3.
+
+279
+00:13:57,010 --> 00:14:00,520
+And notice now that the answer
+isn't just a number.
+
+280
+00:14:00,520 --> 00:14:04,400
+Like in this case, the answer
+was one third and 2/3.
+
+281
+00:14:04,400 --> 00:14:07,930
+And it didn't actually matter
+how your friend chose between
+
+282
+00:14:07,930 --> 00:14:10,220
+these two doors when
+he had a choice.
+
+283
+00:14:10,220 --> 00:14:12,680
+But in this case, it actually
+doesn't matter, because p
+
+284
+00:14:12,680 --> 00:14:14,090
+stays in the answer.
+
+285
+00:14:14,090 --> 00:14:17,420
+But one thing that we can do
+is we can compare this with
+
+286
+00:14:17,420 --> 00:14:18,780
+these strategies.
+
+287
+00:14:18,780 --> 00:14:22,470
+So what we see is that, well, p
+is a probability, so it has
+
+288
+00:14:22,470 --> 00:14:23,920
+to be between 0 and 1.
+
+289
+00:14:23,920 --> 00:14:27,000
+So this probability winning for
+this strategy is somewhere
+
+290
+00:14:27,000 --> 00:14:31,130
+between one third times 0 plus
+one third, which is one third.
+
+291
+00:14:31,130 --> 00:14:33,460
+And one third times 1 plus
+one third, which is 2/3.
+
+292
+00:14:33,460 --> 00:14:38,530
+So the strategy is somewhere
+between 2/3 and one third.
+
+293
+00:14:38,530 --> 00:14:43,560
+So what we see is that no matter
+what, this strategy is
+
+294
+00:14:43,560 --> 00:14:46,200
+at least as good as staying all
+the time, because that was
+
+295
+00:14:46,200 --> 00:14:47,060
+only one third.
+
+296
+00:14:47,060 --> 00:14:51,610
+And no matter what it can't be
+any better than switching,
+
+297
+00:14:51,610 --> 00:14:53,850
+which was 2/3.
+
+298
+00:14:53,850 --> 00:14:56,850
+So you can also come up with
+lots of other different
+
+299
+00:14:56,850 --> 00:15:00,970
+strategies and see what the
+probabilities of winning are
+
+300
+00:15:00,970 --> 00:15:02,580
+in that case.
+
+301
+00:15:02,580 --> 00:15:05,100
+OK, so what have we learned
+in this problem?
+
+302
+00:15:05,100 --> 00:15:06,380
+What are the key takeaways?
+
+303
+00:15:06,380 --> 00:15:10,680
+One important takeaway is that
+it's important to really
+
+304
+00:15:10,680 --> 00:15:13,500
+understand a problem and arrive
+at a concrete and
+
+305
+00:15:13,500 --> 00:15:15,530
+precise set of assumptions.
+
+306
+00:15:15,530 --> 00:15:19,070
+So really have a precise problem
+that you're solving.
+
+307
+00:15:19,070 --> 00:15:24,460
+And another important takeaway
+is to think about your final
+
+308
+00:15:24,460 --> 00:15:27,230
+answer, make sure that that
+actually makes sense to you,
+
+309
+00:15:27,230 --> 00:15:30,740
+make sure that you can justify
+it somehow intuitively.
+
+310
+00:15:30,740 --> 00:15:35,030
+In that case, you can actually
+convince yourself that your
+
+311
+00:15:35,030 --> 00:15:37,890
+answer is actually correct,
+because sometimes go through a
+
+312
+00:15:37,890 --> 00:15:41,660
+lot of formulas, and sometimes
+your formula may have an error
+
+313
+00:15:41,660 --> 00:15:43,040
+in there somewhere.
+
+314
+00:15:43,040 --> 00:15:45,040
+But you could take the final
+answer and ask yourself does
+
+315
+00:15:45,040 --> 00:15:48,100
+this actually makes sense,
+intuitively?
+
+316
+00:15:48,100 --> 00:15:52,250
+That's often a very good check
+and sometimes you can catch
+
+317
+00:15:52,250 --> 00:15:55,400
+errors in your calculations
+that way.
+
+318
+00:15:55,400 --> 00:15:57,160
+OK so we'll see next time.
+
+319
+00:15:57,160 --> 00:16:03,000

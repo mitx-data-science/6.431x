@@ -1,0 +1,788 @@
+1
+00:00:00,000 --> 00:00:00,300
+
+2
+00:00:00,300 --> 00:00:00,800
+Hi.
+
+3
+00:00:00,800 --> 00:00:03,180
+In this problem, we're
+going to get more practice
+
+4
+00:00:03,180 --> 00:00:04,787
+working with Poisson processes.
+
+5
+00:00:04,787 --> 00:00:06,370
+And in particular,
+we're going to look
+
+6
+00:00:06,370 --> 00:00:08,860
+at how to merge two
+Poisson processes,
+
+7
+00:00:08,860 --> 00:00:13,380
+and then think about where each
+arrival in the merged process
+
+8
+00:00:13,380 --> 00:00:15,120
+came from.
+
+9
+00:00:15,120 --> 00:00:17,370
+In this problem, we
+have a service station
+
+10
+00:00:17,370 --> 00:00:20,450
+that services jobs of two types.
+
+11
+00:00:20,450 --> 00:00:24,800
+Type A jobs we're told arrive
+as a Poisson process with a rate
+
+12
+00:00:24,800 --> 00:00:28,410
+lambda A equals 3
+jobs per minute.
+
+13
+00:00:28,410 --> 00:00:32,640
+Type B jobs also arrive as a
+Poisson process with a rate
+
+14
+00:00:32,640 --> 00:00:35,560
+lambda B equals 4
+jobs per minute.
+
+15
+00:00:35,560 --> 00:00:38,230
+And we're also told
+that these two Poisson
+
+16
+00:00:38,230 --> 00:00:41,040
+processes are independent.
+
+17
+00:00:41,040 --> 00:00:46,820
+Part (a) is looking for the
+PMF, expectation, and variance
+
+18
+00:00:46,820 --> 00:00:49,530
+of the number of
+total jobs that arrive
+
+19
+00:00:49,530 --> 00:00:52,380
+in any 3-minute interval.
+
+20
+00:00:52,380 --> 00:00:55,040
+Let's define a random
+variable for that.
+
+21
+00:00:55,040 --> 00:01:01,910
+So let's let N be the number
+of total jobs in 3 minutes.
+
+22
+00:01:01,910 --> 00:01:04,730
+
+23
+00:01:04,730 --> 00:01:07,400
+We know that for
+[a] Poisson process,
+
+24
+00:01:07,400 --> 00:01:12,050
+the distribution for the number
+of arrivals in any given time
+
+25
+00:01:12,050 --> 00:01:16,470
+interval tau is given by
+a Poisson distribution.
+
+26
+00:01:16,470 --> 00:01:18,750
+But we have to do a little
+bit more in this case
+
+27
+00:01:18,750 --> 00:01:21,710
+because we're looking for
+the number of total jobs.
+
+28
+00:01:21,710 --> 00:01:24,610
+And here, we're only
+given Poisson processes
+
+29
+00:01:24,610 --> 00:01:28,420
+for the individual
+types of jobs.
+
+30
+00:01:28,420 --> 00:01:30,970
+But because they're independent,
+what we can do first
+
+31
+00:01:30,970 --> 00:01:34,550
+is merge these two processes.
+
+32
+00:01:34,550 --> 00:01:41,430
+And what we'll get is a merged
+process with a rate lambda
+
+33
+00:01:41,430 --> 00:01:44,785
+that's equal to the sum of
+the two individual lambda
+
+34
+00:01:44,785 --> 00:01:51,725
+A and lambda B. So what we get
+is total jobs arrive at a rate
+
+35
+00:01:51,725 --> 00:01:56,390
+lambda equals to 7 jobs per
+minute in this merged process.
+
+36
+00:01:56,390 --> 00:02:01,180
+Now, what we can do is apply
+the Poisson distribution
+
+37
+00:02:01,180 --> 00:02:02,940
+to this merged process.
+
+38
+00:02:02,940 --> 00:02:04,620
+So in general, the
+Poisson distribution
+
+39
+00:02:04,620 --> 00:02:09,479
+is equal to lambda
+times tau to the n times
+
+40
+00:02:09,479 --> 00:02:15,620
+e to the minus lambda
+tau over n factorial.
+
+41
+00:02:15,620 --> 00:02:19,465
+In our case, lambda
+we just said was 7.
+
+42
+00:02:19,465 --> 00:02:20,840
+We're given that
+we're interested
+
+43
+00:02:20,840 --> 00:02:24,440
+in a 3-minute
+interval, so tau was 3.
+
+44
+00:02:24,440 --> 00:02:28,110
+So let's substitute that in and
+we get lambda times tau is 21.
+
+45
+00:02:28,110 --> 00:02:35,490
+So we get 21 to the n times e to
+the minus 21 over n factorial.
+
+46
+00:02:35,490 --> 00:02:37,850
+And we should
+specify that this is
+
+47
+00:02:37,850 --> 00:02:43,690
+valid for n equals
+0, 1, 2, and so on.
+
+48
+00:02:43,690 --> 00:02:46,410
+The last part of
+this part (a) asks us
+
+49
+00:02:46,410 --> 00:02:50,250
+for the expectation
+and the variance.
+
+50
+00:02:50,250 --> 00:02:54,040
+We know that the expectation
+of a Poisson random variable
+
+51
+00:02:54,040 --> 00:02:55,980
+is equal to lambda tau.
+
+52
+00:02:55,980 --> 00:02:57,330
+In this case, lambda tau is 21.
+
+53
+00:02:57,330 --> 00:03:00,680
+
+54
+00:03:00,680 --> 00:03:04,320
+We also know that the variance
+of a Poisson distribution
+
+55
+00:03:04,320 --> 00:03:06,010
+is, again, equal to lambda tau.
+
+56
+00:03:06,010 --> 00:03:10,950
+So the variance of n is
+also equal to 21 here.
+
+57
+00:03:10,950 --> 00:03:15,690
+OK, in part (b), we're told that
+we have a 10-minute interval
+
+58
+00:03:15,690 --> 00:03:18,740
+and we know that there were
+exactly 10 total jobs that
+
+59
+00:03:18,740 --> 00:03:20,852
+arrived in this
+10-minute interval.
+
+60
+00:03:20,852 --> 00:03:22,810
+And what we're asked to
+find is the probability
+
+61
+00:03:22,810 --> 00:03:29,390
+that exactly 3 of these
+10 jobs were of type A.
+
+62
+00:03:29,390 --> 00:03:34,590
+So in order to do that, let's
+go back to our merged process
+
+63
+00:03:34,590 --> 00:03:38,660
+and consider any arrival
+in this merged process.
+
+64
+00:03:38,660 --> 00:03:40,510
+Let's say this one.
+
+65
+00:03:40,510 --> 00:03:46,690
+We know that the
+probability that any arrival
+
+66
+00:03:46,690 --> 00:03:53,910
+in the merged process
+came from type A
+
+67
+00:03:53,910 --> 00:03:55,620
+given that there
+was an arrival, we
+
+68
+00:03:55,620 --> 00:03:58,890
+know that this probability is
+equal to this ratio, lambda
+
+69
+00:03:58,890 --> 00:04:06,100
+A over lambda A plus lambda
+B. And so in this case,
+
+70
+00:04:06,100 --> 00:04:08,330
+we know that given
+that there was
+
+71
+00:04:08,330 --> 00:04:10,640
+an arrival in this
+merged process,
+
+72
+00:04:10,640 --> 00:04:15,000
+so there was some job of
+either type that arrived,
+
+73
+00:04:15,000 --> 00:04:19,029
+the probability that that
+job was of type A is 3/7.
+
+74
+00:04:19,029 --> 00:04:20,529
+And the other thing
+that we can note
+
+75
+00:04:20,529 --> 00:04:23,270
+is that suppose
+that we consider now
+
+76
+00:04:23,270 --> 00:04:25,710
+another arrival in
+this merged process.
+
+77
+00:04:25,710 --> 00:04:28,650
+We also know that whether
+or not this arrival
+
+78
+00:04:28,650 --> 00:04:31,410
+was of type A is independent of
+whether or not this arrival is
+
+79
+00:04:31,410 --> 00:04:35,731
+of type A. Because of the fresh
+start property of the Poisson
+
+80
+00:04:35,731 --> 00:04:36,230
+process.
+
+81
+00:04:36,230 --> 00:04:43,270
+So after this arrival arrives,
+the process starts anew.
+
+82
+00:04:43,270 --> 00:04:45,900
+And so what happens here
+is independent of what
+
+83
+00:04:45,900 --> 00:04:48,180
+happens here.
+
+84
+00:04:48,180 --> 00:04:51,680
+Now, part (b),
+remember, is asking us
+
+85
+00:04:51,680 --> 00:04:54,470
+for the probability
+of exactly 3 type
+
+86
+00:04:54,470 --> 00:04:57,110
+A jobs out of 10 total jobs.
+
+87
+00:04:57,110 --> 00:05:00,870
+Now, we can think of this
+from the lens of successes
+
+88
+00:05:00,870 --> 00:05:03,620
+out of total number of trials.
+
+89
+00:05:03,620 --> 00:05:08,690
+If we view an arrival coming
+from type A as a success,
+
+90
+00:05:08,690 --> 00:05:12,580
+then what we're looking
+for is the probability
+
+91
+00:05:12,580 --> 00:05:15,470
+of 3 successes out of
+a total of 10 trials.
+
+92
+00:05:15,470 --> 00:05:18,040
+And that sounds like a binomial.
+
+93
+00:05:18,040 --> 00:05:21,200
+And so that is exactly
+what we're going to do.
+
+94
+00:05:21,200 --> 00:05:28,250
+We want to find the probability
+of 3 successes in 10 trials.
+
+95
+00:05:28,250 --> 00:05:31,150
+
+96
+00:05:31,150 --> 00:05:36,580
+And we've just calculated that
+the probability of any given
+
+97
+00:05:36,580 --> 00:05:40,890
+trial being a success is 3/7.
+
+98
+00:05:40,890 --> 00:05:45,620
+And so by using the binomial,
+we know that this is equal to 10
+
+99
+00:05:45,620 --> 00:05:53,835
+choose 3 times 3/7 to
+the third power times 4/7
+
+100
+00:05:53,835 --> 00:05:54,710
+to the seventh power.
+
+101
+00:05:54,710 --> 00:05:59,220
+
+102
+00:05:59,220 --> 00:06:05,270
+Now, part (c) is telling
+us that we started
+
+103
+00:06:05,270 --> 00:06:08,990
+at-- suppose we
+start at some time 0
+
+104
+00:06:08,990 --> 00:06:13,050
+and we focus only on what
+happens after this time.
+
+105
+00:06:13,050 --> 00:06:17,310
+We want to know, what is
+the distribution, the PMF,
+
+106
+00:06:17,310 --> 00:06:24,820
+of the number of type B arrivals
+until the first type A arrival?
+
+107
+00:06:24,820 --> 00:06:28,950
+Everything is relative to
+after some arbitrary time 0.
+
+108
+00:06:28,950 --> 00:06:33,875
+So let's say-- this is
+again, our merged process.
+
+109
+00:06:33,875 --> 00:06:36,250
+These are the arrivals in the
+merged process and each one
+
+110
+00:06:36,250 --> 00:06:40,500
+can be of either
+type A or type B.
+
+111
+00:06:40,500 --> 00:06:45,100
+For example, say this is
+where the first type A arrival
+
+112
+00:06:45,100 --> 00:06:45,970
+occurs.
+
+113
+00:06:45,970 --> 00:06:47,750
+Well, what that
+immediately tells
+
+114
+00:06:47,750 --> 00:06:54,007
+us is that these three prior
+arrivals were all of type B.
+
+115
+00:06:54,007 --> 00:06:55,590
+And so what we can
+take away from this
+
+116
+00:06:55,590 --> 00:07:00,150
+is that once we know when the
+first type A arrival occurs,
+
+117
+00:07:00,150 --> 00:07:03,240
+that tells us immediately how
+many Type B arrivals there
+
+118
+00:07:03,240 --> 00:07:08,500
+were up to that
+first type A arrival.
+
+119
+00:07:08,500 --> 00:07:13,750
+And this is exactly
+the quantity that we're
+
+120
+00:07:13,750 --> 00:07:16,650
+trying to find the PMF of.
+
+121
+00:07:16,650 --> 00:07:17,150
+OK.
+
+122
+00:07:17,150 --> 00:07:20,840
+And if you think about it,
+what we're looking for now
+
+123
+00:07:20,840 --> 00:07:24,890
+is related to the
+number of arrivals
+
+124
+00:07:24,890 --> 00:07:27,020
+until the first type A arrival.
+
+125
+00:07:27,020 --> 00:07:29,870
+And that sounds
+like a geometric.
+
+126
+00:07:29,870 --> 00:07:32,930
+The number of trials until the
+first success, where success
+
+127
+00:07:32,930 --> 00:07:37,490
+now we can think of
+as a type A arrival.
+
+128
+00:07:37,490 --> 00:07:40,210
+OK, so let's define a
+random variable again,
+
+129
+00:07:40,210 --> 00:07:55,180
+K. K is the number of B arrivals
+until the first A arrival.
+
+130
+00:07:55,180 --> 00:07:57,480
+That's what we want to find.
+
+131
+00:07:57,480 --> 00:08:03,390
+And the PMF of K, this
+is the probability
+
+132
+00:08:03,390 --> 00:08:06,970
+that there are k
+arrivals, k B arrivals up
+
+133
+00:08:06,970 --> 00:08:08,760
+to the first A arrival.
+
+134
+00:08:08,760 --> 00:08:10,535
+And what we've just
+said is that that
+
+135
+00:08:10,535 --> 00:08:16,310
+is equivalent to being-- that
+the first A arrival occurs
+
+136
+00:08:16,310 --> 00:08:23,170
+on the k plus 1-- occurs
+on arrival number k plus 1.
+
+137
+00:08:23,170 --> 00:08:25,800
+So if this is arrival
+number k plus 1,
+
+138
+00:08:25,800 --> 00:08:28,340
+then we know that
+there were exactly
+
+139
+00:08:28,340 --> 00:08:30,790
+k B arrivals prior to it.
+
+140
+00:08:30,790 --> 00:08:40,539
+OK, so what is the probability
+that first A arrival is
+
+141
+00:08:40,539 --> 00:08:43,559
+at k plus 1?
+
+142
+00:08:43,559 --> 00:08:47,560
+
+143
+00:08:47,560 --> 00:08:54,270
+Well, that means that it's going
+to be the geometric because we
+
+144
+00:08:54,270 --> 00:09:01,240
+need k failures followed by a
+success at the k plus 1 trial.
+
+145
+00:09:01,240 --> 00:09:07,040
+So we need k failures.
+
+146
+00:09:07,040 --> 00:09:11,220
+Meaning that the first
+k arrivals must all
+
+147
+00:09:11,220 --> 00:09:17,060
+have come from type B. And we
+can do a similar argument here
+
+148
+00:09:17,060 --> 00:09:20,350
+to show that for any
+arrival, the probability
+
+149
+00:09:20,350 --> 00:09:22,850
+that it's from type B is
+just lambda B over lambda A
+
+150
+00:09:22,850 --> 00:09:25,960
+plus lambda B, is 4/7.
+
+151
+00:09:25,960 --> 00:09:29,090
+So we need the first k of those
+to be of type B. And then, we
+
+152
+00:09:29,090 --> 00:09:34,550
+need the k plus 1
+arrival to be of type A.
+
+153
+00:09:34,550 --> 00:09:37,840
+And that's with probably 3/7.
+
+154
+00:09:37,840 --> 00:09:40,690
+And so that gives us our answer.
+
+155
+00:09:40,690 --> 00:09:47,330
+And this is valid for k
+equals 0, 1, 2, and so on.
+
+156
+00:09:47,330 --> 00:09:50,490
+
+157
+00:09:50,490 --> 00:09:51,130
+OK.
+
+158
+00:09:51,130 --> 00:09:53,580
+And so in this problem,
+we got some more practice
+
+159
+00:09:53,580 --> 00:09:56,097
+with Poisson
+processes, specifically
+
+160
+00:09:56,097 --> 00:09:57,680
+thinking about how
+to merge processes.
+
+161
+00:09:57,680 --> 00:09:59,810
+And then, taking
+the merged process
+
+162
+00:09:59,810 --> 00:10:02,860
+and calculating
+probabilities related
+
+163
+00:10:02,860 --> 00:10:06,510
+to going back to the
+source, the origin,
+
+164
+00:10:06,510 --> 00:10:09,880
+whether it was from lambda A
+or lambda-- type A or type B.
+
+165
+00:10:09,880 --> 00:10:12,000
+And we saw that there
+are some connections
+
+166
+00:10:12,000 --> 00:10:17,490
+that we can make to the binomial
+and the geometric in this case.
+
+167
+00:10:17,490 --> 00:10:20,630
+So I hope that was helpful
+and see you next time.

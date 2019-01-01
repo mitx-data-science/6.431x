@@ -1,0 +1,132 @@
+1
+00:00:00,000 --> 00:00:00,990
+
+
+2
+00:00:00,990 --> 00:00:03,900
+- The fire department
+receives emergency calls
+
+3
+00:00:03,900 --> 00:00:06,550
+from all over the city.
+
+4
+00:00:06,550 --> 00:00:09,090
+If we believe that calls
+occur in a completely
+
+5
+00:00:09,090 --> 00:00:12,180
+random and
+uncoordinated fashion,
+
+6
+00:00:12,180 --> 00:00:16,875
+how do we translate these
+beliefs into a tractable model?
+
+7
+00:00:16,875 --> 00:00:19,010
+Then, once we have
+a model, there
+
+8
+00:00:19,010 --> 00:00:21,980
+are many questions
+we may want to raise.
+
+9
+00:00:21,980 --> 00:00:27,640
+For example, how many calls are
+expected tomorrow afternoon?
+
+10
+00:00:27,640 --> 00:00:31,294
+How much does this
+number fluctuate?
+
+11
+00:00:31,294 --> 00:00:32,710
+What is the
+probability that there
+
+12
+00:00:32,710 --> 00:00:34,955
+are no calls within
+the next three hours?
+
+13
+00:00:34,955 --> 00:00:41,290
+
+
+14
+00:00:41,290 --> 00:00:43,210
+The fire department
+also distinguishes
+
+15
+00:00:43,210 --> 00:00:45,820
+between different
+types of calls,
+
+16
+00:00:45,820 --> 00:00:48,460
+for example, those
+related to fires
+
+17
+00:00:48,460 --> 00:00:52,630
+or the less serious
+calls, like whenever
+
+18
+00:00:52,630 --> 00:00:55,330
+a cat is stuck on a tree.
+
+19
+00:00:55,330 --> 00:00:58,690
+How do we refine our model to
+account for the different types
+
+20
+00:00:58,690 --> 00:01:00,330
+of calls?
+
+21
+00:01:00,330 --> 00:01:04,420
+What can we say about the
+number of less serious calls
+
+22
+00:01:04,420 --> 00:01:07,650
+before the first
+call about the fire?
+
+23
+00:01:07,650 --> 00:01:10,600
+In this unit, we will
+study Bernoulli processes
+
+24
+00:01:10,600 --> 00:01:13,480
+in discrete time and
+Poisson processes
+
+25
+00:01:13,480 --> 00:01:16,510
+in continuous time, which
+provide the framework
+
+26
+00:01:16,510 --> 00:01:21,310
+for describing and analyzing all
+sorts of situations involving
+
+27
+00:01:21,310 --> 00:01:25,191
+a sequence of requests
+or customer arrivals.
+
+28
+00:01:25,191 --> 00:01:25,691

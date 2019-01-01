@@ -1,7 +1,3 @@
----
-
-
----
 
 <h2 id="introduction">1. Introduction</h2>
 <p>Welcome to 6.431x, an introduction to probabilistic models, including random processes and the basic elements of statistical inference.</p>

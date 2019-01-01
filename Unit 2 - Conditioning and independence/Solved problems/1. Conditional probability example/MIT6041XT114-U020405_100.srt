@@ -1,0 +1,1251 @@
+1
+00:00:00,000 --> 00:00:00,820
+
+2
+00:00:00,820 --> 00:00:01,640
+Hi.
+
+3
+00:00:01,640 --> 00:00:04,500
+Today we're going to do another
+fun problem that
+
+4
+00:00:04,500 --> 00:00:06,110
+involves rolling [of]
+
+5
+00:00:06,110 --> 00:00:07,750
+two dice.
+
+6
+00:00:07,750 --> 00:00:11,210
+So if you guys happen to
+frequent casinos, this problem
+
+7
+00:00:11,210 --> 00:00:13,750
+might be really useful
+for you.
+
+8
+00:00:13,750 --> 00:00:14,680
+I'm just kidding.
+
+9
+00:00:14,680 --> 00:00:18,310
+But in all seriousness, this
+problem is a good problem,
+
+10
+00:00:18,310 --> 00:00:22,760
+because it's going to remind
+us how and when to use the
+
+11
+00:00:22,760 --> 00:00:24,060
+discrete uniform law.
+
+12
+00:00:24,060 --> 00:00:26,650
+Don't worry, I'll review
+what that says.
+
+13
+00:00:26,650 --> 00:00:29,140
+And it's also going to exercise
+your understanding of
+
+14
+00:00:29,140 --> 00:00:31,030
+conditional probability.
+
+15
+00:00:31,030 --> 00:00:32,110
+So quick recap.
+
+16
+00:00:32,110 --> 00:00:35,140
+The discrete uniform law says
+that when your sample space is
+
+17
+00:00:35,140 --> 00:00:38,670
+discrete, and when the outcomes
+in your sample space
+
+18
+00:00:38,670 --> 00:00:42,750
+are equally likely, then to
+compute the probability of any
+
+19
+00:00:42,750 --> 00:00:47,855
+event A, you can simply count
+the number of outcomes in A
+
+20
+00:00:47,855 --> 00:00:52,730
+and divide it by the total
+number of possible outcomes.
+
+21
+00:00:52,730 --> 00:00:55,130
+OK, so coming back
+to our problem.
+
+22
+00:00:55,130 --> 00:00:59,060
+The problem statement tells
+us that we roll two fair
+
+23
+00:00:59,060 --> 00:01:01,150
+six-sided [dice].
+
+24
+00:01:01,150 --> 00:01:05,069
+And it also tells us that each
+one of the 36 possible
+
+25
+00:01:05,069 --> 00:01:08,940
+outcomes is assumed to
+be equally likely.
+
+26
+00:01:08,940 --> 00:01:12,220
+So you know alarm bell should
+be going off in your head.
+
+27
+00:01:12,220 --> 00:01:14,810
+Our sample space is
+clearly discrete.
+
+28
+00:01:14,810 --> 00:01:16,930
+And it says explicitly that all
+
+29
+00:01:16,930 --> 00:01:18,380
+outcomes are equally likely.
+
+30
+00:01:18,380 --> 00:01:22,020
+So clearly, we can use the
+discrete uniform law.
+
+31
+00:01:22,020 --> 00:01:25,850
+And again, this is helpful
+because it reduces a problem
+
+32
+00:01:25,850 --> 00:01:30,090
+of computing probabilities
+to a problem of counting.
+
+33
+00:01:30,090 --> 00:01:32,950
+OK, and before we go any
+further, I just want to review
+
+34
+00:01:32,950 --> 00:01:34,850
+what this graph is plotting.
+
+35
+00:01:34,850 --> 00:01:38,990
+You've seen it a few times, but
+just to clarify, on one
+
+36
+00:01:38,990 --> 00:01:42,430
+axis, we're plotting the outcome
+of the first die roll,
+
+37
+00:01:42,430 --> 00:01:44,360
+and on the second axis,
+we're plotting [the]
+
+38
+00:01:44,360 --> 00:01:46,810
+outcome of the second
+die roll.
+
+39
+00:01:46,810 --> 00:01:50,750
+So if you got a 4 on your first
+die, and you get a 1 on
+
+40
+00:01:50,750 --> 00:01:54,590
+your second die, that
+corresponds to this point over
+
+41
+00:01:54,590 --> 00:01:56,940
+4 and up 1.
+
+42
+00:01:56,940 --> 00:02:01,310
+OK, so part (a) asks us to
+find the probability that
+
+43
+00:02:01,310 --> 00:02:04,500
+doubles are rolled.
+
+44
+00:02:04,500 --> 00:02:07,480
+So let's use some shorthand.
+
+45
+00:02:07,480 --> 00:02:10,960
+We're going to let D be the
+event that doubles are rolled.
+
+46
+00:02:10,960 --> 00:02:14,720
+And we want to compute
+the probability of D.
+
+47
+00:02:14,720 --> 00:02:17,570
+I argue before we can use the
+discrete uniform law.
+
+48
+00:02:17,570 --> 00:02:22,470
+So if we apply that, we just
+get the number of outcomes
+
+49
+00:02:22,470 --> 00:02:26,050
+that comprise the event "doubles
+rolled", divided by
+
+50
+00:02:26,050 --> 00:02:30,360
+36, because there are 36
+possible outcomes, which you
+
+51
+00:02:30,360 --> 00:02:34,380
+can see just by counting
+the dots in this graph.
+
+52
+00:02:34,380 --> 00:02:37,710
+Six possible outcomes for the
+first die, six possible
+
+53
+00:02:37,710 --> 00:02:38,970
+outcomes for the second die.
+
+54
+00:02:38,970 --> 00:02:39,555
+That's how you--
+
+55
+00:02:39,555 --> 00:02:42,800
+6 times 6 is 36.
+
+56
+00:02:42,800 --> 00:02:45,440
+So I've been assuming this
+entire time that you know what
+
+57
+00:02:45,440 --> 00:02:46,250
+doubles are.
+
+58
+00:02:46,250 --> 00:02:50,470
+For those of you who don't know,
+doubles is essentially
+
+59
+00:02:50,470 --> 00:02:54,190
+when that number on the first
+die matches the number on the
+
+60
+00:02:54,190 --> 00:02:56,120
+second die.
+
+61
+00:02:56,120 --> 00:03:00,480
+So this outcome here 1-1 is
+part of the event "doubles
+
+62
+00:03:00,480 --> 00:03:08,076
+rolled." Similarly, 2-2, 3-3,
+4-4, 5-5, and 6-6--
+
+63
+00:03:08,076 --> 00:03:11,510
+these six points comprise the
+event "doubles rolled."
+
+64
+00:03:11,510 --> 00:03:16,000
+So we can go ahead and
+put 6 over 36,
+
+65
+00:03:16,000 --> 00:03:18,340
+which is equal to 1/6.
+
+66
+00:03:18,340 --> 00:03:20,730
+So we're done with part (a).
+
+67
+00:03:20,730 --> 00:03:22,530
+We haven't seen any
+conditioning yet.
+
+68
+00:03:22,530 --> 00:03:24,840
+The conditioning comes
+in part (b).
+
+69
+00:03:24,840 --> 00:03:28,060
+So in part (b) we're still
+interested in the event D, in
+
+70
+00:03:28,060 --> 00:03:31,020
+the event that "doubles are
+rolled." But now we want to
+
+71
+00:03:31,020 --> 00:03:35,710
+compute this probability
+conditioned on the event that
+
+72
+00:03:35,710 --> 00:03:39,930
+the sum of the results is
+less than or equal to 4.
+
+73
+00:03:39,930 --> 00:03:45,150
+So I'm going to use this
+shorthand "sum less than or
+
+74
+00:03:45,150 --> 00:03:50,100
+equal to 4" to denote the event
+that the role results in
+
+75
+00:03:50,100 --> 00:03:53,010
+the sum of 4 or smaller.
+
+76
+00:03:53,010 --> 00:03:55,570
+So there's two ways we're
+going to go about
+
+77
+00:03:55,570 --> 00:03:57,660
+solving part (b).
+
+78
+00:03:57,660 --> 00:03:59,900
+Let's just jump right
+into the first way.
+
+79
+00:03:59,900 --> 00:04:03,330
+The first way is applying the
+definition of conditional
+
+80
+00:04:03,330 --> 00:04:04,430
+probability.
+
+81
+00:04:04,430 --> 00:04:10,440
+So hopefully you remember that
+this is just probability of D
+
+82
+00:04:10,440 --> 00:04:14,480
+intersect "sum less than or
+equal to 4", divided by
+
+83
+00:04:14,480 --> 00:04:19,870
+probability of "sum less
+than or equal to 4".
+
+84
+00:04:19,870 --> 00:04:23,810
+Now, "sum less than or equal
+to 4" and D intersect "sum
+
+85
+00:04:23,810 --> 00:04:26,950
+less than or equal to 4"
+are just two events.
+
+86
+00:04:26,950 --> 00:04:29,740
+And so we can apply the discrete
+uniform law to
+
+87
+00:04:29,740 --> 00:04:33,170
+calculate both the numerator
+and the denominator.
+
+88
+00:04:33,170 --> 00:04:36,050
+So let's start with the
+denominator first because it
+
+89
+00:04:36,050 --> 00:04:38,070
+seems a little bit easier.
+
+90
+00:04:38,070 --> 00:04:42,930
+So "sum less than or equal to
+4", let's figure this out.
+
+91
+00:04:42,930 --> 00:04:45,970
+Well, 1-1 gives us a sum
+of 2, that's less
+
+92
+00:04:45,970 --> 00:04:48,000
+than or equal to 4.
+
+93
+00:04:48,000 --> 00:04:49,535
+2-1 gives us 3.
+
+94
+00:04:49,535 --> 00:04:51,346
+3-1 gives us 4.
+
+95
+00:04:51,346 --> 00:04:55,960
+4-1 gives us 5, so we don't want
+to include this or this,
+
+96
+00:04:55,960 --> 00:04:57,160
+or this point.
+
+97
+00:04:57,160 --> 00:04:59,380
+And you can sort of convince
+yourself that the next point
+
+98
+00:04:59,380 --> 00:05:01,420
+we want to include
+is this one.
+
+99
+00:05:01,420 --> 00:05:05,040
+That corresponds to 2-2, which
+is 4, so it makes sense that
+
+100
+00:05:05,040 --> 00:05:09,410
+these guys should form the
+boundary, because all dots
+
+101
+00:05:09,410 --> 00:05:12,540
+sort of up and to the right
+will have a bigger sum.
+
+102
+00:05:12,540 --> 00:05:14,350
+3-1 gives us 4.
+
+103
+00:05:14,350 --> 00:05:18,170
+And 1-2 gives us 3.
+
+104
+00:05:18,170 --> 00:05:20,172
+So these six points--
+
+105
+00:05:20,172 --> 00:05:22,850
+1, 2, 3, 4, 5, 6--
+
+106
+00:05:22,850 --> 00:05:26,970
+are the outcomes that comprise
+the event "sum less than or
+
+107
+00:05:26,970 --> 00:05:28,910
+equal to 4".
+
+108
+00:05:28,910 --> 00:05:34,480
+So we can go ahead and write in
+the denominator, 6 over 36,
+
+109
+00:05:34,480 --> 00:05:38,310
+because we just counted the
+outcomes in "sum less than or
+
+110
+00:05:38,310 --> 00:05:40,620
+equal to 4" and divided
+it by the number
+
+111
+00:05:40,620 --> 00:05:43,170
+of outcomes in omega.
+
+112
+00:05:43,170 --> 00:05:45,510
+Now, let's compute
+the numerator.
+
+113
+00:05:45,510 --> 00:05:49,410
+D intersect "sum less
+than or equal to 4".
+
+114
+00:05:49,410 --> 00:05:51,920
+So we already found the
+blue check marks.
+
+115
+00:05:51,920 --> 00:05:55,380
+Those correspond to "sum less
+than or equal to 4".
+
+116
+00:05:55,380 --> 00:05:58,350
+Out of the points that have blue
+check marks, which ones
+
+117
+00:05:58,350 --> 00:05:59,740
+correspond to doubles?
+
+118
+00:05:59,740 --> 00:06:02,590
+Well, they're actually
+already circled.
+
+119
+00:06:02,590 --> 00:06:04,370
+It's just these two points.
+
+120
+00:06:04,370 --> 00:06:08,920
+So we don't even need to circle
+those, so we get 2 over
+
+121
+00:06:08,920 --> 00:06:11,830
+36, using the discrete
+uniform law.
+
+122
+00:06:11,830 --> 00:06:15,080
+And you see that these two
+36s cancel each other.
+
+123
+00:06:15,080 --> 00:06:19,980
+So you just get 2/6 or 1/3.
+
+124
+00:06:19,980 --> 00:06:23,780
+So that is one way of solving
+part (b), but I want to take
+
+125
+00:06:23,780 --> 00:06:25,930
+you, guys, through a different
+way, which I think is
+
+126
+00:06:25,930 --> 00:06:30,240
+important, and that make sure
+you really understand what
+
+127
+00:06:30,240 --> 00:06:32,630
+conditioning means.
+
+128
+00:06:32,630 --> 00:06:38,710
+So another way that you can
+solve part (b) is to say, OK,
+
+129
+00:06:38,710 --> 00:06:41,710
+we are now in the universe,
+we are in the conditional
+
+130
+00:06:41,710 --> 00:06:44,730
+universe, where we know
+the sum of our
+
+131
+00:06:44,730 --> 00:06:49,090
+results is 4 or smaller.
+
+132
+00:06:49,090 --> 00:06:55,600
+And so that means our new sample
+space is really just
+
+133
+00:06:55,600 --> 00:06:58,125
+this set of six points.
+
+134
+00:06:58,125 --> 00:07:01,430
+
+135
+00:07:01,430 --> 00:07:05,720
+And one thing that it's worth
+noting is that conditioning
+
+136
+00:07:05,720 --> 00:07:09,780
+never changes the relative
+frequencies or relative
+
+137
+00:07:09,780 --> 00:07:12,510
+likelihoods of the different
+outcomes.
+
+138
+00:07:12,510 --> 00:07:16,530
+So because all outcomes were
+equally likely in our original
+
+139
+00:07:16,530 --> 00:07:19,770
+sample space omega, in the
+conditional world, the
+
+140
+00:07:19,770 --> 00:07:22,280
+outcomes are also
+equally likely.
+
+141
+00:07:22,280 --> 00:07:25,400
+So using that argument, we could
+say that in our sort of
+
+142
+00:07:25,400 --> 00:07:27,330
+blue conditional universe
+all of the
+
+143
+00:07:27,330 --> 00:07:29,570
+outcomes are equally likely.
+
+144
+00:07:29,570 --> 00:07:32,910
+And therefore, we can apply a
+conditional version of the
+
+145
+00:07:32,910 --> 00:07:34,540
+discrete uniform law.
+
+146
+00:07:34,540 --> 00:07:37,800
+So namely, to compute the
+probability of some event in
+
+147
+00:07:37,800 --> 00:07:39,160
+that conditional world.
+
+148
+00:07:39,160 --> 00:07:42,760
+So the conditional probability
+that "doubles are rolled", we
+
+149
+00:07:42,760 --> 00:07:46,440
+need only count the number of
+outcomes in that event and
+
+150
+00:07:46,440 --> 00:07:49,430
+divide it by the total
+number of outcomes.
+
+151
+00:07:49,430 --> 00:07:55,000
+So in the conditional world,
+there's only two outcomes that
+
+152
+00:07:55,000 --> 00:07:58,670
+comprise the event "doubles
+rolled." These are the only
+
+153
+00:07:58,670 --> 00:08:00,770
+two circles in the
+blue region.
+
+154
+00:08:00,770 --> 00:08:04,290
+So applying the conditional
+version of our
+
+155
+00:08:04,290 --> 00:08:05,770
+law, we have two.
+
+156
+00:08:05,770 --> 00:08:09,240
+And then we need to divide
+by the size of omega.
+
+157
+00:08:09,240 --> 00:08:12,920
+So our conditional universe,
+we've already said, has six
+
+158
+00:08:12,920 --> 00:08:14,320
+possible dots.
+
+159
+00:08:14,320 --> 00:08:18,020
+So we just divide by 6, and you
+see that we get the same
+
+160
+00:08:18,020 --> 00:08:20,420
+answer of 1/3.
+
+161
+00:08:20,420 --> 00:08:23,010
+And so again, we used two
+different strategies.
+
+162
+00:08:23,010 --> 00:08:26,040
+I happen to prefer the second
+one, because it's slightly
+
+163
+00:08:26,040 --> 00:08:30,260
+faster and it makes you think
+about what does conditioning
+
+164
+00:08:30,260 --> 00:08:31,480
+really mean.
+
+165
+00:08:31,480 --> 00:08:34,840
+Conditioning means you're now
+restricting your attention to
+
+166
+00:08:34,840 --> 00:08:36,179
+a conditional universe.
+
+167
+00:08:36,179 --> 00:08:39,700
+And given that you're in this
+conditional universe where the
+
+168
+00:08:39,700 --> 00:08:42,730
+sum was less than or equal
+to 4, what is then the
+
+169
+00:08:42,730 --> 00:08:46,192
+probability that doubles
+also happened?
+
+170
+00:08:46,192 --> 00:08:48,790
+OK, hopefully you, guys,
+are following.
+
+171
+00:08:48,790 --> 00:08:51,610
+Let's move on to part (c).
+
+172
+00:08:51,610 --> 00:08:55,680
+So part (c) asks for the
+probability that at least one
+
+173
+00:08:55,680 --> 00:08:58,510
+die roll is a 6.
+
+174
+00:08:58,510 --> 00:09:03,890
+So I'm going to use the letter
+S to denote this, the [event]
+
+175
+00:09:03,890 --> 00:09:06,120
+that at least one
+die roll is a 6.
+
+176
+00:09:06,120 --> 00:09:08,250
+So let's go back to
+our picture and
+
+177
+00:09:08,250 --> 00:09:11,310
+we'll use a green marker.
+
+178
+00:09:11,310 --> 00:09:17,120
+So hopefully you agree that
+anything in this column
+
+179
+00:09:17,120 --> 00:09:20,520
+corresponds to at least one 6.
+
+180
+00:09:20,520 --> 00:09:24,850
+So this point, this point, this
+point, this point, this
+
+181
+00:09:24,850 --> 00:09:30,630
+point, and this point your first
+die landed on a 6, so at
+
+182
+00:09:30,630 --> 00:09:32,720
+least one 6 is satisfied.
+
+183
+00:09:32,720 --> 00:09:38,440
+Similarly, if your second die
+has a 6, then we're also OK.
+
+184
+00:09:38,440 --> 00:09:41,960
+So I claim we want to look
+at these 11 points.
+
+185
+00:09:41,960 --> 00:09:43,885
+Let me just check that,
+yeah, 6 plus 5--
+
+186
+00:09:43,885 --> 00:09:44,850
+11.
+
+187
+00:09:44,850 --> 00:09:50,110
+So using the discrete uniform
+law again, we get
+
+188
+00:09:50,110 --> 00:09:52,150
+11 divided by 36.
+
+189
+00:09:52,150 --> 00:09:54,660
+
+190
+00:09:54,660 --> 00:09:58,210
+OK, last problem, we're
+almost done.
+
+191
+00:09:58,210 --> 00:10:02,930
+So again, we're interested in
+the event S again, so the
+
+192
+00:10:02,930 --> 00:10:05,810
+event that at least one
+die roll is a 6.
+
+193
+00:10:05,810 --> 00:10:09,340
+But now we want to compute the
+probability of that event in
+
+194
+00:10:09,340 --> 00:10:12,380
+the conditional world where
+the two dice land
+
+195
+00:10:12,380 --> 00:10:13,630
+on different numbers.
+
+196
+00:10:13,630 --> 00:10:16,020
+
+197
+00:10:16,020 --> 00:10:19,590
+So I'm going to call this
+probability of S. Let's see,
+
+198
+00:10:19,590 --> 00:10:21,910
+I'm running out of letters.
+
+199
+00:10:21,910 --> 00:10:26,350
+Let's for lack of a better
+letter, my name is Katie, so
+
+200
+00:10:26,350 --> 00:10:29,640
+we'll just use a K. We want to
+compute the probability of S
+
+201
+00:10:29,640 --> 00:10:33,970
+given K. And instead of using
+the definition of conditional
+
+202
+00:10:33,970 --> 00:10:37,660
+probability, like we did back in
+part b, we're going to use
+
+203
+00:10:37,660 --> 00:10:39,520
+the faster route.
+
+204
+00:10:39,520 --> 00:10:48,820
+So essentially, we're going to
+find the number of outcomes in
+
+205
+00:10:48,820 --> 00:10:51,715
+the conditional world.
+
+206
+00:10:51,715 --> 00:10:54,720
+
+207
+00:10:54,720 --> 00:10:57,770
+And then we're also going to
+compute the number of outcomes
+
+208
+00:10:57,770 --> 00:11:00,710
+that comprise S in the
+conditional world.
+
+209
+00:11:00,710 --> 00:11:04,610
+So let's take a look at this.
+
+210
+00:11:04,610 --> 00:11:10,160
+We are conditioning on the event
+that the two dice land
+
+211
+00:11:10,160 --> 00:11:11,590
+on different numbers.
+
+212
+00:11:11,590 --> 00:11:15,860
+So hopefully you agree with me
+that every single dot that is
+
+213
+00:11:15,860 --> 00:11:18,760
+not on the diagonal, so every
+single dot that doesn't
+
+214
+00:11:18,760 --> 00:11:23,160
+correspond to doubles, is a
+dot that we care about.
+
+215
+00:11:23,160 --> 00:11:27,970
+So our conditional universe of
+that the two dice land on
+
+216
+00:11:27,970 --> 00:11:34,066
+"different numbers", that
+corresponds to these dots.
+
+217
+00:11:34,066 --> 00:11:37,550
+
+218
+00:11:37,550 --> 00:11:42,900
+And it corresponds
+to these dots.
+
+219
+00:11:42,900 --> 00:11:46,740
+I don't want to get this one.
+
+220
+00:11:46,740 --> 00:11:49,650
+OK, that's good.
+
+221
+00:11:49,650 --> 00:11:54,100
+So let's see, how many outcomes
+do we have in our
+
+222
+00:11:54,100 --> 00:11:56,660
+conditional world?
+
+223
+00:11:56,660 --> 00:11:59,315
+And I'm sorry I don't know why
+I didn't include this.
+
+224
+00:11:59,315 --> 00:12:00,940
+This is absolutely included.
+
+225
+00:12:00,940 --> 00:12:03,460
+I'm just testing to see if you,
+
+226
+00:12:03,460 --> 00:12:05,160
+guys, are paying attention.
+
+227
+00:12:05,160 --> 00:12:08,720
+So we counted before that there
+are six dots on the
+
+228
+00:12:08,720 --> 00:12:12,350
+diagonal, and we know that
+there are 36 dots total.
+
+229
+00:12:12,350 --> 00:12:15,660
+So the number of dots, or
+outcomes to use the proper
+
+230
+00:12:15,660 --> 00:12:20,670
+word, in our conditional world
+is 36 minus 6, or 30.
+
+231
+00:12:20,670 --> 00:12:24,640
+So we get a 30 on
+the denominator.
+
+232
+00:12:24,640 --> 00:12:28,260
+And now we're sort of using a
+conditional version of our
+
+233
+00:12:28,260 --> 00:12:29,910
+discrete uniform law, again.
+
+234
+00:12:29,910 --> 00:12:33,960
+And the reason why we can do
+this is, as I argued before,
+
+235
+00:12:33,960 --> 00:12:36,870
+that conditioning doesn't change
+the relative frequency
+
+236
+00:12:36,870 --> 00:12:38,130
+of the outcomes.
+
+237
+00:12:38,130 --> 00:12:41,560
+So in this conditional world,
+all of the outcomes are still
+
+238
+00:12:41,560 --> 00:12:44,740
+equally likely, hence we can
+apply this law again.
+
+239
+00:12:44,740 --> 00:12:49,680
+So now we need to count the
+number of outcomes that are in
+
+240
+00:12:49,680 --> 00:12:55,090
+the orange conditional world,
+but that also satisfy at least
+
+241
+00:12:55,090 --> 00:12:57,760
+one die roll is a 6.
+
+242
+00:12:57,760 --> 00:12:59,610
+So you can see--
+
+243
+00:12:59,610 --> 00:13:02,720
+1-- we just need to count the
+green circles that are also in
+
+244
+00:13:02,720 --> 00:13:03,590
+the orange.
+
+245
+00:13:03,590 --> 00:13:08,910
+So that's 1, 2, 3, 4,
+5, 6, 7, 8, 9, 10.
+
+246
+00:13:08,910 --> 00:13:17,460
+So we get a 10, so our answer
+is 10 over 30, or 1/3.
+
+247
+00:13:17,460 --> 00:13:19,340
+So now we're done with
+this problem.
+
+248
+00:13:19,340 --> 00:13:23,360
+As you see, hopefully, it
+wasn't too painful.
+
+249
+00:13:23,360 --> 00:13:24,920
+And what are the important
+takeaways
+
+250
+00:13:24,920 --> 00:13:26,560
+here for this problem?
+
+251
+00:13:26,560 --> 00:13:32,290
+Well, one is that whenever you
+have a discrete sample space,
+
+252
+00:13:32,290 --> 00:13:35,540
+in which all of outcomes are
+equally likely, you should
+
+253
+00:13:35,540 --> 00:13:39,570
+think about using the discrete
+uniform law, because this law
+
+254
+00:13:39,570 --> 00:13:43,290
+lets you reduce the problem from
+computing probabilities
+
+255
+00:13:43,290 --> 00:13:46,740
+to just counting outcomes
+within events.
+
+256
+00:13:46,740 --> 00:13:50,860
+And the second takeaway is
+the way we thought about
+
+257
+00:13:50,860 --> 00:13:51,970
+conditioning.
+
+258
+00:13:51,970 --> 00:13:55,340
+So we talked about one thing,
+which is that in your
+
+259
+00:13:55,340 --> 00:13:59,340
+conditional world, when you
+condition, the relative
+
+260
+00:13:59,340 --> 00:14:02,310
+likelihoods of the various
+outcomes don't change.
+
+261
+00:14:02,310 --> 00:14:05,640
+So in our original universe,
+all of the outcomes were
+
+262
+00:14:05,640 --> 00:14:06,770
+equally likely.
+
+263
+00:14:06,770 --> 00:14:09,380
+So in our conditional universe,
+all of the outcomes
+
+264
+00:14:09,380 --> 00:14:10,840
+are equally likely.
+
+265
+00:14:10,840 --> 00:14:14,900
+And we saw it was much faster to
+apply a conditional version
+
+266
+00:14:14,900 --> 00:14:17,820
+of the discrete uniform law.
+
+267
+00:14:17,820 --> 00:14:19,380
+So that's it for today.
+
+268
+00:14:19,380 --> 00:14:21,750
+And we'll do more problems
+next time.
+
+269
+00:14:21,750 --> 00:14:23,000

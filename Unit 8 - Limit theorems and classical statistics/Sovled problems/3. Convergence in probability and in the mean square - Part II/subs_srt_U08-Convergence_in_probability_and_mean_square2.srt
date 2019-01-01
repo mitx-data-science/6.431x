@@ -1,0 +1,442 @@
+1
+00:00:00,000 --> 00:00:01,460
+
+2
+00:00:01,460 --> 00:00:01,920
+For [parts]
+
+3
+00:00:01,920 --> 00:00:04,300
+(e) and (f) of the problem,
+we'll be introducing a new
+
+4
+00:00:04,300 --> 00:00:06,950
+notion of convergence, so-called
+the convergence in
+
+5
+00:00:06,950 --> 00:00:07,160
+[the]
+
+6
+00:00:07,160 --> 00:00:09,260
+mean squared sense.
+
+7
+00:00:09,260 --> 00:00:13,820
+We say that Xn converges
+to a number c in [the]
+
+8
+00:00:13,820 --> 00:00:21,140
+mean squared, if as we take n
+go to infinity, the expected
+
+9
+00:00:21,140 --> 00:00:29,200
+value of Xn minus c
+squared goes to 0.
+
+10
+00:00:29,200 --> 00:00:33,130
+To get a sense of what this
+looks like, let's say we let c
+
+11
+00:00:33,130 --> 00:00:38,740
+equal to the expected value of
+Xn, and let's say the expected
+
+12
+00:00:38,740 --> 00:00:40,940
+value of Xn is always
+the same.
+
+13
+00:00:40,940 --> 00:00:44,060
+So the sequence of random
+variables has the same mean.
+
+14
+00:00:44,060 --> 00:00:47,540
+Well, if that is true, then
+mean squared convergence
+
+15
+00:00:47,540 --> 00:00:54,170
+simply says the limit of the
+variance of Xn is 0.
+
+16
+00:00:54,170 --> 00:00:59,370
+So as you can imagine, somehow
+as n becomes big, the variance
+
+17
+00:00:59,370 --> 00:01:03,130
+of Xn is very small, so
+Xn is basically highly
+
+18
+00:01:03,130 --> 00:01:05,300
+concentrated around c.
+
+19
+00:01:05,300 --> 00:01:10,080
+And by this I mean, the density
+function for Xn.
+
+20
+00:01:10,080 --> 00:01:11,400
+So that's the notion
+of convergence
+
+21
+00:01:11,400 --> 00:01:12,940
+we'll be working with.
+
+22
+00:01:12,940 --> 00:01:16,440
+Our first task here is to show
+that the mean square
+
+23
+00:01:16,440 --> 00:01:20,000
+convergence is in some sense
+stronger than the convergence
+
+24
+00:01:20,000 --> 00:01:23,290
+in probability that we have been
+working with from part
+
+25
+00:01:23,290 --> 00:01:25,000
+(a) to part (d).
+
+26
+00:01:25,000 --> 00:01:29,580
+That is, if I know that Xn
+converged to some number c in
+
+27
+00:01:29,580 --> 00:01:35,110
+mean squared, then this must
+imply that Xn converges to c
+
+28
+00:01:35,110 --> 00:01:37,660
+in probability.
+
+29
+00:01:37,660 --> 00:01:39,930
+And now, we'll show
+that for part (e).
+
+30
+00:01:39,930 --> 00:01:42,560
+
+31
+00:01:42,560 --> 00:01:45,400
+Well, let's start with a
+definition of convergence in
+
+32
+00:01:45,400 --> 00:01:46,620
+probability.
+
+33
+00:01:46,620 --> 00:01:49,990
+We want to show that for a fixed
+constant epsilon the
+
+34
+00:01:49,990 --> 00:01:55,650
+probability that Xn minus
+c, greater than epsilon,
+
+35
+00:01:55,650 --> 00:02:00,990
+essentially goes to 0 as
+n goes to infinity.
+
+36
+00:02:00,990 --> 00:02:03,830
+To do so, we look at the
+value of this term.
+
+37
+00:02:03,830 --> 00:02:07,470
+Well, the probability of
+absolute value Xn minus c
+
+38
+00:02:07,470 --> 00:02:11,700
+greater than epsilon is equal
+to the case if we were to
+
+39
+00:02:11,700 --> 00:02:15,150
+square both sides of
+the inequality.
+
+40
+00:02:15,150 --> 00:02:19,000
+So that is equal to the
+probability that Xn minus c
+
+41
+00:02:19,000 --> 00:02:22,320
+squared greater than
+epsilon squared.
+
+42
+00:02:22,320 --> 00:02:26,170
+We can do this because both
+sides are positive, hence this
+
+43
+00:02:26,170 --> 00:02:28,590
+goes through.
+
+44
+00:02:28,590 --> 00:02:33,630
+Now, to bound this quantity,
+we'll invoke the Markov's
+
+45
+00:02:33,630 --> 00:02:46,970
+Inequality, which says this
+probability of Xn, some random
+
+46
+00:02:46,970 --> 00:02:51,420
+variable greater than epsilon
+squared, is no more than, is
+
+47
+00:02:51,420 --> 00:02:51,690
+less [than or]
+
+48
+00:02:51,690 --> 00:02:56,950
+equal to the expected value
+of the random variable.
+
+49
+00:02:56,950 --> 00:03:00,850
+In this case, the expected value
+of X minus c squared
+
+50
+00:03:00,850 --> 00:03:04,890
+divided by the threshold that
+we're trying to cross.
+
+51
+00:03:04,890 --> 00:03:08,530
+So that is Markov's
+Inequality.
+
+52
+00:03:08,530 --> 00:03:12,430
+Now, since we know Xn converges
+to c in mean
+
+53
+00:03:12,430 --> 00:03:15,590
+squared, and by definition of
+the mean squared we know this
+
+54
+00:03:15,590 --> 00:03:19,710
+precise expectation right
+here goes to 0.
+
+55
+00:03:19,710 --> 00:03:25,040
+And therefore, the whole
+expression goes to 0 as n goes
+
+56
+00:03:25,040 --> 00:03:26,140
+to infinity.
+
+57
+00:03:26,140 --> 00:03:30,380
+Because the denominator here is
+a constant and the top, the
+
+58
+00:03:30,380 --> 00:03:32,920
+numerator here, goes to 0.
+
+59
+00:03:32,920 --> 00:03:34,190
+So now we have it.
+
+60
+00:03:34,190 --> 00:03:39,760
+We know that the probability of
+Xn minus c, absolute value,
+
+61
+00:03:39,760 --> 00:03:43,630
+greater than epsilon goes to 0
+as n goes to infinity, for all
+
+62
+00:03:43,630 --> 00:03:47,660
+fixed value of epsilon and
+this is the definition of
+
+63
+00:03:47,660 --> 00:03:48,910
+convergence in probability.
+
+64
+00:03:48,910 --> 00:03:55,310
+
+65
+00:03:55,310 --> 00:03:58,740
+Now that we know if Xn converges
+to c mean squared,
+
+66
+00:03:58,740 --> 00:04:02,720
+it implies that Xn converges
+to c in probability.
+
+67
+00:04:02,720 --> 00:04:06,160
+One might wonder whether
+the reverse is true.
+
+68
+00:04:06,160 --> 00:04:09,430
+Namely, if we know something
+converges in probability to a
+
+69
+00:04:09,430 --> 00:04:12,080
+constant, does the same sequence
+of random variables
+
+70
+00:04:12,080 --> 00:04:14,820
+converge to the same constant
+in mean squared?
+
+71
+00:04:14,820 --> 00:04:17,279
+It turns out that is
+not quite the case.
+
+72
+00:04:17,279 --> 00:04:21,279
+The notion of convergence in
+probability is not as strong
+
+73
+00:04:21,279 --> 00:04:25,030
+as a notion of convergence
+in mean squared.
+
+74
+00:04:25,030 --> 00:04:27,810
+Again, to look for a counter
+example, we do not have to go
+
+75
+00:04:27,810 --> 00:04:31,410
+further than the Yn's we
+have been working with.
+
+76
+00:04:31,410 --> 00:04:38,210
+So here we know that Yn
+converges to 0 in probability.
+
+77
+00:04:38,210 --> 00:04:40,160
+But it turns out it does
+not converge to
+
+78
+00:04:40,160 --> 00:04:42,030
+0 in the mean squared.
+
+79
+00:04:42,030 --> 00:04:45,520
+And to see why this is the case,
+we can take the expected
+
+80
+00:04:45,520 --> 00:04:50,820
+value of Yn minus 0 squared,
+and see how that goes.
+
+81
+00:04:50,820 --> 00:04:54,780
+Well, the value of this can be
+computed easily, which is
+
+82
+00:04:54,780 --> 00:05:01,090
+simply 0, if Yn is equal to 0,
+with probability 1 minus n,
+
+83
+00:05:01,090 --> 00:05:06,800
+plus n squared when Yn takes a
+value of n, and this happens
+
+84
+00:05:06,800 --> 00:05:09,140
+with probability 1 over n.
+
+85
+00:05:09,140 --> 00:05:13,490
+The whole expression evaluates
+to n, which blows up to
+
+86
+00:05:13,490 --> 00:05:15,780
+infinity as n [goes]
+
+87
+00:05:15,780 --> 00:05:18,400
+to infinity.
+
+88
+00:05:18,400 --> 00:05:26,490
+As a result, the limit n going
+to infinity of E of Yn minus 0
+
+89
+00:05:26,490 --> 00:05:32,200
+squared is infinity and
+is not equal to 0.
+
+90
+00:05:32,200 --> 00:05:35,580
+And there we have it, even
+though Yn converges to 0 in
+
+91
+00:05:35,580 --> 00:05:39,290
+probability, because the
+variance of Yn, in some sense,
+
+92
+00:05:39,290 --> 00:05:42,660
+is too big, it does
+not converge in a
+
+93
+00:05:42,660 --> 00:05:43,910
+mean squared sense.
+
+94
+00:05:43,910 --> 00:05:45,167

@@ -1,0 +1,305 @@
+1
+00:00:00,000 --> 00:00:00,970
+
+2
+00:00:00,970 --> 00:00:03,580
+In this exercise, we'll be
+looking at a problem,
+
+3
+00:00:03,580 --> 00:00:06,650
+so-called the birthday paradox,
+where we have n
+
+4
+00:00:06,650 --> 00:00:10,480
+people and each person
+has a random birthday
+
+5
+00:00:10,480 --> 00:00:13,480
+out of the 365 days.
+
+6
+00:00:13,480 --> 00:00:16,520
+And the probability we want to
+measure is the probability of
+
+7
+00:00:16,520 --> 00:00:19,595
+the event that no two
+birthdays coincide.
+
+8
+00:00:19,595 --> 00:00:26,820
+
+9
+00:00:26,820 --> 00:00:30,360
+To set up the problem, we'll
+define the sample space omega
+
+10
+00:00:30,360 --> 00:00:33,315
+as a set of all possible
+birthday combinations.
+
+11
+00:00:33,315 --> 00:00:36,830
+
+12
+00:00:36,830 --> 00:00:38,550
+Let's see how big that is.
+
+13
+00:00:38,550 --> 00:00:42,280
+Well, we have a collection
+of n people.
+
+14
+00:00:42,280 --> 00:00:46,810
+And each person has
+365 choices.
+
+15
+00:00:46,810 --> 00:00:50,310
+And therefore, the total
+number choices for all
+
+16
+00:00:50,310 --> 00:00:54,570
+possible birthday combinations
+will be this number raised to
+
+17
+00:00:54,570 --> 00:00:55,620
+the power n.
+
+18
+00:00:55,620 --> 00:01:00,370
+So this will be the size of
+our sample space omega.
+
+19
+00:01:00,370 --> 00:01:04,360
+Now, out of the sample space
+we'll look at all choices, all
+
+20
+00:01:04,360 --> 00:01:07,190
+combinations where no
+two people have
+
+21
+00:01:07,190 --> 00:01:09,330
+exactly the same birthday.
+
+22
+00:01:09,330 --> 00:01:13,250
+To count that, we can start from
+the first person, person
+
+23
+00:01:13,250 --> 00:01:14,070
+number one.
+
+24
+00:01:14,070 --> 00:01:18,330
+Well, this person has 365
+choices because so far there
+
+25
+00:01:18,330 --> 00:01:20,610
+has not been any other
+birthdays to
+
+26
+00:01:20,610 --> 00:01:22,220
+be conflicting with.
+
+27
+00:01:22,220 --> 00:01:24,930
+However, for the second person
+we know that whatever the
+
+28
+00:01:24,930 --> 00:01:27,470
+first person chose, we
+cannot choose the
+
+29
+00:01:27,470 --> 00:01:28,610
+same birthday again.
+
+30
+00:01:28,610 --> 00:01:34,350
+And so we're left with
+364 choices.
+
+31
+00:01:34,350 --> 00:01:40,250
+Keep going like this, we get
+363, and so on and so forth.
+
+32
+00:01:40,250 --> 00:01:44,780
+Until we reach the last person,
+which will give us 365
+
+33
+00:01:44,780 --> 00:01:47,740
+minus n plus 1.
+
+34
+00:01:47,740 --> 00:01:52,630
+Since we've repeated this
+process n times.
+
+35
+00:01:52,630 --> 00:01:57,370
+Now, looking at these two
+numbers we know that the
+
+36
+00:01:57,370 --> 00:02:06,310
+probability of no two birthdays
+coincide is equal to
+
+37
+00:02:06,310 --> 00:02:09,990
+the size of the event, which
+is this problem here--
+
+38
+00:02:09,990 --> 00:02:18,790
+365 times 364, so on and so
+forth, times 365 minus n plus
+
+39
+00:02:18,790 --> 00:02:27,100
+1, divided by the size of the
+sample space, 365 raised to
+
+40
+00:02:27,100 --> 00:02:30,090
+the nth power.
+
+41
+00:02:30,090 --> 00:02:33,360
+Now, you might wonder how big
+really is this probability?
+
+42
+00:02:33,360 --> 00:02:37,840
+Well, if we were to plot the
+probability of having no two
+
+43
+00:02:37,840 --> 00:02:41,230
+birthdays coincide as a function
+of the size of the
+
+44
+00:02:41,230 --> 00:02:45,530
+group n, where n goes from 0 all
+the way to 80, we see that
+
+45
+00:02:45,530 --> 00:02:48,000
+the probability drops
+very quickly.
+
+46
+00:02:48,000 --> 00:02:53,100
+In particular, if we were to
+draw a line right here from
+
+47
+00:02:53,100 --> 00:02:54,730
+having 50 [percent]
+
+48
+00:02:54,730 --> 00:02:58,500
+chance of seeing no two
+birthdays coincide.
+
+49
+00:02:58,500 --> 00:03:04,420
+We see that roughly around 23
+we're already are seeing a
+
+50
+00:03:04,420 --> 00:03:06,676
+chance smaller than half.
+
+51
+00:03:06,676 --> 00:03:10,540
+If the group size is about 40
+and the chance of having a
+
+52
+00:03:10,540 --> 00:03:14,310
+unique birthday for everyone
+is only about 10%.
+
+53
+00:03:14,310 --> 00:03:17,580
+Now, here on the right we are
+plotting the same probability
+
+54
+00:03:17,580 --> 00:03:18,900
+but with a different scaling.
+
+55
+00:03:18,900 --> 00:03:22,130
+So on the y-axis we're plotting
+with respect to a
+
+56
+00:03:22,130 --> 00:03:26,390
+logarithmic scaling, showing
+a finer granularity of
+
+57
+00:03:26,390 --> 00:03:27,940
+the value near zero.
+
+58
+00:03:27,940 --> 00:03:31,890
+Now we can see right here beyond
+60 and the plot on the
+
+59
+00:03:31,890 --> 00:03:33,520
+left that we solved before,
+you can barely
+
+60
+00:03:33,520 --> 00:03:35,090
+tell the value p-n.
+
+61
+00:03:35,090 --> 00:03:39,660
+So here if we were to track 60
+around right here, we see that
+
+62
+00:03:39,660 --> 00:03:44,150
+the values start dipping below
+1% and all the way to 10 to
+
+63
+00:03:44,150 --> 00:03:44,950
+the negative tenth.
+
+64
+00:03:44,950 --> 00:03:47,680
+So that's a tiny number, even
+though we only have a
+
+65
+00:03:47,680 --> 00:03:50,420
+group of size 120.
+
+66
+00:03:50,420 --> 00:03:52,067

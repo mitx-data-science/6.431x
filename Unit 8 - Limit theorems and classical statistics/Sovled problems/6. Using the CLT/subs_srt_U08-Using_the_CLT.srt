@@ -1,0 +1,836 @@
+1
+00:00:00,000 --> 00:00:00,320
+
+2
+00:00:00,320 --> 00:00:01,430
+Hi.
+
+3
+00:00:01,430 --> 00:00:03,370
+In this video, we're going
+to do some approximate
+
+4
+00:00:03,370 --> 00:00:07,300
+calculations using the central
+limit theorem.
+
+5
+00:00:07,300 --> 00:00:09,876
+We're given that Xn is the
+number of gadgets produced on
+
+6
+00:00:09,876 --> 00:00:11,590
+day n by a factory.
+
+7
+00:00:11,590 --> 00:00:14,600
+And it has a normal
+distribution, with mean 5 and
+
+8
+00:00:14,600 --> 00:00:15,910
+variance 9.
+
+9
+00:00:15,910 --> 00:00:19,780
+And they're all independent and
+identically distributed.
+
+10
+00:00:19,780 --> 00:00:21,470
+We're looking for the
+probability that the total
+
+11
+00:00:21,470 --> 00:00:25,630
+number of gadgets in 100
+days is less than 440.
+
+12
+00:00:25,630 --> 00:00:33,110
+To start, we can first write
+this as the probability of the
+
+13
+00:00:33,110 --> 00:00:37,550
+sum of the gadgets produced on
+each of the 100 days being
+
+14
+00:00:37,550 --> 00:00:41,770
+less than 440.
+
+15
+00:00:41,770 --> 00:00:45,340
+Notice that this is the sum of
+a large number of independent
+
+16
+00:00:45,340 --> 00:00:46,520
+random variables.
+
+17
+00:00:46,520 --> 00:00:49,820
+So we can use the central limit
+theorem and approximate
+
+18
+00:00:49,820 --> 00:00:53,330
+the sum as a normal
+random variable.
+
+19
+00:00:53,330 --> 00:00:56,240
+Then we'd basically, in order
+to compute this probability,
+
+20
+00:00:56,240 --> 00:00:59,250
+we'd basically need to
+standardize this and then use
+
+21
+00:00:59,250 --> 00:01:00,900
+the standard normal table.
+
+22
+00:01:00,900 --> 00:01:02,940
+So let's first compute
+the expectation and
+
+23
+00:01:02,940 --> 00:01:06,390
+variance of the sum.
+
+24
+00:01:06,390 --> 00:01:10,840
+So I'm going to actually sum
+up from 1 to n, instead of
+
+25
+00:01:10,840 --> 00:01:15,250
+100, to do it more generally.
+
+26
+00:01:15,250 --> 00:01:21,150
+So the linearity is preserved
+for the expectation operator.
+
+27
+00:01:21,150 --> 00:01:24,120
+So this is the sum of
+the expected values.
+
+28
+00:01:24,120 --> 00:01:27,570
+And since they're all
+identically distributed, they
+
+29
+00:01:27,570 --> 00:01:30,750
+all have the same expectation,
+and there are n of them.
+
+30
+00:01:30,750 --> 00:01:34,696
+And so we have this
+being n times 5.
+
+31
+00:01:34,696 --> 00:01:42,280
+For the variance of the sum,
+it's also the sum of the
+
+32
+00:01:42,280 --> 00:01:48,160
+variances because of
+the independence.
+
+33
+00:01:48,160 --> 00:01:51,050
+And so they're identically
+distributed to be n times the
+
+34
+00:01:51,050 --> 00:01:53,030
+variance of Xi.
+
+35
+00:01:53,030 --> 00:01:58,320
+And this is n times 9.
+
+36
+00:01:58,320 --> 00:02:03,310
+So now, we can standardize
+it or make it 0 mean
+
+37
+00:02:03,310 --> 00:02:04,430
+and variance 1.
+
+38
+00:02:04,430 --> 00:02:09,199
+So to do that, you would
+take these Xi's,
+
+39
+00:02:09,199 --> 00:02:11,050
+subtract their mean.
+
+40
+00:02:11,050 --> 00:02:14,890
+It's going to be 5 times
+100 of them.
+
+41
+00:02:14,890 --> 00:02:19,130
+So it's 500 over the square root
+of the variance, which is
+
+42
+00:02:19,130 --> 00:02:21,510
+9 times 100 of them.
+
+43
+00:02:21,510 --> 00:02:23,870
+So it's 900.
+
+44
+00:02:23,870 --> 00:02:34,430
+So that's less than 440 minus
+500 over square root of 900.
+
+45
+00:02:34,430 --> 00:02:45,300
+So notice that the sum of Xi's
+is a discrete quantity.
+
+46
+00:02:45,300 --> 00:02:46,850
+So it's a discrete
+random variable.
+
+47
+00:02:46,850 --> 00:02:48,675
+So it may have a
+PMF like this.
+
+48
+00:02:48,675 --> 00:02:52,470
+
+49
+00:02:52,470 --> 00:02:53,590
+And we're trying to
+approximate it
+
+50
+00:02:53,590 --> 00:02:56,050
+with a normal density.
+
+51
+00:02:56,050 --> 00:02:58,220
+So this is not drawn to scale.
+
+52
+00:02:58,220 --> 00:03:04,150
+But let's say that this is
+440 and this is 439.
+
+53
+00:03:04,150 --> 00:03:06,445
+Basically, we're trying to say,
+what's the probability of
+
+54
+00:03:06,445 --> 00:03:07,710
+it being less than 440?
+
+55
+00:03:07,710 --> 00:03:14,870
+So it's the probability that
+it's 439 or 438 or 437.
+
+56
+00:03:14,870 --> 00:03:18,760
+But in the continuous case, a
+good approximation to this
+
+57
+00:03:18,760 --> 00:03:24,000
+would be to take the middle,
+say 439.5, and compute the
+
+58
+00:03:24,000 --> 00:03:27,140
+area below that.
+
+59
+00:03:27,140 --> 00:03:32,010
+So in this case, when we do the
+normal approximation, it
+
+60
+00:03:32,010 --> 00:03:36,580
+works out better if we use
+this half correction.
+
+61
+00:03:36,580 --> 00:03:40,800
+And so this, in this case,
+the probability--
+
+62
+00:03:40,800 --> 00:03:43,670
+let's call Z the standard
+normal.
+
+63
+00:03:43,670 --> 00:03:46,850
+And so this is approximately
+equal to a standard normal,
+
+64
+00:03:46,850 --> 00:03:52,250
+with the probability of the
+standard normal being less
+
+65
+00:03:52,250 --> 00:03:53,880
+than whatever that is.
+
+66
+00:03:53,880 --> 00:03:55,300
+If you plug that into
+your calculator, you
+
+67
+00:03:55,300 --> 00:03:59,240
+get negative 2.02.
+
+68
+00:03:59,240 --> 00:04:04,520
+So now, if we try to figure out
+what this, from the table,
+
+69
+00:04:04,520 --> 00:04:07,160
+we'll find that negative values
+are not tabulated.
+
+70
+00:04:07,160 --> 00:04:10,815
+But we know that
+the normal, the
+
+71
+00:04:10,815 --> 00:04:11,950
+standard normal is symmetric.
+
+72
+00:04:11,950 --> 00:04:15,790
+And so if we want to compute the
+area in this region, it's
+
+73
+00:04:15,790 --> 00:04:18,720
+the same as the area in
+this region above--
+
+74
+00:04:18,720 --> 00:04:19,480
+2.02.
+
+75
+00:04:19,480 --> 00:04:22,420
+So this is the same as the
+probability that Z
+
+76
+00:04:22,420 --> 00:04:28,050
+is bigger than 2.02.
+
+77
+00:04:28,050 --> 00:04:31,930
+That's just 1 minus the
+probability that Z is less
+
+78
+00:04:31,930 --> 00:04:34,150
+than or equal to 2.02.
+
+79
+00:04:34,150 --> 00:04:40,370
+And so that's, by definition,
+Phi of 2.02.
+
+80
+00:04:40,370 --> 00:04:45,410
+If you look it up on the table,
+2.02 has probability
+
+81
+00:04:45,410 --> 00:04:48,940
+here of 0.9783.
+
+82
+00:04:48,940 --> 00:04:50,670
+And we can just write that in.
+
+83
+00:04:50,670 --> 00:04:52,970
+That's the answer
+for part (a).
+
+84
+00:04:52,970 --> 00:04:59,320
+
+85
+00:04:59,320 --> 00:05:03,090
+So now, for part (b), we're
+asked what's the largest n
+
+86
+00:05:03,090 --> 00:05:09,070
+approximately so that
+it satisfies this?
+
+87
+00:05:09,070 --> 00:05:13,330
+So again, we can use the central
+limit theorem and use
+
+88
+00:05:13,330 --> 00:05:16,460
+similar steps here.
+
+89
+00:05:16,460 --> 00:05:22,050
+So we have, in this case, for n
+greater than or equal to 200
+
+90
+00:05:22,050 --> 00:05:26,070
+plus 5n, and standardize.
+
+91
+00:05:26,070 --> 00:05:33,360
+So we'll have to n.
+
+92
+00:05:33,360 --> 00:05:35,540
+And the mean here, this where
+this comes handy,
+
+93
+00:05:35,540 --> 00:05:36,400
+that's going to be 5n.
+
+94
+00:05:36,400 --> 00:05:39,910
+And the variance is 9n.
+
+95
+00:05:39,910 --> 00:05:41,500
+It's greater than
+or equal to--
+
+96
+00:05:41,500 --> 00:05:43,780
+5n's will cancel when
+you subtract.
+
+97
+00:05:43,780 --> 00:05:48,910
+So you get 200 over the
+square root of 9n.
+
+98
+00:05:48,910 --> 00:05:54,050
+And we can again use the half
+approximation here, the half
+
+99
+00:05:54,050 --> 00:05:57,750
+correction here, but I'm not
+going to do it to keep the
+
+100
+00:05:57,750 --> 00:06:00,270
+problem simple.
+
+101
+00:06:00,270 --> 00:06:06,520
+And so in this case, this is
+approximately equal to the
+
+102
+00:06:06,520 --> 00:06:08,530
+probability of the standard
+normal being greater than or
+
+103
+00:06:08,530 --> 00:06:12,920
+equal to 200 over square
+root of 9n.
+
+104
+00:06:12,920 --> 00:06:18,620
+And so same sort
+of thing here--
+
+105
+00:06:18,620 --> 00:06:23,180
+this is just 1 minus this.
+
+106
+00:06:23,180 --> 00:06:26,180
+The equal sign doesn't matter,
+because Z is a continuous
+
+107
+00:06:26,180 --> 00:06:27,690
+random variable.
+
+108
+00:06:27,690 --> 00:06:33,840
+And so we have this here.
+
+109
+00:06:33,840 --> 00:06:39,760
+And we want this to be less
+than or equal 0.05.
+
+110
+00:06:39,760 --> 00:06:46,630
+So that means that Phi of 200
+over square root of 9 has to
+
+111
+00:06:46,630 --> 00:06:49,360
+be greater than or
+equal to 0.95.
+
+112
+00:06:49,360 --> 00:06:59,480
+So we're basically looking for
+something here that ensures
+
+113
+00:06:59,480 --> 00:07:03,810
+that this region is
+at least 0.95.
+
+114
+00:07:03,810 --> 00:07:09,260
+So if you look at the table,
+0.95 lies somewhere in between
+
+115
+00:07:09,260 --> 00:07:12,590
+1.64 and 1.65.
+
+116
+00:07:12,590 --> 00:07:17,240
+And I'm going to use 1.65 to
+be conservative, because we
+
+117
+00:07:17,240 --> 00:07:20,100
+want this region to
+be at least 0.95.
+
+118
+00:07:20,100 --> 00:07:23,450
+So 1.65 works better here.
+
+119
+00:07:23,450 --> 00:07:29,780
+And so we want this thing, this
+here, which is going to
+
+120
+00:07:29,780 --> 00:07:38,710
+be 200 over square root
+of 9n, to be bigger
+
+121
+00:07:38,710 --> 00:07:42,800
+than or equal to 1.65.
+
+122
+00:07:42,800 --> 00:07:50,690
+So n here is going to be less
+than or equal to 200 over 1.65
+
+123
+00:07:50,690 --> 00:07:54,040
+squared 1 over 9.
+
+124
+00:07:54,040 --> 00:07:57,100
+So if you plug this into your
+calculator, you might have a
+
+125
+00:07:57,100 --> 00:07:58,130
+decimal in there.
+
+126
+00:07:58,130 --> 00:08:02,630
+Then we just pick n,
+the largest integer
+
+127
+00:08:02,630 --> 00:08:04,680
+that satisfies this.
+
+128
+00:08:04,680 --> 00:08:07,650
+So we can plug that into
+your calculator.
+
+129
+00:08:07,650 --> 00:08:12,220
+You'll find that it's
+going to be 1632.
+
+130
+00:08:12,220 --> 00:08:14,450
+So that's part (b).
+
+131
+00:08:14,450 --> 00:08:16,150
+Last part--
+
+132
+00:08:16,150 --> 00:08:19,330
+let n be the first day when the
+total number of gadgets is
+
+133
+00:08:19,330 --> 00:08:21,170
+greater than 1,000.
+
+134
+00:08:21,170 --> 00:08:23,390
+What's the probability
+that n is greater
+
+135
+00:08:23,390 --> 00:08:24,810
+than or equal to 220?
+
+136
+00:08:24,810 --> 00:08:28,550
+Again, we want to use the
+central limit theorem, but the
+
+137
+00:08:28,550 --> 00:08:35,100
+trick here is to recognize that
+this is actually equal to
+
+138
+00:08:35,100 --> 00:08:41,510
+the probability that the sum
+from i equals 1 to 219 of Xi
+
+139
+00:08:41,510 --> 00:08:44,800
+is less than or equal
+to 1,000.
+
+140
+00:08:44,800 --> 00:08:47,650
+So let's look at both directions
+to check this.
+
+141
+00:08:47,650 --> 00:08:51,410
+If n is greater than or equal
+to 220, then this has to be
+
+142
+00:08:51,410 --> 00:08:55,720
+true, because if it weren't
+true, and if this were greater
+
+143
+00:08:55,720 --> 00:08:58,230
+than 1,000, then n would've
+been less
+
+144
+00:08:58,230 --> 00:09:00,160
+than or equal to 219.
+
+145
+00:09:00,160 --> 00:09:03,650
+So this direction works.
+
+146
+00:09:03,650 --> 00:09:07,440
+The other direction, if this
+were the case, it has to be
+
+147
+00:09:07,440 --> 00:09:11,290
+the case that n is greater than
+or equal to 220, because
+
+148
+00:09:11,290 --> 00:09:14,840
+up until 219, it hasn't
+exceeded 1,000.
+
+149
+00:09:14,840 --> 00:09:19,090
+And so at some point
+beyond that, it's
+
+150
+00:09:19,090 --> 00:09:19,970
+going to exceed 1,000.
+
+151
+00:09:19,970 --> 00:09:23,450
+And n is going to be greater
+than or equal to 220.
+
+152
+00:09:23,450 --> 00:09:25,180
+So this is the key trick here.
+
+153
+00:09:25,180 --> 00:09:33,260
+And once you see this, you
+realize that this is very
+
+154
+00:09:33,260 --> 00:09:37,540
+easy, because we do the same
+steps as we did before.
+
+155
+00:09:37,540 --> 00:09:42,470
+So we're looking for this.
+
+156
+00:09:42,470 --> 00:09:46,373
+This is equal to, again, you
+do your standardization.
+
+157
+00:09:46,373 --> 00:09:49,270
+
+158
+00:09:49,270 --> 00:09:52,640
+So this is from 219.
+
+159
+00:09:52,640 --> 00:09:58,350
+And you get 5 times 219 for the
+mean and 9 times 219 for
+
+160
+00:09:58,350 --> 00:09:59,070
+the variance.
+
+161
+00:09:59,070 --> 00:10:06,280
+This is less than or equal to
+1,000 minus 5 times 219 over
+
+162
+00:10:06,280 --> 00:10:09,150
+square root of 9 times 219.
+
+163
+00:10:09,150 --> 00:10:10,940
+Again, you can do the
+half correction
+
+164
+00:10:10,940 --> 00:10:15,030
+here, make it 1,000.5.
+
+165
+00:10:15,030 --> 00:10:20,000
+But I'm not going to do that in
+this case, for simplicity.
+
+166
+00:10:20,000 --> 00:10:23,220
+So this is approximately equal
+to Z being less than
+
+167
+00:10:23,220 --> 00:10:26,620
+whatever this is.
+
+168
+00:10:26,620 --> 00:10:28,530
+And if you plug it
+in, you find that
+
+169
+00:10:28,530 --> 00:10:31,410
+this is negative 2.14.
+
+170
+00:10:31,410 --> 00:10:38,980
+So in this case, we have this
+is the probability that Z--
+
+171
+00:10:38,980 --> 00:10:40,860
+again, we do the same thing--
+
+172
+00:10:40,860 --> 00:10:44,300
+is greater than or
+equal to 2.14.
+
+173
+00:10:44,300 --> 00:10:49,050
+And this is 1 minus the
+probability that Z is less
+
+174
+00:10:49,050 --> 00:10:53,230
+than or equal to 2.14.
+
+175
+00:10:53,230 --> 00:11:03,030
+And that's just Phi of 2.14,
+1 minus Phi of 2.14.
+
+176
+00:11:03,030 --> 00:11:07,612
+And that's, if you look it up
+on the table, it's 2.14.
+
+177
+00:11:07,612 --> 00:11:12,160
+It's 0.9838.
+
+178
+00:11:12,160 --> 00:11:13,610
+So here's your answer.
+
+179
+00:11:13,610 --> 00:11:15,990
+So we're done with
+part (c) as well.
+
+180
+00:11:15,990 --> 00:11:19,770
+So in this exercise, we did
+a lot of approximate
+
+181
+00:11:19,770 --> 00:11:23,130
+calculations using the central
+limit theorem.

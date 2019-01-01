@@ -1,0 +1,610 @@
+1
+00:00:00,000 --> 00:00:00,190
+
+2
+00:00:00,190 --> 00:00:03,380
+In this problem, we're given a
+random variable X which has a
+
+3
+00:00:03,380 --> 00:00:09,980
+uniform distribution in the
+interval negative 1 to 1.
+
+4
+00:00:09,980 --> 00:00:15,030
+In other words, if we were to
+draw out the PDF of X, we see
+
+5
+00:00:15,030 --> 00:00:19,290
+that in the interval negative
+1 to 1, it has value 1/2.
+
+6
+00:00:19,290 --> 00:00:22,460
+
+7
+00:00:22,460 --> 00:00:23,720
+Now we're given a
+sequence [of]
+
+8
+00:00:23,720 --> 00:00:29,320
+random variables X1, X2, and so
+on, where each Xi has the
+
+9
+00:00:29,320 --> 00:00:33,240
+same distribution as X and
+different Xi's are
+
+10
+00:00:33,240 --> 00:00:35,480
+independent.
+
+11
+00:00:35,480 --> 00:00:38,820
+For part (a), we would like
+to know if the sequence Xi
+
+12
+00:00:38,820 --> 00:00:41,070
+converges to some number--
+
+13
+00:00:41,070 --> 00:00:42,390
+let's call it c--
+
+14
+00:00:42,390 --> 00:00:48,100
+in probability as i
+goes to infinity--
+
+15
+00:00:48,100 --> 00:00:49,710
+whether this is true.
+
+16
+00:00:49,710 --> 00:00:52,030
+Let's first recall the
+definition of convergence in
+
+17
+00:00:52,030 --> 00:00:53,410
+probability.
+
+18
+00:00:53,410 --> 00:00:57,900
+If this does happen, then by
+definition, we'll have that
+
+19
+00:00:57,900 --> 00:01:05,660
+for every epsilon greater than
+0, the probability Xi minus c
+
+20
+00:01:05,660 --> 00:01:06,030
+greater [than or]
+
+21
+00:01:06,030 --> 00:01:11,510
+equal to epsilon, this quantity
+will go to 0 in the
+
+22
+00:01:11,510 --> 00:01:15,490
+limit of i going to infinity.
+
+23
+00:01:15,490 --> 00:01:20,450
+In other words, with very high
+probability, we will find Xi
+
+24
+00:01:20,450 --> 00:01:24,220
+to be very concentrated around
+the number c if this were to
+
+25
+00:01:24,220 --> 00:01:28,580
+be the PDF of Xi.
+
+26
+00:01:28,580 --> 00:01:30,430
+Now, can this be true?
+
+27
+00:01:30,430 --> 00:01:34,740
+Well, we know that each Xi is
+simply a uniform distribution
+
+28
+00:01:34,740 --> 00:01:36,380
+over negative 1 to 1.
+
+29
+00:01:36,380 --> 00:01:38,790
+It doesn't really change
+as we increase i.
+
+30
+00:01:38,790 --> 00:01:41,420
+So intuitively, the
+concentration around any
+
+31
+00:01:41,420 --> 00:01:43,840
+number c is not going
+to happen.
+
+32
+00:01:43,840 --> 00:01:47,980
+So we should not expect
+convergence in probability in
+
+33
+00:01:47,980 --> 00:01:49,050
+this sense.
+
+34
+00:01:49,050 --> 00:01:53,250
+For part (b), we would like to
+know whether the sequence Yi,
+
+35
+00:01:53,250 --> 00:01:58,370
+defined as Xi divided by i,
+converges to anything in
+
+36
+00:01:58,370 --> 00:02:01,050
+probability.
+
+37
+00:02:01,050 --> 00:02:04,250
+Well, by just looking at the
+shape of Yi, we know that
+
+38
+00:02:04,250 --> 00:02:09,340
+since the absolute value of Xi
+is less than 1, then we expect
+
+39
+00:02:09,340 --> 00:02:14,380
+the absolute value of
+Yi is less than 1/i.
+
+40
+00:02:14,380 --> 00:02:17,400
+So eventually, Yi gets
+very close to 0
+
+41
+00:02:17,400 --> 00:02:19,450
+as i goes to infinity.
+
+42
+00:02:19,450 --> 00:02:23,650
+So it's safe to bet that maybe
+Yi will converge to 0 in
+
+43
+00:02:23,650 --> 00:02:26,400
+probability.
+
+44
+00:02:26,400 --> 00:02:28,870
+Let's see if this is
+indeed the case.
+
+45
+00:02:28,870 --> 00:02:33,155
+The probability of Yi minus
+0 greater [than or]
+
+46
+00:02:33,155 --> 00:02:38,860
+equal to epsilon is equal to the
+probability of Yi absolute
+
+47
+00:02:38,860 --> 00:02:39,570
+value greater [than or]
+
+48
+00:02:39,570 --> 00:02:41,440
+equal to epsilon.
+
+49
+00:02:41,440 --> 00:02:46,020
+Now, previously we know that the
+absolute value of Yi is at
+
+50
+00:02:46,020 --> 00:02:49,270
+most 1/i by the definition
+of Yi.
+
+51
+00:02:49,270 --> 00:02:53,000
+And hence the probability right
+here is upper bounded by
+
+52
+00:02:53,000 --> 00:02:55,690
+the probability of 1/i
+greater [than or]
+
+53
+00:02:55,690 --> 00:02:57,370
+equal to epsilon.
+
+54
+00:02:57,370 --> 00:02:59,740
+Notice in this expression,
+there is nothing random.
+
+55
+00:02:59,740 --> 00:03:01,410
+i is simply a number.
+
+56
+00:03:01,410 --> 00:03:08,030
+Hence this is either 1 if
+i is less [than or]
+
+57
+00:03:08,030 --> 00:03:15,700
+equal to 1/epsilon, or 0 if i
+is greater than 1/epsilon.
+
+58
+00:03:15,700 --> 00:03:20,520
+Now, this tells us, as long as
+i is great enough-- it's big
+
+59
+00:03:20,520 --> 00:03:22,720
+enough compared to epsilon--
+
+60
+00:03:22,720 --> 00:03:25,500
+we know that this quantity
+here is 0.
+
+61
+00:03:25,500 --> 00:03:30,782
+And that tells us in the limit
+[as] i goes to infinity, [the]
+
+62
+00:03:30,782 --> 00:03:35,910
+probability of Yi deviating
+from 0 by more than
+
+63
+00:03:35,910 --> 00:03:40,070
+epsilon goes to 0.
+
+64
+00:03:40,070 --> 00:03:47,080
+And that shows that indeed, Yi
+converges to 0 in probability
+
+65
+00:03:47,080 --> 00:03:51,100
+because the expression right
+here, this limit, holds for
+
+66
+00:03:51,100 --> 00:03:53,180
+all epsilon.
+
+67
+00:03:53,180 --> 00:03:55,400
+Now, in the last part of the
+problem, we are looking at a
+
+68
+00:03:55,400 --> 00:04:01,100
+sequence Zi defined by Xi raised
+to the i-th power.
+
+69
+00:04:01,100 --> 00:04:03,940
+Again, since we know Xi is some
+number between negative 1
+
+70
+00:04:03,940 --> 00:04:07,380
+and 1, this number raised to the
+i-th power is likely to be
+
+71
+00:04:07,380 --> 00:04:08,630
+very small.
+
+72
+00:04:08,630 --> 00:04:10,760
+And likely to be small in the
+sense that it will have
+
+73
+00:04:10,760 --> 00:04:12,830
+absolute value close to 0.
+
+74
+00:04:12,830 --> 00:04:16,660
+So a safe guess will be the
+sequence Zi converges to 0 as
+
+75
+00:04:16,660 --> 00:04:20,500
+well as i goes to infinity.
+
+76
+00:04:20,500 --> 00:04:22,490
+How do we prove this formally?
+
+77
+00:04:22,490 --> 00:04:26,810
+We'll start again with a
+probability that Zi stays away
+
+78
+00:04:26,810 --> 00:04:31,970
+from 0 by more than epsilon
+and see how that evolves.
+
+79
+00:04:31,970 --> 00:04:36,770
+And this is equal to the
+probability that Xi raised to
+
+80
+00:04:36,770 --> 00:04:38,090
+the i-th power [is]
+
+81
+00:04:38,090 --> 00:04:38,460
+greater [than or]
+
+82
+00:04:38,460 --> 00:04:40,920
+equal to epsilon.
+
+83
+00:04:40,920 --> 00:04:46,330
+Or again, we can write this by
+taking out the absolute value,
+
+84
+00:04:46,330 --> 00:04:47,960
+that Xi is less [than or]
+
+85
+00:04:47,960 --> 00:04:51,780
+equal to negative epsilon raised
+to the 1 over i-th
+
+86
+00:04:51,780 --> 00:04:55,280
+power or Xi greater [than or]
+
+87
+00:04:55,280 --> 00:04:57,710
+equal to epsilon [to the]
+
+88
+00:04:57,710 --> 00:05:01,470
+1 over i-th power.
+
+89
+00:05:01,470 --> 00:05:05,610
+So here, we'll divide into two
+cases, depending on the value
+
+90
+00:05:05,610 --> 00:05:07,000
+of epsilon.
+
+91
+00:05:07,000 --> 00:05:10,670
+In the first case, epsilon
+is greater than 1.
+
+92
+00:05:10,670 --> 00:05:15,130
+Well, if that's the case, then
+we know epsilon raised to some
+
+93
+00:05:15,130 --> 00:05:18,590
+positive power is still
+greater than 1.
+
+94
+00:05:18,590 --> 00:05:22,760
+But again, Xi cannot have any
+positive density beyond the
+
+95
+00:05:22,760 --> 00:05:25,470
+interval negative 1 or 1.
+
+96
+00:05:25,470 --> 00:05:28,650
+And hence we know the
+probability above, which is Xi
+
+97
+00:05:28,650 --> 00:05:31,780
+less than some number smaller
+than negative 1 or greater
+
+98
+00:05:31,780 --> 00:05:34,720
+than some number bigger
+than 1 is 0.
+
+99
+00:05:34,720 --> 00:05:36,910
+So that case is handled.
+
+100
+00:05:36,910 --> 00:05:40,210
+Now let's look at a case where
+epsilon is less than 1,
+
+101
+00:05:40,210 --> 00:05:41,870
+greater than 0.
+
+102
+00:05:41,870 --> 00:05:47,010
+So in this case, epsilon to the
+1/i will be less than 1.
+
+103
+00:05:47,010 --> 00:05:50,380
+And it's not that difficult
+to check that since Xi has
+
+104
+00:05:50,380 --> 00:05:55,280
+uniform density between negative
+1 and 1, of magnitude
+
+105
+00:05:55,280 --> 00:05:59,490
+1/2, then the probability
+here [will simply be]
+
+106
+00:05:59,490 --> 00:06:07,590
+2 times 1/2 times the distance
+between epsilon to the 1 over
+
+107
+00:06:07,590 --> 00:06:11,390
+i-th power and 1.
+
+108
+00:06:11,390 --> 00:06:15,080
+So in order to prove this
+quantity converges to 0, we
+
+109
+00:06:15,080 --> 00:06:19,200
+simply have to justify why
+does epsilon to the 1/i
+
+110
+00:06:19,200 --> 00:06:23,570
+converge to 1 as i
+goes to infinity.
+
+111
+00:06:23,570 --> 00:06:25,120
+For that, we'll recall
+properties
+
+112
+00:06:25,120 --> 00:06:26,560
+of exponential functions.
+
+113
+00:06:26,560 --> 00:06:30,910
+In particular, if a is a
+positive number and x is its
+
+114
+00:06:30,910 --> 00:06:35,920
+exponent, if we were to take the
+limit as x goes to 0 and
+
+115
+00:06:35,920 --> 00:06:39,370
+look at the value of a to the
+power of x, we see that
+
+116
+00:06:39,370 --> 00:06:41,190
+this goes to 1.
+
+117
+00:06:41,190 --> 00:06:46,920
+So in this case, we let a be
+equal to epsilon and x be
+
+118
+00:06:46,920 --> 00:06:48,640
+equal to 1/i.
+
+119
+00:06:48,640 --> 00:06:52,450
+As we can see that as i goes to
+infinity, the value of x,
+
+120
+00:06:52,450 --> 00:06:55,070
+which is 1/i, does go to 0.
+
+121
+00:06:55,070 --> 00:06:59,540
+And therefore, in the limit of i
+going to infinity, the value
+
+122
+00:06:59,540 --> 00:07:04,500
+of epsilon to the 1 over
+i-th power goes to 1.
+
+123
+00:07:04,500 --> 00:07:09,380
+And that shows if we plug this
+limit into the expression
+
+124
+00:07:09,380 --> 00:07:13,860
+right here that indeed, the term
+right here goes to 0 as i
+
+125
+00:07:13,860 --> 00:07:15,150
+goes to infinity.
+
+126
+00:07:15,150 --> 00:07:20,740
+And all in all, this implies the
+probability of Zi minus 0
+
+127
+00:07:20,740 --> 00:07:21,740
+absolute value greater
+[than or]
+
+128
+00:07:21,740 --> 00:07:26,290
+equal to epsilon, in the limit
+of i going to infinity,
+
+129
+00:07:26,290 --> 00:07:30,370
+converges to 0 for all
+positive epsilon.
+
+130
+00:07:30,370 --> 00:07:34,230
+And that completes our proof
+that indeed, Zi converges to 0
+
+131
+00:07:34,230 --> 00:07:35,480
+in probability.
+
+132
+00:07:35,480 --> 00:07:36,080

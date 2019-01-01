@@ -1,0 +1,153 @@
+1
+00:00:00,000 --> 00:00:00,460
+
+2
+00:00:00,460 --> 00:00:03,970
+In this lecture, we look in
+some depth into various
+
+3
+00:00:03,970 --> 00:00:06,690
+properties of Poisson
+processes.
+
+4
+00:00:06,690 --> 00:00:10,030
+These properties would be quite
+hard to study if one
+
+5
+00:00:10,030 --> 00:00:12,390
+were to proceed just
+analytically by
+
+6
+00:00:12,390 --> 00:00:14,620
+manipulating formulas.
+
+7
+00:00:14,620 --> 00:00:17,930
+However, by using memorylessness
+and our
+
+8
+00:00:17,930 --> 00:00:20,650
+intuitive understanding of
+what the Poisson process
+
+9
+00:00:20,650 --> 00:00:23,770
+really is, they become
+quite simple.
+
+10
+00:00:23,770 --> 00:00:26,550
+And the mathematical
+manipulations can be avoided
+
+11
+00:00:26,550 --> 00:00:29,690
+almost entirely.
+
+12
+00:00:29,690 --> 00:00:33,150
+We will start by arguing that
+the sum of independent Poisson
+
+13
+00:00:33,150 --> 00:00:36,080
+random variables is Poisson.
+
+14
+00:00:36,080 --> 00:00:40,250
+But we will then establish the
+much stronger statement that
+
+15
+00:00:40,250 --> 00:00:44,650
+if we merge two independent
+Poisson processes, we, again,
+
+16
+00:00:44,650 --> 00:00:47,500
+obtain a Poisson process.
+
+17
+00:00:47,500 --> 00:00:50,250
+We will see that we can exploit
+this fact to solve
+
+18
+00:00:50,250 --> 00:00:54,130
+some problems that would be
+quite difficult otherwise.
+
+19
+00:00:54,130 --> 00:00:58,820
+Once more, intuitive reasoning
+is the key.
+
+20
+00:00:58,820 --> 00:01:02,040
+Finally, we will spend some time
+discussing a phenomenon
+
+21
+00:01:02,040 --> 00:01:06,160
+that goes under the name
+of random incidence.
+
+22
+00:01:06,160 --> 00:01:08,590
+The Poisson process
+has been running.
+
+23
+00:01:08,590 --> 00:01:10,890
+You show up at a certain time.
+
+24
+00:01:10,890 --> 00:01:14,110
+You look at the size of the
+inter-arrival interval during
+
+25
+00:01:14,110 --> 00:01:15,940
+which you show up.
+
+26
+00:01:15,940 --> 00:01:19,450
+It turns out that this
+inter-arrival interval that
+
+27
+00:01:19,450 --> 00:01:22,810
+you get to observe is
+not a typical one.
+
+28
+00:01:22,810 --> 00:01:25,260
+It tends to be larger
+than the typical
+
+29
+00:01:25,260 --> 00:01:27,940
+inter-arrival interval.
+
+30
+00:01:27,940 --> 00:01:30,930
+We will understand what exactly
+is going on, build
+
+31
+00:01:30,930 --> 00:01:34,240
+some intuition, and realize
+that this is a general
+
+32
+00:01:34,240 --> 00:01:37,770
+phenomenon that also shows up
+in many other contexts.
+
+33
+00:01:37,770 --> 00:01:39,020

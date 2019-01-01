@@ -1,0 +1,214 @@
+1
+00:00:00,000 --> 00:00:00,750
+
+2
+00:00:00,750 --> 00:00:03,010
+In this lecture, we start
+our systematic
+
+3
+00:00:03,010 --> 00:00:05,290
+study of Bayesian inference.
+
+4
+00:00:05,290 --> 00:00:08,340
+We will first talk a little
+bit about the big picture,
+
+5
+00:00:08,340 --> 00:00:11,620
+about inference in general,
+the huge range of possible
+
+6
+00:00:11,620 --> 00:00:14,260
+applications, and the different
+types of problems
+
+7
+00:00:14,260 --> 00:00:16,079
+that one may encounter.
+
+8
+00:00:16,079 --> 00:00:18,990
+For example, we have hypothesis
+testing problems in
+
+9
+00:00:18,990 --> 00:00:22,130
+which we are trying to choose
+between a finite and usually
+
+10
+00:00:22,130 --> 00:00:26,280
+small number of alternative
+hypotheses or estimation
+
+11
+00:00:26,280 --> 00:00:30,160
+problems where we want to
+estimate as close as we can an
+
+12
+00:00:30,160 --> 00:00:33,020
+unknown numerical quantity.
+
+13
+00:00:33,020 --> 00:00:34,030
+We then move into the
+
+14
+00:00:34,030 --> 00:00:36,170
+specifics of Bayesian inference.
+
+15
+00:00:36,170 --> 00:00:39,090
+The central idea is that we
+always use the Bayes rule to
+
+16
+00:00:39,090 --> 00:00:41,770
+find the posterior distribution
+of an unknown
+
+17
+00:00:41,770 --> 00:00:45,160
+random variable based on
+observations of a related
+
+18
+00:00:45,160 --> 00:00:46,740
+random variable.
+
+19
+00:00:46,740 --> 00:00:49,330
+Depending on whether the random
+variables are discrete
+
+20
+00:00:49,330 --> 00:00:52,160
+or continuous, we must of course
+you use the appropriate
+
+21
+00:00:52,160 --> 00:00:55,060
+version of the Bayes rule.
+
+22
+00:00:55,060 --> 00:00:58,670
+If we want to summarize the
+posterior in a single number,
+
+23
+00:00:58,670 --> 00:01:01,420
+that is, to come up with a
+numerical estimate of the
+
+24
+00:01:01,420 --> 00:01:05,160
+unknown random variable, we
+then have some options.
+
+25
+00:01:05,160 --> 00:01:07,860
+One is to report the
+value at which the
+
+26
+00:01:07,860 --> 00:01:09,850
+posterior is largest.
+
+27
+00:01:09,850 --> 00:01:12,610
+Another is to report the
+mean of the conditional
+
+28
+00:01:12,610 --> 00:01:14,000
+distribution.
+
+29
+00:01:14,000 --> 00:01:17,710
+These go under the acronyms
+MAP and LMS.
+
+30
+00:01:17,710 --> 00:01:22,700
+We will see shortly what these
+acronyms stand for.
+
+31
+00:01:22,700 --> 00:01:25,590
+Given any particular method
+for coming up with a point
+
+32
+00:01:25,590 --> 00:01:29,280
+estimate, there are certain
+performance metrics that tell
+
+33
+00:01:29,280 --> 00:01:31,680
+us how good the estimate is.
+
+34
+00:01:31,680 --> 00:01:34,510
+For hypothesis testing problems,
+the appropriate
+
+35
+00:01:34,510 --> 00:01:37,850
+metric is the probability of
+error, the probability of
+
+36
+00:01:37,850 --> 00:01:40,100
+making a mistake.
+
+37
+00:01:40,100 --> 00:01:43,670
+For problems of estimating
+a numerical quantity, an
+
+38
+00:01:43,670 --> 00:01:46,510
+appropriate metric that we will
+be using a lot is the
+
+39
+00:01:46,510 --> 00:01:50,420
+expected value of the
+squared error.
+
+40
+00:01:50,420 --> 00:01:53,440
+As we will see, there will be
+no new mathematics in this
+
+41
+00:01:53,440 --> 00:01:57,380
+lecture, just a few definitions,
+a few new terms,
+
+42
+00:01:57,380 --> 00:01:59,760
+and an application of
+the Bayes rule.
+
+43
+00:01:59,760 --> 00:02:03,240
+Nevertheless, it is important to
+be able to apply the Bayes
+
+44
+00:02:03,240 --> 00:02:06,290
+rule systematically and
+with confidence.
+
+45
+00:02:06,290 --> 00:02:09,130
+For this reason, we will be
+going over several examples.
+
+46
+00:02:09,130 --> 00:02:10,380

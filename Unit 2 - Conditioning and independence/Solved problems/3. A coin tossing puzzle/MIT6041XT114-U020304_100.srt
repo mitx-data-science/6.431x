@@ -1,0 +1,665 @@
+1
+00:00:00,000 --> 00:00:00,080
+
+2
+00:00:00,080 --> 00:00:00,880
+Hi.
+
+3
+00:00:00,880 --> 00:00:03,340
+In this problem, we'll be going
+over practice with the
+
+4
+00:00:03,340 --> 00:00:06,140
+calculation of conditional
+probabilities.
+
+5
+00:00:06,140 --> 00:00:09,580
+We'll start with a game where
+our friend Alice will be
+
+6
+00:00:09,580 --> 00:00:13,500
+tossing a coin with certain
+bias of having a head, and
+
+7
+00:00:13,500 --> 00:00:15,170
+tosses this coin twice.
+
+8
+00:00:15,170 --> 00:00:16,520
+And we're interested in
+knowing, what's the
+
+9
+00:00:16,520 --> 00:00:19,110
+probability that both
+coin tosses will
+
+10
+00:00:19,110 --> 00:00:20,980
+end up being a head?
+
+11
+00:00:20,980 --> 00:00:23,500
+The first step we're going to
+do is to convert the problem
+
+12
+00:00:23,500 --> 00:00:25,940
+into a mathematical form
+by defining two
+
+13
+00:00:25,940 --> 00:00:27,490
+events as the following.
+
+14
+00:00:27,490 --> 00:00:31,430
+Event A is where the first
+coin toss is a head.
+
+15
+00:00:31,430 --> 00:00:35,200
+And similarly, event B will be
+having the second coin toss
+
+16
+00:00:35,200 --> 00:00:37,050
+also being a head.
+
+17
+00:00:37,050 --> 00:00:40,910
+Having these two events will
+allow us to say, well, the
+
+18
+00:00:40,910 --> 00:00:44,280
+event that A intersection B will
+be the event that both
+
+19
+00:00:44,280 --> 00:00:45,640
+coin tosses are a head.
+
+20
+00:00:45,640 --> 00:00:50,640
+And we'd like to know the
+probability of such an event.
+
+21
+00:00:50,640 --> 00:00:54,310
+In particular, the probability
+of A and B will be calculated
+
+22
+00:00:54,310 --> 00:00:57,040
+under two types of
+information.
+
+23
+00:00:57,040 --> 00:01:01,480
+In the first case, we'll be
+conditioning on that we know
+
+24
+00:01:01,480 --> 00:01:04,879
+the first coin toss is a head.
+
+25
+00:01:04,879 --> 00:01:07,670
+I'd like to know what the
+probability of A and B is.
+
+26
+00:01:07,670 --> 00:01:12,160
+In the second case, we know that
+at least one of the two
+
+27
+00:01:12,160 --> 00:01:16,260
+coin tosses is a head expressed
+in the form A union
+
+28
+00:01:16,260 --> 00:01:17,310
+B.
+
+29
+00:01:17,310 --> 00:01:22,560
+And under this conditioning,
+what is the probability of A
+
+30
+00:01:22,560 --> 00:01:25,180
+and B, A intersection B?
+
+31
+00:01:25,180 --> 00:01:28,790
+So Alice, in this problem,
+says-- well, her guess will be
+
+32
+00:01:28,790 --> 00:01:31,980
+that the first quantity
+is no smaller
+
+33
+00:01:31,980 --> 00:01:33,630
+than the second quantity.
+
+34
+00:01:33,630 --> 00:01:38,900
+Namely, knowing that the first
+coin toss is a head somehow
+
+35
+00:01:38,900 --> 00:01:41,800
+more strongly implies that both
+coin tosses will be a
+
+36
+00:01:41,800 --> 00:01:44,650
+head, compared to the case that
+we only know at least one
+
+37
+00:01:44,650 --> 00:01:46,610
+of the two coin tosses
+is a head.
+
+38
+00:01:46,610 --> 00:01:49,190
+And we'd like to verify if this
+
+39
+00:01:49,190 --> 00:01:51,440
+inequality is indeed true.
+
+40
+00:01:51,440 --> 00:01:54,970
+To do so, let's just use the
+basic calculation of
+
+41
+00:01:54,970 --> 00:01:56,780
+conditional probability.
+
+42
+00:01:56,780 --> 00:01:59,110
+Now, from the lectures, you've
+already learned that to
+
+43
+00:01:59,110 --> 00:02:02,880
+calculate this quantity, we'll
+write out a fraction where the
+
+44
+00:02:02,880 --> 00:02:07,240
+numerator is the probability of
+the intersection of these
+
+45
+00:02:07,240 --> 00:02:08,550
+two events.
+
+46
+00:02:08,550 --> 00:02:16,820
+So we have A intersection B
+intersection A, divided by the
+
+47
+00:02:16,820 --> 00:02:19,410
+probability of the event that
+we're conditioning on, which
+
+48
+00:02:19,410 --> 00:02:23,000
+is A.
+
+49
+00:02:23,000 --> 00:02:28,140
+Now, the top quantity, since
+we know that A and B is a
+
+50
+00:02:28,140 --> 00:02:32,110
+subset of event A, then taking
+the intersection of these two
+
+51
+00:02:32,110 --> 00:02:35,190
+quantities will just give
+us the first event.
+
+52
+00:02:35,190 --> 00:02:41,060
+So we have A and B. And the
+bottom is still probability of
+
+53
+00:02:41,060 --> 00:02:42,560
+A.
+
+54
+00:02:42,560 --> 00:02:45,780
+Let's do the same thing for
+the second quantity here.
+
+55
+00:02:45,780 --> 00:02:54,480
+We have the top probability of A
+and B intersection the event
+
+56
+00:02:54,480 --> 00:03:02,430
+A union B, and on the bottom,
+probability of the event A and
+
+57
+00:03:02,430 --> 00:03:08,930
+B. Again, we see the event A and
+B is a subset of the event
+
+58
+00:03:08,930 --> 00:03:16,050
+A union B. So the top will be
+A and B. And the bottom--
+
+59
+00:03:16,050 --> 00:03:19,990
+A union B.
+
+60
+00:03:19,990 --> 00:03:23,070
+OK, now let's stop
+for a little bit.
+
+61
+00:03:23,070 --> 00:03:28,230
+We've computed the probability
+for each expression in the
+
+62
+00:03:28,230 --> 00:03:30,280
+following fractional form.
+
+63
+00:03:30,280 --> 00:03:32,610
+And we observed that for
+both fractions, the
+
+64
+00:03:32,610 --> 00:03:33,920
+numerator is the same.
+
+65
+00:03:33,920 --> 00:03:37,530
+So the numerator is a
+probability of A and B. And
+
+66
+00:03:37,530 --> 00:03:41,590
+the denominator in the first
+case is probably of A, and the
+
+67
+00:03:41,590 --> 00:03:44,490
+second case, probably
+of A union B.
+
+68
+00:03:44,490 --> 00:03:49,370
+Since we know that A is a subset
+of the event A union B,
+
+69
+00:03:49,370 --> 00:03:53,120
+and by the monotonicity of
+probabilities, we know that
+
+70
+00:03:53,120 --> 00:03:56,630
+the probability of A is hence
+no greater than the
+
+71
+00:03:56,630 --> 00:04:01,860
+probability of A union B.
+Substituting this back into
+
+72
+00:04:01,860 --> 00:04:07,330
+these expressions, we know that
+because they lie in the
+
+73
+00:04:07,330 --> 00:04:11,500
+denominators, the first
+expression is indeed no
+
+74
+00:04:11,500 --> 00:04:13,430
+smaller than the second
+expression.
+
+75
+00:04:13,430 --> 00:04:16,690
+So our friend Alice
+was correct.
+
+76
+00:04:16,690 --> 00:04:20,269
+So throughout this problem, we
+never used the fact that the
+
+77
+00:04:20,269 --> 00:04:25,160
+probability of a particular coin
+toss results, let's say,
+
+78
+00:04:25,160 --> 00:04:27,270
+in a head is a certain number.
+
+79
+00:04:27,270 --> 00:04:30,430
+Actually, this bias for the
+coin is irrelevant.
+
+80
+00:04:30,430 --> 00:04:33,260
+Whether the coin is fair
+or unfair, this
+
+81
+00:04:33,260 --> 00:04:35,170
+fact is always true.
+
+82
+00:04:35,170 --> 00:04:36,750
+So indeed, it does
+not depend on the
+
+83
+00:04:36,750 --> 00:04:38,660
+probability of the coin.
+
+84
+00:04:38,660 --> 00:04:43,440
+But if you're really curious
+what happens when the coin is
+
+85
+00:04:43,440 --> 00:04:45,820
+fair, we can plug
+in the numbers.
+
+86
+00:04:45,820 --> 00:04:52,320
+And here, we're assuming the
+coin is fair, which means
+
+87
+00:04:52,320 --> 00:04:57,790
+probability of having
+a head is 1/2.
+
+88
+00:04:57,790 --> 00:05:01,130
+Then, we'll see after going
+through the calculations that
+
+89
+00:05:01,130 --> 00:05:05,610
+the first probability is 1/2,
+whereas the second probability
+
+90
+00:05:05,610 --> 00:05:11,090
+is 1/3, which means,
+in this case, the
+
+91
+00:05:11,090 --> 00:05:12,640
+dominance actually is strict.
+
+92
+00:05:12,640 --> 00:05:14,550
+So the first one is strictly
+greater than
+
+93
+00:05:14,550 --> 00:05:16,110
+the second one, OK?
+
+94
+00:05:16,110 --> 00:05:18,480
+So this completes the first
+part of the problem.
+
+95
+00:05:18,480 --> 00:05:22,590
+How do we generalize this into
+more general settings?
+
+96
+00:05:22,590 --> 00:05:24,300
+There are multiple ways,
+but we'll go over
+
+97
+00:05:24,300 --> 00:05:27,630
+one particular form.
+
+98
+00:05:27,630 --> 00:05:35,880
+And to do so, we'll be defining
+three events somewhat
+
+99
+00:05:35,880 --> 00:05:37,030
+more abstractly.
+
+100
+00:05:37,030 --> 00:05:38,420
+Let's say we have
+three events--
+
+101
+00:05:38,420 --> 00:05:44,530
+C, D, and E. Imagine any event,
+but all three events
+
+102
+00:05:44,530 --> 00:05:47,000
+have to satisfy the following
+condition.
+
+103
+00:05:47,000 --> 00:05:54,620
+First, event D will be a subset
+of E. And second, the
+
+104
+00:05:54,620 --> 00:05:57,950
+intersection of C and
+D is equal to the
+
+105
+00:05:57,950 --> 00:06:01,340
+intersection of C and E, OK?
+
+106
+00:06:01,340 --> 00:06:03,570
+So this will be our
+choice events.
+
+107
+00:06:03,570 --> 00:06:07,700
+And let's see a particular
+example.
+
+108
+00:06:07,700 --> 00:06:12,990
+Let's say you have a sample
+space here and some event E.
+
+109
+00:06:12,990 --> 00:06:17,570
+Now, by the first condition, D
+will have to lie somewhere in
+
+110
+00:06:17,570 --> 00:06:21,990
+E. For the second condition,
+we'll pick some event C such
+
+111
+00:06:21,990 --> 00:06:23,500
+that this is true.
+
+112
+00:06:23,500 --> 00:06:27,780
+And one way to do so is simply
+picking C that lies within
+
+113
+00:06:27,780 --> 00:06:32,630
+both D and E. And you can see
+C intersection D will be C.
+
+114
+00:06:32,630 --> 00:06:37,910
+And C intersection E will still
+be C. Hence, the second
+
+115
+00:06:37,910 --> 00:06:39,760
+equality is true.
+
+116
+00:06:39,760 --> 00:06:42,720
+So if both equalities are true,
+we have the following
+
+117
+00:06:42,720 --> 00:06:46,170
+relationship, that the
+probability of C conditioned
+
+118
+00:06:46,170 --> 00:06:51,940
+on D will be no smaller than
+the probability of C
+
+119
+00:06:51,940 --> 00:06:57,150
+conditioned on event E. And this
+will be the more general
+
+120
+00:06:57,150 --> 00:06:59,265
+form of the inequality
+that we saw before.
+
+121
+00:06:59,265 --> 00:07:01,940
+
+122
+00:07:01,940 --> 00:07:03,430
+So first of all, the
+way to prove this
+
+123
+00:07:03,430 --> 00:07:04,590
+is in fact the same.
+
+124
+00:07:04,590 --> 00:07:07,920
+We simply write out the
+value of this using
+
+125
+00:07:07,920 --> 00:07:09,410
+the fractional form.
+
+126
+00:07:09,410 --> 00:07:12,180
+And based on these two facts,
+we can arrive at this
+
+127
+00:07:12,180 --> 00:07:15,000
+equation, which I shall
+now go over.
+
+128
+00:07:15,000 --> 00:07:18,380
+But just to see why this form
+is more general, in fact, if
+
+129
+00:07:18,380 --> 00:07:25,950
+we, say, we let C be the event
+A intersection B, D be the
+
+130
+00:07:25,950 --> 00:07:30,650
+event A, and E be the
+event A [union]
+
+131
+00:07:30,650 --> 00:07:37,990
+B where A and B are the events
+that we defined earlier.
+
+132
+00:07:37,990 --> 00:07:41,260
+We can verify that, indeed,
+these conditions are true,
+
+133
+00:07:41,260 --> 00:07:45,170
+namely D is a subset of E.
+Because A is a subset of A
+
+134
+00:07:45,170 --> 00:07:50,870
+union B, and C is a subset of
+both D and E. And hence,
+
+135
+00:07:50,870 --> 00:07:53,030
+condition two is also true.
+
+136
+00:07:53,030 --> 00:07:56,330
+And if that's the case, we
+will actually recover the
+
+137
+00:07:56,330 --> 00:08:00,440
+result we got earlier for events
+A and B. And hence,
+
+138
+00:08:00,440 --> 00:08:03,710
+this equation here is
+a more general form.
+
+139
+00:08:03,710 --> 00:08:04,870
+So that's the end
+of the problem.
+
+140
+00:08:04,870 --> 00:08:06,120
+See you next time.
+
+141
+00:08:06,120 --> 00:08:09,834

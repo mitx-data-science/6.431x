@@ -1,0 +1,186 @@
+1
+00:00:00,000 --> 00:00:00,590
+
+2
+00:00:00,590 --> 00:00:03,250
+In the previous lecture, we
+went through examples of
+
+3
+00:00:03,250 --> 00:00:05,830
+inference involving some
+of the variations
+
+4
+00:00:05,830 --> 00:00:07,590
+of the Bayes rule.
+
+5
+00:00:07,590 --> 00:00:10,730
+One case that we did not
+consider was the case where
+
+6
+00:00:10,730 --> 00:00:13,970
+the unknown random variable and
+the observation are both
+
+7
+00:00:13,970 --> 00:00:15,520
+continuous.
+
+8
+00:00:15,520 --> 00:00:18,740
+In this lecture, we will focus
+exclusively on an important
+
+9
+00:00:18,740 --> 00:00:20,150
+model of this kind.
+
+10
+00:00:20,150 --> 00:00:23,960
+And because we consider only one
+specific setting, we will
+
+11
+00:00:23,960 --> 00:00:28,060
+be able to start it in
+considerable detail.
+
+12
+00:00:28,060 --> 00:00:30,950
+In the model that we consider,
+we start with some basic
+
+13
+00:00:30,950 --> 00:00:33,660
+independent normal
+random variables.
+
+14
+00:00:33,660 --> 00:00:38,540
+Some of them, the Theta j, are
+unknown, to be estimated.
+
+15
+00:00:38,540 --> 00:00:42,110
+And some of them, the
+Wi, represent noise.
+
+16
+00:00:42,110 --> 00:00:45,900
+Our observations, Xi, are linear
+functions of these
+
+17
+00:00:45,900 --> 00:00:47,650
+basic random variables.
+
+18
+00:00:47,650 --> 00:00:50,810
+In particular, since linear
+functions of independent
+
+19
+00:00:50,810 --> 00:00:54,140
+normal random variables are
+normal, the observations are
+
+20
+00:00:54,140 --> 00:00:57,450
+themselves normal as well.
+
+21
+00:00:57,450 --> 00:01:01,920
+This is probably the most
+commonly used type of model in
+
+22
+00:01:01,920 --> 00:01:04,569
+all of inference
+and statistics.
+
+23
+00:01:04,569 --> 00:01:07,120
+This is because it is a
+reasonable approximation in
+
+24
+00:01:07,120 --> 00:01:08,510
+many situations.
+
+25
+00:01:08,510 --> 00:01:12,090
+Also, it has a very clean
+analytical structure and a
+
+26
+00:01:12,090 --> 00:01:14,210
+very simple solution.
+
+27
+00:01:14,210 --> 00:01:17,860
+For example, it turns out that
+the posterior distribution of
+
+28
+00:01:17,860 --> 00:01:22,890
+each Theta j is itself normal
+and that the MAP and LMS
+
+29
+00:01:22,890 --> 00:01:25,110
+estimates coincide.
+
+30
+00:01:25,110 --> 00:01:28,950
+This is because the peak of a
+normal occurs at the mean.
+
+31
+00:01:28,950 --> 00:01:32,650
+Furthermore, these estimates
+are given by some simple
+
+32
+00:01:32,650 --> 00:01:36,550
+linear functions of
+the observations.
+
+33
+00:01:36,550 --> 00:01:39,890
+We will go over these facts by
+moving through a sequence of
+
+34
+00:01:39,890 --> 00:01:42,890
+progressively more
+complex versions.
+
+35
+00:01:42,890 --> 00:01:46,700
+We will start with just one
+unknown and one observation
+
+36
+00:01:46,700 --> 00:01:48,400
+and then generalize.
+
+37
+00:01:48,400 --> 00:01:51,350
+And we will illustrate the
+formulation and the solution
+
+38
+00:01:51,350 --> 00:01:55,050
+through a rather realistic
+example where we estimate the
+
+39
+00:01:55,050 --> 00:01:57,960
+trajectory of an object from
+a few noisy measurements.
+
+40
+00:01:57,960 --> 00:01:59,210

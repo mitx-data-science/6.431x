@@ -1,0 +1,528 @@
+1
+00:00:00,000 --> 00:00:01,260
+
+2
+00:00:01,260 --> 00:00:03,390
+In this lecture
+sequence, we introduced
+
+3
+00:00:03,390 --> 00:00:05,700
+quite a few new
+concepts and went
+
+4
+00:00:05,700 --> 00:00:08,090
+through a fair
+number of examples.
+
+5
+00:00:08,090 --> 00:00:09,930
+So for this reason,
+it is useful now
+
+6
+00:00:09,930 --> 00:00:14,860
+to just take stock and summarize
+the key ideas and concepts.
+
+7
+00:00:14,860 --> 00:00:17,650
+The starting point in a
+Bayesian inference problem
+
+8
+00:00:17,650 --> 00:00:18,580
+is the following.
+
+9
+00:00:18,580 --> 00:00:20,510
+There's an unknown
+parameter, Theta,
+
+10
+00:00:20,510 --> 00:00:23,050
+and we're given a
+prior distribution
+
+11
+00:00:23,050 --> 00:00:24,510
+for that parameter.
+
+12
+00:00:24,510 --> 00:00:28,690
+We're also given a model
+for the observations, X,
+
+13
+00:00:28,690 --> 00:00:31,240
+in terms of a
+distribution that depends
+
+14
+00:00:31,240 --> 00:00:34,140
+on the unknown parameter, Theta.
+
+15
+00:00:34,140 --> 00:00:36,610
+The inference problem
+is as follows.
+
+16
+00:00:36,610 --> 00:00:40,590
+We will be given the value
+of the random variable X.
+
+17
+00:00:40,590 --> 00:00:43,690
+And then we want to find
+the posterior distribution
+
+18
+00:00:43,690 --> 00:00:48,060
+of Theta, that is, given this
+particular value of X, what
+
+19
+00:00:48,060 --> 00:00:50,420
+is the conditional
+distribution of Theta?
+
+20
+00:00:50,420 --> 00:00:52,210
+In the case where
+Theta is discrete,
+
+21
+00:00:52,210 --> 00:00:54,060
+this will be in terms of a PMF.
+
+22
+00:00:54,060 --> 00:00:57,630
+If Theta is continuous,
+this would be a PDF.
+
+23
+00:00:57,630 --> 00:00:59,550
+We find the posterior
+distribution
+
+24
+00:00:59,550 --> 00:01:02,760
+by using an appropriate
+version of the Bayes rule.
+
+25
+00:01:02,760 --> 00:01:08,010
+And here we have four different
+combinations or four choices,
+
+26
+00:01:08,010 --> 00:01:13,460
+depending on which variables
+are discrete or continuous.
+
+27
+00:01:13,460 --> 00:01:15,780
+This is a complete solution
+to the Bayesian inference
+
+28
+00:01:15,780 --> 00:01:18,610
+problem-- a posterior
+distribution.
+
+29
+00:01:18,610 --> 00:01:24,640
+But if we want to come up with
+a single guess of what Theta is,
+
+30
+00:01:24,640 --> 00:01:27,860
+then we use a
+so-called estimator.
+
+31
+00:01:27,860 --> 00:01:31,290
+What an estimator does is that
+it calculates a certain value
+
+32
+00:01:31,290 --> 00:01:33,830
+as a function of
+the observed data.
+
+33
+00:01:33,830 --> 00:01:37,380
+So g describes the way that
+the data are processed.
+
+34
+00:01:37,380 --> 00:01:40,110
+Because X is random,
+the estimator
+
+35
+00:01:40,110 --> 00:01:42,710
+itself will be a
+random variable.
+
+36
+00:01:42,710 --> 00:01:46,980
+But once we obtain a specific
+value of our random variable
+
+37
+00:01:46,980 --> 00:01:49,860
+and we apply this
+particular estimator,
+
+38
+00:01:49,860 --> 00:01:53,490
+then we get the realized
+value of the estimator.
+
+39
+00:01:53,490 --> 00:01:56,740
+So we apply g now
+to the lowercase x,
+
+40
+00:01:56,740 --> 00:02:00,940
+and this gives us an estimate,
+which is actually a number.
+
+41
+00:02:00,940 --> 00:02:04,200
+We have seen two particular
+ways of constructing
+
+42
+00:02:04,200 --> 00:02:06,210
+estimates or estimators.
+
+43
+00:02:06,210 --> 00:02:11,039
+One of them is the maximum a
+posteriori probability rule
+
+44
+00:02:11,039 --> 00:02:17,210
+in which we choose an estimate
+that maximizes the posterior
+
+45
+00:02:17,210 --> 00:02:18,520
+distribution.
+
+46
+00:02:18,520 --> 00:02:20,590
+So in the case where
+Theta is discrete,
+
+47
+00:02:20,590 --> 00:02:23,500
+this finds the value
+of theta, which
+
+48
+00:02:23,500 --> 00:02:27,280
+is the most likely one
+given our observation.
+
+49
+00:02:27,280 --> 00:02:29,560
+And similarly, in
+the continuous case,
+
+50
+00:02:29,560 --> 00:02:32,360
+it finds a value
+of theta at which
+
+51
+00:02:32,360 --> 00:02:36,460
+the conditional PDF of
+Theta would be largest.
+
+52
+00:02:36,460 --> 00:02:40,000
+Another estimator
+is the one that we
+
+53
+00:02:40,000 --> 00:02:43,140
+call the LMS or least mean
+squares estimator, which
+
+54
+00:02:43,140 --> 00:02:45,390
+calculates the
+conditional expectation
+
+55
+00:02:45,390 --> 00:02:47,880
+of the unknown parameter,
+given the observations
+
+56
+00:02:47,880 --> 00:02:50,160
+that we have obtained.
+
+57
+00:02:50,160 --> 00:02:53,150
+Finally, we may be
+interested in evaluating
+
+58
+00:02:53,150 --> 00:02:56,110
+the performance of
+a given estimator.
+
+59
+00:02:56,110 --> 00:02:58,260
+For hypotheses-testing
+problems we're
+
+60
+00:02:58,260 --> 00:03:00,910
+interested in the
+probability of error.
+
+61
+00:03:00,910 --> 00:03:03,820
+And we have the conditional
+probability of error.
+
+62
+00:03:03,820 --> 00:03:06,730
+Given the data that
+I have just observed
+
+63
+00:03:06,730 --> 00:03:09,420
+and given that I'm using
+a specific estimator,
+
+64
+00:03:09,420 --> 00:03:12,560
+what is the probability
+that I make a mistake?
+
+65
+00:03:12,560 --> 00:03:16,800
+And then there's the overall
+evaluation of the estimator--
+
+66
+00:03:16,800 --> 00:03:19,720
+how well does it
+do on the average
+
+67
+00:03:19,720 --> 00:03:23,710
+before I know what
+X is going to be?
+
+68
+00:03:23,710 --> 00:03:26,200
+And this is just the
+probability that I
+
+69
+00:03:26,200 --> 00:03:29,250
+will be making an
+incorrect decision.
+
+70
+00:03:29,250 --> 00:03:31,250
+For estimation problems,
+on the other hand,
+
+71
+00:03:31,250 --> 00:03:34,800
+we're interested in the
+distance between our estimates
+
+72
+00:03:34,800 --> 00:03:36,830
+from the true value of Theta.
+
+73
+00:03:36,830 --> 00:03:40,780
+And this leads us to the
+following conditional mean
+
+74
+00:03:40,780 --> 00:03:44,270
+squared error, given
+that we have already
+
+75
+00:03:44,270 --> 00:03:45,740
+obtained an observation.
+
+76
+00:03:45,740 --> 00:03:48,400
+And we come up
+with an estimator.
+
+77
+00:03:48,400 --> 00:03:50,890
+In particular, the value of
+the estimator at this time
+
+78
+00:03:50,890 --> 00:03:54,230
+would be completely determined
+by the data that we obtained.
+
+79
+00:03:54,230 --> 00:03:57,460
+But Theta, the unknown
+parameter remains random.
+
+80
+00:03:57,460 --> 00:04:00,790
+And there's going to be
+a certain squared error.
+
+81
+00:04:00,790 --> 00:04:03,270
+We find the
+conditional expectation
+
+82
+00:04:03,270 --> 00:04:07,130
+of this squared error in this
+particular situation, where
+
+83
+00:04:07,130 --> 00:04:09,910
+we have obtained a specific
+value of the random variable,
+
+84
+00:04:09,910 --> 00:04:12,930
+capital X. On the
+other hand, if we're
+
+85
+00:04:12,930 --> 00:04:15,390
+looking at the estimator
+more generally,
+
+86
+00:04:15,390 --> 00:04:17,990
+how well it does on
+the average, then
+
+87
+00:04:17,990 --> 00:04:21,640
+we look at the unconditional
+mean squared error,
+
+88
+00:04:21,640 --> 00:04:25,540
+and this gives us an overall
+performance evaluation.
+
+89
+00:04:25,540 --> 00:04:29,020
+How do we calculate these
+performance measures?
+
+90
+00:04:29,020 --> 00:04:31,670
+Here, we live in a
+conditional universe.
+
+91
+00:04:31,670 --> 00:04:35,570
+And in a Bayesian estimation
+problem at some point
+
+92
+00:04:35,570 --> 00:04:39,050
+we do calculate the posterior
+distribution of Theta,
+
+93
+00:04:39,050 --> 00:04:40,480
+given the measurements.
+
+94
+00:04:40,480 --> 00:04:45,020
+So these calculations
+involved here
+
+95
+00:04:45,020 --> 00:04:49,490
+consist of just an
+integration or summation
+
+96
+00:04:49,490 --> 00:04:52,050
+using the conditional
+distribution.
+
+97
+00:04:52,050 --> 00:04:55,270
+For example, here we would
+integrate this quantity
+
+98
+00:04:55,270 --> 00:04:57,920
+using the conditional
+density of Theta,
+
+99
+00:04:57,920 --> 00:05:01,250
+given the particular value
+that we have obtained.
+
+100
+00:05:01,250 --> 00:05:06,000
+If we want to now calculate
+the unconditional performance,
+
+101
+00:05:06,000 --> 00:05:09,860
+then we would have to
+use the total probability
+
+102
+00:05:09,860 --> 00:05:11,625
+or expectation theorem.
+
+103
+00:05:11,625 --> 00:05:16,210
+
+104
+00:05:16,210 --> 00:05:21,880
+And in that case, we can average
+over all the possible values
+
+105
+00:05:21,880 --> 00:05:25,410
+of X to find the overall error.
+
+106
+00:05:25,410 --> 00:05:29,560
+So all of the calculations
+involve tools and equations
+
+107
+00:05:29,560 --> 00:05:32,790
+that we have seen and that
+we have used in the past,
+
+108
+00:05:32,790 --> 00:05:36,400
+so it is just a matter
+of connecting those tools
+
+109
+00:05:36,400 --> 00:05:40,900
+with the specific new concepts
+that we have introduced here.

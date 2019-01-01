@@ -1,0 +1,829 @@
+1
+00:00:00,000 --> 00:00:00,580
+
+2
+00:00:00,580 --> 00:00:03,520
+In this segment, we will discuss
+the multinomial, and
+
+3
+00:00:03,520 --> 00:00:06,000
+the multinomial probabilities,
+which are a nice
+
+4
+00:00:06,000 --> 00:00:09,090
+generalization of the binomial
+probabilities.
+
+5
+00:00:09,090 --> 00:00:10,930
+The setting is as follows.
+
+6
+00:00:10,930 --> 00:00:11,895
+We're dealing with balls.
+
+7
+00:00:11,895 --> 00:00:14,170
+And the balls come into
+different colors.
+
+8
+00:00:14,170 --> 00:00:17,240
+There are r possible
+different colors.
+
+9
+00:00:17,240 --> 00:00:18,670
+We pick a ball at random.
+
+10
+00:00:18,670 --> 00:00:22,490
+And when we do that, there's a
+certain probability p-i that
+
+11
+00:00:22,490 --> 00:00:25,410
+the ball that we picked,
+has the i-th color.
+
+12
+00:00:25,410 --> 00:00:29,160
+Now, we repeat this process,
+n times independently, each
+
+13
+00:00:29,160 --> 00:00:32,270
+time, we get a ball that
+has a random color.
+
+14
+00:00:32,270 --> 00:00:35,660
+And we're interested in the
+following kind of question.
+
+15
+00:00:35,660 --> 00:00:38,450
+Somebody fixes for us
+certain numbers--
+
+16
+00:00:38,450 --> 00:00:44,430
+n1, n2, up to nr that add up to
+n, and asks us, what is the
+
+17
+00:00:44,430 --> 00:00:47,050
+probability that when you carry
+out the experiment, you
+
+18
+00:00:47,050 --> 00:00:51,410
+get exactly n1 balls of the
+first color, exactly n2 balls
+
+19
+00:00:51,410 --> 00:00:53,930
+of the second color,
+and so on.
+
+20
+00:00:53,930 --> 00:00:59,640
+So the numbers n1, n2, and up to
+nr are fixed given numbers.
+
+21
+00:00:59,640 --> 00:01:01,910
+For a particular choice of
+those numbers, we want to
+
+22
+00:01:01,910 --> 00:01:04,680
+calculate this probability.
+
+23
+00:01:04,680 --> 00:01:07,300
+Now of course, this is
+a more general model.
+
+24
+00:01:07,300 --> 00:01:09,350
+It doesn't necessarily
+deal with balls
+
+25
+00:01:09,350 --> 00:01:10,770
+of different colors.
+
+26
+00:01:10,770 --> 00:01:15,480
+For example, we might have an
+experiment that gives us
+
+27
+00:01:15,480 --> 00:01:20,120
+random numbers where the numbers
+range from 1 up to r.
+
+28
+00:01:20,120 --> 00:01:23,970
+And, at each time, we get
+a random number, with
+
+29
+00:01:23,970 --> 00:01:25,130
+probability p-i.
+
+30
+00:01:25,130 --> 00:01:27,850
+We get a number which
+is equal to i.
+
+31
+00:01:27,850 --> 00:01:32,440
+So we could use this to model
+die rolls, for example.
+
+32
+00:01:32,440 --> 00:01:35,290
+And there's actually a special
+case of this problem, which
+
+33
+00:01:35,290 --> 00:01:36,720
+should be familiar.
+
+34
+00:01:36,720 --> 00:01:39,120
+Suppose that we have
+only two colors.
+
+35
+00:01:39,120 --> 00:01:42,570
+And instead of thinking of
+colors, let's think of the two
+
+36
+00:01:42,570 --> 00:01:46,980
+possibilities as being
+heads or tails.
+
+37
+00:01:46,980 --> 00:01:49,100
+And we can make the
+following analogy.
+
+38
+00:01:49,100 --> 00:01:55,730
+Somebody gives us numbers, n1
+and n2 that add up to n.
+
+39
+00:01:55,730 --> 00:01:59,050
+And we're interested in the
+probability that we get n1 of
+
+40
+00:01:59,050 --> 00:02:02,310
+the first color and n2
+of the second color.
+
+41
+00:02:02,310 --> 00:02:05,950
+Well, we could think of this
+as a setting in which we're
+
+42
+00:02:05,950 --> 00:02:12,570
+asking for the probability that
+we obtain k heads and n
+
+43
+00:02:12,570 --> 00:02:14,610
+minus k tails.
+
+44
+00:02:14,610 --> 00:02:17,560
+
+45
+00:02:17,560 --> 00:02:21,030
+So the question of what is the
+probability that we obtain k
+
+46
+00:02:21,030 --> 00:02:25,470
+heads and n minus k tails is
+of the same kind as what is
+
+47
+00:02:25,470 --> 00:02:29,270
+the probability that we get n1
+of the first color and n2 of
+
+48
+00:02:29,270 --> 00:02:30,820
+the second color.
+
+49
+00:02:30,820 --> 00:02:34,580
+Now, if heads have the
+probability p of occurring,
+
+50
+00:02:34,580 --> 00:02:38,730
+and tails has a probability of
+1 minus p of occurring, then
+
+51
+00:02:38,730 --> 00:02:41,305
+we would have the following
+analogy: the probability of
+
+52
+00:02:41,305 --> 00:02:45,040
+obtaining the first color, which
+correspond to heads,
+
+53
+00:02:45,040 --> 00:02:46,960
+that would be equal to p.
+
+54
+00:02:46,960 --> 00:02:49,590
+The probability of obtaining
+the second color, which
+
+55
+00:02:49,590 --> 00:02:50,720
+corresponds to tails.
+
+56
+00:02:50,720 --> 00:02:54,050
+This would be 1 minus p.
+
+57
+00:02:54,050 --> 00:02:58,850
+Now, the probability of
+obtaining k heads in those n
+
+58
+00:02:58,850 --> 00:03:02,780
+independent trials we
+know what it is.
+
+59
+00:03:02,780 --> 00:03:07,720
+By the binomial probabilities,
+it is n choose k times p to
+
+60
+00:03:07,720 --> 00:03:13,970
+the k times 1 minus p to
+the power n minus k.
+
+61
+00:03:13,970 --> 00:03:18,570
+Now we can translate this answer
+to the multinomial
+
+62
+00:03:18,570 --> 00:03:21,720
+case, where we're dealing with
+colors, and we do these
+
+63
+00:03:21,720 --> 00:03:23,500
+substitutions.
+
+64
+00:03:23,500 --> 00:03:30,990
+So n choose k is n factorial
+divided by k factorial.
+
+65
+00:03:30,990 --> 00:03:35,040
+In this case, k is
+the same as n1.
+
+66
+00:03:35,040 --> 00:03:37,570
+So we get an n1 factorial.
+
+67
+00:03:37,570 --> 00:03:40,830
+And then we're going to have
+here n minus k factorial.
+
+68
+00:03:40,830 --> 00:03:43,920
+But n minus k corresponds
+to n2.
+
+69
+00:03:43,920 --> 00:03:47,750
+So here we get an
+n2 factorial.
+
+70
+00:03:47,750 --> 00:03:49,650
+And then p corresponds to p1.
+
+71
+00:03:49,650 --> 00:03:53,080
+
+72
+00:03:53,080 --> 00:03:58,020
+And p2 corresponds
+to 1 minus p.
+
+73
+00:03:58,020 --> 00:04:01,250
+So we get here p1 times p2.
+
+74
+00:04:01,250 --> 00:04:06,720
+And the power n minus k, again,
+by analogy, is n2.
+
+75
+00:04:06,720 --> 00:04:10,850
+So this is the form of the
+multinomial probabilities for
+
+76
+00:04:10,850 --> 00:04:13,470
+the special case where we're
+dealing with two colors.
+
+77
+00:04:13,470 --> 00:04:16,060
+
+78
+00:04:16,060 --> 00:04:19,149
+Let's now look at the
+general case.
+
+79
+00:04:19,149 --> 00:04:20,820
+Let's start with an example.
+
+80
+00:04:20,820 --> 00:04:25,080
+To be concrete, suppose that the
+number of colors is equal
+
+81
+00:04:25,080 --> 00:04:33,780
+to 3 and that we're going to
+pick n equal to 7 balls.
+
+82
+00:04:33,780 --> 00:04:35,540
+We carry out the experiment.
+
+83
+00:04:35,540 --> 00:04:39,660
+And we might obtain an outcome
+which would be a
+
+84
+00:04:39,660 --> 00:04:41,310
+sequence of this type.
+
+85
+00:04:41,310 --> 00:04:44,560
+So the first ball had
+the color one.
+
+86
+00:04:44,560 --> 00:04:46,760
+The second ball had
+the first color.
+
+87
+00:04:46,760 --> 00:04:49,460
+The third ball had
+the third color.
+
+88
+00:04:49,460 --> 00:04:53,720
+The fourth had the first
+color, and so on.
+
+89
+00:04:53,720 --> 00:04:57,680
+And suppose that this
+was the outcome.
+
+90
+00:04:57,680 --> 00:05:01,260
+One way of summarizing what
+happened in this outcome would
+
+91
+00:05:01,260 --> 00:05:06,035
+be to say that we
+had four ones.
+
+92
+00:05:06,035 --> 00:05:09,670
+
+93
+00:05:09,670 --> 00:05:16,600
+We had two twos, and
+we had one three.
+
+94
+00:05:16,600 --> 00:05:21,810
+We would say that this is
+the type of the outcome.
+
+95
+00:05:21,810 --> 00:05:23,740
+It's of type 4, 2, 1.
+
+96
+00:05:23,740 --> 00:05:27,440
+That is, we obtain 4 of the
+first color, 2 of the second
+
+97
+00:05:27,440 --> 00:05:29,440
+color, and 1 of the
+third color.
+
+98
+00:05:29,440 --> 00:05:32,420
+
+99
+00:05:32,420 --> 00:05:34,590
+This is one possible outcome.
+
+100
+00:05:34,590 --> 00:05:36,690
+What is the probability
+of obtaining
+
+101
+00:05:36,690 --> 00:05:39,610
+this particular outcome?
+
+102
+00:05:39,610 --> 00:05:43,570
+The probability of obtaining
+this particular outcome is,
+
+103
+00:05:43,570 --> 00:05:46,690
+using independence, the
+probability that we obtain
+
+104
+00:05:46,690 --> 00:05:49,750
+color 1 in the first trial.
+
+105
+00:05:49,750 --> 00:05:55,250
+color 1 in the second trial,
+color 3 in the third trial,
+
+106
+00:05:55,250 --> 00:06:00,300
+color 1 in the fourth trial,
+color 2 in the next trial,
+
+107
+00:06:00,300 --> 00:06:04,980
+color 2 in the next trial, color
+1 in the last trial.
+
+108
+00:06:04,980 --> 00:06:08,590
+And we put all of the
+factors together.
+
+109
+00:06:08,590 --> 00:06:13,380
+And we notice that this is p1
+to the fourth, p2 to the
+
+110
+00:06:13,380 --> 00:06:16,050
+second, times p3.
+
+111
+00:06:16,050 --> 00:06:19,410
+
+112
+00:06:19,410 --> 00:06:22,620
+It's not a coincidence that the
+exponents that we have up
+
+113
+00:06:22,620 --> 00:06:27,590
+here are exactly the counts that
+we had when we specified
+
+114
+00:06:27,590 --> 00:06:32,000
+the type of this particular
+outcome.
+
+115
+00:06:32,000 --> 00:06:36,310
+Generalizing from this example,
+we realize that the
+
+116
+00:06:36,310 --> 00:06:39,780
+probability of obtaining a
+particular sequence of a
+
+117
+00:06:39,780 --> 00:06:46,100
+certain type, that probability
+is of this form.
+
+118
+00:06:46,100 --> 00:06:49,980
+For each color, we have the
+probability of that color
+
+119
+00:06:49,980 --> 00:06:53,440
+raised to the power of how many
+times that particular
+
+120
+00:06:53,440 --> 00:06:57,200
+color appears in a sequence.
+
+121
+00:06:57,200 --> 00:07:00,780
+So any particular sequence
+of this type has this
+
+122
+00:07:00,780 --> 00:07:02,020
+probability.
+
+123
+00:07:02,020 --> 00:07:06,460
+What we're interested in is to
+find the total probability of
+
+124
+00:07:06,460 --> 00:07:10,180
+obtaining some sequence
+of this type.
+
+125
+00:07:10,180 --> 00:07:12,270
+How can we find this
+probability?
+
+126
+00:07:12,270 --> 00:07:15,330
+Well, we will take the
+probability of each sequence
+
+127
+00:07:15,330 --> 00:07:20,050
+of this type, which is this
+much, and it's the same for
+
+128
+00:07:20,050 --> 00:07:24,730
+any particular sequence, and
+multiply with the number of
+
+129
+00:07:24,730 --> 00:07:27,980
+sequences of this type.
+
+130
+00:07:27,980 --> 00:07:32,120
+So how many sequences are
+there of a certain type?
+
+131
+00:07:32,120 --> 00:07:34,160
+Let's look back at
+our example.
+
+132
+00:07:34,160 --> 00:07:37,340
+We had seven trials.
+
+133
+00:07:37,340 --> 00:07:42,600
+So let us number here the
+different trials.
+
+134
+00:07:42,600 --> 00:07:46,560
+And when I tell you that a
+particular sequence was
+
+135
+00:07:46,560 --> 00:07:54,880
+obtained, that's the same as
+telling you that, in this set
+
+136
+00:07:54,880 --> 00:08:00,125
+of trials, we had
+the first color.
+
+137
+00:08:00,125 --> 00:08:03,700
+
+138
+00:08:03,700 --> 00:08:09,130
+In this set of trials, the fifth
+and the sixth trial, we
+
+139
+00:08:09,130 --> 00:08:13,260
+had the second color.
+
+140
+00:08:13,260 --> 00:08:19,770
+And in this trial, the third
+trial, we had the third color.
+
+141
+00:08:19,770 --> 00:08:22,610
+This is an alternative
+way of telling you
+
+142
+00:08:22,610 --> 00:08:24,310
+what sequence we obtained.
+
+143
+00:08:24,310 --> 00:08:27,690
+I tell you at which trials we
+had the first color, at which
+
+144
+00:08:27,690 --> 00:08:32,530
+trials we had the second, at
+which trials we had the third.
+
+145
+00:08:32,530 --> 00:08:33,900
+But what do we have here?
+
+146
+00:08:33,900 --> 00:08:39,530
+Here we have a partition of the
+set of numbers from 1 up
+
+147
+00:08:39,530 --> 00:08:43,179
+to 7 into three subsets.
+
+148
+00:08:43,179 --> 00:08:48,240
+And the cardinalities of those
+subsets are the numbers that
+
+149
+00:08:48,240 --> 00:08:52,440
+appear here in the type
+of the sequence.
+
+150
+00:08:52,440 --> 00:08:59,100
+The conclusion is that a
+sequence of a certain type is
+
+151
+00:08:59,100 --> 00:09:03,760
+equivalent, or can be
+alternatively specified, by
+
+152
+00:09:03,760 --> 00:09:11,370
+giving you a partition of the
+set of tosses, which is the
+
+153
+00:09:11,370 --> 00:09:17,150
+set from 1 up to n, how many
+trials we had, a partition
+
+154
+00:09:17,150 --> 00:09:20,390
+into subsets of certain sizes.
+
+155
+00:09:20,390 --> 00:09:25,160
+So this allows us now to count
+the number of sequences of a
+
+156
+00:09:25,160 --> 00:09:26,320
+certain type.
+
+157
+00:09:26,320 --> 00:09:29,610
+It's exactly the same as the
+number of partitions.
+
+158
+00:09:29,610 --> 00:09:31,550
+And we know what this is.
+
+159
+00:09:31,550 --> 00:09:34,690
+And putting everything together,
+the probability of
+
+160
+00:09:34,690 --> 00:09:39,280
+obtaining a sequence of a
+certain type is equal to the
+
+161
+00:09:39,280 --> 00:09:43,940
+count of how many sequences do
+we have of a certain type,
+
+162
+00:09:43,940 --> 00:09:46,330
+which is the same as the number
+of partitions of a
+
+163
+00:09:46,330 --> 00:09:50,340
+certain type, times the
+probability of any particular
+
+164
+00:09:50,340 --> 00:09:55,830
+sequence of that type that
+we're interested in.
+
+165
+00:09:55,830 --> 00:09:59,460
+So this is a formula that
+generalizes the one that we
+
+166
+00:09:59,460 --> 00:10:03,340
+saw before for the case where
+we have only two colors and
+
+167
+00:10:03,340 --> 00:10:07,930
+which corresponded to the
+coin tossing setting.
+
+168
+00:10:07,930 --> 00:10:10,400
+And it is a useful model because
+you can think of many
+
+169
+00:10:10,400 --> 00:10:14,100
+situations in which you have
+repeated trials, and, at each
+
+170
+00:10:14,100 --> 00:10:18,230
+trial, you obtain one
+out of a finite
+
+171
+00:10:18,230 --> 00:10:20,510
+set of possible results.
+
+172
+00:10:20,510 --> 00:10:23,100
+There are r different
+possible results.
+
+173
+00:10:23,100 --> 00:10:25,440
+You repeat those trials
+independently.
+
+174
+00:10:25,440 --> 00:10:29,460
+And you may be interested in
+the question of how many
+
+175
+00:10:29,460 --> 00:10:32,970
+results of the first kind, of
+the second kind, and so on,
+
+176
+00:10:32,970 --> 00:10:34,220
+there will be.
+
+177
+00:10:34,220 --> 00:10:35,157

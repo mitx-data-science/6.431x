@@ -1,0 +1,154 @@
+1
+00:00:00,000 --> 00:00:01,100
+
+2
+00:00:01,100 --> 00:00:04,059
+By this point in this class, we
+have developed all of the
+
+3
+00:00:04,059 --> 00:00:06,650
+basic tools that we need
+to study and analyze
+
+4
+00:00:06,650 --> 00:00:08,540
+probabilistic models.
+
+5
+00:00:08,540 --> 00:00:12,130
+So this is a good time to move
+to a practical subject, the
+
+6
+00:00:12,130 --> 00:00:14,260
+subject of inference.
+
+7
+00:00:14,260 --> 00:00:17,030
+The general idea is that we
+have a probabilistic model
+
+8
+00:00:17,030 --> 00:00:19,400
+involving several random
+variables.
+
+9
+00:00:19,400 --> 00:00:21,740
+We observe the values
+of some of them.
+
+10
+00:00:21,740 --> 00:00:25,230
+And we want to make inferences
+on some of the others.
+
+11
+00:00:25,230 --> 00:00:28,340
+Note that the unknown quantities
+are modeled as
+
+12
+00:00:28,340 --> 00:00:31,020
+random variables, which
+means that we can
+
+13
+00:00:31,020 --> 00:00:32,299
+use the Bayes rule.
+
+14
+00:00:32,299 --> 00:00:34,590
+And so we will stay within
+the realm of
+
+15
+00:00:34,590 --> 00:00:37,930
+so-called Bayesian inference.
+
+16
+00:00:37,930 --> 00:00:41,070
+In the four lectures that
+follow, we will illustrate the
+
+17
+00:00:41,070 --> 00:00:44,040
+use of the Bayes rule
+in various settings.
+
+18
+00:00:44,040 --> 00:00:46,730
+We will discuss different
+methods of coming up with
+
+19
+00:00:46,730 --> 00:00:49,620
+estimates of unobserved
+random variables.
+
+20
+00:00:49,620 --> 00:00:51,670
+And we will illustrate
+the methodology
+
+21
+00:00:51,670 --> 00:00:54,490
+through several examples.
+
+22
+00:00:54,490 --> 00:00:56,990
+If you have mastered the
+material in previous units,
+
+23
+00:00:56,990 --> 00:00:59,530
+you should not face any
+challenges here.
+
+24
+00:00:59,530 --> 00:01:03,460
+We will only apply tools that we
+already have, together with
+
+25
+00:01:03,460 --> 00:01:06,070
+some new definitions
+and terminology.
+
+26
+00:01:06,070 --> 00:01:09,560
+However, this may be a good time
+to review the different
+
+27
+00:01:09,560 --> 00:01:12,980
+versions of the Bayes rule and
+the examples covered in the
+
+28
+00:01:12,980 --> 00:01:15,850
+second half of lecture 10.
+
+29
+00:01:15,850 --> 00:01:18,930
+And by the end of this unit,
+you should have a working
+
+30
+00:01:18,930 --> 00:01:21,960
+knowledge of the key elements
+of Bayesian inference.
+
+31
+00:01:21,960 --> 00:01:24,840
+And you should be ready to apply
+your knowledge to actual
+
+32
+00:01:24,840 --> 00:01:27,360
+problems, as they arise
+in the real world.
+
+33
+00:01:27,360 --> 00:01:28,610

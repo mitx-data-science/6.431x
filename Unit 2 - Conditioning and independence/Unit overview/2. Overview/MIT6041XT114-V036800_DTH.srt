@@ -1,0 +1,161 @@
+1
+00:00:00,000 --> 00:00:00,340
+
+2
+00:00:00,340 --> 00:00:03,360
+In the first lecture, we
+introduced probabilities as a
+
+3
+00:00:03,360 --> 00:00:06,840
+way of describing our beliefs
+about the likelihood that a
+
+4
+00:00:06,840 --> 00:00:08,860
+given event will occur.
+
+5
+00:00:08,860 --> 00:00:11,440
+But our beliefs will in
+general depend on the
+
+6
+00:00:11,440 --> 00:00:13,530
+information that we have.
+
+7
+00:00:13,530 --> 00:00:17,000
+Taking into account new
+information leads us to
+
+8
+00:00:17,000 --> 00:00:19,990
+consider so-called conditional
+probabilities.
+
+9
+00:00:19,990 --> 00:00:22,790
+These are revised probabilities
+that take into
+
+10
+00:00:22,790 --> 00:00:25,720
+account the new information.
+
+11
+00:00:25,720 --> 00:00:29,090
+Conditional probabilities are
+very useful whenever we want
+
+12
+00:00:29,090 --> 00:00:32,830
+to break up a model into simpler
+pieces using a divide
+
+13
+00:00:32,830 --> 00:00:34,550
+and conquer strategy.
+
+14
+00:00:34,550 --> 00:00:37,940
+This is done using certain tools
+that we will develop and
+
+15
+00:00:37,940 --> 00:00:40,870
+which we will keep applying
+throughout this course in
+
+16
+00:00:40,870 --> 00:00:42,540
+different guises.
+
+17
+00:00:42,540 --> 00:00:45,990
+They are also the foundation
+of the field of inference.
+
+18
+00:00:45,990 --> 00:00:49,970
+And we will see how they
+arise in that context.
+
+19
+00:00:49,970 --> 00:00:53,780
+Then, in the second lecture of
+this unit, we will consider a
+
+20
+00:00:53,780 --> 00:00:57,860
+special case where one event
+does not convey useful
+
+21
+00:00:57,860 --> 00:01:01,160
+information about another,
+a situation that we call
+
+22
+00:01:01,160 --> 00:01:03,730
+independence.
+
+23
+00:01:03,730 --> 00:01:05,920
+Independence usually describes
+a situation where the
+
+24
+00:01:05,920 --> 00:01:09,360
+occurrence or non-occurrence
+of different events is
+
+25
+00:01:09,360 --> 00:01:13,170
+determined by factors that
+are completely unrelated.
+
+26
+00:01:13,170 --> 00:01:17,030
+Independence is what allows us
+to build complex models out of
+
+27
+00:01:17,030 --> 00:01:18,420
+simple ones.
+
+28
+00:01:18,420 --> 00:01:21,640
+This is because it is often the
+case that a complex system
+
+29
+00:01:21,640 --> 00:01:24,640
+is made up of several components
+that are affected
+
+30
+00:01:24,640 --> 00:01:28,400
+by unrelated, that is,
+independent sources of
+
+31
+00:01:28,400 --> 00:01:29,960
+randomness.
+
+32
+00:01:29,960 --> 00:01:33,300
+And so with the tools to be
+developed in this unit, we
+
+33
+00:01:33,300 --> 00:01:36,180
+will be ready to calculate
+probabilities in fairly
+
+34
+00:01:36,180 --> 00:01:37,790
+complex probabilistic models.
+
+35
+00:01:37,790 --> 00:01:39,040

@@ -1,0 +1,97 @@
+1
+00:00:00,000 --> 00:00:05,450
+
+
+2
+00:00:05,450 --> 00:00:08,450
+You build a local communication
+network consisting
+
+3
+00:00:08,450 --> 00:00:12,650
+of routers, computers,
+and some hard-wired links
+
+4
+00:00:12,650 --> 00:00:14,520
+that connect them.
+
+5
+00:00:14,520 --> 00:00:17,120
+However, its link has
+a small probability
+
+6
+00:00:17,120 --> 00:00:21,770
+of being nonfunctional
+because of a hardware failure.
+
+7
+00:00:21,770 --> 00:00:23,990
+Assuming that failures
+at different lengths
+
+8
+00:00:23,990 --> 00:00:27,050
+happen independently,
+how likely is it
+
+9
+00:00:27,050 --> 00:00:30,560
+that the message from
+router A will still
+
+10
+00:00:30,560 --> 00:00:33,980
+be able to reach your computer?
+
+11
+00:00:33,980 --> 00:00:37,040
+Suppose now that you received
+notice that one of the routers
+
+12
+00:00:37,040 --> 00:00:38,360
+is down.
+
+13
+00:00:38,360 --> 00:00:40,550
+Given this information,
+how would you
+
+14
+00:00:40,550 --> 00:00:44,330
+update the probability that
+the message from router A
+
+15
+00:00:44,330 --> 00:00:48,890
+will still be able to
+reach your computer?
+
+16
+00:00:48,890 --> 00:00:50,870
+By the end of this
+unit, you will
+
+17
+00:00:50,870 --> 00:00:53,840
+be able to answer
+questions of this type
+
+18
+00:00:53,840 --> 00:00:57,140
+by using the concept of
+conditional probability
+
+19
+00:00:57,140 --> 00:00:59,900
+and by giving a precise
+meaning to the concept
+
+20
+00:00:59,900 --> 00:01:02,430
+of independent failures.
+
+21
+00:01:02,430 --> 00:01:03,446

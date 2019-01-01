@@ -1,0 +1,726 @@
+1
+00:00:00,000 --> 00:00:00,950
+
+2
+00:00:00,950 --> 00:00:01,530
+Hi.
+
+3
+00:00:01,530 --> 00:00:04,059
+In this problem, we're going
+to look at random incidence
+
+4
+00:00:04,059 --> 00:00:05,910
+under Erlang arrivals.
+
+5
+00:00:05,910 --> 00:00:08,230
+First, let's parse
+what that means.
+
+6
+00:00:08,230 --> 00:00:12,970
+In a Poisson process, remember,
+the time between arrivals,
+
+7
+00:00:12,970 --> 00:00:15,050
+or the inter-arrival
+time, is distributed
+
+8
+00:00:15,050 --> 00:00:17,710
+as an exponential
+random variable.
+
+9
+00:00:17,710 --> 00:00:21,610
+And random incidence
+for a Poisson process
+
+10
+00:00:21,610 --> 00:00:23,500
+refers to the somewhat
+surprising result
+
+11
+00:00:23,500 --> 00:00:27,170
+that when you consider
+a specific time,
+
+12
+00:00:27,170 --> 00:00:31,010
+say, t-star, then the length
+of the inter-arrival interval
+
+13
+00:00:31,010 --> 00:00:34,510
+that contains that time
+t-star is not distributed
+
+14
+00:00:34,510 --> 00:00:39,500
+as an exponential
+random variable.
+
+15
+00:00:39,500 --> 00:00:42,830
+It's actually distributed as an
+Erlang random variable of order
+
+16
+00:00:42,830 --> 00:00:47,050
+2 or it's distributed
+as a sum of two
+
+17
+00:00:47,050 --> 00:00:48,530
+exponential random variables.
+
+18
+00:00:48,530 --> 00:00:52,080
+And the reason for that is
+that it comprises of two parts.
+
+19
+00:00:52,080 --> 00:00:56,180
+One is the time since
+the last arrival
+
+20
+00:00:56,180 --> 00:00:59,980
+until t-star, which is
+exponentially distributed,
+
+21
+00:00:59,980 --> 00:01:03,980
+and the time from t-star
+until the next arrival, which
+
+22
+00:01:03,980 --> 00:01:06,170
+is also exponentially
+distributed.
+
+23
+00:01:06,170 --> 00:01:08,140
+So that brings us
+to a review of what
+
+24
+00:01:08,140 --> 00:01:10,190
+Erlang random variables are.
+
+25
+00:01:10,190 --> 00:01:12,540
+An Erlang random
+variable of order k
+
+26
+00:01:12,540 --> 00:01:16,280
+is just the sum of k
+independent and identically
+
+27
+00:01:16,280 --> 00:01:18,760
+distributed exponential
+random variables.
+
+28
+00:01:18,760 --> 00:01:23,200
+So to be more specific, if Ti is
+an exponential random variable
+
+29
+00:01:23,200 --> 00:01:28,700
+with parameter lambda, then
+if you take k iid copies of Ti
+
+30
+00:01:28,700 --> 00:01:31,350
+and add them up,
+and call that Yk,
+
+31
+00:01:31,350 --> 00:01:36,330
+then Yk is an Erlang
+random variable of order k.
+
+32
+00:01:36,330 --> 00:01:40,740
+And one other fact is
+that the mean of Yk,
+
+33
+00:01:40,740 --> 00:01:43,420
+the mean of an Erlang
+random variable of order k,
+
+34
+00:01:43,420 --> 00:01:47,040
+is just k, the
+order, over lambda,
+
+35
+00:01:47,040 --> 00:01:50,185
+which is the rate of the
+underlying exponential random
+
+36
+00:01:50,185 --> 00:01:51,960
+variables.
+
+37
+00:01:51,960 --> 00:01:55,395
+So as a consequence, if you
+have an Erlang random variable
+
+38
+00:01:55,395 --> 00:01:59,210
+of order two and that random
+variable also has a mean of two
+
+39
+00:01:59,210 --> 00:02:02,850
+over lambda, we can interpret
+that random variable as just
+
+40
+00:02:02,850 --> 00:02:05,620
+being the sum of two
+exponential random variables.
+
+41
+00:02:05,620 --> 00:02:08,500
+2 iid exponential random
+variables, T1 and T2,
+
+42
+00:02:08,500 --> 00:02:14,300
+where each one is exponential
+with the rate lambda.
+
+43
+00:02:14,300 --> 00:02:17,920
+OK, so in this problem now,
+we're dealing with random
+
+44
+00:02:17,920 --> 00:02:20,200
+incidence not under
+Poisson processes,
+
+45
+00:02:20,200 --> 00:02:25,140
+but under something else, which
+we call here an Erlang process
+
+46
+00:02:25,140 --> 00:02:28,180
+with Erlang arrival times.
+
+47
+00:02:28,180 --> 00:02:31,430
+So to be more specific,
+what we're saying is that,
+
+48
+00:02:31,430 --> 00:02:34,470
+instead of an inter-arrival
+time being exponentially
+
+49
+00:02:34,470 --> 00:02:38,260
+distributed, in this process, an
+inter-arrival time is actually
+
+50
+00:02:38,260 --> 00:02:42,690
+distributed as an Erlang random
+variable of order 2 with mean 2
+
+51
+00:02:42,690 --> 00:02:43,800
+over lambda.
+
+52
+00:02:43,800 --> 00:02:48,740
+So to be explicit, this is
+no longer a Poisson process.
+
+53
+00:02:48,740 --> 00:02:53,260
+It's some other process because
+the inter-arrival times are not
+
+54
+00:02:53,260 --> 00:02:54,620
+exponential.
+
+55
+00:02:54,620 --> 00:02:57,730
+So let's make use of this fact
+that we talked about earlier
+
+56
+00:02:57,730 --> 00:03:00,770
+because now we know that the
+inter-arrival times of this
+
+57
+00:03:00,770 --> 00:03:05,450
+Erlang process are Erlang order
+2 with mean 2 over lambda.
+
+58
+00:03:05,450 --> 00:03:08,440
+But we know that that can just
+be re-interpreted as a sum
+
+59
+00:03:08,440 --> 00:03:13,320
+of two simple exponentials,
+each with parameter lambda.
+
+60
+00:03:13,320 --> 00:03:20,910
+So let's just draw another
+picture and imagine that
+
+61
+00:03:20,910 --> 00:03:25,070
+for each of these arrivals,
+so say we have three sample
+
+62
+00:03:25,070 --> 00:03:29,320
+arrivals in this Erlang
+process, we can fill in, kind
+
+63
+00:03:29,320 --> 00:03:38,060
+of, the gaps between these
+with additional arrivals.
+
+64
+00:03:38,060 --> 00:03:48,980
+And then think of each one
+of these times as all being
+
+65
+00:03:48,980 --> 00:03:54,050
+exponential with
+parameter lambda.
+
+66
+00:03:54,050 --> 00:03:58,040
+So this is a valid
+interpretation because when we
+
+67
+00:03:58,040 --> 00:04:08,440
+connect these, these
+inter-arrival times correspond
+
+68
+00:04:08,440 --> 00:04:11,320
+to the combination of
+two inter-arrival times,
+
+69
+00:04:11,320 --> 00:04:15,490
+which we know we can split that
+into just two exponentials.
+
+70
+00:04:15,490 --> 00:04:19,060
+So each one of these is an
+exponential random variable.
+
+71
+00:04:19,060 --> 00:04:23,980
+And when you combine them,
+you get an Erlang order of 2.
+
+72
+00:04:23,980 --> 00:04:27,300
+But the nice thing about this
+is that if we look at this
+
+73
+00:04:27,300 --> 00:04:36,060
+diagram, it actually is just
+exactly a Poisson process with
+
+74
+00:04:36,060 --> 00:04:42,020
+a rate lambda because now,
+what we're dealing with are
+
+75
+00:04:42,020 --> 00:04:45,930
+exactly-- the inter-arrival
+times are now exactly
+
+76
+00:04:45,930 --> 00:04:47,460
+exponential random variables.
+
+77
+00:04:47,460 --> 00:04:52,770
+And so this is in fact, now,
+just a simple Poisson process.
+
+78
+00:04:52,770 --> 00:04:59,290
+And we can also just think of it
+as we take the Poisson process,
+
+79
+00:04:59,290 --> 00:05:01,960
+and take every
+other arrival, say,
+
+80
+00:05:01,960 --> 00:05:06,730
+all the even-numbered arrivals,
+and make those correspond
+
+81
+00:05:06,730 --> 00:05:11,440
+to the arrivals in
+the Erlang process.
+
+82
+00:05:11,440 --> 00:05:18,810
+OK, so now let's think about
+some specific time t-star.
+
+83
+00:05:18,810 --> 00:05:28,910
+We want to know what is the
+distribution of the length
+
+84
+00:05:28,910 --> 00:05:35,910
+of this specific inter-arrival
+interval that t-star is in.
+
+85
+00:05:35,910 --> 00:05:41,290
+Well, what we can do is take
+it down to the level of this
+
+86
+00:05:41,290 --> 00:05:43,500
+Poisson process and
+look at it from there.
+
+87
+00:05:43,500 --> 00:05:48,010
+Well, we do that because,
+for a Poisson process,
+
+88
+00:05:48,010 --> 00:05:51,910
+we know about random incidence
+for Poisson processes.
+
+89
+00:05:51,910 --> 00:05:55,190
+And we know how to deal
+with Poisson processes.
+
+90
+00:05:55,190 --> 00:05:57,660
+So let's think about this now.
+
+91
+00:05:57,660 --> 00:05:59,890
+Well, t-star is here.
+
+92
+00:05:59,890 --> 00:06:03,855
+And what we know from random
+incidence for a Poisson process
+
+93
+00:06:03,855 --> 00:06:09,380
+is that the length of this
+inter-arrival interval
+
+94
+00:06:09,380 --> 00:06:15,660
+for the Poisson process, we
+know that this is an exponential
+
+95
+00:06:15,660 --> 00:06:17,180
+plus an exponential.
+
+96
+00:06:17,180 --> 00:06:25,780
+So combined, this
+is Erlang order 2.
+
+97
+00:06:25,780 --> 00:06:30,100
+
+98
+00:06:30,100 --> 00:06:34,070
+But that only covers
+from here to here.
+
+99
+00:06:34,070 --> 00:06:36,580
+And what we want is
+actually from here to there.
+
+100
+00:06:36,580 --> 00:06:42,730
+Well now, we tack on an extra
+exponential because we know
+
+101
+00:06:42,730 --> 00:06:46,000
+that the inter-arrival times--
+the time between this arrival
+
+102
+00:06:46,000 --> 00:06:48,310
+and that arrival in the
+Poisson process is just another
+
+103
+00:06:48,310 --> 00:06:49,670
+exponential.
+
+104
+00:06:49,670 --> 00:06:52,720
+And now all of these are
+in disjoint time intervals.
+
+105
+00:06:52,720 --> 00:06:54,100
+And they're all independent.
+
+106
+00:06:54,100 --> 00:06:58,610
+And so the time of this
+inter-arrival interval
+
+107
+00:06:58,610 --> 00:07:02,200
+in the Erlang process is just
+going to be the sum of three
+
+108
+00:07:02,200 --> 00:07:06,670
+independent exponentials within
+the underlying Poisson process.
+
+109
+00:07:06,670 --> 00:07:09,270
+And so the answer
+here is actually,
+
+110
+00:07:09,270 --> 00:07:13,790
+it's going to be an
+Erlang of order 3.
+
+111
+00:07:13,790 --> 00:07:16,960
+
+112
+00:07:16,960 --> 00:07:20,680
+Now this is one possible
+scenario for how this might
+
+113
+00:07:20,680 --> 00:07:21,610
+occur.
+
+114
+00:07:21,610 --> 00:07:27,830
+Another scenario is actually
+that t-star is somewhere else.
+
+115
+00:07:27,830 --> 00:07:29,760
+So let's draw this again.
+
+116
+00:07:29,760 --> 00:07:34,300
+
+117
+00:07:34,300 --> 00:07:45,880
+And suppose now, in this case,
+t-star landed between an even
+
+118
+00:07:45,880 --> 00:07:49,590
+numbered arrival in the Poisson
+process and an odd numbered
+
+119
+00:07:49,590 --> 00:07:50,880
+arrival.
+
+120
+00:07:50,880 --> 00:07:54,000
+Now it could also arrive between
+an odd numbered and an even
+
+121
+00:07:54,000 --> 00:07:55,560
+numbered arrival.
+
+122
+00:07:55,560 --> 00:08:02,170
+So it could be that
+t-star is actually here.
+
+123
+00:08:02,170 --> 00:08:04,690
+Well, but in this case, it's
+actually more or less the same
+
+124
+00:08:04,690 --> 00:08:11,110
+thing because now what we want
+is the length of this entire
+
+125
+00:08:11,110 --> 00:08:14,120
+inter-arrival interval,
+which, in the Poisson world,
+
+126
+00:08:14,120 --> 00:08:19,030
+we can break it down into random
+incidence within this interval,
+
+127
+00:08:19,030 --> 00:08:23,800
+this inter-arrival interval,
+which is two exponentials,
+
+128
+00:08:23,800 --> 00:08:29,710
+or an Erlang of 2,
+plus this interval,
+
+129
+00:08:29,710 --> 00:08:31,750
+which is just a standard
+inter-arrival time,
+
+130
+00:08:31,750 --> 00:08:33,360
+which is another exponential.
+
+131
+00:08:33,360 --> 00:08:37,530
+So in this case as well, we have
+the sum of three independent
+
+132
+00:08:37,530 --> 00:08:38,900
+exponential random variables.
+
+133
+00:08:38,900 --> 00:08:44,130
+And so, in either case, we have
+that the inter-arrival time
+
+134
+00:08:44,130 --> 00:08:48,250
+in the Erlang process
+is an Erlang of order 3.
+
+135
+00:08:48,250 --> 00:08:50,260
+And so the final
+answer is, in fact,
+
+136
+00:08:50,260 --> 00:08:53,930
+that the inter-arrival time for
+random incidence under these
+
+137
+00:08:53,930 --> 00:08:59,030
+Erlang-type arrivals is
+an Erlang of order 3.
+
+138
+00:08:59,030 --> 00:09:04,490
+OK, so in this problem we looked
+at the random incidence under
+
+139
+00:09:04,490 --> 00:09:07,290
+a different type of an
+arrival process, not Poisson,
+
+140
+00:09:07,290 --> 00:09:09,270
+but with Erlang
+random variables.
+
+141
+00:09:09,270 --> 00:09:11,600
+But we used the insight
+that Erlang really can be
+
+142
+00:09:11,600 --> 00:09:16,110
+re-interpreted as the sum of
+independent and identically
+
+143
+00:09:16,110 --> 00:09:18,155
+distributed exponential
+random variables.
+
+144
+00:09:18,155 --> 00:09:25,320
+And exponential random variables
+can be viewed as one way
+
+145
+00:09:25,320 --> 00:09:27,990
+of interpreting and
+viewing a Poisson process.
+
+146
+00:09:27,990 --> 00:09:30,510
+And so by going
+through those steps,
+
+147
+00:09:30,510 --> 00:09:33,940
+we were able to use what we know
+about random incidence under
+
+148
+00:09:33,940 --> 00:09:37,300
+Poisson processes to help us
+solve this problem of random
+
+149
+00:09:37,300 --> 00:09:39,030
+incidence under Erlang arrivals.
+
+150
+00:09:39,030 --> 00:09:40,510
+So I hope that was helpful.
+
+151
+00:09:40,510 --> 00:09:42,960
+And I'll see you next time.
+
+152
+00:09:42,960 --> 00:09:44,334

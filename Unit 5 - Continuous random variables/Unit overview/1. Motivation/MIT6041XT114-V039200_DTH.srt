@@ -1,0 +1,103 @@
+1
+00:00:00,000 --> 00:00:00,740
+
+
+2
+00:00:00,740 --> 00:00:02,960
+Here's a fun problem.
+
+3
+00:00:02,960 --> 00:00:06,110
+A sheet of paper is
+ruled with parallel lines
+
+4
+00:00:06,110 --> 00:00:09,230
+that are at equal
+distance from each other.
+
+5
+00:00:09,230 --> 00:00:13,740
+I throw a needle on
+the paper randomly.
+
+6
+00:00:13,740 --> 00:00:15,700
+What is the probability
+that the needle will
+
+7
+00:00:15,700 --> 00:00:17,245
+intersect one of the lines?
+
+8
+00:00:17,245 --> 00:00:25,933
+
+
+9
+00:00:25,933 --> 00:00:27,889
+[CELL PHONE RINGING]
+
+10
+00:00:27,889 --> 00:00:33,290
+
+
+11
+00:00:33,290 --> 00:00:34,970
+Here's another question.
+
+12
+00:00:34,970 --> 00:00:39,630
+A cell phone tower sends
+signals carrying voice, text,
+
+13
+00:00:39,630 --> 00:00:42,770
+and digital data
+to your cell phone.
+
+14
+00:00:42,770 --> 00:00:46,040
+These signals are always
+corrupted by some noise.
+
+15
+00:00:46,040 --> 00:00:48,980
+How would you describe
+or model the noise?
+
+16
+00:00:48,980 --> 00:00:51,230
+And how would you
+evaluate the probability
+
+17
+00:00:51,230 --> 00:00:53,345
+that the signal is
+incorrectly received?
+
+18
+00:00:53,345 --> 00:00:56,860
+
+
+19
+00:00:56,860 --> 00:00:59,650
+In both of these examples,
+we can model the underlying
+
+20
+00:00:59,650 --> 00:01:03,500
+phenomena in terms of
+continuous random variables.
+
+21
+00:01:03,500 --> 00:01:07,000
+And in this unit, we will
+develop methods to answer
+
+22
+00:01:07,000 --> 00:01:09,630
+the questions we raised.
+
+23
+00:01:09,630 --> 00:01:11,534

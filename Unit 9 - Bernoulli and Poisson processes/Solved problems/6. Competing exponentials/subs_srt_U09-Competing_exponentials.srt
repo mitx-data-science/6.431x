@@ -1,0 +1,658 @@
+1
+00:00:00,000 --> 00:00:00,500
+
+2
+00:00:00,500 --> 00:00:01,070
+Hi.
+
+3
+00:00:01,070 --> 00:00:04,370
+In this problem, we're going to
+look at competing exponentials.
+
+4
+00:00:04,370 --> 00:00:07,030
+So, we have three
+exponential random variables.
+
+5
+00:00:07,030 --> 00:00:11,160
+X with parameter lambda,
+Y with parameter mu,
+
+6
+00:00:11,160 --> 00:00:13,370
+and Z with parameter nu.
+
+7
+00:00:13,370 --> 00:00:16,765
+And we want to calculate
+some probability.
+
+8
+00:00:16,765 --> 00:00:18,640
+And the probability that
+we want to calculate
+
+9
+00:00:18,640 --> 00:00:25,440
+is the probability that X is
+less than Y is less than Z.
+
+10
+00:00:25,440 --> 00:00:31,910
+Now, we can reinterpret this
+as three Poisson processes,
+
+11
+00:00:31,910 --> 00:00:34,460
+because the link
+between exponentials
+
+12
+00:00:34,460 --> 00:00:37,550
+and Poisson processes is
+that the interarrival time
+
+13
+00:00:37,550 --> 00:00:40,460
+of Poisson processes are
+exponentially distributed.
+
+14
+00:00:40,460 --> 00:00:45,370
+So, you can think of X being
+the time until the first arrival
+
+15
+00:00:45,370 --> 00:00:49,030
+in a Poisson process
+with parameter lambda.
+
+16
+00:00:49,030 --> 00:00:52,505
+And same thing for Y is
+the first arrival time
+
+17
+00:00:52,505 --> 00:00:54,700
+of a Poisson process
+with parameter mu.
+
+18
+00:00:54,700 --> 00:00:57,120
+The same thing for Z and nu.
+
+19
+00:00:57,120 --> 00:01:02,690
+So, in that interpretation,
+X less than Y lesson Z,
+
+20
+00:01:02,690 --> 00:01:06,690
+you could interpret as a race,
+meaning that X finishes first,
+
+21
+00:01:06,690 --> 00:01:10,160
+followed by a Y, and
+then Z comes in last.
+
+22
+00:01:10,160 --> 00:01:11,910
+So, with that
+interpretation, let's see
+
+23
+00:01:11,910 --> 00:01:14,910
+how we can calculate
+what this probability is.
+
+24
+00:01:14,910 --> 00:01:22,480
+We can rewrite this
+probability as a combination
+
+25
+00:01:22,480 --> 00:01:23,670
+of two things occurring.
+
+26
+00:01:23,670 --> 00:01:33,020
+One is that X is less than
+the minimum of Y and Z,
+
+27
+00:01:33,020 --> 00:01:38,310
+and then the other is
+that Y is less than Z.
+
+28
+00:01:38,310 --> 00:01:40,130
+So, what does this
+first event mean?
+
+29
+00:01:40,130 --> 00:01:43,260
+This first event means
+that X comes in first.
+
+30
+00:01:43,260 --> 00:01:45,770
+And it doesn't matter
+whether Y comes
+
+31
+00:01:45,770 --> 00:01:47,790
+in second or Z comes in second.
+
+32
+00:01:47,790 --> 00:01:51,200
+So, we first say that X
+has to come in first, which
+
+33
+00:01:51,200 --> 00:01:55,440
+means it has to beat
+the better [of] Y and Z.
+
+34
+00:01:55,440 --> 00:01:59,720
+And then that combined with
+the fact that Y does better
+
+35
+00:01:59,720 --> 00:02:03,300
+than Z is the same thing
+as saying that X is first,
+
+36
+00:02:03,300 --> 00:02:05,920
+Y is second, and Z is third.
+
+37
+00:02:05,920 --> 00:02:09,580
+And now let's try to argue
+using Poisson processes
+
+38
+00:02:09,580 --> 00:02:12,570
+that these two events
+are actually independent.
+
+39
+00:02:12,570 --> 00:02:21,100
+So, this event occurring means
+that X is smaller than Y and Z.
+
+40
+00:02:21,100 --> 00:02:24,570
+So, let's take these
+Poisson processes
+
+41
+00:02:24,570 --> 00:02:26,590
+and, because these
+random variables
+
+42
+00:02:26,590 --> 00:02:29,440
+are assumed to be
+independent, these
+
+43
+00:02:29,440 --> 00:02:34,060
+are independent Poisson
+process, so, we can merge them.
+
+44
+00:02:34,060 --> 00:02:36,100
+So let's merge
+these two and we'll
+
+45
+00:02:36,100 --> 00:02:43,920
+get a Poisson process
+that has rate mu plus nu.
+
+46
+00:02:43,920 --> 00:02:50,110
+And we can also merge this
+first one and that one,
+
+47
+00:02:50,110 --> 00:02:51,720
+and we'll get another
+Poisson process
+
+48
+00:02:51,720 --> 00:02:58,520
+with parameter lambda
+plus mu plus nu.
+
+49
+00:02:58,520 --> 00:03:00,480
+So, in that context,
+what does it
+
+50
+00:03:00,480 --> 00:03:03,520
+mean that X is less than
+the minimum of Y and Z?
+
+51
+00:03:03,520 --> 00:03:09,220
+It just means that, in
+this merged process,
+
+52
+00:03:09,220 --> 00:03:16,770
+the first arrival came
+from the X process.
+
+53
+00:03:16,770 --> 00:03:18,850
+In that case, if
+that's true, then X
+
+54
+00:03:18,850 --> 00:03:21,470
+is less than the
+minimum of Y and Z.
+
+55
+00:03:21,470 --> 00:03:24,290
+Well, let's say
+that that event does
+
+56
+00:03:24,290 --> 00:03:29,710
+occur, that the first arrival
+is from the X process.
+
+57
+00:03:29,710 --> 00:03:35,970
+Now we're interested in what
+the order of the second two
+
+58
+00:03:35,970 --> 00:03:36,570
+arrivals are.
+
+59
+00:03:36,570 --> 00:03:39,450
+Is it Y first and then
+Z, or Z first and then Y?
+
+60
+00:03:39,450 --> 00:03:42,550
+Well, it doesn't matter because
+of the fresh start property.
+
+61
+00:03:42,550 --> 00:03:46,030
+Because, after this
+arrival comes-- and say
+
+62
+00:03:46,030 --> 00:03:52,300
+it is from the X process-- the
+Poisson processes start anew,
+
+63
+00:03:52,300 --> 00:03:54,610
+and they're still independent.
+
+64
+00:03:54,610 --> 00:03:56,820
+And so what happens
+after that is
+
+65
+00:03:56,820 --> 00:04:00,510
+independent of what happened
+here when X arrived.
+
+66
+00:04:00,510 --> 00:04:05,750
+Whether Y came first followed by
+Z or Z came first followed by Y
+
+67
+00:04:05,750 --> 00:04:07,760
+is independent of
+what happened here.
+
+68
+00:04:07,760 --> 00:04:11,260
+So, because of that, these
+two events are independent.
+
+69
+00:04:11,260 --> 00:04:13,940
+When we have the probability
+of the intersection of two
+
+70
+00:04:13,940 --> 00:04:15,700
+independent events,
+we can write that
+
+71
+00:04:15,700 --> 00:04:18,745
+as the product of those
+two probabilities.
+
+72
+00:04:18,745 --> 00:04:30,150
+
+73
+00:04:30,150 --> 00:04:34,070
+Now, what is the probability
+of this first event,
+
+74
+00:04:34,070 --> 00:04:36,500
+the probability that X is
+less than the minimum Y and Z?
+
+75
+00:04:36,500 --> 00:04:38,400
+Well, we just said
+that that corresponds
+
+76
+00:04:38,400 --> 00:04:41,030
+to the first arrival
+of this merged process
+
+77
+00:04:41,030 --> 00:04:44,450
+being from the X process.
+
+78
+00:04:44,450 --> 00:04:51,940
+Well, that probability is lambda
+over lambda plus mu plus nu.
+
+79
+00:04:51,940 --> 00:04:55,000
+So, it's equal to
+this ratio where
+
+80
+00:04:55,000 --> 00:04:57,950
+the process that you're
+interested in, its rate
+
+81
+00:04:57,950 --> 00:05:01,334
+comes in the numerator,
+and then the merged rate
+
+82
+00:05:01,334 --> 00:05:02,250
+is on the denominator.
+
+83
+00:05:02,250 --> 00:05:05,290
+
+84
+00:05:05,290 --> 00:05:06,590
+And what about the second one?
+
+85
+00:05:06,590 --> 00:05:10,150
+What's the probably
+that Y is less than Z?
+
+86
+00:05:10,150 --> 00:05:13,000
+Well, let's go now to
+this merged process
+
+87
+00:05:13,000 --> 00:05:15,610
+where we merge just
+the Y and Z processes
+
+88
+00:05:15,610 --> 00:05:17,260
+and see which one comes first.
+
+89
+00:05:17,260 --> 00:05:18,940
+Well, in that case,
+what we want to know
+
+90
+00:05:18,940 --> 00:05:23,340
+is, in this merged process,
+what is the probability
+
+91
+00:05:23,340 --> 00:05:26,320
+that the first arrival
+came from the Y process.
+
+92
+00:05:26,320 --> 00:05:28,700
+Well, analogously,
+that probability
+
+93
+00:05:28,700 --> 00:05:35,120
+is going to be mu
+over mu plus nu,
+
+94
+00:05:35,120 --> 00:05:37,550
+and that gives us our answer.
+
+95
+00:05:37,550 --> 00:05:42,390
+And so we see that what
+looked like a pretty complex
+
+96
+00:05:42,390 --> 00:05:44,560
+calculation, when
+we reinterpret it
+
+97
+00:05:44,560 --> 00:05:46,250
+in terms of Poisson
+processes, it
+
+98
+00:05:46,250 --> 00:05:49,620
+becomes relatively
+easy to solve.
+
+99
+00:05:49,620 --> 00:05:53,361
+But this still seems like
+a complicated expression,
+
+100
+00:05:53,361 --> 00:05:55,360
+so let's try to check to
+see whether it actually
+
+101
+00:05:55,360 --> 00:05:56,340
+makes sense.
+
+102
+00:05:56,340 --> 00:05:58,860
+One way to do that is to
+look at a specific example
+
+103
+00:05:58,860 --> 00:06:01,012
+of the choice of
+lambda, mu, and nu,
+
+104
+00:06:01,012 --> 00:06:02,470
+and see if it
+actually makes sense.
+
+105
+00:06:02,470 --> 00:06:06,600
+
+106
+00:06:06,600 --> 00:06:10,530
+One example is, suppose that
+all three of these parameters
+
+107
+00:06:10,530 --> 00:06:11,930
+are the same.
+
+108
+00:06:11,930 --> 00:06:14,150
+Well, if they're all the
+same, then this probability,
+
+109
+00:06:14,150 --> 00:06:22,530
+the first part becomes 1/3,
+and the second one is 1/2.
+
+110
+00:06:22,530 --> 00:06:25,855
+And so, if all three
+parameters are the same,
+
+111
+00:06:25,855 --> 00:06:28,040
+the probability becomes 1/6.
+
+112
+00:06:28,040 --> 00:06:30,070
+And let's see if
+that makes sense.
+
+113
+00:06:30,070 --> 00:06:31,990
+If all three parameters
+are the same,
+
+114
+00:06:31,990 --> 00:06:38,620
+that means that these arrival
+rates are all the same.
+
+115
+00:06:38,620 --> 00:06:45,190
+And what that means is that
+any ordering of these three
+
+116
+00:06:45,190 --> 00:06:47,990
+arrivals is as likely
+as any other ordering.
+
+117
+00:06:47,990 --> 00:06:50,370
+And what we're interested
+in is the probability
+
+118
+00:06:50,370 --> 00:06:54,310
+of one particular ordering
+happening, which is X first,
+
+119
+00:06:54,310 --> 00:06:57,890
+then Y, then Z. But, if
+everything is symmetric,
+
+120
+00:06:57,890 --> 00:07:01,310
+then any of the orderings is
+as likely as any other one.
+
+121
+00:07:01,310 --> 00:07:02,870
+And how many
+orderings are there?
+
+122
+00:07:02,870 --> 00:07:07,170
+Well, there's three choices for
+who comes in first, two for who
+
+123
+00:07:07,170 --> 00:07:10,040
+comes in second, and one
+for who comes in last.
+
+124
+00:07:10,040 --> 00:07:12,080
+So, there's a total
+of six possible orders
+
+125
+00:07:12,080 --> 00:07:14,940
+in which these three
+contestants, if you think
+
+126
+00:07:14,940 --> 00:07:17,362
+of it that way, can
+finish this race.
+
+127
+00:07:17,362 --> 00:07:19,070
+And out of those, we
+want the probability
+
+128
+00:07:19,070 --> 00:07:21,510
+that one of those
+outcomes happens.
+
+129
+00:07:21,510 --> 00:07:23,370
+And so, the probability
+should be 1/6,
+
+130
+00:07:23,370 --> 00:07:25,500
+and that's what our
+formula tells us.
+
+131
+00:07:25,500 --> 00:07:28,510
+So, as I said, in
+this problem, we
+
+132
+00:07:28,510 --> 00:07:31,540
+saw how to reinterpret
+exponentials
+
+133
+00:07:31,540 --> 00:07:33,630
+in the context of
+Poisson processes
+
+134
+00:07:33,630 --> 00:07:37,030
+that helped us solve
+a probability that
+
+135
+00:07:37,030 --> 00:07:38,760
+looked like it was
+pretty complicated.
+
+136
+00:07:38,760 --> 00:07:41,461
+So, I hope that was helpful,
+and see you next time.
+
+137
+00:07:41,461 --> 00:07:41,960

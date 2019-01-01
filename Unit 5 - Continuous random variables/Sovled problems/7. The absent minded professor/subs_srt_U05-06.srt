@@ -1,0 +1,1106 @@
+1
+00:00:00,000 --> 00:00:00,430
+
+2
+00:00:00,430 --> 00:00:00,860
+Hi.
+
+3
+00:00:00,860 --> 00:00:03,820
+In this problem, we have an
+absent-minded professor who
+
+4
+00:00:03,820 --> 00:00:06,860
+will inadvertently give us some
+practice with exponential
+
+5
+00:00:06,860 --> 00:00:08,460
+random variables.
+
+6
+00:00:08,460 --> 00:00:13,630
+So the professor has made two
+appointments with two students
+
+7
+00:00:13,630 --> 00:00:17,480
+and inadvertently made them
+at the same time.
+
+8
+00:00:17,480 --> 00:00:21,390
+And what we do is we model the
+duration of these appointments
+
+9
+00:00:21,390 --> 00:00:23,340
+with an exponential
+random variable.
+
+10
+00:00:23,340 --> 00:00:26,760
+So remember, an exponential
+random variable is a
+
+11
+00:00:26,760 --> 00:00:29,850
+continuous random variable that
+takes on non-negative
+
+12
+00:00:29,850 --> 00:00:35,980
+values, and it's parametrized
+by a rate parameter, lambda.
+
+13
+00:00:35,980 --> 00:00:39,030
+And the exponential random
+variable is often used to
+
+14
+00:00:39,030 --> 00:00:42,670
+model durations of time-- so
+time until something happens,
+
+15
+00:00:42,670 --> 00:00:46,310
+so for example, in this case,
+time until the student leaves
+
+16
+00:00:46,310 --> 00:00:47,420
+or the appointment is over.
+
+17
+00:00:47,420 --> 00:00:51,180
+Or sometimes you will also use
+it to be as a model of time
+
+18
+00:00:51,180 --> 00:00:52,430
+until something fails.
+
+19
+00:00:52,430 --> 00:00:54,600
+
+20
+00:00:54,600 --> 00:00:59,010
+And one thing that will be
+useful is the CDF of this
+
+21
+00:00:59,010 --> 00:01:00,240
+exponential random variable.
+
+22
+00:01:00,240 --> 00:01:02,280
+So the probability that it's
+less than or equal to some
+
+23
+00:01:02,280 --> 00:01:07,290
+value, little t, is equal to 1
+minus e to the minus lambda t.
+
+24
+00:01:07,290 --> 00:01:10,970
+So this is, of course, valid
+only when t is non-negative.
+
+25
+00:01:10,970 --> 00:01:15,750
+The other useful property is
+that the expected value of an
+
+26
+00:01:15,750 --> 00:01:17,790
+exponential random variable
+is just 1 over
+
+27
+00:01:17,790 --> 00:01:20,280
+the parameter lambda.
+
+28
+00:01:20,280 --> 00:01:22,390
+And the last thing that we'll
+use specifically in this
+
+29
+00:01:22,390 --> 00:01:24,450
+problem is the memoryless
+property of
+
+30
+00:01:24,450 --> 00:01:25,410
+exponential random variables.
+
+31
+00:01:25,410 --> 00:01:30,490
+And so recall that that just
+means that if you pop in the
+
+32
+00:01:30,490 --> 00:01:36,700
+middle of an exponential
+random variable, the
+
+33
+00:01:36,700 --> 00:01:40,350
+distribution for that random
+variable going forward from
+
+34
+00:01:40,350 --> 00:01:43,345
+the point where you popped in
+is exactly the same as if it
+
+35
+00:01:43,345 --> 00:01:44,400
+had just started over.
+
+36
+00:01:44,400 --> 00:01:46,430
+So that's why we call it the
+memoryless property.
+
+37
+00:01:46,430 --> 00:01:49,250
+Basically, the past doesn't
+really matter, and going
+
+38
+00:01:49,250 --> 00:01:52,670
+forward from whatever point
+that you observe it at, it
+
+39
+00:01:52,670 --> 00:01:58,310
+looks as if it had just
+started over afresh.
+
+40
+00:01:58,310 --> 00:02:02,350
+And last thing we'll use, which
+is a review of a concept
+
+41
+00:02:02,350 --> 00:02:06,780
+from earlier, is total
+expectation.
+
+42
+00:02:06,780 --> 00:02:08,889
+So let's actually model
+this problem
+
+43
+00:02:08,889 --> 00:02:10,979
+with two random variables.
+
+44
+00:02:10,979 --> 00:02:17,080
+Let's let T1 be the time that
+the first student takes in the
+
+45
+00:02:17,080 --> 00:02:20,760
+appointment and T2 be the time
+that the second student takes.
+
+46
+00:02:20,760 --> 00:02:23,160
+And what we're told in the
+problem is that they're both
+
+47
+00:02:23,160 --> 00:02:26,000
+exponential with mean
+30 minutes.
+
+48
+00:02:26,000 --> 00:02:29,240
+So remember the mean being 30
+minutes means that the lambda
+
+49
+00:02:29,240 --> 00:02:30,640
+is 1 over the mean.
+
+50
+00:02:30,640 --> 00:02:34,260
+And so the lambda in this
+case would be 1/30.
+
+51
+00:02:34,260 --> 00:02:35,770
+And importantly, we're also
+told that they are
+
+52
+00:02:35,770 --> 00:02:36,710
+independent.
+
+53
+00:02:36,710 --> 00:02:40,160
+So how long the first person
+takes is independent of how
+
+54
+00:02:40,160 --> 00:02:41,960
+long the second person takes.
+
+55
+00:02:41,960 --> 00:02:46,560
+So the first student arrives on
+time and take some random
+
+56
+00:02:46,560 --> 00:02:48,110
+amount of time, T1.
+
+57
+00:02:48,110 --> 00:02:51,330
+The second student arrives
+exactly five minutes late.
+
+58
+00:02:51,330 --> 00:02:55,170
+And whatever the second person
+meets with the professor, that
+
+59
+00:02:55,170 --> 00:02:58,310
+student will then take some
+random amount of time, T2.
+
+60
+00:02:58,310 --> 00:03:01,810
+What we're asked to do is find
+the expected time between when
+
+61
+00:03:01,810 --> 00:03:03,270
+the first student arrives--
+
+62
+00:03:03,270 --> 00:03:05,370
+so we can just call
+that time 0--
+
+63
+00:03:05,370 --> 00:03:08,920
+and when the second
+student leaves.
+
+64
+00:03:08,920 --> 00:03:12,580
+Now you may say, well we're
+dealing with expectations, so
+
+65
+00:03:12,580 --> 00:03:13,890
+it's easier.
+
+66
+00:03:13,890 --> 00:03:19,640
+And in this case, it probably is
+just the expectation of how
+
+67
+00:03:19,640 --> 00:03:21,540
+long the first student takes
+plus the expectation of how
+
+68
+00:03:21,540 --> 00:03:22,540
+long the second student takes.
+
+69
+00:03:22,540 --> 00:03:26,450
+So it should be about 60 minutes
+or exactly 60 minutes.
+
+70
+00:03:26,450 --> 00:03:28,940
+Now, why is that not
+exactly right?
+
+71
+00:03:28,940 --> 00:03:36,450
+It's because there is a small
+wrinkle, that the students may
+
+72
+00:03:36,450 --> 00:03:38,660
+not go exactly back to back.
+
+73
+00:03:38,660 --> 00:03:41,970
+So let's actually draw out a
+time frame of what might
+
+74
+00:03:41,970 --> 00:03:44,640
+actually happen.
+
+75
+00:03:44,640 --> 00:03:47,240
+So here's time 0, when the
+first student arrives.
+
+76
+00:03:47,240 --> 00:03:52,270
+And the first will go for some
+amount of time and leave.
+
+77
+00:03:52,270 --> 00:03:54,390
+And now let's consider
+two scenarios.
+
+78
+00:03:54,390 --> 00:04:00,570
+One scenario is that the first
+student takes more than five
+
+79
+00:04:00,570 --> 00:04:01,560
+minutes to complete.
+
+80
+00:04:01,560 --> 00:04:10,120
+Well then the second student
+will have arrived at 5 minutes
+
+81
+00:04:10,120 --> 00:04:14,210
+and then will be already waiting
+whenever this first
+
+82
+00:04:14,210 --> 00:04:14,810
+student leaves.
+
+83
+00:04:14,810 --> 00:04:16,180
+So then the second student will
+
+84
+00:04:16,180 --> 00:04:18,310
+immediately pick up and continue.
+
+85
+00:04:18,310 --> 00:04:22,740
+And in that case, we do have two
+exponentials back to back.
+
+86
+00:04:22,740 --> 00:04:25,370
+But there could be another
+situation.
+
+87
+00:04:25,370 --> 00:04:32,110
+Suppose that the first student
+didn't take very long at all
+
+88
+00:04:32,110 --> 00:04:37,260
+and finished within five
+minutes, in which case the
+
+89
+00:04:37,260 --> 00:04:38,490
+second student hasn't
+arrived yet.
+
+90
+00:04:38,490 --> 00:04:42,530
+So this professor is idle
+in between here.
+
+91
+00:04:42,530 --> 00:04:45,970
+And so we actually don't
+necessarily have two of them
+
+92
+00:04:45,970 --> 00:04:47,190
+going back to back.
+
+93
+00:04:47,190 --> 00:04:50,260
+So there's an empty period in
+between that we have to
+
+94
+00:04:50,260 --> 00:04:52,270
+account for.
+
+95
+00:04:52,270 --> 00:04:57,730
+So with that in mind, we see
+that we have two scenarios.
+
+96
+00:04:57,730 --> 00:04:59,640
+And so what does that
+beg to use?
+
+97
+00:04:59,640 --> 00:05:02,520
+Well, we can split them up into
+the two scenarios and
+
+98
+00:05:02,520 --> 00:05:05,140
+then calculate expectations
+with each one and then use
+
+99
+00:05:05,140 --> 00:05:09,280
+total expectation to
+find the overall
+
+100
+00:05:09,280 --> 00:05:12,090
+expected length of time.
+
+101
+00:05:12,090 --> 00:05:15,350
+OK, so let's begin with
+the first scenario.
+
+102
+00:05:15,350 --> 00:05:19,690
+
+103
+00:05:19,690 --> 00:05:24,450
+The first scenario is that,
+let's say, the first student
+
+104
+00:05:24,450 --> 00:05:27,710
+finished within five minutes.
+
+105
+00:05:27,710 --> 00:05:30,840
+So what does that mean in terms
+of the definitions that
+
+106
+00:05:30,840 --> 00:05:31,870
+we've used?
+
+107
+00:05:31,870 --> 00:05:37,050
+That means T1 is less
+than or equal to 5.
+
+108
+00:05:37,050 --> 00:05:40,460
+So if the first student took
+less than five minutes, then
+
+109
+00:05:40,460 --> 00:05:41,840
+what happens?
+
+110
+00:05:41,840 --> 00:05:46,070
+Then we know that the
+amount of time that
+
+111
+00:05:46,070 --> 00:05:47,320
+you'd need to take--
+
+112
+00:05:47,320 --> 00:05:51,510
+
+113
+00:05:51,510 --> 00:05:52,600
+let's call that something
+else.
+
+114
+00:05:52,600 --> 00:05:58,190
+Let's call that X. So X is the
+random variable that we're
+
+115
+00:05:58,190 --> 00:06:01,580
+interested in, the time between
+when the first student
+
+116
+00:06:01,580 --> 00:06:04,140
+comes and the second
+student leaves.
+
+117
+00:06:04,140 --> 00:06:05,950
+This is the value that
+we want to find.
+
+118
+00:06:05,950 --> 00:06:10,440
+Well we know that we're
+guaranteed that there will be
+
+119
+00:06:10,440 --> 00:06:12,720
+a five-minute interval.
+
+120
+00:06:12,720 --> 00:06:17,260
+So first student will come,
+and then the second person
+
+121
+00:06:17,260 --> 00:06:19,070
+will take over.
+
+122
+00:06:19,070 --> 00:06:31,340
+So we're guaranteed that the
+first five minutes will be the
+
+123
+00:06:31,340 --> 00:06:34,380
+difference between when time
+starts and when the second
+
+124
+00:06:34,380 --> 00:06:35,240
+student arrives.
+
+125
+00:06:35,240 --> 00:06:39,670
+And then, after that, it's just
+however long the second
+
+126
+00:06:39,670 --> 00:06:44,320
+student takes, which is just
+the expected value of T2.
+
+127
+00:06:44,320 --> 00:06:47,770
+And T2 is a exponential random
+variable with mean 30.
+
+128
+00:06:47,770 --> 00:06:51,325
+So in this case, it's just 35.
+
+129
+00:06:51,325 --> 00:06:55,800
+
+130
+00:06:55,800 --> 00:06:58,410
+So the first student doesn't
+take very long.
+
+131
+00:06:58,410 --> 00:07:02,320
+Then we just get the five
+minutes, that little buffer,
+
+132
+00:07:02,320 --> 00:07:04,170
+plus however long the second
+student takes, which, on
+
+133
+00:07:04,170 --> 00:07:06,640
+average, is 30 minutes.
+
+134
+00:07:06,640 --> 00:07:09,260
+Now what is the probability
+of this happening?
+
+135
+00:07:09,260 --> 00:07:12,820
+The probability of this
+happening is the probability
+
+136
+00:07:12,820 --> 00:07:16,080
+that the first student takes
+less than five minutes.
+
+137
+00:07:16,080 --> 00:07:21,980
+And here is where we use the CDF
+that we wrote out earlier.
+
+138
+00:07:21,980 --> 00:07:30,650
+It's going to be 1 minus e
+to the minus lambda t.
+
+139
+00:07:30,650 --> 00:07:35,550
+So in this case, t is five
+and lambda is 1/30.
+
+140
+00:07:35,550 --> 00:07:40,440
+So it's minus 5/30 is
+the probability.
+
+141
+00:07:40,440 --> 00:07:43,580
+All right, now let's consider
+the second case.
+
+142
+00:07:43,580 --> 00:07:47,690
+The second case is that the
+first student actually takes
+
+143
+00:07:47,690 --> 00:07:50,360
+longer than five minutes.
+
+144
+00:07:50,360 --> 00:07:54,350
+OK, so what happens
+in that case?
+
+145
+00:07:54,350 --> 00:07:54,880
+Here's five minutes.
+
+146
+00:07:54,880 --> 00:07:58,300
+The first student came
+to five minutes.
+
+147
+00:07:58,300 --> 00:08:00,665
+The second student arrived,
+and the first
+
+148
+00:08:00,665 --> 00:08:02,640
+student is still going.
+
+149
+00:08:02,640 --> 00:08:06,320
+So he goes for some
+amount of time.
+
+150
+00:08:06,320 --> 00:08:10,310
+And then whenever he finishes,
+the second student continues.
+
+151
+00:08:10,310 --> 00:08:13,120
+So now the question is, what
+is the total amount of
+
+152
+00:08:13,120 --> 00:08:14,960
+time in this case?
+
+153
+00:08:14,960 --> 00:08:22,150
+Well, you can think of it as
+using the memoryless property.
+
+154
+00:08:22,150 --> 00:08:24,020
+This is where it comes in.
+
+155
+00:08:24,020 --> 00:08:27,550
+So the first five minutes, we
+know that it was already taken
+
+156
+00:08:27,550 --> 00:08:31,390
+because we're considering the
+second scenario, which we're
+
+157
+00:08:31,390 --> 00:08:34,860
+given that T1 is
+greater than 5.
+
+158
+00:08:34,860 --> 00:08:38,190
+And so the question now is, if
+we know that, how much longer
+
+159
+00:08:38,190 --> 00:08:39,650
+does it take?
+
+160
+00:08:39,650 --> 00:08:41,799
+How much longer past the
+five-minute mark does the
+
+161
+00:08:41,799 --> 00:08:43,049
+first student take?
+
+162
+00:08:43,049 --> 00:08:46,570
+And by the memoryless property,
+we know that it's as
+
+163
+00:08:46,570 --> 00:08:49,210
+if the first student
+started over.
+
+164
+00:08:49,210 --> 00:08:51,800
+So there was no memory of the
+first five minutes, and it's
+
+165
+00:08:51,800 --> 00:08:55,310
+as if the first student just
+arrived also at the
+
+166
+00:08:55,310 --> 00:08:57,000
+five-minute mark and met
+with the professor.
+
+167
+00:08:57,000 --> 00:09:02,950
+So past the five-minute mark,
+it's as if you have a new
+
+168
+00:09:02,950 --> 00:09:06,300
+exponential random variable,
+still with mean 30.
+
+169
+00:09:06,300 --> 00:09:12,490
+And so what we get is that,
+in this case, you get the
+
+170
+00:09:12,490 --> 00:09:18,760
+guaranteed five minutes, and
+then you get the memoryless
+
+171
+00:09:18,760 --> 00:09:25,860
+continuation of the first
+student's appointment.
+
+172
+00:09:25,860 --> 00:09:28,460
+So you get another 30 minutes
+on average because of the
+
+173
+00:09:28,460 --> 00:09:29,640
+memoryless property.
+
+174
+00:09:29,640 --> 00:09:32,470
+And then whenever the first
+student finally does finish
+
+175
+00:09:32,470 --> 00:09:35,950
+up, the second student will
+immediately take over because
+
+176
+00:09:35,950 --> 00:09:37,080
+he has already arrived.
+
+177
+00:09:37,080 --> 00:09:38,580
+It's past the five-minute
+mark.
+
+178
+00:09:38,580 --> 00:09:41,520
+And then that second student
+will take, again, on average,
+
+179
+00:09:41,520 --> 00:09:42,530
+30 more minutes.
+
+180
+00:09:42,530 --> 00:09:47,130
+So what you get is, in this
+case, the appointment lasts 65
+
+181
+00:09:47,130 --> 00:09:49,540
+minutes on average.
+
+182
+00:09:49,540 --> 00:09:51,100
+Now what is the probability
+of this case?
+
+183
+00:09:51,100 --> 00:09:55,410
+The probability of this case is
+the probability that T1 is
+
+184
+00:09:55,410 --> 00:09:57,150
+greater than 5.
+
+185
+00:09:57,150 --> 00:10:00,720
+And now we know that that is
+just the complement of this, 1
+
+186
+00:10:00,720 --> 00:10:01,520
+minus that.
+
+187
+00:10:01,520 --> 00:10:04,050
+So it's just e to
+the minus 5/30.
+
+188
+00:10:04,050 --> 00:10:06,840
+
+189
+00:10:06,840 --> 00:10:10,490
+So now we have both scenarios.
+
+190
+00:10:10,490 --> 00:10:12,850
+We have the probabilities of
+each scenario, and we have the
+
+191
+00:10:12,850 --> 00:10:15,980
+expectation under
+each scenario.
+
+192
+00:10:15,980 --> 00:10:18,810
+Now all that remains now is to
+combine them using total
+
+193
+00:10:18,810 --> 00:10:20,060
+expectation.
+
+194
+00:10:20,060 --> 00:10:26,990
+
+195
+00:10:26,990 --> 00:10:36,880
+So I really should have written
+expectation of X given
+
+196
+00:10:36,880 --> 00:10:38,920
+T1 is less than or
+equal to 5 here.
+
+197
+00:10:38,920 --> 00:10:42,630
+And this is expectation
+of X given that T1 is
+
+198
+00:10:42,630 --> 00:10:44,840
+greater than 5.
+
+199
+00:10:44,840 --> 00:10:49,840
+So expectation of X overall is
+the probability that T1 is
+
+200
+00:10:49,840 --> 00:10:54,250
+less than or equal to 5 times
+the expectation of X given
+
+201
+00:10:54,250 --> 00:10:59,190
+that T1 is less than or equal to
+5 plus the probability that
+
+202
+00:10:59,190 --> 00:11:04,790
+T1 is greater than 5 times the
+expectation of X given that T1
+
+203
+00:11:04,790 --> 00:11:07,640
+is greater than 5.
+
+204
+00:11:07,640 --> 00:11:10,440
+And we have all four of
+these pieces here.
+
+205
+00:11:10,440 --> 00:11:23,220
+so it's 35 times 1 minus e to
+the minus 5/30 plus 65 times e
+
+206
+00:11:23,220 --> 00:11:26,650
+to the minus 5 5/30.
+
+207
+00:11:26,650 --> 00:11:31,600
+And it turns out that this
+is approximately
+
+208
+00:11:31,600 --> 00:11:39,790
+equal to 60.394 minutes.
+
+209
+00:11:39,790 --> 00:11:42,610
+All right, so what
+have we found?
+
+210
+00:11:42,610 --> 00:11:47,430
+We found that the original guess
+that we had, if we just
+
+211
+00:11:47,430 --> 00:11:50,360
+had two meetings back to back,
+was on average it would take
+
+212
+00:11:50,360 --> 00:11:51,310
+60 minutes.
+
+213
+00:11:51,310 --> 00:11:55,150
+It turns out that, because of
+the way that things are set
+
+214
+00:11:55,150 --> 00:11:58,890
+up, because of the five minute
+thing, it actually takes a
+
+215
+00:11:58,890 --> 00:12:00,780
+little longer than 60
+minutes on average.
+
+216
+00:12:00,780 --> 00:12:01,700
+And why is that?
+
+217
+00:12:01,700 --> 00:12:08,630
+It's because the five sometimes
+adds an extra
+
+218
+00:12:08,630 --> 00:12:13,930
+buffer, adds a little bit of
+extra amount, because it would
+
+219
+00:12:13,930 --> 00:12:18,820
+have been shorter in this
+scenario because, if the both
+
+220
+00:12:18,820 --> 00:12:21,030
+students had arrived on time,
+then the second student would
+
+221
+00:12:21,030 --> 00:12:23,570
+have been able to pick up
+right here immediately.
+
+222
+00:12:23,570 --> 00:12:26,180
+And so both appointments would
+have ended sooner.
+
+223
+00:12:26,180 --> 00:12:29,880
+But because the second student
+didn't arrive until five
+
+224
+00:12:29,880 --> 00:12:32,490
+minutes, there was some empty
+space that was wasted.
+
+225
+00:12:32,490 --> 00:12:36,140
+And that's where you get you the
+little bit of extra time.
+
+226
+00:12:36,140 --> 00:12:39,760
+So this is a nice problem just
+to get some more exercise with
+
+227
+00:12:39,760 --> 00:12:42,590
+exponential random variables
+and also nicely illustrates
+
+228
+00:12:42,590 --> 00:12:46,850
+the memoryless property, which
+was a key points in order to
+
+229
+00:12:46,850 --> 00:12:47,680
+solve this.
+
+230
+00:12:47,680 --> 00:12:52,170
+And it also is nice because we
+get to review a useful tool
+
+231
+00:12:52,170 --> 00:12:56,350
+that we've been using all course
+long, which is to split
+
+232
+00:12:56,350 --> 00:13:00,010
+things into different scenarios
+and then solve the
+
+233
+00:13:00,010 --> 00:13:02,770
+simpler problems and then
+combine them up, for example
+
+234
+00:13:02,770 --> 00:13:05,490
+using total expectation.
+
+235
+00:13:05,490 --> 00:13:08,120
+So I hope that was helpful,
+and see you next time.
+
+236
+00:13:08,120 --> 00:13:10,334

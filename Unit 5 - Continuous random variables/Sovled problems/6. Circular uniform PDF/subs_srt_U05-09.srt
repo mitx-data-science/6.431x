@@ -1,0 +1,1064 @@
+1
+00:00:00,000 --> 00:00:00,910
+Hi.
+
+2
+00:00:00,910 --> 00:00:05,190
+In this problem, we're throwing
+a dart at a circle.
+
+3
+00:00:05,190 --> 00:00:08,420
+And the circle has
+radius of r.
+
+4
+00:00:08,420 --> 00:00:12,540
+And what we assume is that
+we always hit the target.
+
+5
+00:00:12,540 --> 00:00:16,420
+So whatever we throw, the dart
+always lands somewhere within
+
+6
+00:00:16,420 --> 00:00:17,205
+the circle.
+
+7
+00:00:17,205 --> 00:00:20,970
+And so we don't miss completely
+and hit out here.
+
+8
+00:00:20,970 --> 00:00:26,120
+And the other thing we assume is
+that all points within the
+
+9
+00:00:26,120 --> 00:00:28,900
+circle are equally likely.
+
+10
+00:00:28,900 --> 00:00:29,920
+All right.
+
+11
+00:00:29,920 --> 00:00:31,770
+So that's the set
+up the problem.
+
+12
+00:00:31,770 --> 00:00:35,110
+And what we're asked to do
+is to come up with some
+
+13
+00:00:35,110 --> 00:00:37,780
+distributions, some densities.
+
+14
+00:00:37,780 --> 00:00:39,700
+And the first thing that
+we'll do is we'll
+
+15
+00:00:39,700 --> 00:00:41,240
+define two random variables.
+
+16
+00:00:41,240 --> 00:00:42,040
+All right.
+
+17
+00:00:42,040 --> 00:00:47,030
+So we'll define random
+variable X to be the
+
+18
+00:00:47,030 --> 00:00:55,230
+x-coordinate of where we hit
+on the target and random
+
+19
+00:00:55,230 --> 00:00:56,700
+variable Y to be the
+y-coordinate.
+
+20
+00:00:56,700 --> 00:01:01,230
+
+21
+00:01:01,230 --> 00:01:02,960
+So now we have these two
+random variables.
+
+22
+00:01:02,960 --> 00:01:06,130
+And the first part of the
+problem is to calculate what
+
+23
+00:01:06,130 --> 00:01:08,370
+the joint PDF is.
+
+24
+00:01:08,370 --> 00:01:13,500
+So what is the joint
+PDF of X and Y?
+
+25
+00:01:13,500 --> 00:01:17,150
+Well, in this case, it's not so
+bad, because we are told to
+
+26
+00:01:17,150 --> 00:01:19,860
+assume that all points
+are equally likely.
+
+27
+00:01:19,860 --> 00:01:20,960
+So what does that mean?
+
+28
+00:01:20,960 --> 00:01:23,170
+That means that within this
+circle, which is where the
+
+29
+00:01:23,170 --> 00:01:26,870
+target is, it's uniformly
+distributed.
+
+30
+00:01:26,870 --> 00:01:29,880
+So all points are
+equally likely.
+
+31
+00:01:29,880 --> 00:01:33,360
+So all we have to do now to find
+what this joint PDF is is
+
+32
+00:01:33,360 --> 00:01:37,500
+to calculate what this area is
+and take 1 over the area.
+
+33
+00:01:37,500 --> 00:01:39,000
+So it's 1 over the area.
+
+34
+00:01:39,000 --> 00:01:46,630
+And as you know, the area of
+the circle is pi r squared.
+
+35
+00:01:46,630 --> 00:01:50,740
+So it's just 1 over pi r squared
+when you are within
+
+36
+00:01:50,740 --> 00:01:51,540
+the circle.
+
+37
+00:01:51,540 --> 00:01:53,710
+And what is the equation
+of a circle?
+
+38
+00:01:53,710 --> 00:01:56,420
+The equation of a circle
+is x squared plus y
+
+39
+00:01:56,420 --> 00:01:57,790
+squared equals r squared.
+
+40
+00:01:57,790 --> 00:02:01,170
+So we're centering the
+coordinate system at 0.00.
+
+41
+00:02:01,170 --> 00:02:04,470
+That's where the circle
+is centered.
+
+42
+00:02:04,470 --> 00:02:12,120
+So we lie within this circle
+when x squared plus y squared
+
+43
+00:02:12,120 --> 00:02:15,660
+is less than or equal
+to r squared.
+
+44
+00:02:15,660 --> 00:02:17,970
+And we always hit the target.
+
+45
+00:02:17,970 --> 00:02:25,460
+So we never fall outside
+of this circle.
+
+46
+00:02:25,460 --> 00:02:28,550
+So within the circle, it's
+uniformly distributed and the
+
+47
+00:02:28,550 --> 00:02:32,040
+normalization or the scaling
+factor is 1 over the area.
+
+48
+00:02:32,040 --> 00:02:33,830
+And outside, it's 0.
+
+49
+00:02:33,830 --> 00:02:34,670
+All right.
+
+50
+00:02:34,670 --> 00:02:37,360
+Now, the second part asks us
+to find the conditional
+
+51
+00:02:37,360 --> 00:02:41,590
+distribution of X given
+Y So what is the
+
+52
+00:02:41,590 --> 00:02:47,830
+distribution of X given Y?
+
+53
+00:02:47,830 --> 00:02:51,340
+Well, the distribution
+of X given Y--
+
+54
+00:02:51,340 --> 00:02:55,820
+we know we can calculate that
+from taking the joint PDF of X
+
+55
+00:02:55,820 --> 00:02:59,650
+and Y and dividing by the
+
+56
+00:02:59,650 --> 00:03:03,210
+marginal of Y. OK.
+
+57
+00:03:03,210 --> 00:03:06,480
+So first, let's calculate what
+the marginal of y is.
+
+58
+00:03:06,480 --> 00:03:07,730
+The marginal of y--
+
+59
+00:03:07,730 --> 00:03:10,890
+
+60
+00:03:10,890 --> 00:03:14,570
+when you calculate a marginal,
+remember, it's just a matter
+
+61
+00:03:14,570 --> 00:03:20,190
+of taking the joint and
+integrating out to the
+
+62
+00:03:20,190 --> 00:03:21,720
+variable that you don't
+want any more.
+
+63
+00:03:21,720 --> 00:03:25,010
+So in this case, we're
+integrating out x.
+
+64
+00:03:25,010 --> 00:03:28,000
+And in general, you integrate
+from x equals minus infinity
+
+65
+00:03:28,000 --> 00:03:29,410
+to infinity.
+
+66
+00:03:29,410 --> 00:03:32,590
+But in this case, we need to be
+careful what the limits are
+
+67
+00:03:32,590 --> 00:03:37,790
+and only integrate when
+the limits are valid.
+
+68
+00:03:37,790 --> 00:03:40,990
+So for now, let's just write
+minus infinity to infinity.
+
+69
+00:03:40,990 --> 00:03:42,660
+And we'll fill that in.
+
+70
+00:03:42,660 --> 00:03:46,910
+So we know that the joint PDF
+is just 1 over the area, 1
+
+71
+00:03:46,910 --> 00:03:48,160
+over pi r squared.
+
+72
+00:03:48,160 --> 00:03:52,050
+
+73
+00:03:52,050 --> 00:03:56,486
+Now, when is this joint
+PDF actually valid?
+
+74
+00:03:56,486 --> 00:03:57,150
+All right.
+
+75
+00:03:57,150 --> 00:04:00,230
+So now let's fix some value
+of y that we want.
+
+76
+00:04:00,230 --> 00:04:03,010
+Let's say it's this
+one right here.
+
+77
+00:04:03,010 --> 00:04:06,210
+This is the value of y.
+
+78
+00:04:06,210 --> 00:04:11,160
+Well, given that that's the
+value of y, what range of x is
+
+79
+00:04:11,160 --> 00:04:12,584
+this joint PDF valid?
+
+80
+00:04:12,584 --> 00:04:17,060
+Well, it's valid for the range
+of x that falls within this
+
+81
+00:04:17,060 --> 00:04:21,279
+band here, from here to here.
+
+82
+00:04:21,279 --> 00:04:23,350
+Now, what are these
+two values?
+
+83
+00:04:23,350 --> 00:04:27,150
+Well, if y is here and the
+radius is r and we know that
+
+84
+00:04:27,150 --> 00:04:29,770
+the equation of the circle is
+x squared plus y squared
+
+85
+00:04:29,770 --> 00:04:35,060
+equals r squared, then we know
+that this point has to equal
+
+86
+00:04:35,060 --> 00:04:39,270
+the square root of r squared
+minus y squared.
+
+87
+00:04:39,270 --> 00:04:42,000
+That's the value of x that
+corresponds with
+
+88
+00:04:42,000 --> 00:04:44,970
+that value of y.
+
+89
+00:04:44,970 --> 00:04:50,090
+And then similarly, here we have
+minus square root of r
+
+90
+00:04:50,090 --> 00:04:56,700
+squared minus y squared.
+
+91
+00:04:56,700 --> 00:05:00,570
+So that's the range of Xs
+for that value of y.
+
+92
+00:05:00,570 --> 00:05:04,675
+So that actually becomes the
+limits of our integration.
+
+93
+00:05:04,675 --> 00:05:11,720
+
+94
+00:05:11,720 --> 00:05:14,840
+And the good thing
+is that this is
+
+95
+00:05:14,840 --> 00:05:15,910
+just a constant, right?
+
+96
+00:05:15,910 --> 00:05:18,960
+There's no y in here.
+
+97
+00:05:18,960 --> 00:05:20,830
+And so we can just
+pull that out.
+
+98
+00:05:20,830 --> 00:05:26,160
+And really, it just becomes an
+integral of a constant or an
+
+99
+00:05:26,160 --> 00:05:28,840
+integral 1 from minus square
+root of r squared minus y
+
+100
+00:05:28,840 --> 00:05:31,460
+squared 2 square root of r
+squared minus y squared.
+
+101
+00:05:31,460 --> 00:05:38,010
+So it actually is just going
+to be 2 square root of r
+
+102
+00:05:38,010 --> 00:05:45,830
+squared minus y squared
+over pi r squared.
+
+103
+00:05:45,830 --> 00:05:54,590
+And again, this is valid only
+for y from minus r to r.
+
+104
+00:05:54,590 --> 00:05:57,880
+And it's 0 otherwise.
+
+105
+00:05:57,880 --> 00:06:01,210
+
+106
+00:06:01,210 --> 00:06:02,010
+So why is that?
+
+107
+00:06:02,010 --> 00:06:07,540
+It's because no matter what, y
+can only go as high as the
+
+108
+00:06:07,540 --> 00:06:09,800
+radius in either direction.
+
+109
+00:06:09,800 --> 00:06:12,570
+So y is bounded between
+minus r and r.
+
+110
+00:06:12,570 --> 00:06:16,460
+And so another way to look at
+this graphically is you're
+
+111
+00:06:16,460 --> 00:06:22,730
+just taking this joint PDF and
+squishing it to the y-axis.
+
+112
+00:06:22,730 --> 00:06:25,250
+
+113
+00:06:25,250 --> 00:06:28,510
+And so the only parts that will
+get nonzero contributions
+
+114
+00:06:28,510 --> 00:06:31,590
+are the ones from
+r to minus r.
+
+115
+00:06:31,590 --> 00:06:34,920
+And note that although the
+original joint distribution
+
+116
+00:06:34,920 --> 00:06:36,020
+was uniform--
+
+117
+00:06:36,020 --> 00:06:37,380
+we assumed so--
+
+118
+00:06:37,380 --> 00:06:40,860
+when you take the marginal of
+y, the marginal of y is not
+
+119
+00:06:40,860 --> 00:06:42,390
+uniform, right?
+
+120
+00:06:42,390 --> 00:06:45,170
+Notice that it actually
+depends on y here.
+
+121
+00:06:45,170 --> 00:06:47,080
+And it varies depending
+on what y is.
+
+122
+00:06:47,080 --> 00:06:51,510
+And it turns out that it will
+be largest when y is 0 and
+
+123
+00:06:51,510 --> 00:06:54,190
+smallest when y is
+r or minus r.
+
+124
+00:06:54,190 --> 00:06:54,850
+Why is that?
+
+125
+00:06:54,850 --> 00:07:00,930
+Because when you squish this,
+you get more contribution when
+
+126
+00:07:00,930 --> 00:07:02,800
+you're at y equals 0.
+
+127
+00:07:02,800 --> 00:07:07,300
+It's more likely for y to be 0
+because there are a lot more
+
+128
+00:07:07,300 --> 00:07:10,810
+corresponding Xs that pair
+with that y equals 0.
+
+129
+00:07:10,810 --> 00:07:13,870
+And when you're all the way up
+here, there are very few other
+
+130
+00:07:13,870 --> 00:07:17,230
+Xs that will pair with that.
+
+131
+00:07:17,230 --> 00:07:18,110
+OK.
+
+132
+00:07:18,110 --> 00:07:25,850
+So we found the marginal
+distribution of Y. And now all
+
+133
+00:07:25,850 --> 00:07:30,610
+that's left to do is to
+calculate out what this
+
+134
+00:07:30,610 --> 00:07:31,540
+quotient is.
+
+135
+00:07:31,540 --> 00:07:34,330
+So we have the joint
+distribution.
+
+136
+00:07:34,330 --> 00:07:35,190
+And we have the marginal.
+
+137
+00:07:35,190 --> 00:07:42,320
+So let's just calculate out
+what the conditional
+
+138
+00:07:42,320 --> 00:07:45,540
+distribution is.
+
+139
+00:07:45,540 --> 00:07:46,130
+OK.
+
+140
+00:07:46,130 --> 00:07:51,080
+So the numerator is just
+1 over the area.
+
+141
+00:07:51,080 --> 00:07:57,190
+
+142
+00:07:57,190 --> 00:08:02,060
+And the denominator is this--
+
+143
+00:08:02,060 --> 00:08:07,690
+2 times square root of r squared
+minus y squared over
+
+144
+00:08:07,690 --> 00:08:08,940
+pi r squared.
+
+145
+00:08:08,940 --> 00:08:11,610
+
+146
+00:08:11,610 --> 00:08:13,590
+And of course, we can do
+some cancellations and
+
+147
+00:08:13,590 --> 00:08:14,840
+simplifications.
+
+148
+00:08:14,840 --> 00:08:16,390
+
+149
+00:08:16,390 --> 00:08:20,850
+But the first thing we want to
+do is, as always, to check
+
+150
+00:08:20,850 --> 00:08:24,240
+what range this is
+a valid for.
+
+151
+00:08:24,240 --> 00:08:29,650
+So the numerator is the
+joint distribution.
+
+152
+00:08:29,650 --> 00:08:33,030
+And that's valid for any
+x and y pairs that
+
+153
+00:08:33,030 --> 00:08:35,210
+fall within the circle.
+
+154
+00:08:35,210 --> 00:08:38,669
+And the bottom is valid
+for any y that is
+
+155
+00:08:38,669 --> 00:08:41,480
+between minus r and r.
+
+156
+00:08:41,480 --> 00:08:46,330
+And so what this tells us is
+that this is in fact valid for
+
+157
+00:08:46,330 --> 00:08:51,860
+any pairs of x and y that
+fall within this circle.
+
+158
+00:08:51,860 --> 00:09:00,440
+So it's valid for x squared plus
+y squared less than or
+
+159
+00:09:00,440 --> 00:09:01,690
+equal to r squared.
+
+160
+00:09:01,690 --> 00:09:04,650
+
+161
+00:09:04,650 --> 00:09:07,300
+And outside of it, it's 0.
+
+162
+00:09:07,300 --> 00:09:12,380
+
+163
+00:09:12,380 --> 00:09:16,410
+And what we can do is simplify
+this a little bit, right?
+
+164
+00:09:16,410 --> 00:09:22,380
+Because this will cancel
+out with the top.
+
+165
+00:09:22,380 --> 00:09:27,760
+And what we're left with is just
+1 over 2 times the square
+
+166
+00:09:27,760 --> 00:09:31,350
+root of r squared
+minus y squared.
+
+167
+00:09:31,350 --> 00:09:37,290
+And note here now that for any
+given conditioning on Y being
+
+168
+00:09:37,290 --> 00:09:40,950
+at some value little y, this
+conditional density of X no
+
+169
+00:09:40,950 --> 00:09:42,710
+longer depends on x.
+
+170
+00:09:42,710 --> 00:09:47,040
+So it is in fact uniform
+along a certain range.
+
+171
+00:09:47,040 --> 00:09:55,690
+So another way to write this
+range that is maybe a little
+
+172
+00:09:55,690 --> 00:10:01,532
+more explicit is that y has to
+be between negative r and r.
+
+173
+00:10:01,532 --> 00:10:03,090
+So that's what you're
+conditioning on.
+
+174
+00:10:03,090 --> 00:10:06,780
+You know that y can only
+be these values.
+
+175
+00:10:06,780 --> 00:10:10,600
+And then given that Y is that
+little y, then this is true
+
+176
+00:10:10,600 --> 00:10:12,490
+for some range of x.
+
+177
+00:10:12,490 --> 00:10:16,630
+So given that y is some value,
+you know that x can only go
+
+178
+00:10:16,630 --> 00:10:23,220
+from minus y squared minus y
+squared to the positive square
+
+179
+00:10:23,220 --> 00:10:26,630
+root of y squared minus y
+squared minus square root of r
+
+180
+00:10:26,630 --> 00:10:29,980
+squared minus y squared less
+than x less than equal to
+
+181
+00:10:29,980 --> 00:10:31,890
+square root of r squared
+minus y squared.
+
+182
+00:10:31,890 --> 00:10:35,330
+So it's doing the analogous
+calculation as we did earlier.
+
+183
+00:10:35,330 --> 00:10:38,590
+
+184
+00:10:38,590 --> 00:10:43,450
+And so what we see is that it
+is in fact uniform, right?
+
+185
+00:10:43,450 --> 00:10:45,160
+Because it doesn't
+depend on x.
+
+186
+00:10:45,160 --> 00:10:46,460
+And why is that?
+
+187
+00:10:46,460 --> 00:10:49,635
+It's because when you take
+conditioning on Y being some
+
+188
+00:10:49,635 --> 00:10:53,100
+little value it's, as we talked
+about, it's as if
+
+189
+00:10:53,100 --> 00:10:56,076
+you're taking a slice
+along that value.
+
+190
+00:10:56,076 --> 00:10:59,910
+And now remember that the
+original joint distribution
+
+191
+00:10:59,910 --> 00:11:00,670
+was uniform.
+
+192
+00:11:00,670 --> 00:11:03,480
+So it was like a round
+cake that was flat.
+
+193
+00:11:03,480 --> 00:11:07,140
+And now you take a slice of that
+cake, a horizontal slice,
+
+194
+00:11:07,140 --> 00:11:08,950
+at some particular value of y.
+
+195
+00:11:08,950 --> 00:11:12,640
+Well, when you take that slice,
+then you know that, if
+
+196
+00:11:12,640 --> 00:11:16,020
+you can imagine it coming
+out of the board, this
+
+197
+00:11:16,020 --> 00:11:18,970
+distribution of X will
+also be still flat.
+
+198
+00:11:18,970 --> 00:11:22,270
+So the distribution of X
+will still be uniform.
+
+199
+00:11:22,270 --> 00:11:24,150
+And that's what you get here.
+
+200
+00:11:24,150 --> 00:11:26,400
+So it's interesting
+that the original
+
+201
+00:11:26,400 --> 00:11:28,390
+distribution is uniform.
+
+202
+00:11:28,390 --> 00:11:30,870
+But when you marginalize it
+and take the marginal
+
+203
+00:11:30,870 --> 00:11:34,530
+distribution of Y, you get
+something that is not uniform,
+
+204
+00:11:34,530 --> 00:11:35,990
+where it depends on y.
+
+205
+00:11:35,990 --> 00:11:39,730
+And by symmetry, you can say
+that when you marginalize out
+
+206
+00:11:39,730 --> 00:11:42,910
+y and take the marginal
+distribution of just X, you
+
+207
+00:11:42,910 --> 00:11:45,320
+will also see that the marginal
+distribution of X is
+
+208
+00:11:45,320 --> 00:11:47,320
+also not uniform.
+
+209
+00:11:47,320 --> 00:11:50,820
+But when you then calculate the
+conditional distribution,
+
+210
+00:11:50,820 --> 00:11:53,580
+you get a uniform distribution
+back again.
+
+211
+00:11:53,580 --> 00:11:56,730
+And that's because you're taking
+this slice, right?
+
+212
+00:11:56,730 --> 00:12:05,150
+The reason is that, depending on
+where the slice is, you get
+
+213
+00:12:05,150 --> 00:12:06,450
+a longer slice.
+
+214
+00:12:06,450 --> 00:12:09,840
+And because of that, the
+marginal distribution becomes
+
+215
+00:12:09,840 --> 00:12:16,030
+higher closer to the axis
+and smaller when
+
+216
+00:12:16,030 --> 00:12:17,430
+you go to the extremes.
+
+217
+00:12:17,430 --> 00:12:21,170
+But as long as you know and you
+condition on just taking
+
+218
+00:12:21,170 --> 00:12:23,390
+some slice, within
+that slice, the
+
+219
+00:12:23,390 --> 00:12:25,776
+distribution will be uniform.
+
+220
+00:12:25,776 --> 00:12:26,190
+OK.
+
+221
+00:12:26,190 --> 00:12:29,890
+So this is just a slightly
+different kind of joint
+
+222
+00:12:29,890 --> 00:12:32,570
+distribution with a
+circular shape.
+
+223
+00:12:32,570 --> 00:12:36,500
+Mostly we've been dealing more
+with kind of angular
+
+224
+00:12:36,500 --> 00:12:37,440
+distributions.
+
+225
+00:12:37,440 --> 00:12:39,580
+And so you can see that even
+with circular distributions,
+
+226
+00:12:39,580 --> 00:12:40,730
+you get something.
+
+227
+00:12:40,730 --> 00:12:43,430
+You can still apply the same
+kind of methodologies and
+
+228
+00:12:43,430 --> 00:12:45,715
+tools to get the answers
+that you want.
+
+229
+00:12:45,715 --> 00:12:46,140
+All right.
+
+230
+00:12:46,140 --> 00:12:47,380
+So I hope that was helpful.
+
+231
+00:12:47,380 --> 00:12:48,630
+And we'll see you next time.
+
+232
+00:12:48,630 --> 00:12:49,690

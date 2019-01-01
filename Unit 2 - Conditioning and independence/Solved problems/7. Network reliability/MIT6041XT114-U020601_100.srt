@@ -1,0 +1,613 @@
+1
+00:00:00,000 --> 00:00:00,590
+
+2
+00:00:00,590 --> 00:00:03,420
+Previously, we learned the
+concept of independent
+
+3
+00:00:03,420 --> 00:00:04,890
+experiments.
+
+4
+00:00:04,890 --> 00:00:08,119
+In this exercise, we'll see how
+the seemingly simple idea
+
+5
+00:00:08,119 --> 00:00:11,080
+of independence can help us
+understand the behavior of
+
+6
+00:00:11,080 --> 00:00:13,240
+quite complex systems.
+
+7
+00:00:13,240 --> 00:00:15,720
+In particular, we'll combine
+the concept of independence
+
+8
+00:00:15,720 --> 00:00:19,430
+with the idea of divide and
+conquer, where we break a
+
+9
+00:00:19,430 --> 00:00:22,630
+large system into smaller
+components, and then use
+
+10
+00:00:22,630 --> 00:00:23,260
+[independence]
+
+11
+00:00:23,260 --> 00:00:26,310
+properties to glue them
+back together.
+
+12
+00:00:26,310 --> 00:00:27,740
+Now, let's take a look
+at the problem.
+
+13
+00:00:27,740 --> 00:00:30,950
+We are given a network of
+connected components, and each
+
+14
+00:00:30,950 --> 00:00:32,299
+component can be good with
+
+15
+00:00:32,299 --> 00:00:35,680
+probability p or bad otherwise.
+
+16
+00:00:35,680 --> 00:00:38,370
+All components are independent
+from each other.
+
+17
+00:00:38,370 --> 00:00:41,620
+We say the system is operational
+if there exists a
+
+18
+00:00:41,620 --> 00:00:47,620
+path connecting point A here to
+point B that goes through
+
+19
+00:00:47,620 --> 00:00:49,690
+only the good components.
+
+20
+00:00:49,690 --> 00:00:52,450
+And we'd like to understand,
+what is the probability that
+
+21
+00:00:52,450 --> 00:00:54,490
+system is operational?
+
+22
+00:00:54,490 --> 00:01:01,794
+Which we'll denote
+by P of A to B.
+
+23
+00:01:01,794 --> 00:01:04,150
+Although the problem might seem
+a little complicated at
+
+24
+00:01:04,150 --> 00:01:05,920
+the beginning, it turns
+out only two
+
+25
+00:01:05,920 --> 00:01:07,420
+structures really matter.
+
+26
+00:01:07,420 --> 00:01:10,800
+So let's look at each of them.
+
+27
+00:01:10,800 --> 00:01:14,320
+In the first structure, which we
+call the serial structure,
+
+28
+00:01:14,320 --> 00:01:18,640
+we have a collection of k
+components, each one having
+
+29
+00:01:18,640 --> 00:01:22,290
+probability p of being good,
+connected one next to each
+
+30
+00:01:22,290 --> 00:01:24,230
+other in a serial line.
+
+31
+00:01:24,230 --> 00:01:26,770
+Now, in this structure, in order
+for there to be a good
+
+32
+00:01:26,770 --> 00:01:29,500
+path from a to b, every
+single one of the
+
+33
+00:01:29,500 --> 00:01:31,380
+components must be working.
+
+34
+00:01:31,380 --> 00:01:35,380
+So the probability of having
+a good path from a to b is
+
+35
+00:01:35,380 --> 00:01:41,640
+simply p times p, so on and so,
+repeated k times, which is
+
+36
+00:01:41,640 --> 00:01:43,940
+p raised to the k power.
+
+37
+00:01:43,940 --> 00:01:46,320
+Note that the reason we can
+write the probability this
+
+38
+00:01:46,320 --> 00:01:49,530
+way, in terms of this product,
+is because of the
+
+39
+00:01:49,530 --> 00:01:51,210
+independence property.
+
+40
+00:01:51,210 --> 00:01:58,720
+
+41
+00:01:58,720 --> 00:01:59,510
+Now, the second useful
+
+42
+00:01:59,510 --> 00:02:01,750
+structure is parallel structure.
+
+43
+00:02:01,750 --> 00:02:05,265
+Here again, we have k components
+one, two, through
+
+44
+00:02:05,265 --> 00:02:08,419
+k, but this time they're
+connected in parallel to each
+
+45
+00:02:08,419 --> 00:02:11,780
+other, namely they start from
+one point here and ends at
+
+46
+00:02:11,780 --> 00:02:13,900
+another point here,
+and this holds for
+
+47
+00:02:13,900 --> 00:02:15,420
+every single component.
+
+48
+00:02:15,420 --> 00:02:18,250
+Now, for the parallel structure
+to work, namely for
+
+49
+00:02:18,250 --> 00:02:22,370
+there to exist a good path from
+a to b, it's easy to see
+
+50
+00:02:22,370 --> 00:02:25,330
+that as long as one of these
+components works the whole
+
+51
+00:02:25,330 --> 00:02:26,760
+thing will work.
+
+52
+00:02:26,760 --> 00:02:30,640
+So the probability of a to b
+is the probability that at
+
+53
+00:02:30,640 --> 00:02:33,260
+least one of these
+components works.
+
+54
+00:02:33,260 --> 00:02:36,260
+Or in [other words], the
+probability of the complement
+
+55
+00:02:36,260 --> 00:02:39,125
+of the event where all
+components fail.
+
+56
+00:02:39,125 --> 00:02:44,740
+Now, if each component has
+probability p to be good, then
+
+57
+00:02:44,740 --> 00:02:49,920
+the probability that all k
+components fail is 1 minus p
+
+58
+00:02:49,920 --> 00:02:51,740
+raised to the kth power.
+
+59
+00:02:51,740 --> 00:02:55,000
+Again, having this expression
+means that we have used the
+
+60
+00:02:55,000 --> 00:02:57,580
+property of independence,
+and that is [the]
+
+61
+00:02:57,580 --> 00:03:00,990
+probability of having a good
+parallel structure.
+
+62
+00:03:00,990 --> 00:03:02,760
+Now, there's one more
+observation that will be
+
+63
+00:03:02,760 --> 00:03:03,800
+useful for us.
+
+64
+00:03:03,800 --> 00:03:07,360
+Just like how we define two
+components to be independent,
+
+65
+00:03:07,360 --> 00:03:10,920
+we can also find two collections
+of components to
+
+66
+00:03:10,920 --> 00:03:13,430
+be independent from
+each other.
+
+67
+00:03:13,430 --> 00:03:16,820
+For example, in this diagram,
+if we call the components
+
+68
+00:03:16,820 --> 00:03:21,580
+between points C and E as
+collection two, and the
+
+69
+00:03:21,580 --> 00:03:25,580
+components between E and
+B as collection three.
+
+70
+00:03:25,580 --> 00:03:28,760
+Now, if we assume that each
+component in both
+
+71
+00:03:28,760 --> 00:03:29,570
+collections--
+
+72
+00:03:29,570 --> 00:03:32,210
+they're completely independent
+from each other, then it's not
+
+73
+00:03:32,210 --> 00:03:35,600
+hard to see that collection
+two and three behave
+
+74
+00:03:35,600 --> 00:03:36,780
+independently.
+
+75
+00:03:36,780 --> 00:03:41,250
+And this will be very helpful
+in getting us the breakdown
+
+76
+00:03:41,250 --> 00:03:45,710
+from complex networks
+to simpler elements.
+
+77
+00:03:45,710 --> 00:03:47,630
+Now, let's go back to the
+original problem of
+
+78
+00:03:47,630 --> 00:03:50,990
+calculating the probability of
+having a good path from point
+
+79
+00:03:50,990 --> 00:03:54,560
+big A to point big B
+in this diagram.
+
+80
+00:03:54,560 --> 00:03:57,920
+Based on that argument of
+independent collections, we
+
+81
+00:03:57,920 --> 00:04:00,070
+can first divide the whole
+network into three
+
+82
+00:04:00,070 --> 00:04:04,870
+collections, as you see here,
+from A to C, C to E, and E to
+
+83
+00:04:04,870 --> 00:04:09,330
+B. Now, because they're
+independent and in a serial
+
+84
+00:04:09,330 --> 00:04:12,180
+structure, as seen by the
+definition of a serial
+
+85
+00:04:12,180 --> 00:04:16,140
+structure here, we see that the
+probability of A to B can
+
+86
+00:04:16,140 --> 00:04:24,580
+be written as a probability of
+A to C, multiplied by C to E,
+
+87
+00:04:24,580 --> 00:04:29,230
+and finally, E to B.
+
+88
+00:04:29,230 --> 00:04:33,880
+Now, the probability of A to
+C is simply p because the
+
+89
+00:04:33,880 --> 00:04:36,510
+collection contains
+only one element.
+
+90
+00:04:36,510 --> 00:04:41,090
+And similarly, the probability
+of E to B is not that hard
+
+91
+00:04:41,090 --> 00:04:43,070
+knowing the parallel
+structure here.
+
+92
+00:04:43,070 --> 00:04:47,010
+We see that collection three
+has two components in
+
+93
+00:04:47,010 --> 00:04:53,500
+parallel, so this probability
+will be given by 1 minus 1
+
+94
+00:04:53,500 --> 00:04:55,945
+minus P squared.
+
+95
+00:04:55,945 --> 00:04:59,480
+
+96
+00:04:59,480 --> 00:05:02,930
+And it remains to calculate just
+the probability of having
+
+97
+00:05:02,930 --> 00:05:07,670
+a good path from point
+C to point E. To get
+
+98
+00:05:07,670 --> 00:05:08,650
+a value for P [of]
+
+99
+00:05:08,650 --> 00:05:16,710
+C to E, we notice again, that
+this area can be treated as
+
+100
+00:05:16,710 --> 00:05:24,260
+two components, C1 to E and C2
+to E, connected in parallel.
+
+101
+00:05:24,260 --> 00:05:27,570
+And using the parallel law we
+get this probability is 1
+
+102
+00:05:27,570 --> 00:05:37,930
+minus 1 minus P C1 to E,
+multiplied by 1 minus P C2 to
+
+103
+00:05:37,930 --> 00:05:43,010
+E. Note that I'm using two
+different characters, C1 and
+
+104
+00:05:43,010 --> 00:05:47,760
+C2, to denote the same node,
+which is C. This is simply for
+
+105
+00:05:47,760 --> 00:05:51,610
+making it easier to analyze
+two branches where they
+
+106
+00:05:51,610 --> 00:05:53,930
+actually denote the same node.
+
+107
+00:05:53,930 --> 00:06:02,600
+Now P C1 to E, is another serial
+connection of these
+
+108
+00:06:02,600 --> 00:06:08,660
+three elements here with
+another component.
+
+109
+00:06:08,660 --> 00:06:13,580
+So the first three elements are
+connected in parallel, and
+
+110
+00:06:13,580 --> 00:06:16,580
+we know the probability of that
+being successful is 1
+
+111
+00:06:16,580 --> 00:06:17,236
+minus p [to the power]
+
+112
+00:06:17,236 --> 00:06:22,430
+3, and the last one is p.
+
+113
+00:06:22,430 --> 00:06:29,570
+And finally, P C2 to E. It's
+just a single element
+
+114
+00:06:29,570 --> 00:06:31,715
+component with probability
+of [being]
+
+115
+00:06:31,715 --> 00:06:33,760
+successful being p.
+
+116
+00:06:33,760 --> 00:06:37,270
+At this point, there is no
+longer any unknown variables,
+
+117
+00:06:37,270 --> 00:06:40,460
+and we have indeed obtained
+exact values for all the
+
+118
+00:06:40,460 --> 00:06:42,740
+quantities that we're
+interested in.
+
+119
+00:06:42,740 --> 00:06:44,960
+So starting from this equation,
+we can plug in the
+
+120
+00:06:44,960 --> 00:06:51,290
+values for P C2 to E, P C1 to E
+back here, and then further
+
+121
+00:06:51,290 --> 00:06:54,520
+plug in P C to E back here.
+
+122
+00:06:54,520 --> 00:06:57,880
+That will give us the final
+solution, which is given by
+
+123
+00:06:57,880 --> 00:07:01,370
+the following somewhat
+complicated formula.
+
+124
+00:07:01,370 --> 00:07:04,240
+So in summary, in this problem,
+we learned how to use
+
+125
+00:07:04,240 --> 00:07:07,820
+the independence property among
+different components to
+
+126
+00:07:07,820 --> 00:07:11,850
+break down the entire fairly
+complex network into simple
+
+127
+00:07:11,850 --> 00:07:15,570
+modular components, and use the
+law of serial and parallel
+
+128
+00:07:15,570 --> 00:07:19,580
+connections to put the
+probabilities back together
+
+129
+00:07:19,580 --> 00:07:22,640
+and come up with the overall
+success probability of finding
+
+130
+00:07:22,640 --> 00:07:24,700
+a path from A to B.

@@ -1,0 +1,444 @@
+1
+00:00:00,000 --> 00:00:00,490
+
+2
+00:00:00,490 --> 00:00:01,360
+Hi.
+
+3
+00:00:01,360 --> 00:00:03,990
+In this video, we're going to
+do standard probability
+
+4
+00:00:03,990 --> 00:00:07,640
+calculations for normal
+random variables.
+
+5
+00:00:07,640 --> 00:00:10,670
+We're given that X is standard
+normal with mean 0 and
+
+6
+00:00:10,670 --> 00:00:11,730
+variance 1.
+
+7
+00:00:11,730 --> 00:00:15,420
+And Y is normal with mean
+one and variance 4.
+
+8
+00:00:15,420 --> 00:00:18,310
+And we're asked for a couple
+of probabilities.
+
+9
+00:00:18,310 --> 00:00:22,400
+For the normal CDF, we don't
+have a closed form expression.
+
+10
+00:00:22,400 --> 00:00:26,610
+And so people generally tabulate
+values and for the
+
+11
+00:00:26,610 --> 00:00:28,570
+standard normal case.
+
+12
+00:00:28,570 --> 00:00:34,880
+So if we want little X equal to
+3.49, we just look for 3.4
+
+13
+00:00:34,880 --> 00:00:37,970
+along the rows and 0.09 along
+the columns, and then pick the
+
+14
+00:00:37,970 --> 00:00:39,720
+value appropriately.
+
+15
+00:00:39,720 --> 00:00:43,680
+So for part (a), we're asked
+what's the probability that X
+
+16
+00:00:43,680 --> 00:00:46,230
+is less than equal to 1.5?
+
+17
+00:00:46,230 --> 00:00:50,110
+That's exactly phi of 1.5
+and we can look that up.
+
+18
+00:00:50,110 --> 00:00:56,950
+1.5 directly and
+that's 0.9332.
+
+19
+00:00:56,950 --> 00:00:59,260
+Then we asked, what's the
+probability that X is less
+
+20
+00:00:59,260 --> 00:01:02,250
+than equal to negative 1?
+
+21
+00:01:02,250 --> 00:01:05,610
+Notice that negative values
+are not on this table.
+
+22
+00:01:05,610 --> 00:01:09,800
+And the reason that is is
+because the standard normal is
+
+23
+00:01:09,800 --> 00:01:11,140
+symmetric around zero.
+
+24
+00:01:11,140 --> 00:01:12,780
+And we don't really need that.
+
+25
+00:01:12,780 --> 00:01:15,490
+We just recognize that the area
+in this region is exactly
+
+26
+00:01:15,490 --> 00:01:17,490
+the area in this region.
+
+27
+00:01:17,490 --> 00:01:20,320
+And so that's equal to the
+probability that X is greater
+
+28
+00:01:20,320 --> 00:01:22,920
+than equal to 1.
+
+29
+00:01:22,920 --> 00:01:25,940
+This is equal to 1 minus
+the probability that X
+
+30
+00:01:25,940 --> 00:01:27,920
+is less than 1.
+
+31
+00:01:27,920 --> 00:01:31,350
+And we can put the equal sign
+in here because X is
+
+32
+00:01:31,350 --> 00:01:33,370
+continuous, it doesn't matter.
+
+33
+00:01:33,370 --> 00:01:35,570
+And so we're going to get,
+this is equal to 1
+
+34
+00:01:35,570 --> 00:01:38,020
+minus phi of one.
+
+35
+00:01:38,020 --> 00:01:40,310
+And we can look up phi
+of 1, which is
+
+36
+00:01:40,310 --> 00:01:49,650
+1.00, and that's 0.8413.
+
+37
+00:01:49,650 --> 00:01:51,330
+OK.
+
+38
+00:01:51,330 --> 00:01:56,050
+For part (b), we're asked for
+the distribution of Y
+
+39
+00:01:56,050 --> 00:01:58,160
+minus 1 over 2.
+
+40
+00:01:58,160 --> 00:02:00,650
+So any linear function
+of a normal random
+
+41
+00:02:00,650 --> 00:02:02,860
+variable is also normal.
+
+42
+00:02:02,860 --> 00:02:06,930
+And you can see that by using
+the derived distribution for
+
+43
+00:02:06,930 --> 00:02:12,800
+linear functions of
+random variables.
+
+44
+00:02:12,800 --> 00:02:15,360
+So in this case, we only need to
+figure out what's the mean
+
+45
+00:02:15,360 --> 00:02:18,620
+and the variance of this
+normal random variable.
+
+46
+00:02:18,620 --> 00:02:22,880
+So the mean in this case, I'm
+going to write that as Y over
+
+47
+00:02:22,880 --> 00:02:24,130
+2 minus 1/2.
+
+48
+00:02:24,130 --> 00:02:27,020
+
+49
+00:02:27,020 --> 00:02:28,970
+The expectation operator
+is linear and so
+
+50
+00:02:28,970 --> 00:02:30,220
+that's going to be--
+
+51
+00:02:30,220 --> 00:02:34,990
+
+52
+00:02:34,990 --> 00:02:38,810
+and the expectation in
+this case is 1, so
+
+53
+00:02:38,810 --> 00:02:41,310
+that's going to be 0.
+
+54
+00:02:41,310 --> 00:02:42,560
+Now the variance.
+
+55
+00:02:42,560 --> 00:02:45,840
+
+56
+00:02:45,840 --> 00:02:49,320
+For the shift, it doesn't
+affect the spread.
+
+57
+00:02:49,320 --> 00:02:52,530
+And so the variance is exactly
+going to be the same without
+
+58
+00:02:52,530 --> 00:02:55,300
+the minus 1/2.
+
+59
+00:02:55,300 --> 00:02:57,240
+And for the constant, you
+can just pull that
+
+60
+00:02:57,240 --> 00:02:58,490
+out and square it.
+
+61
+00:02:58,490 --> 00:03:01,530
+
+62
+00:03:01,530 --> 00:03:04,410
+And the variance of
+Y we know is 4.
+
+63
+00:03:04,410 --> 00:03:07,670
+And so that's 1/4 times
+4, that's 1.
+
+64
+00:03:07,670 --> 00:03:08,170
+OK.
+
+65
+00:03:08,170 --> 00:03:11,190
+So now we know that Y
+minus 1 over 2 is
+
+66
+00:03:11,190 --> 00:03:12,700
+actually standard normal.
+
+67
+00:03:12,700 --> 00:03:16,740
+
+68
+00:03:16,740 --> 00:03:21,840
+Actually for any normal random
+variable, you can follow the
+
+69
+00:03:21,840 --> 00:03:22,500
+same procedure.
+
+70
+00:03:22,500 --> 00:03:24,960
+You just subtract its mean,
+which is 1 in this case.
+
+71
+00:03:24,960 --> 00:03:28,050
+And divide by its standard
+deviation and you will get a
+
+72
+00:03:28,050 --> 00:03:31,520
+standard normal distribution.
+
+73
+00:03:31,520 --> 00:03:37,560
+All right, so for part (c) we
+want the probability that Y is
+
+74
+00:03:37,560 --> 00:03:42,190
+between negative 1 and 1.
+
+75
+00:03:42,190 --> 00:03:45,420
+So let's try to massage it so
+that we can use the standard
+
+76
+00:03:45,420 --> 00:03:46,980
+normal table.
+
+77
+00:03:46,980 --> 00:03:49,430
+And we already know that this
+is standard normal, so let's
+
+78
+00:03:49,430 --> 00:03:53,210
+subtract both sides
+by negative 1.
+
+79
+00:03:53,210 --> 00:04:04,240
+
+80
+00:04:04,240 --> 00:04:05,170
+And that's equal to--
+
+81
+00:04:05,170 --> 00:04:10,120
+I'm going to call this standard
+normal Z, so that's
+
+82
+00:04:10,120 --> 00:04:11,600
+easier to write.
+
+83
+00:04:11,600 --> 00:04:16,100
+And that's equal to negative 1
+less than equal to Z, less
+
+84
+00:04:16,100 --> 00:04:17,670
+than equal to zero.
+
+85
+00:04:17,670 --> 00:04:23,600
+So we're looking for this
+region, 0, 1, negative 1.
+
+86
+00:04:23,600 --> 00:04:26,900
+
+87
+00:04:26,900 --> 00:04:37,710
+So that's just the probability
+that it's less than zero minus
+
+88
+00:04:37,710 --> 00:04:42,840
+probability that it's less
+than negative 1.
+
+89
+00:04:42,840 --> 00:04:46,790
+Well for a standard normal, half
+the mass is below zero
+
+90
+00:04:46,790 --> 00:04:48,490
+and a half the mass is above.
+
+91
+00:04:48,490 --> 00:04:51,960
+And so that's just going
+to be 0.5 directly.
+
+92
+00:04:51,960 --> 00:04:56,460
+And for this, we've already
+computed this for a standard
+
+93
+00:04:56,460 --> 00:04:59,290
+normal, which was
+X in our case.
+
+94
+00:04:59,290 --> 00:05:09,868
+And that was 1 minus 0.8413.
+
+95
+00:05:09,868 --> 00:05:10,870
+Done.
+
+96
+00:05:10,870 --> 00:05:16,320
+So we basically calculated a few
+standard probabilities for
+
+97
+00:05:16,320 --> 00:05:17,560
+normal distributions.
+
+98
+00:05:17,560 --> 00:05:20,950
+And we did that by looking
+them up from the standard
+
+99
+00:05:20,950 --> 00:05:22,200
+normal table.
+
+100
+00:05:22,200 --> 00:05:24,367

@@ -1,0 +1,992 @@
+1
+00:00:00,000 --> 00:00:02,310
+
+2
+00:00:02,310 --> 00:00:04,450
+In this problem, we're going
+to look at the probability
+
+3
+00:00:04,450 --> 00:00:07,630
+that when you take a stick and
+break it into three pieces
+
+4
+00:00:07,630 --> 00:00:10,850
+randomly, that these three
+pieces can actually be used to
+
+5
+00:00:10,850 --> 00:00:13,420
+form a triangle.
+
+6
+00:00:13,420 --> 00:00:20,230
+So we start out with a stick of
+unit length-- so length 1.
+
+7
+00:00:20,230 --> 00:00:26,130
+And we'll choose a point along
+the stick to break.
+
+8
+00:00:26,130 --> 00:00:29,090
+And we'll choose that point
+uniformly at random.
+
+9
+00:00:29,090 --> 00:00:31,470
+So let's say that we
+chose it here.
+
+10
+00:00:31,470 --> 00:00:34,030
+That was a point where
+we'll break it.
+
+11
+00:00:34,030 --> 00:00:37,720
+And then independently of this
+first choice, we'll again
+
+12
+00:00:37,720 --> 00:00:42,390
+choose a second point to break
+it, again uniformly at random,
+
+13
+00:00:42,390 --> 00:00:43,550
+along the entire stick.
+
+14
+00:00:43,550 --> 00:00:48,410
+So let's say the second point
+we chose is here.
+
+15
+00:00:48,410 --> 00:00:50,880
+So what we have now is, we'll
+break it here and here.
+
+16
+00:00:50,880 --> 00:00:52,160
+And so we'll have
+three pieces--
+
+17
+00:00:52,160 --> 00:00:53,960
+the first one, the left
+one, the middle one,
+
+18
+00:00:53,960 --> 00:00:54,860
+and the right one.
+
+19
+00:00:54,860 --> 00:00:57,280
+And we want to know, what's the
+probability that when you
+
+20
+00:00:57,280 --> 00:01:01,360
+take these three pieces you
+can form a triangle?
+
+21
+00:01:01,360 --> 00:01:02,650
+So the first thing we
+should ask ourselves
+
+22
+00:01:02,650 --> 00:01:04,739
+is, what do you need?
+
+23
+00:01:04,739 --> 00:01:07,590
+What conditions must be
+satisfied in order to actually
+
+24
+00:01:07,590 --> 00:01:10,330
+be able to form a triangle
+with three pieces?
+
+25
+00:01:10,330 --> 00:01:13,620
+So you could think about what
+would stop you from being able
+
+26
+00:01:13,620 --> 00:01:14,660
+to do that?
+
+27
+00:01:14,660 --> 00:01:18,670
+Well, one possibility is
+that you have pieces
+
+28
+00:01:18,670 --> 00:01:19,920
+that look like this.
+
+29
+00:01:19,920 --> 00:01:23,540
+
+30
+00:01:23,540 --> 00:01:28,450
+So in that case, you would
+try to form something
+
+31
+00:01:28,450 --> 00:01:33,080
+that looks like this.
+
+32
+00:01:33,080 --> 00:01:36,340
+But you can't get a triangle,
+because these two pieces are
+
+33
+00:01:36,340 --> 00:01:38,430
+too short, and they can't
+touch each other.
+
+34
+00:01:38,430 --> 00:01:42,590
+So actually, the condition that
+must be satisfied is that
+
+35
+00:01:42,590 --> 00:01:48,230
+when you take any two of the
+three pieces, their combined
+
+36
+00:01:48,230 --> 00:01:51,870
+length has to be greater than
+the length of the remaining
+
+37
+00:01:51,870 --> 00:01:52,740
+third piece.
+
+38
+00:01:52,740 --> 00:01:54,450
+And that's true for
+any two pieces.
+
+39
+00:01:54,450 --> 00:01:57,040
+
+40
+00:01:57,040 --> 00:02:01,320
+And really, that's just so that
+any two pieces, they can
+
+41
+00:02:01,320 --> 00:02:05,510
+touch and still form
+a triangle.
+
+42
+00:02:05,510 --> 00:02:09,400
+So let's try to add some
+probability to this.
+
+43
+00:02:09,400 --> 00:02:13,990
+So we have a unit-length
+stick.
+
+44
+00:02:13,990 --> 00:02:18,470
+So let's actually give
+a coordinate system.
+
+45
+00:02:18,470 --> 00:02:20,980
+The stick goes from 0 to 1.
+
+46
+00:02:20,980 --> 00:02:23,790
+And let's say that we break
+it at these two points.
+
+47
+00:02:23,790 --> 00:02:32,280
+
+48
+00:02:32,280 --> 00:02:38,810
+The first point where we choose,
+we'll call that X. So
+
+49
+00:02:38,810 --> 00:02:41,620
+that's the first point that
+we choose to break it.
+
+50
+00:02:41,620 --> 00:02:45,230
+And then the second point we
+choose, we'll call that Y.
+
+51
+00:02:45,230 --> 00:02:51,260
+Now, note that I've drawn it so
+that X is to the left of Y.
+
+52
+00:02:51,260 --> 00:02:54,300
+But it could actually be the
+case that the first point I
+
+53
+00:02:54,300 --> 00:02:56,460
+chose is here and the
+second point that I
+
+54
+00:02:56,460 --> 00:02:58,230
+chose is to the left.
+
+55
+00:02:58,230 --> 00:03:07,340
+But for now, let's first assume
+that's this scenario
+
+56
+00:03:07,340 --> 00:03:10,480
+holds, that the first
+point is to the left
+
+57
+00:03:10,480 --> 00:03:13,390
+of the second point.
+
+58
+00:03:13,390 --> 00:03:20,320
+So under this assumption,
+we can see that from the
+
+59
+00:03:20,320 --> 00:03:22,490
+definition of these random
+variables, we can actually see
+
+60
+00:03:22,490 --> 00:03:26,860
+that the lengths are given
+by these three lengths.
+
+61
+00:03:26,860 --> 00:03:30,150
+
+62
+00:03:30,150 --> 00:03:36,760
+So the lengths are X. The
+left-most piece has length X.
+
+63
+00:03:36,760 --> 00:03:42,610
+The second, middle, piece has
+length of Y minus X. And the
+
+64
+00:03:42,610 --> 00:03:51,420
+last piece has length 1 minus
+Y. And now, let's recall our
+
+65
+00:03:51,420 --> 00:03:54,820
+three conditions.
+
+66
+00:03:54,820 --> 00:03:59,960
+So the conditions were that any
+two of these, the sum of
+
+67
+00:03:59,960 --> 00:04:03,770
+any two lengths has to be
+greater than the length of the
+
+68
+00:04:03,770 --> 00:04:05,380
+third piece.
+
+69
+00:04:05,380 --> 00:04:08,320
+So let's do these together.
+
+70
+00:04:08,320 --> 00:04:16,120
+So X plus Y minus X has to be
+greater than y minus 1.
+
+71
+00:04:16,120 --> 00:04:21,860
+So with these two pieces, you
+can cover this third piece.
+
+72
+00:04:21,860 --> 00:04:28,990
+We also need that with the first
+and third pieces, we can
+
+73
+00:04:28,990 --> 00:04:32,460
+cover the middle piece.
+
+74
+00:04:32,460 --> 00:04:42,110
+And we need with the second and
+third pieces, we can cover
+
+75
+00:04:42,110 --> 00:04:44,410
+the first piece.
+
+76
+00:04:44,410 --> 00:04:46,690
+Now, this looks kind of messy,
+but in fact, we can actually
+
+77
+00:04:46,690 --> 00:04:48,810
+simplify this.
+
+78
+00:04:48,810 --> 00:04:51,050
+So this actually simplifies.
+
+79
+00:04:51,050 --> 00:04:53,330
+X minus X-- that disappears.
+
+80
+00:04:53,330 --> 00:04:58,110
+And so this actually simplifies
+to 2Y has
+
+81
+00:04:58,110 --> 00:04:59,070
+to be at least 1.
+
+82
+00:04:59,070 --> 00:05:03,187
+Or, even more simply, y has
+to be greater than 1/2.
+
+83
+00:05:03,187 --> 00:05:06,050
+
+84
+00:05:06,050 --> 00:05:08,050
+What about this one?
+
+85
+00:05:08,050 --> 00:05:11,255
+This one we can rearrange
+things again.
+
+86
+00:05:11,255 --> 00:05:14,430
+The X we can move over here,
+Y we can move over here.
+
+87
+00:05:14,430 --> 00:05:19,220
+And we get that 2X plus 1 has
+to be greater than 2Y.
+
+88
+00:05:19,220 --> 00:05:29,680
+Or put in other words, Y is
+less than X plus 1/2.
+
+89
+00:05:29,680 --> 00:05:32,970
+And for the last one, again,
+we can simplify.
+
+90
+00:05:32,970 --> 00:05:34,570
+The Y's cancel each other out.
+
+91
+00:05:34,570 --> 00:05:37,400
+And we're left with
+2X is less than 1.
+
+92
+00:05:37,400 --> 00:05:40,140
+
+93
+00:05:40,140 --> 00:05:42,390
+Or X is less than 1/2.
+
+94
+00:05:42,390 --> 00:05:45,390
+
+95
+00:05:45,390 --> 00:05:48,980
+So these are our three
+conditions
+
+96
+00:05:48,980 --> 00:05:50,920
+that need to be satisfied.
+
+97
+00:05:50,920 --> 00:05:53,180
+So now, we just have to figure
+out what's the probability
+
+98
+00:05:53,180 --> 00:05:55,720
+that this is actually
+satisfied.
+
+99
+00:05:55,720 --> 00:06:06,580
+Now, let's go back to original
+definition and see what are
+
+100
+00:06:06,580 --> 00:06:08,840
+the actual distributions for
+these random variables, X and
+
+101
+00:06:08,840 --> 00:06:09,200
+Y.
+
+102
+00:06:09,200 --> 00:06:12,920
+Remember, we defined them to
+be X is the location of the
+
+103
+00:06:12,920 --> 00:06:16,940
+first break and Y is the
+location of the second break.
+
+104
+00:06:16,940 --> 00:06:20,640
+And as we said in the problem,
+these are chosen uniformly at
+
+105
+00:06:20,640 --> 00:06:23,560
+random, and they're
+independent.
+
+106
+00:06:23,560 --> 00:06:29,290
+And so we can actually draw
+out their joint PDF.
+
+107
+00:06:29,290 --> 00:06:35,280
+So X and Y, it can cover any
+point in the square.
+
+108
+00:06:35,280 --> 00:06:42,750
+And moreover, it's actually
+uniform within this square,
+
+109
+00:06:42,750 --> 00:06:46,450
+because each one is chosen
+uniformly at random.
+
+110
+00:06:46,450 --> 00:06:48,380
+And they're independent.
+
+111
+00:06:48,380 --> 00:06:51,780
+So it's anywhere in here.
+
+112
+00:06:51,780 --> 00:06:54,320
+And so what do we need to do?
+
+113
+00:06:54,320 --> 00:06:56,840
+We just need to identify what's
+the probability that
+
+114
+00:06:56,840 --> 00:06:59,230
+these three conditions hold.
+
+115
+00:06:59,230 --> 00:07:00,480
+Let me adjust.
+
+116
+00:07:00,480 --> 00:07:04,340
+
+117
+00:07:04,340 --> 00:07:09,150
+Let me write this,
+line these up.
+
+118
+00:07:09,150 --> 00:07:14,520
+So these are our three
+conditions that we need.
+
+119
+00:07:14,520 --> 00:07:16,790
+And now, remember, we're still
+working under the assumption
+
+120
+00:07:16,790 --> 00:07:20,450
+that the first point that we
+chose is actually to the left
+
+121
+00:07:20,450 --> 00:07:22,210
+of the second point.
+
+122
+00:07:22,210 --> 00:07:24,990
+So what does that mean?
+
+123
+00:07:24,990 --> 00:07:28,470
+That means that we are
+actually in this top
+
+124
+00:07:28,470 --> 00:07:30,640
+triangle, top 1/2.
+
+125
+00:07:30,640 --> 00:07:35,520
+X is less than Y. So
+what do we need?
+
+126
+00:07:35,520 --> 00:07:37,830
+We need Y to be at least 1/2.
+
+127
+00:07:37,830 --> 00:07:39,460
+So here's 1/2.
+
+128
+00:07:39,460 --> 00:07:42,530
+So we need Y to be
+above this line.
+
+129
+00:07:42,530 --> 00:07:45,030
+We need X to be less than
+1/2, so we need X to
+
+130
+00:07:45,030 --> 00:07:48,890
+be to the left here.
+
+131
+00:07:48,890 --> 00:07:52,180
+So far, we're stuck in
+this upper square.
+
+132
+00:07:52,180 --> 00:07:56,970
+And the last thing we need is Y
+to be less than X plus 1/2.
+
+133
+00:07:56,970 --> 00:08:02,870
+The line Y equals X plus
+1/2 is this one.
+
+134
+00:08:02,870 --> 00:08:07,430
+So Y has to be less than that,
+so we have to be in this
+
+135
+00:08:07,430 --> 00:08:08,910
+triangle here.
+
+136
+00:08:08,910 --> 00:08:12,210
+So these three conditions tell
+us that in order for us to
+
+137
+00:08:12,210 --> 00:08:18,110
+have a triangle, we need for X
+and Y to fall jointly in this
+
+138
+00:08:18,110 --> 00:08:20,040
+small triangle here.
+
+139
+00:08:20,040 --> 00:08:24,730
+And now, because the joint
+distribution is uniform, we
+
+140
+00:08:24,730 --> 00:08:28,620
+know that the density is just
+1, because the area
+
+141
+00:08:28,620 --> 00:08:30,700
+here is just 1.
+
+142
+00:08:30,700 --> 00:08:33,150
+So the height is
+just 1 as well.
+
+143
+00:08:33,150 --> 00:08:37,360
+And so the density or the
+probability of falling within
+
+144
+00:08:37,360 --> 00:08:41,559
+this smallest triangle is just
+going to be also the area of
+
+145
+00:08:41,559 --> 00:08:42,390
+this triangle.
+
+146
+00:08:42,390 --> 00:08:45,440
+And what is the area
+of this triangle?
+
+147
+00:08:45,440 --> 00:08:48,410
+Well, you can fit eight of
+these triangles in here.
+
+148
+00:08:48,410 --> 00:08:51,130
+Or you could think of it as
+1/2 times 1/2 times 1/2.
+
+149
+00:08:51,130 --> 00:08:54,920
+So the area is just 1/8.
+
+150
+00:08:54,920 --> 00:09:01,360
+So assuming that X is less than
+Y, then the probability
+
+151
+00:09:01,360 --> 00:09:05,450
+forming a triangle is 1/8.
+
+152
+00:09:05,450 --> 00:09:08,790
+Now, that's only half the story,
+because it's possible
+
+153
+00:09:08,790 --> 00:09:13,220
+that when you chose these two
+break points, that we actually
+
+154
+00:09:13,220 --> 00:09:20,830
+had the opposite result, that
+X, the point that you chose
+
+155
+00:09:20,830 --> 00:09:23,580
+first falls to the right of
+the point that you chose
+
+156
+00:09:23,580 --> 00:09:28,670
+second, in which case everything
+kind of flips.
+
+157
+00:09:28,670 --> 00:09:34,580
+Now, we assume that Y is less
+than X, which means that now
+
+158
+00:09:34,580 --> 00:09:39,310
+we're in this lower triangle
+in the square.
+
+159
+00:09:39,310 --> 00:09:41,680
+Now, we could go through this
+whole exercise again.
+
+160
+00:09:41,680 --> 00:09:45,110
+But really, what we can see is
+that all we've really done is
+
+161
+00:09:45,110 --> 00:09:48,320
+just swap the names.
+
+162
+00:09:48,320 --> 00:09:48,550
+instead.
+
+163
+00:09:48,550 --> 00:09:53,530
+Of having X and Y, we now
+call X, we call it XY.
+
+164
+00:09:53,530 --> 00:09:55,870
+We call Y X.
+
+165
+00:09:55,870 --> 00:10:00,480
+And so if we just swap names,
+we can see that--
+
+166
+00:10:00,480 --> 00:10:02,420
+let's just fast forward through
+all these steps and
+
+167
+00:10:02,420 --> 00:10:05,220
+see that we could just swap
+names here too as well in the
+
+168
+00:10:05,220 --> 00:10:05,760
+three conditions.
+
+169
+00:10:05,760 --> 00:10:09,810
+So instead of needing Y to be
+greater than 1/2, we just need
+
+170
+00:10:09,810 --> 00:10:11,440
+X to be greater than 1/2.
+
+171
+00:10:11,440 --> 00:10:14,230
+And instead of having
+X less than 1/2, we
+
+172
+00:10:14,230 --> 00:10:15,760
+need Y less than 1/2.
+
+173
+00:10:15,760 --> 00:10:18,770
+And then we also swap this.
+
+174
+00:10:18,770 --> 00:10:22,790
+So we need X to be less
+than Y plus 1/2.
+
+175
+00:10:22,790 --> 00:10:27,030
+Or Y is greater than
+X minus 1/2.
+
+176
+00:10:27,030 --> 00:10:29,800
+
+177
+00:10:29,800 --> 00:10:33,680
+Now, let's figure out what
+this corresponds to.
+
+178
+00:10:33,680 --> 00:10:36,020
+We need X to be greater
+than 1/2.
+
+179
+00:10:36,020 --> 00:10:38,370
+So it needs to be to
+the right of here.
+
+180
+00:10:38,370 --> 00:10:39,920
+We need Y to be less than 1/2.
+
+181
+00:10:39,920 --> 00:10:43,380
+So we need it to be
+below this line.
+
+182
+00:10:43,380 --> 00:10:47,300
+And we need Y to be greater
+than X minus 1/2.
+
+183
+00:10:47,300 --> 00:10:51,120
+What is the line Y equals
+X minus 1/2?
+
+184
+00:10:51,120 --> 00:10:54,260
+That is this line here.
+
+185
+00:10:54,260 --> 00:10:55,920
+And we need Y to be
+greater than that.
+
+186
+00:10:55,920 --> 00:10:58,060
+So it needs to be
+above this line.
+
+187
+00:10:58,060 --> 00:11:03,470
+And so we get that this is the
+triangle, the small triangle
+
+188
+00:11:03,470 --> 00:11:05,820
+that we need in this case.
+
+189
+00:11:05,820 --> 00:11:11,020
+Notice that it's exactly the
+same area as this one.
+
+190
+00:11:11,020 --> 00:11:13,870
+And so we get another
+contribution of 1/8 here.
+
+191
+00:11:13,870 --> 00:11:20,030
+So the final answer is,
+1/8 plus 1/8 is 1/4.
+
+192
+00:11:20,030 --> 00:11:23,970
+So the probability of forming
+a triangle using this three
+
+193
+00:11:23,970 --> 00:11:26,860
+pieces is exactly 1/4.
+
+194
+00:11:26,860 --> 00:11:31,620
+And so notice that what we've
+done is, you've set things up
+
+195
+00:11:31,620 --> 00:11:34,360
+very methodically in the
+beginning by assigning these
+
+196
+00:11:34,360 --> 00:11:35,090
+random variables.
+
+197
+00:11:35,090 --> 00:11:38,090
+You consider different cases.
+
+198
+00:11:38,090 --> 00:11:41,530
+Because you don't actually know
+the order in which X and
+
+199
+00:11:41,530 --> 00:11:45,950
+Y fall, let's just assume that
+one particular order and work
+
+200
+00:11:45,950 --> 00:11:46,740
+from there .
+
+201
+00:11:46,740 --> 00:11:49,100
+And then do the other
+case as well.
+
+202
+00:11:49,100 --> 00:11:53,320
+And it just so happened that
+because of the symmetry of the
+
+203
+00:11:53,320 --> 00:11:56,120
+problem, the second case was
+actually very simple.
+
+204
+00:11:56,120 --> 00:11:58,870
+We could just see that it
+is actually symmetric.
+
+205
+00:11:58,870 --> 00:12:01,720
+And so we get the same answer.
+
+206
+00:12:01,720 --> 00:12:04,470
+So this is kind of an
+interesting problem because
+
+207
+00:12:04,470 --> 00:12:07,110
+it's actually a practical
+application of something that
+
+208
+00:12:07,110 --> 00:12:08,090
+you might actually do.
+
+209
+00:12:08,090 --> 00:12:12,000
+And you can see that just by
+applying these probability
+
+210
+00:12:12,000 --> 00:12:14,310
+concepts, you can actually
+calculate an interesting
+
+211
+00:12:14,310 --> 00:12:15,470
+probability.
+
+212
+00:12:15,470 --> 00:12:19,350
+And the answer to this
+question is 1/4.
+
+213
+00:12:19,350 --> 00:12:20,720
+So I hope that was interesting,
+and we'll
+
+214
+00:12:20,720 --> 00:12:21,970
+see you next time.
+
+215
+00:12:21,970 --> 00:12:22,610

@@ -1,0 +1,429 @@
+1
+00:00:00,000 --> 00:00:01,040
+
+2
+00:00:01,040 --> 00:00:04,710
+In this problem, we're given an
+urn with n balls in it, out
+
+3
+00:00:04,710 --> 00:00:08,510
+of which m balls
+are red balls.
+
+4
+00:00:08,510 --> 00:00:13,370
+To visualize it, we can draw a
+box that represents the set of
+
+5
+00:00:13,370 --> 00:00:14,990
+all n balls.
+
+6
+00:00:14,990 --> 00:00:18,310
+Somewhere in the middle or
+somewhere else we have a cut,
+
+7
+00:00:18,310 --> 00:00:21,750
+such that to the left we have
+all the red balls (there are
+
+8
+00:00:21,750 --> 00:00:24,670
+m), and non-red balls.
+
+9
+00:00:24,670 --> 00:00:27,100
+Let's for now call
+it black balls.
+
+10
+00:00:27,100 --> 00:00:30,250
+That is n minus m.
+
+11
+00:00:30,250 --> 00:00:34,450
+Now, from this box, we are to
+draw k balls, and we'd like to
+
+12
+00:00:34,450 --> 00:00:37,900
+know the probability that
+i out of those k
+
+13
+00:00:37,900 --> 00:00:39,455
+balls are red balls.
+
+14
+00:00:39,455 --> 00:00:42,690
+
+15
+00:00:42,690 --> 00:00:44,670
+For the rest of the problem,
+we'll refer to this
+
+16
+00:00:44,670 --> 00:00:50,120
+probability as p-r, where r
+stands for the red balls.
+
+17
+00:00:50,120 --> 00:00:54,180
+So from this picture, we know
+that we're going to draw a
+
+18
+00:00:54,180 --> 00:00:59,330
+subset of the balls, such that
+i of them are red, and the
+
+19
+00:00:59,330 --> 00:01:03,920
+remaining k minus i are black.
+
+20
+00:01:03,920 --> 00:01:06,830
+And we'll like to know what is
+the probability that this
+
+21
+00:01:06,830 --> 00:01:09,020
+event would occur.
+
+22
+00:01:09,020 --> 00:01:13,360
+To start, we define our sample
+space, omega, as the set of
+
+23
+00:01:13,360 --> 00:01:17,150
+all ways to draw k balls
+out of n balls.
+
+24
+00:01:17,150 --> 00:01:19,540
+We found a simple counting
+argument -- we know that size
+
+25
+00:01:19,540 --> 00:01:23,750
+of our sample space has
+n-choose-k, which is the total
+
+26
+00:01:23,750 --> 00:01:25,710
+number of ways to draw k
+balls out of n balls.
+
+27
+00:01:25,710 --> 00:01:28,300
+
+28
+00:01:28,300 --> 00:01:30,450
+Next, we'd like to know how
+many of those samples
+
+29
+00:01:30,450 --> 00:01:32,630
+correspond to the event that
+we're interested in.
+
+30
+00:01:32,630 --> 00:01:35,700
+In particular, we would like to
+know c, which is equal to
+
+31
+00:01:35,700 --> 00:01:38,670
+the number of ways to get
+i red balls after
+
+32
+00:01:38,670 --> 00:01:40,800
+we draw the k balls.
+
+33
+00:01:40,800 --> 00:01:44,500
+To do so, we'll break c into
+a product of two numbers --
+
+34
+00:01:44,500 --> 00:01:46,660
+let's call it a times b --
+
+35
+00:01:46,660 --> 00:01:52,680
+where a is the total number of
+ways to select i red balls out
+
+36
+00:01:52,680 --> 00:01:54,520
+of m red balls.
+
+37
+00:01:54,520 --> 00:02:02,530
+So the number of ways to get
+i out of m red balls.
+
+38
+00:02:02,530 --> 00:02:05,820
+Going back to the picture, this
+corresponds to the total
+
+39
+00:02:05,820 --> 00:02:09,340
+number of ways to
+get these balls.
+
+40
+00:02:09,340 --> 00:02:15,000
+And similarly, we define b as
+the total number of ways to
+
+41
+00:02:15,000 --> 00:02:23,150
+get the remaining k minus i
+balls out of the set n minus m
+
+42
+00:02:23,150 --> 00:02:25,340
+black balls.
+
+43
+00:02:25,340 --> 00:02:29,890
+This corresponds to the total
+number of ways to select the
+
+44
+00:02:29,890 --> 00:02:34,820
+subset right here in the
+right side of the box.
+
+45
+00:02:34,820 --> 00:02:38,080
+Now as you can see, once we have
+a and b, we multiply them
+
+46
+00:02:38,080 --> 00:02:41,600
+together, and this yields
+the total number of ways
+
+47
+00:02:41,600 --> 00:02:43,470
+to get i red balls.
+
+48
+00:02:43,470 --> 00:02:48,335
+To compute what these numbers
+are, we see that a is equal to
+
+49
+00:02:48,335 --> 00:02:54,280
+m-choose-i number of ways to
+get i red balls, and b is n
+
+50
+00:02:54,280 --> 00:03:01,570
+minus m, the total number of
+black balls, choose k minus i,
+
+51
+00:03:01,570 --> 00:03:06,160
+the balls that are not red
+within those k balls.
+
+52
+00:03:06,160 --> 00:03:09,670
+Now putting everything back, we
+have p-r, the probability
+
+53
+00:03:09,670 --> 00:03:14,260
+we set out to compute, is equal
+to c, the size of the
+
+54
+00:03:14,260 --> 00:03:20,250
+event, divided by the size of
+the entire sample space.
+
+55
+00:03:20,250 --> 00:03:22,700
+From the previous calculations,
+we know that c
+
+56
+00:03:22,700 --> 00:03:28,410
+is equal to a times b, which
+is then equal to m-choose-i
+
+57
+00:03:28,410 --> 00:03:33,000
+times (n minus m)-choose-(k
+minus i).
+
+58
+00:03:33,000 --> 00:03:38,460
+And on the denominator, we have
+the entire sample space
+
+59
+00:03:38,460 --> 00:03:41,110
+is a size n-choose-k.
+
+60
+00:03:41,110 --> 00:03:44,810
+And that completes
+our derivation.
+
+61
+00:03:44,810 --> 00:03:48,080
+Now let's look at a numerical
+example of this problem.
+
+62
+00:03:48,080 --> 00:03:51,630
+Here, let's say we have
+a deck of 52 cards.
+
+63
+00:03:51,630 --> 00:03:57,290
+And we draw a box with n equals
+52, out of which we
+
+64
+00:03:57,290 --> 00:04:00,400
+know that there are 4 aces.
+
+65
+00:04:00,400 --> 00:04:04,660
+So we'll call these the left
+side of the box, which is we
+
+66
+00:04:04,660 --> 00:04:09,130
+have m equals 4 aces.
+
+67
+00:04:09,130 --> 00:04:12,640
+Now if we were to draw
+seven cards--
+
+68
+00:04:12,640 --> 00:04:15,550
+call it k equal to 7--
+
+69
+00:04:15,550 --> 00:04:18,620
+and we'd like to know what is
+the probability that out of
+
+70
+00:04:18,620 --> 00:04:21,340
+the 7 cards, we have 3 aces.
+
+71
+00:04:21,340 --> 00:04:24,610
+
+72
+00:04:24,610 --> 00:04:29,420
+Using the notation we did
+earlier, if we were to draw a
+
+73
+00:04:29,420 --> 00:04:33,000
+circle representing the seven
+cards, we want to know what is
+
+74
+00:04:33,000 --> 00:04:36,550
+the probability that we have 3
+aces in the left side of the
+
+75
+00:04:36,550 --> 00:04:41,650
+box and 4 non-aces for the
+remainder of the deck.
+
+76
+00:04:41,650 --> 00:04:46,570
+In particular, we'll
+call i equal to 3.
+
+77
+00:04:46,570 --> 00:04:49,990
+So by this point, we've cast the
+problem of drawing cards
+
+78
+00:04:49,990 --> 00:04:53,810
+from the deck in the same way
+as we did earlier of drawing
+
+79
+00:04:53,810 --> 00:04:55,210
+balls from an urn.
+
+80
+00:04:55,210 --> 00:04:59,970
+And from the expression right
+here, which we computed
+
+81
+00:04:59,970 --> 00:05:03,630
+earlier, we can readily compute
+the probability of
+
+82
+00:05:03,630 --> 00:05:06,280
+having 3 aces.
+
+83
+00:05:06,280 --> 00:05:10,360
+In particular, we just have to
+substitute into the expression
+
+84
+00:05:10,360 --> 00:05:16,370
+right here the value of m equal
+to 4, n equal to 52, k
+
+85
+00:05:16,370 --> 00:05:19,980
+equal to 7, finally,
+i equal to 3.
+
+86
+00:05:19,980 --> 00:05:29,300
+So we have 4-choose-3 times n
+minus m, in this case would be
+
+87
+00:05:29,300 --> 00:05:36,260
+48, choose k minus i, will be 4,
+and on the denominator, we
+
+88
+00:05:36,260 --> 00:05:41,750
+have 52 total number of cards,
+choosing 7 cards.
+
+89
+00:05:41,750 --> 00:05:42,810
+That gives us [the]
+
+90
+00:05:42,810 --> 00:05:44,440
+numerical answer [for]
+
+91
+00:05:44,440 --> 00:05:47,890
+the probability of getting 3
+aces when we draw 7 cards.
+
+92
+00:05:47,890 --> 00:05:49,140

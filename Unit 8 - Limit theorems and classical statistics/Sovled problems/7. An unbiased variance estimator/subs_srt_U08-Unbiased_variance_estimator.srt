@@ -1,0 +1,805 @@
+1
+00:00:00,000 --> 00:00:00,620
+
+2
+00:00:00,620 --> 00:00:01,300
+Hi.
+
+3
+00:00:01,300 --> 00:00:03,790
+In this problem, we're going to
+find an unbiased estimator
+
+4
+00:00:03,790 --> 00:00:05,940
+for the variance of
+a random variable.
+
+5
+00:00:05,940 --> 00:00:08,970
+Suppose random variable X has
+some unknown mean theta and
+
+6
+00:00:08,970 --> 00:00:12,730
+some unknown variance v. We're
+going to use some i.i.d.
+
+7
+00:00:12,730 --> 00:00:17,510
+observations of X, X1 through
+Xn, and combine these
+
+8
+00:00:17,510 --> 00:00:20,120
+observations to find an
+estimator that will estimate
+
+9
+00:00:20,120 --> 00:00:21,740
+theta and v.
+
+10
+00:00:21,740 --> 00:00:25,280
+Now, how do you know if an
+estimator's any good?
+
+11
+00:00:25,280 --> 00:00:28,170
+For example, here's
+a bad estimator.
+
+12
+00:00:28,170 --> 00:00:31,395
+If I'm trying to estimate what
+theta is, I could come up with
+
+13
+00:00:31,395 --> 00:00:34,010
+an estimator that takes in
+these observations, but
+
+14
+00:00:34,010 --> 00:00:36,760
+ignores them, and always just
+spits out zero as the estimate
+
+15
+00:00:36,760 --> 00:00:38,050
+for what the mean is.
+
+16
+00:00:38,050 --> 00:00:40,220
+So that estimator's probably
+not very good.
+
+17
+00:00:40,220 --> 00:00:41,940
+So how do you know if an
+estimator is good?
+
+18
+00:00:41,940 --> 00:00:44,080
+Well, there are some properties
+of estimators that
+
+19
+00:00:44,080 --> 00:00:45,940
+are desirable to have.
+
+20
+00:00:45,940 --> 00:00:48,370
+One of them is for the
+estimators to be unbiased.
+
+21
+00:00:48,370 --> 00:00:52,360
+So an estimator, capital A, of
+some unknown parameter, little
+
+22
+00:00:52,360 --> 00:00:56,100
+a, is unbiased if the expected
+value of this estimator is
+
+23
+00:00:56,100 --> 00:00:59,610
+equal to the parameter that
+you're trying to estimate.
+
+24
+00:00:59,610 --> 00:01:02,930
+Remember that in general,
+an estimator is a random
+
+25
+00:01:02,930 --> 00:01:05,910
+variable, because it's based on
+some random observations.
+
+26
+00:01:05,910 --> 00:01:08,510
+So it won't always
+be equal to.
+
+27
+00:01:08,510 --> 00:01:11,200
+It won't always give
+you the value that
+
+28
+00:01:11,200 --> 00:01:11,980
+you're trying to estimate.
+
+29
+00:01:11,980 --> 00:01:16,520
+But if it's unbiased, you know
+that on average it'll give you
+
+30
+00:01:16,520 --> 00:01:18,180
+the right value.
+
+31
+00:01:18,180 --> 00:01:21,860
+Let's practice first on the
+mean, theta, and see if we can
+
+32
+00:01:21,860 --> 00:01:23,880
+come up with an unbiased
+estimator for it.
+
+33
+00:01:23,880 --> 00:01:26,750
+One proposal is the
+sample mean.
+
+34
+00:01:26,750 --> 00:01:31,395
+Let's calculate the sample mean
+as the average of all of
+
+35
+00:01:31,395 --> 00:01:34,430
+the n i.i.d. samples
+that we get.
+
+36
+00:01:34,430 --> 00:01:37,930
+So you take X1, add up all
+the Xi's and divide by n.
+
+37
+00:01:37,930 --> 00:01:39,770
+And we'll call that Mn.
+
+38
+00:01:39,770 --> 00:01:44,240
+So in order verify that this
+is in fact unbiased, all we
+
+39
+00:01:44,240 --> 00:01:46,880
+have to do is calculate the
+expected value of Mn and
+
+40
+00:01:46,880 --> 00:01:50,210
+verify that it's
+equal to theta.
+
+41
+00:01:50,210 --> 00:01:54,690
+The expected value of Mn, in
+order to calculate it, we'll
+
+42
+00:01:54,690 --> 00:01:57,500
+rely on linearity
+of expectations.
+
+43
+00:01:57,500 --> 00:02:00,560
+The first we can do is we
+could pull out a 1/n.
+
+44
+00:02:00,560 --> 00:02:03,960
+And then in order to calculate
+the expectation of the sum by
+
+45
+00:02:03,960 --> 00:02:06,860
+linearity again, that is
+equal to the sum of the
+
+46
+00:02:06,860 --> 00:02:08,090
+expectations.
+
+47
+00:02:08,090 --> 00:02:12,630
+And so, what we get is it's
+expectation of X1 plus all the
+
+48
+00:02:12,630 --> 00:02:16,990
+way through expectation of Xn.
+
+49
+00:02:16,990 --> 00:02:20,660
+Because X1 through Xn are all
+i.i.d. observations of X, they
+
+50
+00:02:20,660 --> 00:02:24,170
+all have the same mean,
+which is theta.
+
+51
+00:02:24,170 --> 00:02:29,405
+And so it's 1/n times n copies
+of theta, which gives you that
+
+52
+00:02:29,405 --> 00:02:32,840
+the expectation of Mn is
+in fact equal to theta.
+
+53
+00:02:32,840 --> 00:02:35,460
+And so we've shown that
+this is an unbiased
+
+54
+00:02:35,460 --> 00:02:38,390
+estimator of the mean.
+
+55
+00:02:38,390 --> 00:02:42,990
+Now let's try to take that and
+see if we can find an unbiased
+
+56
+00:02:42,990 --> 00:02:47,150
+estimator for the variance v.
+And here is one proposal.
+
+57
+00:02:47,150 --> 00:02:52,260
+Let's let Sn hat squared be
+equal to this expression.
+
+58
+00:02:52,260 --> 00:02:53,660
+Let's see what we're
+doing here.
+
+59
+00:02:53,660 --> 00:02:58,210
+We're taking each sample, Xi,
+subtracting the sample mean,
+
+60
+00:02:58,210 --> 00:03:01,230
+squaring it, and then taking
+some sort of average of those.
+
+61
+00:03:01,230 --> 00:03:04,860
+And this seems like it may be a
+good choice, because this is
+
+62
+00:03:04,860 --> 00:03:07,900
+kind of like what a variance
+calculation does.
+
+63
+00:03:07,900 --> 00:03:10,380
+You take the square deviations
+from the mean, and take some
+
+64
+00:03:10,380 --> 00:03:11,840
+sort of average of those.
+
+65
+00:03:11,840 --> 00:03:13,910
+So let's see if this is
+actually correct.
+
+66
+00:03:13,910 --> 00:03:16,590
+And in order to do that, we'll
+do the same thing that we did
+
+67
+00:03:16,590 --> 00:03:21,240
+for the mean, which is we'll
+calculate the expectation of
+
+68
+00:03:21,240 --> 00:03:26,100
+Sn hat squared and verify
+that it's equal to v.
+
+69
+00:03:26,100 --> 00:03:29,560
+First, let's try to simplify
+this expression a little bit.
+
+70
+00:03:29,560 --> 00:03:33,870
+So we can expand this square.
+
+71
+00:03:33,870 --> 00:03:42,006
+And we'll get Xi squared minus
+2Xi times Mn plus Mn squared.
+
+72
+00:03:42,006 --> 00:03:46,940
+And next, let's distribute
+this summation.
+
+73
+00:03:46,940 --> 00:03:50,580
+So we'll split it up into three
+different summations.
+
+74
+00:03:50,580 --> 00:03:53,940
+The first one adds up
+all the Xi squares.
+
+75
+00:03:53,940 --> 00:04:00,250
+The second one adds up
+all of the Xi's.
+
+76
+00:04:00,250 --> 00:04:03,090
+So we can pull out the Mn
+outside of the summation,
+
+77
+00:04:03,090 --> 00:04:08,910
+because Mn does not depend
+on the summation index i.
+
+78
+00:04:08,910 --> 00:04:13,360
+And lastly, we have a summation
+of Mn squared.
+
+79
+00:04:13,360 --> 00:04:16,500
+And just like for this
+case, Mn squared also
+
+80
+00:04:16,500 --> 00:04:17,560
+doesn't depend on i.
+
+81
+00:04:17,560 --> 00:04:24,060
+So we just have n copies
+of Mn squared.
+
+82
+00:04:24,060 --> 00:04:28,060
+Now let's look at this middle
+expression here.
+
+83
+00:04:28,060 --> 00:04:33,110
+We know that the sum of the Xi's
+is actually just equal to
+
+84
+00:04:33,110 --> 00:04:35,060
+n times Mn.
+
+85
+00:04:35,060 --> 00:04:37,870
+So let's substitute
+that in to try to
+
+86
+00:04:37,870 --> 00:04:38,940
+simplify this even more.
+
+87
+00:04:38,940 --> 00:04:43,180
+So the sum of the Xi's is equal
+to n times Mn, so we
+
+88
+00:04:43,180 --> 00:04:51,400
+have 2 times Mn times n times
+Mn, which gives us two times n
+
+89
+00:04:51,400 --> 00:04:55,210
+times Mn squared for that.
+
+90
+00:04:55,210 --> 00:04:58,340
+And now we also added
+n times Mn squared.
+
+91
+00:04:58,340 --> 00:05:03,160
+And so what we are
+left with is just
+
+92
+00:05:03,160 --> 00:05:07,530
+minus n times Mn squared.
+
+93
+00:05:07,530 --> 00:05:11,090
+
+94
+00:05:11,090 --> 00:05:13,340
+So we simplified this expression
+a little bit.
+
+95
+00:05:13,340 --> 00:05:16,290
+And now if we were to try to
+calculate the expected value,
+
+96
+00:05:16,290 --> 00:05:18,620
+we know that we're going to have
+to rely on linearity of
+
+97
+00:05:18,620 --> 00:05:20,120
+expectations again.
+
+98
+00:05:20,120 --> 00:05:24,440
+And if we look forward, we can
+see that what we're going to
+
+99
+00:05:24,440 --> 00:05:28,840
+have to calculate eventually
+is the expectation of Xi
+
+100
+00:05:28,840 --> 00:05:33,310
+squared and the expectation
+of Mn squared.
+
+101
+00:05:33,310 --> 00:05:35,830
+So let's calculate
+those first.
+
+102
+00:05:35,830 --> 00:05:39,055
+What is the expectation
+of Xi squared?
+
+103
+00:05:39,055 --> 00:05:42,530
+The expectation of Xi squared,
+we can write that as the
+
+104
+00:05:42,530 --> 00:05:46,390
+variance of Xi plus
+the expectation
+
+105
+00:05:46,390 --> 00:05:49,360
+of Xi quantity squared.
+
+106
+00:05:49,360 --> 00:05:52,120
+
+107
+00:05:52,120 --> 00:05:53,960
+Now, what is the
+variance of Xi?
+
+108
+00:05:53,960 --> 00:06:02,185
+The variance of Xi is v. What
+is the expectation of Xi?
+
+109
+00:06:02,185 --> 00:06:04,210
+The expectation of
+Xi is theta.
+
+110
+00:06:04,210 --> 00:06:04,890
+And we square that.
+
+111
+00:06:04,890 --> 00:06:08,330
+So we get that this is equal
+to v plus theta squared.
+
+112
+00:06:08,330 --> 00:06:11,030
+
+113
+00:06:11,030 --> 00:06:15,320
+What about the expectation
+of Mn squared?
+
+114
+00:06:15,320 --> 00:06:21,050
+The expectation of Mn squared
+we can do a similar thing.
+
+115
+00:06:21,050 --> 00:06:26,300
+And this is equal to the
+variance of Mn plus the
+
+116
+00:06:26,300 --> 00:06:32,240
+expectation of Mn quantity
+squared.
+
+117
+00:06:32,240 --> 00:06:35,840
+But we don't know what the
+variance of Mn is yet, so
+
+118
+00:06:35,840 --> 00:06:38,200
+let's try to calculate
+what that is.
+
+119
+00:06:38,200 --> 00:06:44,970
+The variance of Mn is the
+variance of the sample mean.
+
+120
+00:06:44,970 --> 00:06:54,560
+So it's the variance of 1/n
+times the sum of all the Xi's.
+
+121
+00:06:54,560 --> 00:06:57,955
+We know that 1/n is just some
+constant, and when we pull it
+
+122
+00:06:57,955 --> 00:06:59,290
+out of the variance, we
+have to square it.
+
+123
+00:06:59,290 --> 00:07:04,160
+So we get 1/n squared times this
+variance, the variance of
+
+124
+00:07:04,160 --> 00:07:05,290
+sum of the Xi's.
+
+125
+00:07:05,290 --> 00:07:10,200
+But because the Xi's are
+independent, the variance of
+
+126
+00:07:10,200 --> 00:07:14,290
+the sum is actually equal to
+the sum of the variance.
+
+127
+00:07:14,290 --> 00:07:20,610
+So what we get is the variance
+of X1 plus all the way through
+
+128
+00:07:20,610 --> 00:07:22,840
+the variance of Xn.
+
+129
+00:07:22,840 --> 00:07:25,580
+
+130
+00:07:25,580 --> 00:07:31,300
+All of these variances are equal
+to v. And so we get n
+
+131
+00:07:31,300 --> 00:07:34,250
+times v divided by n squared.
+
+132
+00:07:34,250 --> 00:07:37,190
+And that gives us v/n.
+
+133
+00:07:37,190 --> 00:07:40,950
+
+134
+00:07:40,950 --> 00:07:43,360
+Now, what is the expectation
+of Mn?
+
+135
+00:07:43,360 --> 00:07:46,990
+Expectation of Mn, when we
+calculated it earlier, we saw
+
+136
+00:07:46,990 --> 00:07:49,020
+that this actually is
+equal to theta.
+
+137
+00:07:49,020 --> 00:07:51,370
+And so we can fill
+this in now.
+
+138
+00:07:51,370 --> 00:07:56,190
+The variance of Mn is
+equal to v over n.
+
+139
+00:07:56,190 --> 00:07:58,890
+And the expectation
+of Mn is theta.
+
+140
+00:07:58,890 --> 00:08:01,830
+And you square that, you
+get theta squared.
+
+141
+00:08:01,830 --> 00:08:05,230
+So now we know both of
+these expectations.
+
+142
+00:08:05,230 --> 00:08:08,470
+So let's calculate the actual
+expected value of this
+
+143
+00:08:08,470 --> 00:08:13,270
+estimator, Sn hat squared.
+
+144
+00:08:13,270 --> 00:08:16,150
+So like we alluded to earlier,
+it's going to use linearity of
+
+145
+00:08:16,150 --> 00:08:17,480
+expectations.
+
+146
+00:08:17,480 --> 00:08:23,640
+So the 1 over n minus 1,
+we can pull that out.
+
+147
+00:08:23,640 --> 00:08:31,130
+By linearity, we have that this
+is just the sum of the
+
+148
+00:08:31,130 --> 00:08:34,540
+expectation of all
+the Xi squares.
+
+149
+00:08:34,540 --> 00:08:37,159
+
+150
+00:08:37,159 --> 00:08:43,720
+And then we have n times the
+expectation of Mn squared.
+
+151
+00:08:43,720 --> 00:08:48,750
+
+152
+00:08:48,750 --> 00:08:51,180
+We still have the 1
+over n minus 1.
+
+153
+00:08:51,180 --> 00:08:54,515
+We calculated the value of
+expectation of Xi squared.
+
+154
+00:08:54,515 --> 00:08:57,210
+It's equal to v plus
+theta squared.
+
+155
+00:08:57,210 --> 00:08:59,830
+That doesn't depend on i, so we
+just have n copies of that.
+
+156
+00:08:59,830 --> 00:09:06,090
+So it's n times v plus n
+times theta squared.
+
+157
+00:09:06,090 --> 00:09:09,140
+
+158
+00:09:09,140 --> 00:09:11,930
+We know also the expectation
+of Mn squared.
+
+159
+00:09:11,930 --> 00:09:14,580
+It's v/n plus theta squared.
+
+160
+00:09:14,580 --> 00:09:19,620
+We multiply that by n, and
+we get v plus n squared.
+
+161
+00:09:19,620 --> 00:09:23,190
+And we subtract, so we
+get minus v minus
+
+162
+00:09:23,190 --> 00:09:26,780
+10 times theta squared.
+
+163
+00:09:26,780 --> 00:09:29,990
+These cancel, n times theta
+squared cancel out.
+
+164
+00:09:29,990 --> 00:09:34,950
+You get nv minus v, which is n
+minus 1 times v. The n minus 1
+
+165
+00:09:34,950 --> 00:09:37,350
+cancels out with the
+1 over n minus 1.
+
+166
+00:09:37,350 --> 00:09:40,300
+And so in the end, you get that
+this is in fact equal to
+
+167
+00:09:40,300 --> 00:09:45,230
+the expectation of the
+estimator, is equal to v. And
+
+168
+00:09:45,230 --> 00:09:49,580
+that shows that this estimator
+is in fact an unbiased
+
+169
+00:09:49,580 --> 00:09:54,320
+estimator of this variance, v.
+So I hope that was helpful.
+
+170
+00:09:54,320 --> 00:09:55,570
+And we'll see you next time.
+
+171
+00:09:55,570 --> 00:09:57,134

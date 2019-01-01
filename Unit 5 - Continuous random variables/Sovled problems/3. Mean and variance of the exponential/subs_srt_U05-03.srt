@@ -1,0 +1,1199 @@
+1
+00:00:00,000 --> 00:00:00,770
+
+2
+00:00:00,770 --> 00:00:01,540
+Hi.
+
+3
+00:00:01,540 --> 00:00:04,980
+In this video, we're going to
+compute some useful quantities
+
+4
+00:00:04,980 --> 00:00:08,520
+for the exponential
+random variable.
+
+5
+00:00:08,520 --> 00:00:12,230
+So we're given that X is
+exponential with rate lambda.
+
+6
+00:00:12,230 --> 00:00:16,050
+The PDF looks like this, and
+the formula is here.
+
+7
+00:00:16,050 --> 00:00:19,770
+First question, part
+a, what's the CDF?
+
+8
+00:00:19,770 --> 00:00:23,495
+So let's go right in.
+
+9
+00:00:23,495 --> 00:00:28,350
+The CDF of X is the probability
+that X is less
+
+10
+00:00:28,350 --> 00:00:30,590
+than or equal to little x.
+
+11
+00:00:30,590 --> 00:00:33,090
+Let's look at some cases here.
+
+12
+00:00:33,090 --> 00:00:35,340
+What if little x
+is less than 0?
+
+13
+00:00:35,340 --> 00:00:41,670
+Well, X random variable only
+takes on non-negative values.
+
+14
+00:00:41,670 --> 00:00:45,710
+And so the probability that X is
+less than or equal to some
+
+15
+00:00:45,710 --> 00:00:49,155
+negative number is
+going to be 0.
+
+16
+00:00:49,155 --> 00:00:52,080
+On the other hand, if x is
+greater than or equal to 0, we
+
+17
+00:00:52,080 --> 00:00:54,490
+do actually have to
+integrate here.
+
+18
+00:00:54,490 --> 00:01:00,800
+So to do that, we take the
+integral from minus infinity
+
+19
+00:01:00,800 --> 00:01:03,390
+to x of fx(t) --
+
+20
+00:01:03,390 --> 00:01:06,570
+the dummy variable
+here used is t.
+
+21
+00:01:06,570 --> 00:01:12,080
+Notice that again, fx(t) is
+going to be 0 for negative
+
+22
+00:01:12,080 --> 00:01:17,310
+values, so we take the
+integral here from 0.
+
+23
+00:01:17,310 --> 00:01:22,205
+And now we plug in for fx(t).
+
+24
+00:01:22,205 --> 00:01:25,760
+That's minus lambda t dt.
+
+25
+00:01:25,760 --> 00:01:32,970
+And recall that the integral
+of e to the a t is 1 over a
+
+26
+00:01:32,970 --> 00:01:34,425
+times e to the a t.
+
+27
+00:01:34,425 --> 00:01:37,020
+So here in this case,
+we'll get lambda,
+
+28
+00:01:37,020 --> 00:01:37,900
+which is just a constant.
+
+29
+00:01:37,900 --> 00:01:40,610
+And then a here is going
+to be negative lambda.
+
+30
+00:01:40,610 --> 00:01:46,060
+So we get this, 0 to x.
+
+31
+00:01:46,060 --> 00:01:50,520
+Lambdas cancel and we actually
+get 1 minus e to the
+
+32
+00:01:50,520 --> 00:01:52,600
+minus lambda x.
+
+33
+00:01:52,600 --> 00:01:55,310
+
+34
+00:01:55,310 --> 00:01:57,760
+So do this.
+
+35
+00:01:57,760 --> 00:01:59,150
+And we are done with the CDF.
+
+36
+00:01:59,150 --> 00:02:01,700
+
+37
+00:02:01,700 --> 00:02:03,630
+Now for the expectation.
+
+38
+00:02:03,630 --> 00:02:13,520
+We use the standard formula,
+which is minus infinity to
+
+39
+00:02:13,520 --> 00:02:20,250
+infinity t times fx(t) .
+
+40
+00:02:20,250 --> 00:02:24,410
+So again, fx(t) is going to
+be 0 for a negative value.
+
+41
+00:02:24,410 --> 00:02:28,670
+So we do the integral from 0.
+
+42
+00:02:28,670 --> 00:02:37,130
+We get 0 to infinity t lambda
+e to the minus lambda t dt.
+
+43
+00:02:37,130 --> 00:02:41,700
+Now, you can try all you want
+to get rid of this t.
+
+44
+00:02:41,700 --> 00:02:43,850
+It's not going to go even if
+you try all kinds of u
+
+45
+00:02:43,850 --> 00:02:44,740
+substitution.
+
+46
+00:02:44,740 --> 00:02:49,050
+But at the end the day, you're
+going to have to pull out your
+
+47
+00:02:49,050 --> 00:02:53,380
+calculus textbook and find
+the integration by parts
+
+48
+00:02:53,380 --> 00:02:55,863
+formula, which is--
+
+49
+00:02:55,863 --> 00:03:04,340
+
+50
+00:03:04,340 --> 00:03:05,590
+v du.
+
+51
+00:03:05,590 --> 00:03:07,630
+
+52
+00:03:07,630 --> 00:03:10,370
+So the hope is that this
+integral is going to be easier
+
+53
+00:03:10,370 --> 00:03:12,170
+than the one on the left.
+
+54
+00:03:12,170 --> 00:03:15,603
+Notice that this is the
+integral of one
+
+55
+00:03:15,603 --> 00:03:17,100
+of the terms here.
+
+56
+00:03:17,100 --> 00:03:18,880
+And this is the derivative
+of one of the terms.
+
+57
+00:03:18,880 --> 00:03:22,780
+So that may help you decide
+on how you select u and v.
+
+58
+00:03:22,780 --> 00:03:27,310
+In our case actually, I'm
+going to use u as--
+
+59
+00:03:27,310 --> 00:03:28,490
+t for u.
+
+60
+00:03:28,490 --> 00:03:30,860
+Because when you take
+the derivative, it's
+
+61
+00:03:30,860 --> 00:03:31,780
+going to become 1.
+
+62
+00:03:31,780 --> 00:03:34,175
+And the derivative is what's
+going to go in that integral.
+
+63
+00:03:34,175 --> 00:03:38,100
+
+64
+00:03:38,100 --> 00:03:40,290
+So this is going to
+be dt for du.
+
+65
+00:03:40,290 --> 00:03:43,140
+And then, dv I'm going
+to select as
+
+66
+00:03:43,140 --> 00:03:43,930
+whatever's left over.
+
+67
+00:03:43,930 --> 00:03:47,130
+It's lambda e to minus
+lambda t dt.
+
+68
+00:03:47,130 --> 00:03:49,070
+So v is going to be--
+
+69
+00:03:49,070 --> 00:03:50,490
+we already did the integral--
+
+70
+00:03:50,490 --> 00:03:52,457
+minus e to the minus lambda t.
+
+71
+00:03:52,457 --> 00:03:55,390
+
+72
+00:03:55,390 --> 00:04:01,740
+And so if we do this, it's going
+to be negative t times e
+
+73
+00:04:01,740 --> 00:04:03,550
+to the minus lambda t.
+
+74
+00:04:03,550 --> 00:04:04,720
+So that's uv.
+
+75
+00:04:04,720 --> 00:04:08,240
+Minus v, which is negative
+e to the minus
+
+76
+00:04:08,240 --> 00:04:11,430
+lambda t times dt.
+
+77
+00:04:11,430 --> 00:04:13,310
+That goes from 0 to infinity.
+
+78
+00:04:13,310 --> 00:04:17,529
+This is evaluated from
+0 to infinity.
+
+79
+00:04:17,529 --> 00:04:19,990
+Well, what does it mean
+for this to be
+
+80
+00:04:19,990 --> 00:04:22,300
+evaluated from 0 to infinity?
+
+81
+00:04:22,300 --> 00:04:25,640
+A better and easier way to look
+at this is to say, well,
+
+82
+00:04:25,640 --> 00:04:27,890
+it's going to go from 0 to x.
+
+83
+00:04:27,890 --> 00:04:31,960
+But then you take the limit
+as x goes to infinity.
+
+84
+00:04:31,960 --> 00:04:34,540
+So that's going to
+help us here.
+
+85
+00:04:34,540 --> 00:04:35,860
+And this negative--
+
+86
+00:04:35,860 --> 00:04:37,310
+these negatives cancel.
+
+87
+00:04:37,310 --> 00:04:39,040
+And we're left with--
+
+88
+00:04:39,040 --> 00:04:42,280
+let's plug in the bounds.
+
+89
+00:04:42,280 --> 00:04:51,010
+We're left with negative x
+minus lambda x plus the
+
+90
+00:04:51,010 --> 00:04:56,610
+integral of this is going to be
+1 over negative lambda e to
+
+91
+00:04:56,610 --> 00:05:03,050
+the minus lambda t evaluated
+from 0 to infinity.
+
+92
+00:05:03,050 --> 00:05:07,210
+All right, so now the limit.
+
+93
+00:05:07,210 --> 00:05:11,490
+So for the limit, notice
+that x increases
+
+94
+00:05:11,490 --> 00:05:14,140
+as x goes to infinity.
+
+95
+00:05:14,140 --> 00:05:17,650
+And this exponential decays.
+
+96
+00:05:17,650 --> 00:05:19,890
+So they're kind of competing
+for each other.
+
+97
+00:05:19,890 --> 00:05:22,830
+But the exponential is going to
+win because it decays way
+
+98
+00:05:22,830 --> 00:05:24,160
+faster than x.
+
+99
+00:05:24,160 --> 00:05:27,580
+And so this first term
+is going to go off--
+
+100
+00:05:27,580 --> 00:05:29,490
+the limit is going to go to 0.
+
+101
+00:05:29,490 --> 00:05:36,930
+
+102
+00:05:36,930 --> 00:05:37,820
+All right.
+
+103
+00:05:37,820 --> 00:05:40,582
+For this, if you evaluate
+the balance, the
+
+104
+00:05:40,582 --> 00:05:42,750
+infinity makes this 0.
+
+105
+00:05:42,750 --> 00:05:47,650
+And 0, you're going to
+get 1 over lambda.
+
+106
+00:05:47,650 --> 00:05:49,520
+So that's 1 over lambda.
+
+107
+00:05:49,520 --> 00:05:50,340
+All right.
+
+108
+00:05:50,340 --> 00:05:55,900
+And so the expectation
+is 1 over lambda.
+
+109
+00:05:55,900 --> 00:05:59,290
+OK, so now what's
+the variance?
+
+110
+00:05:59,290 --> 00:06:01,750
+That's part c, right?
+
+111
+00:06:01,750 --> 00:06:11,710
+So we use the standard formula
+for variance, which is this.
+
+112
+00:06:11,710 --> 00:06:15,930
+
+113
+00:06:15,930 --> 00:06:17,640
+We already figured out
+the expectation.
+
+114
+00:06:17,640 --> 00:06:21,380
+We just need to figure out the
+expectation of X squared.
+
+115
+00:06:21,380 --> 00:06:24,850
+Well, we're just going to follow
+the same set of steps
+
+116
+00:06:24,850 --> 00:06:25,710
+from before.
+
+117
+00:06:25,710 --> 00:06:29,360
+For X squared, it's just going
+to be t squared, t squared, t
+
+118
+00:06:29,360 --> 00:06:31,010
+squared, x squared.
+
+119
+00:06:31,010 --> 00:06:36,680
+The only thing that's going to
+change is what we choose for u
+
+120
+00:06:36,680 --> 00:06:37,920
+here, for the u substitution.
+
+121
+00:06:37,920 --> 00:06:40,310
+So it's going to be t squared.
+
+122
+00:06:40,310 --> 00:06:43,530
+So the derivative is going
+to change to 2t dt.
+
+123
+00:06:43,530 --> 00:06:45,880
+v is going to be exactly
+the same.
+
+124
+00:06:45,880 --> 00:06:51,160
+And so here in this term, we
+get negative 2t e to the
+
+125
+00:06:51,160 --> 00:06:54,410
+minus lambda t.
+
+126
+00:06:54,410 --> 00:06:56,660
+But there's a negative sign
+out here, so the negatives
+
+127
+00:06:56,660 --> 00:07:01,460
+cancel and we're left with
+a positive sign here.
+
+128
+00:07:01,460 --> 00:07:04,120
+This is going to change.
+
+129
+00:07:04,120 --> 00:07:06,450
+All right.
+
+130
+00:07:06,450 --> 00:07:07,190
+OK.
+
+131
+00:07:07,190 --> 00:07:10,840
+So in order to do this integral,
+we can use a trick.
+
+132
+00:07:10,840 --> 00:07:12,830
+We can move this--
+
+133
+00:07:12,830 --> 00:07:14,090
+so there's a 2t here.
+
+134
+00:07:14,090 --> 00:07:17,710
+We move this 2 in here,
+leave the t inside.
+
+135
+00:07:17,710 --> 00:07:20,200
+And you have to leave
+the t inside.
+
+136
+00:07:20,200 --> 00:07:24,530
+But multiply by lambda
+and divide by lambda.
+
+137
+00:07:24,530 --> 00:07:27,050
+
+138
+00:07:27,050 --> 00:07:28,750
+Now, look at that integral.
+
+139
+00:07:28,750 --> 00:07:32,870
+0 to infinity t times lambda
+e to the minus lambda t dt.
+
+140
+00:07:32,870 --> 00:07:36,200
+Exactly the expectation
+that we computed.
+
+141
+00:07:36,200 --> 00:07:37,622
+We already did that.
+
+142
+00:07:37,622 --> 00:07:42,260
+That is just 1 over lambda, so
+it's 2 over lambda times 1
+
+143
+00:07:42,260 --> 00:07:43,900
+over lambda.
+
+144
+00:07:43,900 --> 00:07:47,350
+Again, the limit as x
+goes to infinity--
+
+145
+00:07:47,350 --> 00:07:51,180
+the exponential will
+beat x squared.
+
+146
+00:07:51,180 --> 00:07:53,810
+No matter what polynomial
+we put in there, the
+
+147
+00:07:53,810 --> 00:07:56,070
+exponential's going to win.
+
+148
+00:07:56,070 --> 00:07:59,320
+So this is going
+to be 0 still.
+
+149
+00:07:59,320 --> 00:08:02,760
+This one's going to be 2
+over lambda squared.
+
+150
+00:08:02,760 --> 00:08:06,590
+So we're left with 2 over lambda
+squared for expectation
+
+151
+00:08:06,590 --> 00:08:09,700
+of X squared.
+
+152
+00:08:09,700 --> 00:08:17,170
+And so we have 1 over lambda
+squared for the variance.
+
+153
+00:08:17,170 --> 00:08:19,265
+OK, so we're done with
+the variance.
+
+154
+00:08:19,265 --> 00:08:23,980
+
+155
+00:08:23,980 --> 00:08:25,710
+Part d.
+
+156
+00:08:25,710 --> 00:08:31,580
+We're given that X1, X2, and
+X3 are independent and
+
+157
+00:08:31,580 --> 00:08:32,669
+identically distributed.
+
+158
+00:08:32,669 --> 00:08:34,659
+They're exponentials
+with rate lambda.
+
+159
+00:08:34,659 --> 00:08:37,690
+We're asked for the PDF
+of Z, which is the max
+
+160
+00:08:37,690 --> 00:08:39,809
+of X1, x2, and x2.
+
+161
+00:08:39,809 --> 00:08:42,610
+How do we generally
+find a PDF?
+
+162
+00:08:42,610 --> 00:08:47,100
+We take the CDF and then take
+the derivative, right?
+
+163
+00:08:47,100 --> 00:08:49,920
+We first find the CDF, and
+then take the derivative.
+
+164
+00:08:49,920 --> 00:08:54,110
+So let's do that.
+
+165
+00:08:54,110 --> 00:08:56,300
+So first, let's see.
+
+166
+00:08:56,300 --> 00:09:02,540
+Part d, find the CDF of Z,
+which is going to be the
+
+167
+00:09:02,540 --> 00:09:06,330
+probability that Z is less than
+or equal to little z,
+
+168
+00:09:06,330 --> 00:09:09,330
+which is going to be equal to
+the probability that the max
+
+169
+00:09:09,330 --> 00:09:15,680
+of X1, X2, X3 is less
+than or equal to z.
+
+170
+00:09:15,680 --> 00:09:17,910
+And this is going to have
+the same sort of
+
+171
+00:09:17,910 --> 00:09:18,920
+structure as before.
+
+172
+00:09:18,920 --> 00:09:23,800
+If z is less than 0, X1,
+x2, X3 are positive--
+
+173
+00:09:23,800 --> 00:09:24,650
+non-negative.
+
+174
+00:09:24,650 --> 00:09:28,380
+And so this is the probability
+that if you get little z less
+
+175
+00:09:28,380 --> 00:09:31,850
+than 0, you're not going to have
+any probability there.
+
+176
+00:09:31,850 --> 00:09:36,630
+And so if z is greater than or
+equal to 0 is where it gets
+
+177
+00:09:36,630 --> 00:09:37,680
+interesting.
+
+178
+00:09:37,680 --> 00:09:38,930
+We need to do something
+special.
+
+179
+00:09:38,930 --> 00:09:45,570
+
+180
+00:09:45,570 --> 00:09:50,210
+So the special thing here
+is to recognize that the
+
+181
+00:09:50,210 --> 00:09:53,770
+probability of the max being
+less than or equal to z is
+
+182
+00:09:53,770 --> 00:09:58,545
+actually also the probability
+of each of these random
+
+183
+00:09:58,545 --> 00:10:02,000
+variables individually being
+less than or equal to z.
+
+184
+00:10:02,000 --> 00:10:04,510
+Why is that true?
+
+185
+00:10:04,510 --> 00:10:07,200
+One way to check whether the
+events-- these two events are
+
+186
+00:10:07,200 --> 00:10:11,170
+the same is to check
+the two directions.
+
+187
+00:10:11,170 --> 00:10:14,512
+One direction say, if the max of
+X1, X2, X3 is less than or
+
+188
+00:10:14,512 --> 00:10:18,400
+equal to z, does that mean X1 is
+less than or equal to z, X2
+
+189
+00:10:18,400 --> 00:10:19,730
+is less than or equal
+to z, and X3 is less
+
+190
+00:10:19,730 --> 00:10:21,050
+than or equal to z?
+
+191
+00:10:21,050 --> 00:10:21,640
+Yes.
+
+192
+00:10:21,640 --> 00:10:22,600
+OK.
+
+193
+00:10:22,600 --> 00:10:26,116
+And then, if X1, X2, and X3 are
+individually less than or
+
+194
+00:10:26,116 --> 00:10:29,870
+equal to z, then the max is also
+less than or equal to z.
+
+195
+00:10:29,870 --> 00:10:35,950
+So these two events are
+equivalent and this is true.
+
+196
+00:10:35,950 --> 00:10:37,800
+By independence we can
+break this up.
+
+197
+00:10:37,800 --> 00:10:47,720
+
+198
+00:10:47,720 --> 00:10:49,660
+And we get--
+
+199
+00:10:49,660 --> 00:10:53,050
+these are all CDFs of the
+exponential and they
+
+200
+00:10:53,050 --> 00:10:54,500
+all have this form.
+
+201
+00:10:54,500 --> 00:10:57,030
+So it's just going to
+be 1 minus e to the
+
+202
+00:10:57,030 --> 00:11:02,370
+minus lambda z cubed.
+
+203
+00:11:02,370 --> 00:11:03,620
+Plug this in here.
+
+204
+00:11:03,620 --> 00:11:07,990
+
+205
+00:11:07,990 --> 00:11:10,550
+And then, try to take the
+derivative to get the PDF.
+
+206
+00:11:10,550 --> 00:11:21,530
+
+207
+00:11:21,530 --> 00:11:21,940
+Let's see.
+
+208
+00:11:21,940 --> 00:11:28,250
+So it's going to be the same,
+like this for z less than 0.
+
+209
+00:11:28,250 --> 00:11:30,700
+For z greater than or equal
+to 0, it's going to be the
+
+210
+00:11:30,700 --> 00:11:32,700
+derivative of this thing.
+
+211
+00:11:32,700 --> 00:11:38,080
+Derivative of this thing is by
+chain rule, 3 times 1 minus e
+
+212
+00:11:38,080 --> 00:11:40,980
+to the minus lambda z squared.
+
+213
+00:11:40,980 --> 00:11:43,360
+Then the derivative of negative
+e to the minus lambda
+
+214
+00:11:43,360 --> 00:11:49,040
+z, that's just lambda e
+to the minus lambda z.
+
+215
+00:11:49,040 --> 00:11:51,370
+There we go.
+
+216
+00:11:51,370 --> 00:11:54,710
+This is the PDF we
+were looking for.
+
+217
+00:11:54,710 --> 00:11:55,850
+So last problem.
+
+218
+00:11:55,850 --> 00:11:58,240
+We're looking for the PDF
+of W, which is the
+
+219
+00:11:58,240 --> 00:12:00,770
+min of X1 and X2.
+
+220
+00:12:00,770 --> 00:12:03,830
+So let's try this as
+a similar approach.
+
+221
+00:12:03,830 --> 00:12:05,670
+Try the same thing, actually.
+
+222
+00:12:05,670 --> 00:12:06,920
+See if it works.
+
+223
+00:12:06,920 --> 00:12:15,260
+
+224
+00:12:15,260 --> 00:12:23,785
+So w, w, w, w, min, less
+than or equal to w.
+
+225
+00:12:23,785 --> 00:12:26,700
+
+226
+00:12:26,700 --> 00:12:27,720
+OK.
+
+227
+00:12:27,720 --> 00:12:28,970
+So let's see if this works.
+
+228
+00:12:28,970 --> 00:12:36,860
+
+229
+00:12:36,860 --> 00:12:39,250
+Is it true that the min--
+
+230
+00:12:39,250 --> 00:12:45,360
+if the min of X1 and X2 is less
+than or equal to w, that
+
+231
+00:12:45,360 --> 00:12:47,910
+each of them is less
+than or equal to w?
+
+232
+00:12:47,910 --> 00:12:49,220
+No, right?
+
+233
+00:12:49,220 --> 00:12:52,590
+X1 could be less than or
+equal to w and X2 could
+
+234
+00:12:52,590 --> 00:12:53,690
+be bigger than w.
+
+235
+00:12:53,690 --> 00:12:57,682
+And the min could still be
+less than or equal to w.
+
+236
+00:12:57,682 --> 00:13:00,560
+So that's definitely not true.
+
+237
+00:13:00,560 --> 00:13:04,310
+So what do we do here?
+
+238
+00:13:04,310 --> 00:13:12,430
+The trick is to flip it and say
+we want to compute the min
+
+239
+00:13:12,430 --> 00:13:15,850
+of X1 and X2 being
+greater than w.
+
+240
+00:13:15,850 --> 00:13:20,860
+In that case, let's check
+if we can do this trick.
+
+241
+00:13:20,860 --> 00:13:26,420
+
+242
+00:13:26,420 --> 00:13:30,960
+If the min of X1 and X2 is
+greater than w, then clearly
+
+243
+00:13:30,960 --> 00:13:33,650
+X1 is bigger than w and
+X2 is bigger than w.
+
+244
+00:13:33,650 --> 00:13:36,405
+And if X1 and X2 are
+individually bigger than w,
+
+245
+00:13:36,405 --> 00:13:40,390
+then clearly the min's
+also bigger than w.
+
+246
+00:13:40,390 --> 00:13:41,600
+So this works.
+
+247
+00:13:41,600 --> 00:13:43,390
+And now we can use independence
+as before.
+
+248
+00:13:43,390 --> 00:13:48,610
+
+249
+00:13:48,610 --> 00:13:51,860
+And for this, this is just
+1 minus the CDF here.
+
+250
+00:13:51,860 --> 00:13:54,790
+So it's just going to be
+e to the minus lambda
+
+251
+00:13:54,790 --> 00:13:59,950
+w for each of them.
+
+252
+00:13:59,950 --> 00:14:03,020
+But that's the same as e
+to the minus lambda 2w.
+
+253
+00:14:03,020 --> 00:14:09,070
+
+254
+00:14:09,070 --> 00:14:12,140
+Or e to the 2 lambda w.
+
+255
+00:14:12,140 --> 00:14:13,390
+So it's going to be--
+
+256
+00:14:13,390 --> 00:14:18,330
+
+257
+00:14:18,330 --> 00:14:21,110
+Notice the similarity between
+this and this.
+
+258
+00:14:21,110 --> 00:14:24,350
+
+259
+00:14:24,350 --> 00:14:28,120
+The only difference is this
+has a 2 lambda in there.
+
+260
+00:14:28,120 --> 00:14:31,210
+That means that W is an
+exponential random variable
+
+261
+00:14:31,210 --> 00:14:34,260
+with rate 2 lambda.
+
+262
+00:14:34,260 --> 00:14:42,720
+So then the PDF is going to be
+an exponential, whatever it is
+
+263
+00:14:42,720 --> 00:14:45,260
+for an exponential.
+
+264
+00:14:45,260 --> 00:14:48,280
+Except with rate 2 lambda.
+
+265
+00:14:48,280 --> 00:14:55,470
+
+266
+00:14:55,470 --> 00:14:58,550
+You can also take the derivative
+of this and find
+
+267
+00:14:58,550 --> 00:15:00,950
+that you get this.
+
+268
+00:15:00,950 --> 00:15:05,182
+OK, so we're done with
+the problems.
+
+269
+00:15:05,182 --> 00:15:08,590
+We computed some interesting
+quantities for the exponential
+
+270
+00:15:08,590 --> 00:15:10,950
+random variable in this video.

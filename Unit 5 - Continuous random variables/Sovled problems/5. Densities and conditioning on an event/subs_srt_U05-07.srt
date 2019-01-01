@@ -1,0 +1,1207 @@
+1
+00:00:00,000 --> 00:00:00,846
+
+2
+00:00:00,846 --> 00:00:01,270
+Hi.
+
+3
+00:00:01,270 --> 00:00:03,660
+In this problem, we're going to
+get more practice working
+
+4
+00:00:03,660 --> 00:00:07,700
+with densities and also working
+with conditional
+
+5
+00:00:07,700 --> 00:00:11,230
+densities by conditioning
+on an event.
+
+6
+00:00:11,230 --> 00:00:14,410
+The density that we're given is
+one for a random variable
+
+7
+00:00:14,410 --> 00:00:19,400
+X. And we're told that the
+density is x over 4 when x is
+
+8
+00:00:19,400 --> 00:00:20,470
+between 1 and 3.
+
+9
+00:00:20,470 --> 00:00:22,720
+And otherwise, it's
+equal to zero.
+
+10
+00:00:22,720 --> 00:00:25,420
+So here, I've drawn
+out this density.
+
+11
+00:00:25,420 --> 00:00:29,950
+From 1 to 3, it's x over 4.
+
+12
+00:00:29,950 --> 00:00:33,040
+So it goes from 1/4 to
+3/4, and outside
+
+13
+00:00:33,040 --> 00:00:34,890
+of that, it's zero.
+
+14
+00:00:34,890 --> 00:00:38,350
+And we're also given a
+definition for an event, A,
+
+15
+00:00:38,350 --> 00:00:39,830
+which is the event that
+this random variable
+
+16
+00:00:39,830 --> 00:00:41,530
+X is at least 2.
+
+17
+00:00:41,530 --> 00:00:45,565
+So think of it as here is
+the line where it's 2.
+
+18
+00:00:45,565 --> 00:00:49,770
+A is the event that the random
+variable is greater than or
+
+19
+00:00:49,770 --> 00:00:51,740
+equal to 2.
+
+20
+00:00:51,740 --> 00:00:55,000
+And now, in part (a),
+we're asked to
+
+21
+00:00:55,000 --> 00:00:56,820
+find a bunch of things.
+
+22
+00:00:56,820 --> 00:01:02,390
+The first one is the expected
+value of X. The expected
+
+23
+00:01:02,390 --> 00:01:06,680
+value, remember, the definition
+is this integral.
+
+24
+00:01:06,680 --> 00:01:15,410
+You integrate x times
+the density of X.
+
+25
+00:01:15,410 --> 00:01:20,520
+And the important thing here to
+remember is that when you
+
+26
+00:01:20,520 --> 00:01:24,450
+plug this in, when you plug in
+the density, which is x over
+
+27
+00:01:24,450 --> 00:01:29,560
+4, you need to remember
+to correct the limits.
+
+28
+00:01:29,560 --> 00:01:34,120
+Because this density is only
+valid from x from 1 to 3.
+
+29
+00:01:34,120 --> 00:01:37,300
+So instead of integrating from
+minus infinity to infinity, we
+
+30
+00:01:37,300 --> 00:01:39,850
+only go from 1 to 3, because
+outside of that range, this
+
+31
+00:01:39,850 --> 00:01:43,930
+integral is actually zero
+because the density is zero.
+
+32
+00:01:43,930 --> 00:01:49,530
+So now it's just solving this
+integral, which is x squared
+
+33
+00:01:49,530 --> 00:01:52,880
+over 4 from 1 to 3.
+
+34
+00:01:52,880 --> 00:01:55,250
+So what exactly is that?
+
+35
+00:01:55,250 --> 00:01:58,580
+That's going to give you 1/4.
+
+36
+00:01:58,580 --> 00:02:00,670
+And you integrate x squared.
+
+37
+00:02:00,670 --> 00:02:07,700
+That's 1/3 x cubed
+from 1 to 3.
+
+38
+00:02:07,700 --> 00:02:17,710
+So that's 1/12 times 27 minus 1,
+which gives you 26 over 12,
+
+39
+00:02:17,710 --> 00:02:20,575
+which you can also further
+simplify, 13/6.
+
+40
+00:02:20,575 --> 00:02:23,100
+
+41
+00:02:23,100 --> 00:02:25,990
+So that is our first answer.
+
+42
+00:02:25,990 --> 00:02:29,820
+And actually let's just check
+that this kind of makes sense.
+
+43
+00:02:29,820 --> 00:02:35,000
+This is a little bit over 2,
+so it's somewhere here.
+
+44
+00:02:35,000 --> 00:02:36,460
+And yes, that makes sense.
+
+45
+00:02:36,460 --> 00:02:39,510
+Because it makes sense
+it's a little past 2.
+
+46
+00:02:39,510 --> 00:02:42,290
+If this were flat, if this were
+uniform, then we know
+
+47
+00:02:42,290 --> 00:02:44,370
+that the expectation would
+be exactly the
+
+48
+00:02:44,370 --> 00:02:45,440
+midpoint, which is at 2.
+
+49
+00:02:45,440 --> 00:02:49,540
+But it's actually skewed more
+towards higher values of x.
+
+50
+00:02:49,540 --> 00:02:54,010
+So you would expect that the
+expectation is actually to the
+
+51
+00:02:54,010 --> 00:02:56,590
+right of 2, a little
+bit higher than 2.
+
+52
+00:02:56,590 --> 00:02:59,590
+So that seems to check out.
+
+53
+00:02:59,590 --> 00:03:03,120
+The next thing to calculate is
+the probability of this event,
+
+54
+00:03:03,120 --> 00:03:06,040
+the probability of the event A,
+which we could also write
+
+55
+00:03:06,040 --> 00:03:09,120
+as the probability that this
+random variable is at least 2.
+
+56
+00:03:09,120 --> 00:03:11,832
+
+57
+00:03:11,832 --> 00:03:14,530
+Now how do you calculate the
+probability the random
+
+58
+00:03:14,530 --> 00:03:15,960
+variable is at least 2?
+
+59
+00:03:15,960 --> 00:03:23,190
+It's just a matter of
+integrating the density.
+
+60
+00:03:23,190 --> 00:03:27,470
+And you integrate the density
+starting from 2, because you
+
+61
+00:03:27,470 --> 00:03:28,450
+want it to be at least 2.
+
+62
+00:03:28,450 --> 00:03:30,250
+And you integrate it
+all the way up.
+
+63
+00:03:30,250 --> 00:03:32,270
+In general, it would
+be to infinity.
+
+64
+00:03:32,270 --> 00:03:37,070
+But we know that for values
+of x greater than 3,
+
+65
+00:03:37,070 --> 00:03:38,360
+the density is 0.
+
+66
+00:03:38,360 --> 00:03:42,260
+So we actually just integrate
+from 2 to 3.
+
+67
+00:03:42,260 --> 00:03:43,400
+Really, what we're doing
+is we're just
+
+68
+00:03:43,400 --> 00:03:45,640
+calculating this part.
+
+69
+00:03:45,640 --> 00:03:48,440
+
+70
+00:03:48,440 --> 00:03:52,240
+So we can just again plug
+in what this is.
+
+71
+00:03:52,240 --> 00:03:55,270
+It's anywhere from 2 to
+3 of the density.
+
+72
+00:03:55,270 --> 00:03:58,990
+In this range, this form will
+hold, so it's x over 4.
+
+73
+00:03:58,990 --> 00:04:02,070
+
+74
+00:04:02,070 --> 00:04:13,840
+And now that's going to give you
+1/8 x squared from 2 to 3.
+
+75
+00:04:13,840 --> 00:04:19,550
+So it's 1/8 times 8.
+
+76
+00:04:19,550 --> 00:04:29,800
+Sorry, times 9 minus 4, which
+gives you 5/8 as your answer.
+
+77
+00:04:29,800 --> 00:04:32,770
+And again, we can check that
+this kind of makes sense.
+
+78
+00:04:32,770 --> 00:04:36,710
+The probability that the random
+variable is at least 2
+
+79
+00:04:36,710 --> 00:04:40,290
+is 5/8, which is a little
+bit more than half.
+
+80
+00:04:40,290 --> 00:04:41,780
+And again, we can compare
+this to the case
+
+81
+00:04:41,780 --> 00:04:43,060
+where it would be uniform.
+
+82
+00:04:43,060 --> 00:04:46,170
+If it were uniform and flat,
+then the probability that it's
+
+83
+00:04:46,170 --> 00:04:48,590
+greater than 2 would
+be exactly half.
+
+84
+00:04:48,590 --> 00:04:49,620
+Because it's symmetric.
+
+85
+00:04:49,620 --> 00:04:52,800
+It's half on this side,
+half on this side.
+
+86
+00:04:52,800 --> 00:04:55,860
+But because it's skewed, again,
+more towards larger
+
+87
+00:04:55,860 --> 00:04:58,620
+values, you would expect the
+probability that it's at least
+
+88
+00:04:58,620 --> 00:05:00,600
+2 to be a little bit
+more than a half.
+
+89
+00:05:00,600 --> 00:05:04,150
+And the probably that it's less
+than 2 would be a little
+
+90
+00:05:04,150 --> 00:05:05,990
+less than a half.
+
+91
+00:05:05,990 --> 00:05:08,570
+So that also checks out.
+
+92
+00:05:08,570 --> 00:05:13,890
+Now let's actually calculate the
+next thing, which is the
+
+93
+00:05:13,890 --> 00:05:19,290
+conditional density of X given
+the event A. So what does it
+
+94
+00:05:19,290 --> 00:05:20,350
+really mean?
+
+95
+00:05:20,350 --> 00:05:24,550
+It means now by conditioning on
+A, we're saying that we're
+
+96
+00:05:24,550 --> 00:05:27,300
+in the universe where the
+random variable is
+
+97
+00:05:27,300 --> 00:05:28,800
+actually at least 2.
+
+98
+00:05:28,800 --> 00:05:32,140
+So instead of focusing on the
+original density, now we're
+
+99
+00:05:32,140 --> 00:05:34,550
+actually just in this
+restricted universe
+
+100
+00:05:34,550 --> 00:05:36,350
+of just this part.
+
+101
+00:05:36,350 --> 00:05:39,300
+
+102
+00:05:39,300 --> 00:05:43,560
+And now we want an updated
+density for only this part.
+
+103
+00:05:43,560 --> 00:05:47,360
+And in general, what really
+happens is you just take the
+
+104
+00:05:47,360 --> 00:05:52,960
+original density that held for
+the entire random variable and
+
+105
+00:05:52,960 --> 00:05:53,950
+rescale it.
+
+106
+00:05:53,950 --> 00:05:56,220
+Because if you just
+took this, it
+
+107
+00:05:56,220 --> 00:05:57,380
+wouldn't be a valid density.
+
+108
+00:05:57,380 --> 00:06:00,150
+Because we know that this
+thing, this part of the
+
+109
+00:06:00,150 --> 00:06:02,630
+density, only integrates
+to 5/8.
+
+110
+00:06:02,630 --> 00:06:04,430
+And you need a density
+to integrate to 1.
+
+111
+00:06:04,430 --> 00:06:05,460
+So what do we do?
+
+112
+00:06:05,460 --> 00:06:09,810
+We take the original density and
+rescale it so that it does
+
+113
+00:06:09,810 --> 00:06:10,700
+integrate to 1.
+
+114
+00:06:10,700 --> 00:06:13,610
+And what that amounts to is
+really just taking the
+
+115
+00:06:13,610 --> 00:06:22,180
+original density and dividing
+it by the probability of A,
+
+116
+00:06:22,180 --> 00:06:23,910
+which is the probability of
+this portion of this.
+
+117
+00:06:23,910 --> 00:06:28,120
+And you see that that exactly is
+the normalizing factor that
+
+118
+00:06:28,120 --> 00:06:31,720
+we need in order for this
+to integrate to 1.
+
+119
+00:06:31,720 --> 00:06:36,050
+And again, we need to be a
+little bit careful, because
+
+120
+00:06:36,050 --> 00:06:45,550
+this is only true when x is
+within A, in other words, when
+
+121
+00:06:45,550 --> 00:06:50,210
+x is between 2 and 3.
+
+122
+00:06:50,210 --> 00:06:52,925
+And otherwise, it
+would be zero.
+
+123
+00:06:52,925 --> 00:06:58,140
+
+124
+00:06:58,140 --> 00:07:01,240
+Now we know what these
+things are.
+
+125
+00:07:01,240 --> 00:07:05,720
+The original density is x
+over four, and that was
+
+126
+00:07:05,720 --> 00:07:07,640
+valid from 1 to 3.
+
+127
+00:07:07,640 --> 00:07:09,750
+And we're in 2 to 3, so
+that's still valid.
+
+128
+00:07:09,750 --> 00:07:11,210
+So it's x over four.
+
+129
+00:07:11,210 --> 00:07:17,930
+And then the probability of A we
+calculated earlier is 5/8.
+
+130
+00:07:17,930 --> 00:07:21,260
+So when we divide that
+by that, we get 8/5.
+
+131
+00:07:21,260 --> 00:07:24,970
+And so when you simplify this,
+you get 2x over five.
+
+132
+00:07:24,970 --> 00:07:33,020
+
+133
+00:07:33,020 --> 00:07:38,760
+And that becomes your
+new density.
+
+134
+00:07:38,760 --> 00:07:43,620
+And we could actually also
+plot out what this is.
+
+135
+00:07:43,620 --> 00:07:45,140
+And it would actually look
+something like this.
+
+136
+00:07:45,140 --> 00:07:49,480
+
+137
+00:07:49,480 --> 00:07:54,290
+It would be this portion
+of the density.
+
+138
+00:07:54,290 --> 00:08:01,910
+So notice that 2/5 is the
+slope as opposed to 1/4.
+
+139
+00:08:01,910 --> 00:08:04,470
+And really what we've done is
+we've taken this and rescaled
+
+140
+00:08:04,470 --> 00:08:07,990
+it so that this trapezoid now
+integrates actually to 1,
+
+141
+00:08:07,990 --> 00:08:10,200
+whereas this portion
+of it would only
+
+142
+00:08:10,200 --> 00:08:11,450
+integrate it to 5/8.
+
+143
+00:08:11,450 --> 00:08:15,810
+
+144
+00:08:15,810 --> 00:08:21,270
+Now for the last part of this
+part (a), we're asked to find
+
+145
+00:08:21,270 --> 00:08:24,090
+a conditional expectation.
+
+146
+00:08:24,090 --> 00:08:27,810
+So conditioned on the event A,
+what is the expectation of X?
+
+147
+00:08:27,810 --> 00:08:32,669
+Or put in other words, what is
+the expectation of X given
+
+148
+00:08:32,669 --> 00:08:36,130
+that we know that
+it's at least 2.
+
+149
+00:08:36,130 --> 00:08:38,630
+Well we know that when we
+calculate expectations, the
+
+150
+00:08:38,630 --> 00:08:41,620
+general form is something like
+this kind of integral.
+
+151
+00:08:41,620 --> 00:08:45,520
+But because we're conditioning
+on A, we have to change the
+
+152
+00:08:45,520 --> 00:08:49,100
+density to the conditional
+density.
+
+153
+00:08:49,100 --> 00:08:54,250
+So we integrate as before, x.
+
+154
+00:08:54,250 --> 00:08:56,060
+And we use the conditional
+density,
+
+155
+00:08:56,060 --> 00:09:00,720
+which is 2x over five.
+
+156
+00:09:00,720 --> 00:09:04,970
+And now, we need to be careful,
+because again, the
+
+157
+00:09:04,970 --> 00:09:08,430
+limits in general are minus
+infinity to infinity.
+
+158
+00:09:08,430 --> 00:09:12,650
+But we need to write the right
+ones, the ones that are valid
+
+159
+00:09:12,650 --> 00:09:15,800
+for this expression for the
+conditional density.
+
+160
+00:09:15,800 --> 00:09:19,650
+So 2x over 5 is only
+valid from 2 to 3.
+
+161
+00:09:19,650 --> 00:09:24,380
+So we integrate actually
+from 2 to 3.
+
+162
+00:09:24,380 --> 00:09:27,530
+So what is this integral?
+
+163
+00:09:27,530 --> 00:09:33,870
+It's 2/5 times the integral
+of 2 to 3 of x squared.
+
+164
+00:09:33,870 --> 00:09:41,390
+So it's 2/5 integral 1/3
+x cubed from 2 to 3.
+
+165
+00:09:41,390 --> 00:09:44,210
+
+166
+00:09:44,210 --> 00:09:54,900
+So it's going to give you
+2/15 of 27 minus 8.
+
+167
+00:09:54,900 --> 00:09:58,000
+So the final answer
+that you get--
+
+168
+00:09:58,000 --> 00:10:02,940
+this gives you 19 times
+2 is 38 over 15.
+
+169
+00:10:02,940 --> 00:10:07,130
+
+170
+00:10:07,130 --> 00:10:13,070
+And you can see that if
+you look at this.
+
+171
+00:10:13,070 --> 00:10:19,860
+This is 2 and 8/15, which
+is a little bit
+
+172
+00:10:19,860 --> 00:10:21,810
+more than 2 and 1/2.
+
+173
+00:10:21,810 --> 00:10:28,200
+And again, if we're in the
+conditional world where x is
+
+174
+00:10:28,200 --> 00:10:31,330
+least 2 or effectively where
+x is between 2 and 3.
+
+175
+00:10:31,330 --> 00:10:33,760
+And if, in this conditional
+world, the distribution were
+
+176
+00:10:33,760 --> 00:10:37,320
+again uniform, you would
+expect this conditional
+
+177
+00:10:37,320 --> 00:10:40,600
+expectation to be 2 and 1/2
+exactly, the midpoint.
+
+178
+00:10:40,600 --> 00:10:43,850
+But because, just like before in
+the unconditional world, in
+
+179
+00:10:43,850 --> 00:10:47,210
+the condition world, we still
+had the case that it's skewed
+
+180
+00:10:47,210 --> 00:10:48,540
+more towards 3.
+
+181
+00:10:48,540 --> 00:10:50,340
+So because of that,
+it's a little bit
+
+182
+00:10:50,340 --> 00:10:51,450
+more than 2 and 1/2.
+
+183
+00:10:51,450 --> 00:10:57,060
+So it's actually 38/15, which
+you can again just do a quick
+
+184
+00:10:57,060 --> 00:10:58,860
+sanity check to make sure that
+our answer makes sense.
+
+185
+00:10:58,860 --> 00:11:02,110
+
+186
+00:11:02,110 --> 00:11:07,620
+Now one last part, part (b).
+
+187
+00:11:07,620 --> 00:11:15,720
+Now introduced a new random
+variable Y. And we define it
+
+188
+00:11:15,720 --> 00:11:18,240
+as Y equal to X squared.
+
+189
+00:11:18,240 --> 00:11:21,440
+
+190
+00:11:21,440 --> 00:11:27,480
+And we are asked to calculate
+some things.
+
+191
+00:11:27,480 --> 00:11:33,880
+So first, let's calculate the
+expected value of Y. Well, to
+
+192
+00:11:33,880 --> 00:11:36,897
+use the standard way, we would
+have to calculate the pdf of
+
+193
+00:11:36,897 --> 00:11:40,090
+Y, and then use the
+integral formula.
+
+194
+00:11:40,090 --> 00:11:42,740
+But in order to do that, we
+would need the pdf of Y, but
+
+195
+00:11:42,740 --> 00:11:44,550
+we don't actually know
+what that is.
+
+196
+00:11:44,550 --> 00:11:51,050
+But because Y is related to X,
+we can actually just write it
+
+197
+00:11:51,050 --> 00:11:53,690
+in terms of expected
+value of X squared
+
+198
+00:11:53,690 --> 00:11:55,450
+because Y is X squared.
+
+199
+00:11:55,450 --> 00:11:58,050
+And now, we use a formula.
+
+200
+00:11:58,050 --> 00:12:02,100
+The expectation of a function
+of a random variable is the
+
+201
+00:12:02,100 --> 00:12:02,590
+same thing.
+
+202
+00:12:02,590 --> 00:12:07,030
+And so instead of writing just
+X, we write the function of X.
+
+203
+00:12:07,030 --> 00:12:15,530
+So it's x squared times the
+density of X. So that's the
+
+204
+00:12:15,530 --> 00:12:16,660
+general form.
+
+205
+00:12:16,660 --> 00:12:19,070
+And now let's actually
+plug it in and see
+
+206
+00:12:19,070 --> 00:12:19,960
+what it actually is.
+
+207
+00:12:19,960 --> 00:12:21,570
+The density--
+
+208
+00:12:21,570 --> 00:12:24,190
+we go back to the original
+case-- is x over 4.
+
+209
+00:12:24,190 --> 00:12:28,420
+So we get x cubed over 4.
+
+210
+00:12:28,420 --> 00:12:31,850
+And now also we need to
+update the limits.
+
+211
+00:12:31,850 --> 00:12:34,330
+This density is only
+valid from 1 to 3.
+
+212
+00:12:34,330 --> 00:12:36,700
+So we have to integrate
+from 1 to 3.
+
+213
+00:12:36,700 --> 00:12:39,330
+
+214
+00:12:39,330 --> 00:12:42,880
+So when we do this integral,
+what do we get?
+
+215
+00:12:42,880 --> 00:12:52,560
+Well, we get x to the fourth
+over 16 from 1 to 3, which
+
+216
+00:12:52,560 --> 00:12:55,240
+gives you 1/16.
+
+217
+00:12:55,240 --> 00:12:58,670
+And then you get 81--
+
+218
+00:12:58,670 --> 00:12:59,840
+3 to the fourth is 81--
+
+219
+00:12:59,840 --> 00:13:00,700
+minus 1.
+
+220
+00:13:00,700 --> 00:13:06,030
+So 80 over 16 is exactly 5.
+
+221
+00:13:06,030 --> 00:13:10,070
+
+222
+00:13:10,070 --> 00:13:14,330
+So even though we don't know
+exactly what the distribution
+
+223
+00:13:14,330 --> 00:13:18,520
+for Y is, we can use what we
+know about X to calculate the
+
+224
+00:13:18,520 --> 00:13:25,060
+expectation of Y. Now the second
+part is we want to find
+
+225
+00:13:25,060 --> 00:13:33,330
+the variance of Y. And again,
+the usual formula is
+
+226
+00:13:33,330 --> 00:13:36,290
+expectation of Y squared
+minus expectation
+
+227
+00:13:36,290 --> 00:13:40,460
+of Y quantity squared.
+
+228
+00:13:40,460 --> 00:13:41,550
+Now we already know
+what this is.
+
+229
+00:13:41,550 --> 00:13:44,180
+Expectation of Y, we just
+calculated, is 5.
+
+230
+00:13:44,180 --> 00:13:46,130
+But we also need to know
+what the expectation
+
+231
+00:13:46,130 --> 00:13:48,030
+of Y squared is.
+
+232
+00:13:48,030 --> 00:13:54,910
+And we can use the same method
+here, because Y squared is
+
+233
+00:13:54,910 --> 00:13:57,070
+just X to the fourth.
+
+234
+00:13:57,070 --> 00:13:59,840
+So expectation of Y
+squared is just
+
+235
+00:13:59,840 --> 00:14:04,030
+expectation of X to the fourth.
+
+236
+00:14:04,030 --> 00:14:06,390
+And now we can use the exact
+same sort of formula to
+
+237
+00:14:06,390 --> 00:14:07,720
+calculate what that is.
+
+238
+00:14:07,720 --> 00:14:14,470
+So we integrate x to the fourth
+times the density of X.
+
+239
+00:14:14,470 --> 00:14:15,730
+We plug that in.
+
+240
+00:14:15,730 --> 00:14:18,150
+The density of X is x over
+4, so this becomes x to
+
+241
+00:14:18,150 --> 00:14:20,520
+the fifth over 4.
+
+242
+00:14:20,520 --> 00:14:24,350
+And then, again, the limits we
+need to be careful of goes
+
+243
+00:14:24,350 --> 00:14:26,910
+from 1 to 3.
+
+244
+00:14:26,910 --> 00:14:30,280
+So when we do have this
+integral, we get x to the
+
+245
+00:14:30,280 --> 00:14:48,460
+sixth over 24 from 1 to 3,
+which equals 91 over 3.
+
+246
+00:14:48,460 --> 00:14:51,760
+So the last part now is just
+combining the pieces.
+
+247
+00:14:51,760 --> 00:14:55,050
+The variance of Y now is just
+expectation of Y squared,
+
+248
+00:14:55,050 --> 00:14:59,340
+which is 91 over 3 minus
+expectation of Y quantity
+
+249
+00:14:59,340 --> 00:15:03,200
+squared, which is 5
+squared, is 25.
+
+250
+00:15:03,200 --> 00:15:07,290
+And that gives you 16 over
+3 as your final answer.
+
+251
+00:15:07,290 --> 00:15:11,310
+
+252
+00:15:11,310 --> 00:15:15,550
+So this problem really was kind
+of a drill problem that
+
+253
+00:15:15,550 --> 00:15:19,560
+started out with giving you
+a density and asked you to
+
+254
+00:15:19,560 --> 00:15:23,480
+calculate a variety of different
+quantities related
+
+255
+00:15:23,480 --> 00:15:24,490
+to that density.
+
+256
+00:15:24,490 --> 00:15:27,340
+And then we also added another
+wrinkle to a by conditioning
+
+257
+00:15:27,340 --> 00:15:31,640
+on an event and working with
+a conditional density.
+
+258
+00:15:31,640 --> 00:15:35,300
+The last thing was coming up
+with a related random variable
+
+259
+00:15:35,300 --> 00:15:38,330
+and using the original random
+variable to help you calculate
+
+260
+00:15:38,330 --> 00:15:41,210
+quantities related to that
+new random variable.
+
+261
+00:15:41,210 --> 00:15:42,570
+So we'll see you next time.
+
+262
+00:15:42,570 --> 00:15:44,867

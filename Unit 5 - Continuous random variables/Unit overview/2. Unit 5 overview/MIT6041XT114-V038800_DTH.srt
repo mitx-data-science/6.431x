@@ -1,0 +1,170 @@
+1
+00:00:00,000 --> 00:00:00,190
+
+2
+00:00:00,190 --> 00:00:03,830
+In this unit, we more or less
+repeat the entire development
+
+3
+00:00:03,830 --> 00:00:07,380
+in the previous unit, except
+that we will now consider
+
+4
+00:00:07,380 --> 00:00:12,230
+continuous rather than discrete
+random variables.
+
+5
+00:00:12,230 --> 00:00:14,200
+There are several reasons
+for studying
+
+6
+00:00:14,200 --> 00:00:16,550
+continuous random variables.
+
+7
+00:00:16,550 --> 00:00:20,620
+The most important one is that
+many quantities of interest,
+
+8
+00:00:20,620 --> 00:00:24,900
+for example, measurements of
+time, length, or other
+
+9
+00:00:24,900 --> 00:00:27,930
+physical properties, are
+naturally modeled as
+
+10
+00:00:27,930 --> 00:00:29,880
+continuous.
+
+11
+00:00:29,880 --> 00:00:33,010
+Another reason is that
+continuous random variables
+
+12
+00:00:33,010 --> 00:00:36,660
+are sometimes easier to analyze,
+because we can use
+
+13
+00:00:36,660 --> 00:00:38,750
+the machinery of calculus.
+
+14
+00:00:38,750 --> 00:00:41,370
+For example, integrals
+are often easier to
+
+15
+00:00:41,370 --> 00:00:44,100
+evaluate than sums.
+
+16
+00:00:44,100 --> 00:00:46,790
+A last reason is that continuous
+models often
+
+17
+00:00:46,790 --> 00:00:48,830
+provide a clean and simple
+
+18
+00:00:48,830 --> 00:00:52,630
+approximation of discrete models.
+
+19
+00:00:52,630 --> 00:00:56,770
+Our line of development will
+parallel exactly what we did
+
+20
+00:00:56,770 --> 00:00:58,980
+for the discrete case.
+
+21
+00:00:58,980 --> 00:01:01,470
+We will describe the
+distribution of continuous
+
+22
+00:01:01,470 --> 00:01:04,950
+random variables and talk
+about expectations,
+
+23
+00:01:04,950 --> 00:01:07,880
+conditioning, and
+independence.
+
+24
+00:01:07,880 --> 00:01:11,900
+As we will see, every formula
+for the discrete case will
+
+25
+00:01:11,900 --> 00:01:14,120
+have a continuous counterpart.
+
+26
+00:01:14,120 --> 00:01:16,880
+The intuition will generally
+be the same.
+
+27
+00:01:16,880 --> 00:01:20,120
+But there will be some
+additional subtleties.
+
+28
+00:01:20,120 --> 00:01:23,130
+These are due to the fact that
+in a continuous model any
+
+29
+00:01:23,130 --> 00:01:28,270
+particular value of a random
+variable has zero probability.
+
+30
+00:01:28,270 --> 00:01:32,190
+And we will end this unit by
+looking at variations of the
+
+31
+00:01:32,190 --> 00:01:33,390
+Bayes rule.
+
+32
+00:01:33,390 --> 00:01:37,140
+These will be the foundation
+for our later study of the
+
+33
+00:01:37,140 --> 00:01:39,760
+subject of inference.
+
+34
+00:01:39,760 --> 00:01:43,440
+By the end of this unit, we will
+have covered all of the
+
+35
+00:01:43,440 --> 00:01:47,260
+major concepts and formulas that
+are needed to describe
+
+36
+00:01:47,260 --> 00:01:50,180
+and analyze random variables
+of all types.
+
+37
+00:01:50,180 --> 00:01:51,430

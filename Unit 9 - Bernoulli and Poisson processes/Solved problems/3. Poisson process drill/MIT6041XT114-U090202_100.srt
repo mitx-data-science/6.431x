@@ -1,0 +1,863 @@
+1
+00:00:00,000 --> 00:00:00,570
+
+2
+00:00:00,570 --> 00:00:01,300
+Hi.
+
+3
+00:00:01,300 --> 00:00:04,150
+In this session, we're going
+to work on a drill problem
+
+4
+00:00:04,150 --> 00:00:07,780
+to get some more practice
+working with Poisson processes.
+
+5
+00:00:07,780 --> 00:00:10,290
+So remember, a
+Poisson process is
+
+6
+00:00:10,290 --> 00:00:14,770
+a process that models
+how things arrive.
+
+7
+00:00:14,770 --> 00:00:16,999
+And the important
+parameter is lambda,
+
+8
+00:00:16,999 --> 00:00:19,040
+which is the arrival rate,
+the number of arrivals
+
+9
+00:00:19,040 --> 00:00:20,950
+per unit time.
+
+10
+00:00:20,950 --> 00:00:22,780
+And another important
+factor to remember
+
+11
+00:00:22,780 --> 00:00:25,960
+for this problem is that when
+you consider disjoint time
+
+12
+00:00:25,960 --> 00:00:30,110
+intervals, whatever happens
+in these two disjoint time
+
+13
+00:00:30,110 --> 00:00:32,090
+intervals is independent.
+
+14
+00:00:32,090 --> 00:00:34,505
+So here in this
+problem, we have trains
+
+15
+00:00:34,505 --> 00:00:36,440
+that are crossing this bridge.
+
+16
+00:00:36,440 --> 00:00:39,560
+And we're told that the
+trains arrive at this bridge
+
+17
+00:00:39,560 --> 00:00:42,390
+according to a Poisson
+process at a rate of three
+
+18
+00:00:42,390 --> 00:00:43,122
+trains per day.
+
+19
+00:00:43,122 --> 00:00:44,830
+So that doesn't mean
+that there's exactly
+
+20
+00:00:44,830 --> 00:00:45,845
+three trains per day.
+
+21
+00:00:45,845 --> 00:00:48,270
+It just means that
+in some sense,
+
+22
+00:00:48,270 --> 00:00:50,910
+on average, three
+trains come every day.
+
+23
+00:00:50,910 --> 00:00:54,170
+But the number of trains on
+each day is actually random.
+
+24
+00:00:54,170 --> 00:00:56,350
+And an important
+formula to remember
+
+25
+00:00:56,350 --> 00:00:59,480
+is that of a Poisson
+distribution, which tells you
+
+26
+00:00:59,480 --> 00:01:03,200
+the probability of having k
+arrivals over a period of tau
+
+27
+00:01:03,200 --> 00:01:04,590
+days.
+
+28
+00:01:04,590 --> 00:01:07,340
+And that's equal to e
+to the minus lambda tau,
+
+29
+00:01:07,340 --> 00:01:10,650
+times lambda tau to
+the k over k factorial.
+
+30
+00:01:10,650 --> 00:01:14,580
+OK, so the first
+part of this problem
+
+31
+00:01:14,580 --> 00:01:19,060
+asks us to find what is
+the probability that you'll
+
+32
+00:01:19,060 --> 00:01:22,900
+have no trains arriving on
+days one, two, and three,
+
+33
+00:01:22,900 --> 00:01:26,560
+supposing that there's a train
+that arrived on day zero.
+
+34
+00:01:26,560 --> 00:01:29,940
+So the information
+that we're given
+
+35
+00:01:29,940 --> 00:01:32,060
+is that there's a train
+that arrived on day zero.
+
+36
+00:01:32,060 --> 00:01:35,390
+And then we're asked to
+find a probability related
+
+37
+00:01:35,390 --> 00:01:37,620
+to days one, two, and three.
+
+38
+00:01:37,620 --> 00:01:41,164
+So what we should remember is
+that disjoint time intervals
+
+39
+00:01:41,164 --> 00:01:41,830
+are independent.
+
+40
+00:01:41,830 --> 00:01:43,807
+So whatever happened
+on day zero is
+
+41
+00:01:43,807 --> 00:01:46,140
+independent of what happens
+on days one, two, and three.
+
+42
+00:01:46,140 --> 00:01:48,360
+So we can actually just
+forget about the fact
+
+43
+00:01:48,360 --> 00:01:50,550
+that a train
+arrived on day zero,
+
+44
+00:01:50,550 --> 00:01:53,890
+and just focus on what happens
+on days one, two, and three.
+
+45
+00:01:53,890 --> 00:01:56,030
+So what we really
+want is just, what's
+
+46
+00:01:56,030 --> 00:02:03,200
+the probability of
+0 trains in 3 days.
+
+47
+00:02:03,200 --> 00:02:06,130
+Days one, two, and
+three cover 3 days.
+
+48
+00:02:06,130 --> 00:02:09,160
+And if we just now
+apply this formula,
+
+49
+00:02:09,160 --> 00:02:11,470
+we can know exactly
+how to find that.
+
+50
+00:02:11,470 --> 00:02:16,000
+So now k is 0, tau is
+3, and lambda is 3,
+
+51
+00:02:16,000 --> 00:02:17,340
+given by the problem.
+
+52
+00:02:17,340 --> 00:02:20,090
+So what we get is e to
+the minus lambda tau.
+
+53
+00:02:20,090 --> 00:02:24,420
+Lambda is 3, tau is 3, so
+that's e to the minus 9,
+
+54
+00:02:24,420 --> 00:02:32,380
+times lambda tau is 9, to the
+k, which is 0, over 0 factorial.
+
+55
+00:02:32,380 --> 00:02:33,510
+So 9 to the 0 is 1.
+
+56
+00:02:33,510 --> 00:02:34,640
+0 factorial is 1.
+
+57
+00:02:34,640 --> 00:02:37,620
+So all you're left with
+is just e to the minus 9.
+
+58
+00:02:37,620 --> 00:02:42,190
+And that is the probability of
+having no trains in three days.
+
+59
+00:02:42,190 --> 00:02:45,190
+So just remember that disjoint
+time intervals are independent,
+
+60
+00:02:45,190 --> 00:02:47,980
+and don't get tripped
+up over information
+
+61
+00:02:47,980 --> 00:02:50,870
+that actually is irrelevant.
+
+62
+00:02:50,870 --> 00:02:53,400
+Now, part (b)--
+we're asked to find,
+
+63
+00:02:53,400 --> 00:02:57,000
+what is the probability that
+if a train arrives on day
+
+64
+00:02:57,000 --> 00:02:59,830
+zero that it takes more than
+three days for the next train
+
+65
+00:02:59,830 --> 00:03:01,560
+to arrive?
+
+66
+00:03:01,560 --> 00:03:03,660
+Well, if you think
+about that, really, it's
+
+67
+00:03:03,660 --> 00:03:06,180
+asking the exact same
+thing as part (a),
+
+68
+00:03:06,180 --> 00:03:08,850
+because the event that
+the next train takes
+
+69
+00:03:08,850 --> 00:03:10,880
+more than three days
+is exactly the same
+
+70
+00:03:10,880 --> 00:03:14,560
+as there being no trains
+in the next three days.
+
+71
+00:03:14,560 --> 00:03:19,130
+So in fact, this is exactly
+equal to the same probability
+
+72
+00:03:19,130 --> 00:03:21,350
+that we calculated in part
+(a)-- e to the minus 9.
+
+73
+00:03:21,350 --> 00:03:24,560
+
+74
+00:03:24,560 --> 00:03:27,000
+Part (c) now says,
+what's the probability
+
+75
+00:03:27,000 --> 00:03:30,510
+that you have no trains on days
+one and two-- the first two
+
+76
+00:03:30,510 --> 00:03:34,630
+days-- but four trains
+on the fourth day?
+
+77
+00:03:34,630 --> 00:03:38,310
+OK, so now this question
+involves days one and two
+
+78
+00:03:38,310 --> 00:03:39,700
+and day four.
+
+79
+00:03:39,700 --> 00:03:43,665
+So again, let's
+rely on this fact,
+
+80
+00:03:43,665 --> 00:03:45,540
+that disjoint time
+intervals are independent.
+
+81
+00:03:45,540 --> 00:03:47,440
+So we can actually
+calculate the probability
+
+82
+00:03:47,440 --> 00:03:50,444
+of no trains in
+the first two days,
+
+83
+00:03:50,444 --> 00:03:51,860
+and then calculate
+the probability
+
+84
+00:03:51,860 --> 00:03:53,240
+of four trains on
+the fourth day,
+
+85
+00:03:53,240 --> 00:03:56,270
+and combine them, because
+they're independent.
+
+86
+00:03:56,270 --> 00:03:58,380
+So the probability
+that we're looking for
+
+87
+00:03:58,380 --> 00:04:13,140
+is 0 trains in days one and
+two, and 4 trains on day four.
+
+88
+00:04:13,140 --> 00:04:16,850
+
+89
+00:04:16,850 --> 00:04:19,110
+But because this
+is independent, we
+
+90
+00:04:19,110 --> 00:04:22,079
+can actually calculate the
+probability of this first part,
+
+91
+00:04:22,079 --> 00:04:23,690
+the probability of
+the second part,
+
+92
+00:04:23,690 --> 00:04:25,290
+and multiply them together.
+
+93
+00:04:25,290 --> 00:04:28,700
+So what's the probability of
+no trains in days one and two?
+
+94
+00:04:28,700 --> 00:04:30,920
+Well, that is just,
+again, probability
+
+95
+00:04:30,920 --> 00:04:34,420
+of no arrivals in a
+duration of length 2,
+
+96
+00:04:34,420 --> 00:04:38,150
+which again, we can calculate
+using this formula, where
+
+97
+00:04:38,150 --> 00:04:40,580
+k is 0 and tau is now 2.
+
+98
+00:04:40,580 --> 00:04:44,620
+So what we get is e to
+the minus lambda tau--
+
+99
+00:04:44,620 --> 00:04:48,290
+lambda tau here
+is minus 6-- times
+
+100
+00:04:48,290 --> 00:04:51,250
+6 to the 0 over 0 factorial.
+
+101
+00:04:51,250 --> 00:04:53,760
+So that's the first
+part, the probability
+
+102
+00:04:53,760 --> 00:04:56,060
+of 0 trains in days one and two.
+
+103
+00:04:56,060 --> 00:04:58,870
+Now, what's the probability
+of 4 trains in day four?
+
+104
+00:04:58,870 --> 00:05:00,640
+Well, we want now
+the probability
+
+105
+00:05:00,640 --> 00:05:04,070
+of 4 arrivals in a
+duration of length 1,
+
+106
+00:05:04,070 --> 00:05:07,730
+which we can, again, use
+this formula to calculate.
+
+107
+00:05:07,730 --> 00:05:10,950
+That's going to be e to
+the minus lambda tau.
+
+108
+00:05:10,950 --> 00:05:14,850
+Now, tau is 1, and k we
+want to be equal to 4.
+
+109
+00:05:14,850 --> 00:05:18,330
+So lambda tau is 3.
+
+110
+00:05:18,330 --> 00:05:26,020
+And we want lambda tau-- 3 to
+the fourth over 4 factorial.
+
+111
+00:05:26,020 --> 00:05:28,250
+And now, that is just
+going to be equal
+
+112
+00:05:28,250 --> 00:05:32,900
+to-- we can pull out an
+e to the minus 9 here.
+
+113
+00:05:32,900 --> 00:05:35,990
+This 6 to the 0 over 0
+factorial is just one.
+
+114
+00:05:35,990 --> 00:05:40,130
+And then the rest of it is just
+times 3 to the fourth over 4
+
+115
+00:05:40,130 --> 00:05:40,630
+factorial.
+
+116
+00:05:40,630 --> 00:05:44,322
+
+117
+00:05:44,322 --> 00:05:45,780
+We can simplify it
+if we wanted to.
+
+118
+00:05:45,780 --> 00:05:49,860
+
+119
+00:05:49,860 --> 00:05:51,790
+So again, that
+relied on this fact
+
+120
+00:05:51,790 --> 00:05:53,820
+that disjoint time
+intervals are independent,
+
+121
+00:05:53,820 --> 00:05:56,620
+and that's an
+important tool to have.
+
+122
+00:05:56,620 --> 00:05:59,070
+The next and last
+part of this problem
+
+123
+00:05:59,070 --> 00:06:06,290
+asks us for the probability that
+it'll take more than two days
+
+124
+00:06:06,290 --> 00:06:08,360
+for the fifth train to arrive.
+
+125
+00:06:08,360 --> 00:06:14,150
+So we want the probability
+that more than 2 days
+
+126
+00:06:14,150 --> 00:06:16,800
+for the fifth train.
+
+127
+00:06:16,800 --> 00:06:21,540
+
+128
+00:06:21,540 --> 00:06:24,220
+Well, what's another
+way of saying that?
+
+129
+00:06:24,220 --> 00:06:27,115
+In order to take more than
+2 days for the fifth train
+
+130
+00:06:27,115 --> 00:06:28,920
+to arrive, that's
+exactly the same
+
+131
+00:06:28,920 --> 00:06:36,280
+as saying there was no
+more than four trains
+
+132
+00:06:36,280 --> 00:06:39,415
+in the first 2 days.
+
+133
+00:06:39,415 --> 00:06:42,740
+
+134
+00:06:42,740 --> 00:06:45,600
+So we've transformed this into
+something about the number
+
+135
+00:06:45,600 --> 00:06:48,910
+of days until a certain arrival
+to the number of arrivals
+
+136
+00:06:48,910 --> 00:06:54,590
+within a certain number of days,
+because if you have no more
+
+137
+00:06:54,590 --> 00:06:56,090
+than 4 trains in
+the first 2 days,
+
+138
+00:06:56,090 --> 00:07:00,650
+then the fifth train could
+not have arrived until after 2
+
+139
+00:07:00,650 --> 00:07:03,450
+days.
+
+140
+00:07:03,450 --> 00:07:07,750
+Obviously, you can calculate
+using either of these.
+
+141
+00:07:07,750 --> 00:07:11,660
+In this way, you would have
+to know something about
+
+142
+00:07:11,660 --> 00:07:14,750
+the distribution of
+the fifth arrival time,
+
+143
+00:07:14,750 --> 00:07:18,170
+and calculate the probability
+that being greater than 2,
+
+144
+00:07:18,170 --> 00:07:19,220
+which you could do.
+
+145
+00:07:19,220 --> 00:07:22,100
+Alternatively, you could
+also re-frame it in terms
+
+146
+00:07:22,100 --> 00:07:25,560
+of the probability of having
+no more than a certain number
+
+147
+00:07:25,560 --> 00:07:28,150
+of arrivals within
+the first 2 days.
+
+148
+00:07:28,150 --> 00:07:33,730
+So let's do it, in this case,
+using the second method.
+
+149
+00:07:33,730 --> 00:07:36,130
+We want, now, the probability
+of no more than 4 trains
+
+150
+00:07:36,130 --> 00:07:37,710
+in the first 2 days.
+
+151
+00:07:37,710 --> 00:07:41,445
+Well, that's the same as the
+probability of there beings 0
+
+152
+00:07:41,445 --> 00:07:44,070
+trains in the first 2 days,
+plus the probability of being 1
+
+153
+00:07:44,070 --> 00:07:47,810
+train, and so on, all
+the way up to 4 trains,
+
+154
+00:07:47,810 --> 00:07:51,426
+because you can't have both 1
+train in the first 2 days and 2
+
+155
+00:07:51,426 --> 00:07:52,550
+trains in the first 2 days.
+
+156
+00:07:52,550 --> 00:07:55,680
+So those probabilities
+you can just add up.
+
+157
+00:07:55,680 --> 00:07:59,060
+And so it turns out that it's
+just equal to the probability
+
+158
+00:07:59,060 --> 00:08:06,440
+of the sum for k equals 0 up to
+4 of the probability of having
+
+159
+00:08:06,440 --> 00:08:08,700
+exactly k arrivals in 2 days.
+
+160
+00:08:08,700 --> 00:08:12,850
+So the probability of having
+k arrivals in 2 days is just e
+
+161
+00:08:12,850 --> 00:08:14,760
+to the minus lambda tau.
+
+162
+00:08:14,760 --> 00:08:16,370
+Lambda is 3, still.
+
+163
+00:08:16,370 --> 00:08:19,060
+Tau is 2 now, so it's
+e to the minus 6,
+
+164
+00:08:19,060 --> 00:08:22,780
+times 6 to the k
+over k factorial.
+
+165
+00:08:22,780 --> 00:08:26,760
+
+166
+00:08:26,760 --> 00:08:29,670
+And now we can
+simplify this somewhat,
+
+167
+00:08:29,670 --> 00:08:32,150
+and actually calculate out
+what the summation equals.
+
+168
+00:08:32,150 --> 00:08:34,330
+We pull out e to the minus 6.
+
+169
+00:08:34,330 --> 00:08:38,190
+Then we get 6 to the
+0 over 0 factorial,
+
+170
+00:08:38,190 --> 00:08:42,159
+plus 6 to the first
+power over 1 factorial,
+
+171
+00:08:42,159 --> 00:08:48,670
+plus all the way to 6 to
+the fourth over 4 factorial.
+
+172
+00:08:48,670 --> 00:08:53,400
+And now the last part is, we
+can actually calculate out what
+
+173
+00:08:53,400 --> 00:08:55,110
+that number is equal to.
+
+174
+00:08:55,110 --> 00:09:01,430
+And it turns out it's equal
+to 115 times e to the minus 6.
+
+175
+00:09:01,430 --> 00:09:07,350
+OK, so this last problem
+just demonstrates that
+
+176
+00:09:07,350 --> 00:09:10,959
+there's multiple ways of
+framing any particular problem.
+
+177
+00:09:10,959 --> 00:09:12,750
+You can frame it in
+terms of arrival times,
+
+178
+00:09:12,750 --> 00:09:16,690
+or you can frame it in terms
+of the number of arrivals.
+
+179
+00:09:16,690 --> 00:09:19,590
+And depending on the situation,
+maybe one way is easier than
+
+180
+00:09:19,590 --> 00:09:20,650
+the other one.
+
+181
+00:09:20,650 --> 00:09:25,320
+OK, so that was just a quick
+drill problem for Poisson
+
+182
+00:09:25,320 --> 00:09:26,150
+processes.
+
+183
+00:09:26,150 --> 00:09:29,310
+And I hope that was helpful,
+and see you next time.

@@ -1,0 +1,1619 @@
+1
+00:00:00,000 --> 00:00:01,970
+
+2
+00:00:01,970 --> 00:00:06,290
+Today, we're going to do a fun
+problem called rooks on a
+
+3
+00:00:06,290 --> 00:00:07,720
+chessboard.
+
+4
+00:00:07,720 --> 00:00:11,770
+And rooks on a chessboard is a
+problem that's going to test
+
+5
+00:00:11,770 --> 00:00:15,010
+your ability on counting.
+
+6
+00:00:15,010 --> 00:00:19,840
+So hopefully by now in class,
+you've learned a few tricks to
+
+7
+00:00:19,840 --> 00:00:21,300
+approach counting problems.
+
+8
+00:00:21,300 --> 00:00:23,360
+You've learned about
+permutations, you've learned
+
+9
+00:00:23,360 --> 00:00:26,690
+about k-permutations, you've
+learned about combinations,
+
+10
+00:00:26,690 --> 00:00:29,160
+and you've learned
+about partitions.
+
+11
+00:00:29,160 --> 00:00:32,460
+And historically for students
+that we've taught in the past
+
+12
+00:00:32,460 --> 00:00:36,700
+and many people, counting
+can be a tricky topic.
+
+13
+00:00:36,700 --> 00:00:40,500
+So this is just one drill
+problem to help you get those
+
+14
+00:00:40,500 --> 00:00:43,450
+skills under your belt.
+
+15
+00:00:43,450 --> 00:00:48,120
+So what does the rooks on a
+chessboard problem ask you?
+
+16
+00:00:48,120 --> 00:00:52,550
+Well, you're given an 8-by-8
+chessboard, which I've tried
+
+17
+00:00:52,550 --> 00:00:54,210
+to draw here.
+
+18
+00:00:54,210 --> 00:00:55,350
+It's not very symmetrical.
+
+19
+00:00:55,350 --> 00:00:57,770
+Sorry about that.
+
+20
+00:00:57,770 --> 00:01:01,950
+And you're told that you
+have eight rooks.
+
+21
+00:01:01,950 --> 00:01:04,200
+I'm sure most of you guys
+are familiar with chess.
+
+22
+00:01:04,200 --> 00:01:08,210
+But if any of you aren't,
+chess is a
+
+23
+00:01:08,210 --> 00:01:09,790
+sophisticated board game.
+
+24
+00:01:09,790 --> 00:01:12,780
+And one of the types of pieces
+you have in this game is
+
+25
+00:01:12,780 --> 00:01:13,840
+called a rook.
+
+26
+00:01:13,840 --> 00:01:15,450
+And in this particular problem,
+
+27
+00:01:15,450 --> 00:01:17,150
+there are eight rooks.
+
+28
+00:01:17,150 --> 00:01:21,020
+And your job is to place all
+eight rooks onto this 8-by-8
+
+29
+00:01:21,020 --> 00:01:22,380
+chessboard.
+
+30
+00:01:22,380 --> 00:01:26,880
+Now, you're told in the problem
+statement that all
+
+31
+00:01:26,880 --> 00:01:30,780
+placements of rooks are
+equally likely.
+
+32
+00:01:30,780 --> 00:01:38,030
+And you are tasked with finding
+the probability that
+
+33
+00:01:38,030 --> 00:01:39,630
+you get a safe arrangement.
+
+34
+00:01:39,630 --> 00:01:42,920
+So that is to say, you place
+your eight rooks on the board.
+
+35
+00:01:42,920 --> 00:01:44,940
+What is the probability
+that the way you
+
+36
+00:01:44,940 --> 00:01:47,320
+placed them is safe?
+
+37
+00:01:47,320 --> 00:01:49,160
+So what do I mean by "safe"?
+
+38
+00:01:49,160 --> 00:01:55,900
+Well, if you're familiar with
+the way chess works, so if you
+
+39
+00:01:55,900 --> 00:01:59,770
+place a rook here, it can move
+vertically or it can move
+
+40
+00:01:59,770 --> 00:02:00,680
+horizontally.
+
+41
+00:02:00,680 --> 00:02:03,360
+Those are the only two
+legal positions.
+
+42
+00:02:03,360 --> 00:02:07,250
+So if you place a rook here
+and you have another piece
+
+43
+00:02:07,250 --> 00:02:11,430
+here, then this is not a safe
+arrangement, because the rook
+
+44
+00:02:11,430 --> 00:02:14,804
+can move this way
+and kill you.
+
+45
+00:02:14,804 --> 00:02:18,010
+Similarly, if you have a rook
+here and another piece here,
+
+46
+00:02:18,010 --> 00:02:21,120
+the rook can move horizontally
+and kill you that way.
+
+47
+00:02:21,120 --> 00:02:25,870
+So two rooks on this board are
+only safe from each other if
+
+48
+00:02:25,870 --> 00:02:30,060
+they are neither in the same
+column nor in the same row.
+
+49
+00:02:30,060 --> 00:02:34,200
+And that's going to be key for
+us to solve this problem.
+
+50
+00:02:34,200 --> 00:02:37,690
+So let's see-- where
+did my marker go?
+
+51
+00:02:37,690 --> 00:02:39,410
+I've been talking a lot,
+and I haven't really
+
+52
+00:02:39,410 --> 00:02:40,520
+been writing anything.
+
+53
+00:02:40,520 --> 00:02:47,050
+So our job is again, to find the
+probability that you get a
+
+54
+00:02:47,050 --> 00:02:50,100
+safe arrangement.
+
+55
+00:02:50,100 --> 00:02:53,570
+So I'm just going to do
+"arrange" for short.
+
+56
+00:02:53,570 --> 00:02:56,760
+Now, I talked about this
+previously, and you guys have
+
+57
+00:02:56,760 --> 00:02:58,550
+heard it in lecture.
+
+58
+00:02:58,550 --> 00:03:01,250
+Hopefully you remember something
+called the discrete
+
+59
+00:03:01,250 --> 00:03:03,000
+uniform law.
+
+60
+00:03:03,000 --> 00:03:07,100
+So the discrete uniform law is
+applicable when your sample
+
+61
+00:03:07,100 --> 00:03:11,720
+space is discrete and all
+outcomes are equally likely.
+
+62
+00:03:11,720 --> 00:03:14,480
+So let's do a quick
+check here.
+
+63
+00:03:14,480 --> 00:03:17,500
+What is our sample space
+for this problem?
+
+64
+00:03:17,500 --> 00:03:21,510
+Well, a logical choice would
+be that the set of all
+
+65
+00:03:21,510 --> 00:03:26,070
+possible outcomes is the set
+of all possible spatial
+
+66
+00:03:26,070 --> 00:03:28,630
+arrangements of rooks.
+
+67
+00:03:28,630 --> 00:03:33,140
+And hopefully it's clear to
+you that that is discrete.
+
+68
+00:03:33,140 --> 00:03:35,510
+And the problem statement
+furthermore gives us that
+
+69
+00:03:35,510 --> 00:03:37,080
+they're equally likely.
+
+70
+00:03:37,080 --> 00:03:39,820
+So the discrete uniform
+law is in fact
+
+71
+00:03:39,820 --> 00:03:41,430
+applicable in our setting.
+
+72
+00:03:41,430 --> 00:03:45,690
+So I'm going to go ahead and
+write what this means.
+
+73
+00:03:45,690 --> 00:03:50,320
+So when your sample space is
+discrete and all outcomes are
+
+74
+00:03:50,320 --> 00:03:53,740
+equally likely, then you can
+compute the probability of any
+
+75
+00:03:53,740 --> 00:03:58,500
+event, A, simply by counting
+the number of outcomes in A
+
+76
+00:03:58,500 --> 00:04:01,310
+and then dividing it by the
+total number of outcomes in
+
+77
+00:04:01,310 --> 00:04:02,820
+your sample space.
+
+78
+00:04:02,820 --> 00:04:06,500
+So here we just have to find
+the number of total safe
+
+79
+00:04:06,500 --> 00:04:14,680
+arrangements and then divide
+it by the total number of
+
+80
+00:04:14,680 --> 00:04:15,930
+arrangements.
+
+81
+00:04:15,930 --> 00:04:17,990
+
+82
+00:04:17,990 --> 00:04:21,410
+So again, as you've seen in
+other problems, the discrete
+
+83
+00:04:21,410 --> 00:04:24,310
+uniform law is really nice,
+because you reduce the problem
+
+84
+00:04:24,310 --> 00:04:27,970
+of computing probabilities to
+the problem of counting.
+
+85
+00:04:27,970 --> 00:04:29,980
+And so here's where we're
+going to exercise those
+
+86
+00:04:29,980 --> 00:04:34,000
+counting skills, as I
+promised earlier.
+
+87
+00:04:34,000 --> 00:04:37,630
+Now, I would like to start
+with computing the
+
+88
+00:04:37,630 --> 00:04:40,370
+denominator, or the total
+number of arrangements,
+
+89
+00:04:40,370 --> 00:04:44,280
+because I think it's a slightly
+easier computation.
+
+90
+00:04:44,280 --> 00:04:46,775
+So we don't care about the
+arrangements being safe.
+
+91
+00:04:46,775 --> 00:04:49,700
+We just care about
+how many possible
+
+92
+00:04:49,700 --> 00:04:51,760
+arrangements are there.
+
+93
+00:04:51,760 --> 00:04:55,190
+Now, again, we have eight rooks,
+and we need to place
+
+94
+00:04:55,190 --> 00:04:56,770
+all of them.
+
+95
+00:04:56,770 --> 00:04:58,760
+And we have this 8-by-8 board.
+
+96
+00:04:58,760 --> 00:05:02,670
+So pretty quickly, you guys
+could probably tell me that
+
+97
+00:05:02,670 --> 00:05:07,340
+the total number of square
+is 64, because this is
+
+98
+00:05:07,340 --> 00:05:10,950
+just 8 times 8.
+
+99
+00:05:10,950 --> 00:05:16,130
+Now, I like to approach
+problems sequentially.
+
+100
+00:05:16,130 --> 00:05:18,490
+That sort of really helps me
+think clearly about them.
+
+101
+00:05:18,490 --> 00:05:22,330
+So I want you to imagine a
+sequential process during
+
+102
+00:05:22,330 --> 00:05:25,270
+which we place each rook
+one at a time.
+
+103
+00:05:25,270 --> 00:05:27,340
+So pick a rook.
+
+104
+00:05:27,340 --> 00:05:29,450
+The chessboard is
+currently empty.
+
+105
+00:05:29,450 --> 00:05:35,725
+So how many squares can you
+place that rook in?
+
+106
+00:05:35,725 --> 00:05:37,090
+Well, nobody's on the board.
+
+107
+00:05:37,090 --> 00:05:39,580
+You can place it in 64 spots.
+
+108
+00:05:39,580 --> 00:05:47,635
+So for the first rook that you
+pick, there are 64 spots.
+
+109
+00:05:47,635 --> 00:05:50,180
+
+110
+00:05:50,180 --> 00:05:53,790
+Now, once you place this rook,
+you need to place the second
+
+111
+00:05:53,790 --> 00:05:55,430
+rook, because again, we're
+not done until
+
+112
+00:05:55,430 --> 00:05:56,930
+all eight are placed.
+
+113
+00:05:56,930 --> 00:06:00,650
+So how many possible
+spots are left.
+
+114
+00:06:00,650 --> 00:06:04,300
+Well, I claim that there are 63,
+because one rule of chess
+
+115
+00:06:04,300 --> 00:06:07,670
+is that if you put a piece in
+a particular square, you can
+
+116
+00:06:07,670 --> 00:06:09,550
+no longer put anything
+else on that square.
+
+117
+00:06:09,550 --> 00:06:12,080
+You can't put two
+or more things.
+
+118
+00:06:12,080 --> 00:06:16,650
+So the first rook is occupying
+one spot, so there's only 63
+
+119
+00:06:16,650 --> 00:06:18,320
+spots left.
+
+120
+00:06:18,320 --> 00:06:25,360
+So the second rook has 63 spots
+that it could go in.
+
+121
+00:06:25,360 --> 00:06:31,680
+Similarly, the third
+rook has 62 spots.
+
+122
+00:06:31,680 --> 00:06:33,150
+Hopefully you see the pattern.
+
+123
+00:06:33,150 --> 00:06:34,730
+You can continue this down.
+
+124
+00:06:34,730 --> 00:06:37,310
+And remember, we have to
+place all eight rooks.
+
+125
+00:06:37,310 --> 00:06:40,330
+So you could do it out
+yourself or just
+
+126
+00:06:40,330 --> 00:06:42,030
+do the simple math.
+
+127
+00:06:42,030 --> 00:06:46,560
+You'll figure out that the
+eighth rook only has 57 spots
+
+128
+00:06:46,560 --> 00:06:47,810
+that it could be in.
+
+129
+00:06:47,810 --> 00:06:51,610
+
+130
+00:06:51,610 --> 00:06:53,000
+So this is a good start.
+
+131
+00:06:53,000 --> 00:06:56,460
+We've sort of figured out if
+we sequentially place each
+
+132
+00:06:56,460 --> 00:06:59,330
+rook, how many options
+do we have.
+
+133
+00:06:59,330 --> 00:07:03,910
+But we haven't combined these
+numbers in any useful way yet.
+
+134
+00:07:03,910 --> 00:07:08,265
+We haven't counted the number
+of total arrangements.
+
+135
+00:07:08,265 --> 00:07:10,800
+
+136
+00:07:10,800 --> 00:07:13,690
+And this may already be obvious
+to some, but it wasn't
+
+137
+00:07:13,690 --> 00:07:16,130
+obvious to me when I was first
+learning this material, so I
+
+138
+00:07:16,130 --> 00:07:18,960
+want to go through
+this slowly.
+
+139
+00:07:18,960 --> 00:07:21,290
+You have probably heard in
+lecture by now about the
+
+140
+00:07:21,290 --> 00:07:22,930
+counting principle.
+
+141
+00:07:22,930 --> 00:07:25,820
+And what the counting principle
+tells you is that
+
+142
+00:07:25,820 --> 00:07:30,430
+whenever you have a process that
+is done in stages and in
+
+143
+00:07:30,430 --> 00:07:35,430
+each stage, you have a
+particular number of choices,
+
+144
+00:07:35,430 --> 00:07:38,940
+to get the total number of
+choices available at the end
+
+145
+00:07:38,940 --> 00:07:42,420
+of the process, you simply
+multiply the number of choices
+
+146
+00:07:42,420 --> 00:07:43,670
+at each stage.
+
+147
+00:07:43,670 --> 00:07:45,950
+
+148
+00:07:45,950 --> 00:07:48,170
+This might be clear to you,
+again, simply from the
+
+149
+00:07:48,170 --> 00:07:49,860
+statement, for some of you.
+
+150
+00:07:49,860 --> 00:07:51,980
+But for others, it might
+still not be clear.
+
+151
+00:07:51,980 --> 00:07:54,390
+So let's just take
+a simple example.
+
+152
+00:07:54,390 --> 00:07:56,870
+Forget about the rook problem
+for a second.
+
+153
+00:07:56,870 --> 00:07:59,520
+Let's say you're at
+a deli, and you
+
+154
+00:07:59,520 --> 00:08:00,940
+want to make a sandwich.
+
+155
+00:08:00,940 --> 00:08:04,510
+And to make a sandwich, you need
+a choice of bread and you
+
+156
+00:08:04,510 --> 00:08:06,030
+need a choice of meat.
+
+157
+00:08:06,030 --> 00:08:08,020
+So we have a sandwich-building
+process,
+
+158
+00:08:08,020 --> 00:08:09,160
+and there's two stages.
+
+159
+00:08:09,160 --> 00:08:11,100
+First, you have to pick the
+bread, and then you have to
+
+160
+00:08:11,100 --> 00:08:12,260
+pick the meat.
+
+161
+00:08:12,260 --> 00:08:15,270
+So let's say for the choice
+of bread, you can
+
+162
+00:08:15,270 --> 00:08:18,700
+choose wheat or rye.
+
+163
+00:08:18,700 --> 00:08:22,270
+So again, you can always use
+a little decision tree--
+
+164
+00:08:22,270 --> 00:08:24,490
+wheat or rye.
+
+165
+00:08:24,490 --> 00:08:26,480
+And then let's say that
+for the meats,
+
+166
+00:08:26,480 --> 00:08:27,840
+you have three options.
+
+167
+00:08:27,840 --> 00:08:31,440
+You have ham, turkey,
+and salami.
+
+168
+00:08:31,440 --> 00:08:35,460
+So you can have ham,
+turkey, or salami--
+
+169
+00:08:35,460 --> 00:08:40,059
+ham, turkey, or salami.
+
+170
+00:08:40,059 --> 00:08:43,210
+How many total possible
+sandwiches can you make?
+
+171
+00:08:43,210 --> 00:08:44,620
+Well, six.
+
+172
+00:08:44,620 --> 00:08:48,320
+And I got to that
+by 2 times 3.
+
+173
+00:08:48,320 --> 00:08:51,130
+And hopefully this makes sense
+for you, because there's two
+
+174
+00:08:51,130 --> 00:08:54,220
+options in the first stage.
+
+175
+00:08:54,220 --> 00:08:56,090
+Freeze an option.
+
+176
+00:08:56,090 --> 00:08:58,410
+Given this choice, there's
+three options
+
+177
+00:08:58,410 --> 00:09:01,120
+at the second stage.
+
+178
+00:09:01,120 --> 00:09:06,350
+But you have to also realize
+that for every other option
+
+179
+00:09:06,350 --> 00:09:09,450
+you have at the first stage, you
+have to add an additional
+
+180
+00:09:09,450 --> 00:09:11,770
+three options for the
+second stage.
+
+181
+00:09:11,770 --> 00:09:15,540
+And this is the definition
+of multiplication.
+
+182
+00:09:15,540 --> 00:09:19,260
+If you add three two times,
+you know that's 3 times 2.
+
+183
+00:09:19,260 --> 00:09:22,990
+So if you extrapolate this
+example to a larger, more
+
+184
+00:09:22,990 --> 00:09:26,620
+general picture, you will have
+derived for yourself the
+
+185
+00:09:26,620 --> 00:09:28,860
+counting principle.
+
+186
+00:09:28,860 --> 00:09:33,800
+And we're going to use the
+counting principle here to
+
+187
+00:09:33,800 --> 00:09:36,970
+determine what the total number
+of arrangements are.
+
+188
+00:09:36,970 --> 00:09:40,650
+So we have a sequential process,
+because we're placing
+
+189
+00:09:40,650 --> 00:09:43,340
+the first rook and then the
+second rook, et cetera.
+
+190
+00:09:43,340 --> 00:09:48,810
+So at the first stage,
+we have 64 choices.
+
+191
+00:09:48,810 --> 00:09:53,550
+At the second stage,
+we have 63 choices.
+
+192
+00:09:53,550 --> 00:09:57,610
+At the third stage, we have
+62 choices, et cetera.
+
+193
+00:09:57,610 --> 00:10:01,000
+And so I'm just multiplying
+these numbers together,
+
+194
+00:10:01,000 --> 00:10:04,220
+because the counting principle
+says I can do this.
+
+195
+00:10:04,220 --> 00:10:10,320
+So my claim is that this product
+is equal to the total
+
+196
+00:10:10,320 --> 00:10:13,580
+number of arrangements.
+
+197
+00:10:13,580 --> 00:10:17,540
+And we could stop here, but I'm
+going to actually write
+
+198
+00:10:17,540 --> 00:10:20,160
+this in a more useful way.
+
+199
+00:10:20,160 --> 00:10:22,920
+You guys should have
+been introduced to
+
+200
+00:10:22,920 --> 00:10:24,510
+the factorial function.
+
+201
+00:10:24,510 --> 00:10:29,800
+So you can express this
+equivalently as 64 factorial
+
+202
+00:10:29,800 --> 00:10:32,530
+divided by 56 factorial.
+
+203
+00:10:32,530 --> 00:10:36,190
+And this is not necessary for
+your problem solution, but
+
+204
+00:10:36,190 --> 00:10:38,340
+sometimes it's helpful to
+express these types of
+
+205
+00:10:38,340 --> 00:10:41,170
+products in factorials,
+because you can see
+
+206
+00:10:41,170 --> 00:10:44,210
+cancellations more easily.
+
+207
+00:10:44,210 --> 00:10:48,300
+So if it's OK with everybody,
+I'm going to erase this work
+
+208
+00:10:48,300 --> 00:10:51,580
+to give myself more room.
+
+209
+00:10:51,580 --> 00:10:56,310
+So we'll just put our answer for
+the denominator up here,
+
+210
+00:10:56,310 --> 00:11:00,230
+and then we're going to get
+started on the numerator.
+
+211
+00:11:00,230 --> 00:11:04,170
+So for the numerator, thanks to
+the discrete uniform law,
+
+212
+00:11:04,170 --> 00:11:09,410
+we only need to count the number
+of safe arrangements.
+
+213
+00:11:09,410 --> 00:11:12,100
+But this is a little bit more
+tricky, because now, we have
+
+214
+00:11:12,100 --> 00:11:15,420
+to apply our definition
+of what "safe" means.
+
+215
+00:11:15,420 --> 00:11:18,440
+But we're going to use the same
+higher-level strategy,
+
+216
+00:11:18,440 --> 00:11:22,510
+which is realizing that we can
+place rooks sequentially.
+
+217
+00:11:22,510 --> 00:11:25,810
+So we can think of it as
+a sequential process.
+
+218
+00:11:25,810 --> 00:11:29,940
+And then if we figure out how
+many choices you have in each
+
+219
+00:11:29,940 --> 00:11:35,040
+stage that sort of maintain the
+"safeness" of the setup,
+
+220
+00:11:35,040 --> 00:11:37,680
+then you can use the counting
+principle to multiply all
+
+221
+00:11:37,680 --> 00:11:41,250
+those numbers together
+and get your answer.
+
+222
+00:11:41,250 --> 00:11:45,060
+So we have to place
+eight rooks.
+
+223
+00:11:45,060 --> 00:11:49,210
+Starting the same way we did
+last time, how many spots are
+
+224
+00:11:49,210 --> 00:11:52,880
+there for the first rook
+that are safe?
+
+225
+00:11:52,880 --> 00:11:56,520
+Nobody is on the board yet, so
+nobody can harm the first rook
+
+226
+00:11:56,520 --> 00:11:57,500
+we put down.
+
+227
+00:11:57,500 --> 00:12:01,940
+So I claim that it's just
+our total of 64.
+
+228
+00:12:01,940 --> 00:12:04,050
+Now, let's see what happens.
+
+229
+00:12:04,050 --> 00:12:05,740
+Let's pick a random
+square in here.
+
+230
+00:12:05,740 --> 00:12:08,520
+Let's say we put our
+first rook here.
+
+231
+00:12:08,520 --> 00:12:13,210
+Now, I claim a bunch of spots
+get invalidated because of the
+
+232
+00:12:13,210 --> 00:12:14,390
+rules of chess.
+
+233
+00:12:14,390 --> 00:12:18,570
+So before, I told you a rook can
+kill anything in the same
+
+234
+00:12:18,570 --> 00:12:20,680
+column or in the same row.
+
+235
+00:12:20,680 --> 00:12:25,020
+So you can't put a rook here,
+because they'll kill each
+
+236
+00:12:25,020 --> 00:12:27,250
+other, and you can't
+put a rook here.
+
+237
+00:12:27,250 --> 00:12:33,250
+So by extension, you can see
+that everything in the column
+
+238
+00:12:33,250 --> 00:12:36,970
+and the row that I'm
+highlighting in blue, it's no
+
+239
+00:12:36,970 --> 00:12:37,850
+longer an option.
+
+240
+00:12:37,850 --> 00:12:39,880
+You can't place a
+rook in there.
+
+241
+00:12:39,880 --> 00:12:41,780
+Otherwise, we will
+have violated
+
+242
+00:12:41,780 --> 00:12:45,140
+our "safety" principle.
+
+243
+00:12:45,140 --> 00:12:50,580
+So where can our
+second rook go?
+
+244
+00:12:50,580 --> 00:12:55,140
+Well, our second rook can go in
+any of the blank spots, any
+
+245
+00:12:55,140 --> 00:12:57,630
+of the spots that are not
+highlighted by blue.
+
+246
+00:12:57,630 --> 00:13:00,110
+And let's stare at this
+a little bit.
+
+247
+00:13:00,110 --> 00:13:02,640
+
+248
+00:13:02,640 --> 00:13:06,560
+Imagine that you were to take
+scissors to your chessboard
+
+249
+00:13:06,560 --> 00:13:09,370
+and cut along this line
+and this line and this
+
+250
+00:13:09,370 --> 00:13:10,200
+line and this line.
+
+251
+00:13:10,200 --> 00:13:14,190
+So you essentially sawed off
+this cross that we created.
+
+252
+00:13:14,190 --> 00:13:18,470
+Then you would have four
+free-floating chessboard
+
+253
+00:13:18,470 --> 00:13:23,070
+pieces-- this one, this one,
+this one, and this one.
+
+254
+00:13:23,070 --> 00:13:27,650
+So this is a 3-by-4 piece,
+this is 3-by-3, this is
+
+255
+00:13:27,650 --> 00:13:30,020
+4-by-3, and this is 4-by-4.
+
+256
+00:13:30,020 --> 00:13:33,600
+Well, because you cut this part
+out, you can now slide
+
+257
+00:13:33,600 --> 00:13:36,000
+those pieces back together.
+
+258
+00:13:36,000 --> 00:13:39,950
+And hopefully you can convince
+yourself that that would leave
+
+259
+00:13:39,950 --> 00:13:43,390
+you with a 7-by-7 chessboard.
+
+260
+00:13:43,390 --> 00:13:48,650
+And you can see that the
+dimensions match up here.
+
+261
+00:13:48,650 --> 00:13:53,000
+So essentially, the second rook
+can be placed anywhere in
+
+262
+00:13:53,000 --> 00:13:55,970
+the remaining 7-by-7
+chessboard.
+
+263
+00:13:55,970 --> 00:14:00,280
+And of course, there are 49
+spots in a 7-by-7 chessboard.
+
+264
+00:14:00,280 --> 00:14:03,430
+So you get 49.
+
+265
+00:14:03,430 --> 00:14:07,150
+So let's do this experiment
+again.
+
+266
+00:14:07,150 --> 00:14:11,860
+Let me rewrite the reduced
+7-by-7 chessboard.
+
+267
+00:14:11,860 --> 00:14:14,540
+You're going to have to forgive
+me if the lines are
+
+268
+00:14:14,540 --> 00:14:16,680
+not perfect--
+
+269
+00:14:16,680 --> 00:14:22,760
+one, two, three, four, five,
+six, seven; one, two, three,
+
+270
+00:14:22,760 --> 00:14:23,210
+four, five, six, seven.
+
+271
+00:14:23,210 --> 00:14:24,630
+Yep, I did that right.
+
+272
+00:14:24,630 --> 00:14:32,030
+And then we have one, two,
+three, four, five, six, seven.
+
+273
+00:14:32,030 --> 00:14:36,800
+That's not too bad for
+my first attempt.
+
+274
+00:14:36,800 --> 00:14:39,980
+So again, how did I get this
+chessboard from this one?
+
+275
+00:14:39,980 --> 00:14:43,210
+Well, I took scissors and I cut
+off of the blue strips,
+
+276
+00:14:43,210 --> 00:14:46,690
+and then I just merged the
+remaining four pieces.
+
+277
+00:14:46,690 --> 00:14:50,160
+So now, I'm placing
+my second rook.
+
+278
+00:14:50,160 --> 00:14:54,350
+So I know that I can place my
+second rook in any of these
+
+279
+00:14:54,350 --> 00:14:58,770
+squares, and it'll be
+safe from this rook.
+
+280
+00:14:58,770 --> 00:15:00,830
+Of course, in reality, you
+wouldn't really cut up your
+
+281
+00:15:00,830 --> 00:15:01,390
+chessboard.
+
+282
+00:15:01,390 --> 00:15:05,470
+I'm just using this as a visual
+aid to help you guys
+
+283
+00:15:05,470 --> 00:15:08,220
+see why there are 49 spots.
+
+284
+00:15:08,220 --> 00:15:11,020
+Another way you could see 49
+spots is literally just by
+
+285
+00:15:11,020 --> 00:15:15,890
+counting all the white squares,
+but I think it takes
+
+286
+00:15:15,890 --> 00:15:17,720
+time to count 49 squares.
+
+287
+00:15:17,720 --> 00:15:20,501
+And this is a faster
+way of seeing it.
+
+288
+00:15:20,501 --> 00:15:23,930
+So you can put your second
+rook anywhere here.
+
+289
+00:15:23,930 --> 00:15:26,340
+Let's actually put in the
+corner, because the corner is
+
+290
+00:15:26,340 --> 00:15:27,590
+a nice case.
+
+291
+00:15:27,590 --> 00:15:30,700
+If you put your rook in the
+corner, immediately, all the
+
+292
+00:15:30,700 --> 00:15:35,360
+spots in here and all the spots
+in here become invalid
+
+293
+00:15:35,360 --> 00:15:38,230
+for the third rook, because
+otherwise, the rooks can hurt
+
+294
+00:15:38,230 --> 00:15:40,070
+each other.
+
+295
+00:15:40,070 --> 00:15:45,130
+So again, you'll see that if you
+take scissors and cut off
+
+296
+00:15:45,130 --> 00:15:47,940
+the blue part, you will have
+reduced the dimension of the
+
+297
+00:15:47,940 --> 00:15:49,730
+chessboard again.
+
+298
+00:15:49,730 --> 00:15:52,820
+And you can see pretty quickly
+that what you're left with is
+
+299
+00:15:52,820 --> 00:15:55,100
+a 6-by-6 chessboard.
+
+300
+00:15:55,100 --> 00:16:02,820
+So for the third rook, you get a
+6-by-6 chessboard, which has
+
+301
+00:16:02,820 --> 00:16:06,020
+36 free spots.
+
+302
+00:16:06,020 --> 00:16:08,880
+And I'm not going to insult
+your intelligence.
+
+303
+00:16:08,880 --> 00:16:11,280
+You guys can see the pattern--
+
+304
+00:16:11,280 --> 00:16:13,130
+64, 49, 36.
+
+305
+00:16:13,130 --> 00:16:16,310
+These are just perfect
+squares decreasing.
+
+306
+00:16:16,310 --> 00:16:21,740
+So you know that the fourth
+rook will have 25 spots.
+
+307
+00:16:21,740 --> 00:16:24,840
+I'm going to come over here
+because I'm out of room.
+
+308
+00:16:24,840 --> 00:16:27,970
+The fifth rook will
+have 16 spots.
+
+309
+00:16:27,970 --> 00:16:31,230
+The sixth rook will
+have nine spots.
+
+310
+00:16:31,230 --> 00:16:33,900
+The seventh rook will
+have four spots.
+
+311
+00:16:33,900 --> 00:16:37,780
+And the eighth rook will
+just have one spot.
+
+312
+00:16:37,780 --> 00:16:39,360
+And now, here we're going
+to invoke the
+
+313
+00:16:39,360 --> 00:16:40,880
+counting principle again.
+
+314
+00:16:40,880 --> 00:16:43,930
+Remember the thing that I just
+defined to you by talking
+
+315
+00:16:43,930 --> 00:16:46,680
+about sandwiches.
+
+316
+00:16:46,680 --> 00:16:49,240
+And we'll see that to get
+the total number of safe
+
+317
+00:16:49,240 --> 00:16:50,860
+arrangements, we can
+just multiply
+
+318
+00:16:50,860 --> 00:16:52,910
+these numbers together.
+
+319
+00:16:52,910 --> 00:16:54,750
+So I'm going to go ahead
+and put that up here.
+
+320
+00:16:54,750 --> 00:17:02,360
+You get 64 times 49 times
+36 times 25 times 16
+
+321
+00:17:02,360 --> 00:17:05,079
+times 9 times 4.
+
+322
+00:17:05,079 --> 00:17:07,810
+And in fact, this
+is our answer.
+
+323
+00:17:07,810 --> 00:17:10,859
+So we're all done.
+
+324
+00:17:10,859 --> 00:17:15,630
+So I really like this problem,
+because we don't normally ask
+
+325
+00:17:15,630 --> 00:17:18,690
+you to think about different
+spatial arrangements.
+
+326
+00:17:18,690 --> 00:17:22,339
+So it's a nice exercise, because
+it lets you practice
+
+327
+00:17:22,339 --> 00:17:27,069
+your counting skills in a
+new and creative way.
+
+328
+00:17:27,069 --> 00:17:31,220
+And in particular, the thing
+that we've been using for a
+
+329
+00:17:31,220 --> 00:17:33,730
+while now is the discrete
+uniform law.
+
+330
+00:17:33,730 --> 00:17:36,730
+But now, I also introduced
+the counting principle.
+
+331
+00:17:36,730 --> 00:17:39,310
+And we used the counting
+principle twice--
+
+332
+00:17:39,310 --> 00:17:41,910
+once to compute the numerator
+and once to compute the
+
+333
+00:17:41,910 --> 00:17:44,210
+denominator.
+
+334
+00:17:44,210 --> 00:17:49,480
+Counting can take a long time
+for you to absorb it.
+
+335
+00:17:49,480 --> 00:17:52,850
+So if you still don't totally
+buy the counting
+
+336
+00:17:52,850 --> 00:17:54,450
+principle, that's OK.
+
+337
+00:17:54,450 --> 00:17:59,440
+I just recommend you do some
+more examples and try to
+
+338
+00:17:59,440 --> 00:18:02,280
+convince yourself that it's
+really counting the right
+
+339
+00:18:02,280 --> 00:18:04,020
+number of things.
+
+340
+00:18:04,020 --> 00:18:07,510
+So counting principle is
+the second takeaway.
+
+341
+00:18:07,510 --> 00:18:10,520
+And then the other thing that
+is just worth mentioning is,
+
+342
+00:18:10,520 --> 00:18:12,980
+you guys should get really
+comfortable with these
+
+343
+00:18:12,980 --> 00:18:19,960
+factorials, because they will
+just show up again and again.
+
+344
+00:18:19,960 --> 00:18:21,960
+So that's the end of the
+problem, and I'll
+
+345
+00:18:21,960 --> 00:18:23,210
+see you next time.
+
+346
+00:18:23,210 --> 00:18:27,134
