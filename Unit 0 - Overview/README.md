@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html>
+---
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome file</title>
-  <link rel="stylesheet" href="https://stackedit.io/style.css" />
-</head>
 
-<body class="stackedit">
-  <div class="stackedit__html"><h2 id="introduction">1. Introduction</h2>
+---
+
+<h2 id="introduction">1. Introduction</h2>
 <p>Welcome to 6.431x, an introduction to probabilistic models, including random processes and the basic elements of statistical inference.</p>
 <p>The world is full of uncertainty: accidents, storms, unruly financial markets, noisy communications. The world is also full of data. Probabilistic modeling and the related field of statistical inference are the keys to analyzing data and making scientifically sound predictions.</p>
 <p>The course covers all of the basic probability concepts, including:</p>
@@ -176,7 +170,4 @@ Problem Set 10 due on Tue. Dec 11</p>
 <p>The class follows closely the text Introduction to Probability, 2nd edition, by Bertsekas and Tsitsiklis, Athena Scientific, 2008; see the publisher’s website or  <a href="http://amazon.com/">Amazon.com</a>  for more information.</p>
 <p>While this textbook is recommended, the materials provided by this course are self-contained. Furthermore, the publisher has made available, for the purposes of this class, the summary tables that are included in the text. These can be found under the “Resources" tab, or directly by following this  <a href="https://courses.edx.org/courses/course-v1:MITx+6.431x+3T2018/pdfbook/0/chapter/1/1">link</a>. In various places within the courseware, there will also be links to specific sections and pages to the excerpts from the textbook relevant to the material at hand. These links will also take you to the e-reader, jumping directly to the specific sections and pages.</p>
 <p>To adjust the zoom level in the e-reader, click the ‘+’ and ‘-’ buttons at the top-right to zoom in and out, respectively. Or, choose a specific zoom level using the drop-down menu. Depending on your operating system and web browser, you may encounter occasional artifacts or imperfect rendering of some formulas. Please try adjusting the zoom level to find the one that gives the best readability. We recommend using Firefox as it renders the text most accurately.</p>
-</div>
-</body>
 
-</html>
